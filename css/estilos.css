@@ -1,3 +1,9 @@
+/*-------------Var------------*/
+
+
+
+
+/*-------------Struc-----------*/
 html, body{
   padding: 0px;
   margin: 0px;
@@ -6,17 +12,23 @@ html, body{
 }
 
 .BlackEdge_image{
-  padding-left: 20px;
+  padding-left: 30px;
+}
+
+img.logo{
+  width: 150px; height:75px;
+  filter: invert(1);
+
 }
 
 nav{
   display: flex;
-  background-color: rgb(13, 241, 159);
+  background-color: #000;
   padding: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 25px rgb(85, 85, 85);
+  box-shadow: 0 0 20px #000;
 }
 
 nav ul{
@@ -31,7 +43,7 @@ nav li{
 }
 
 nav li a{
-  color: black;
+  color: #c6c9c7;
   text-decoration: none;
 }
 
@@ -42,28 +54,37 @@ nav li a:hover{
 /* ================ Contenido Principal ===================== */
 
 .main_section{
-  padding: 10%;
+  padding: 15%;
   text-align: center;
 }
 
 .products{
-  height: 50px;
-  padding: 5%;
+
+  max-height: 50px;
+  padding: 20%;
   display: flex;
-  background-position: center top;
+  max-width: 10px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 .product{
   padding: 10px;
-  margin-top: -200px;
+  margin-top: -240px;
+  max-width: 1000px;
 }
 
 .product .content{
   background-color: white;
-  padding: 15px;
-  box-shadow: 0 0 25px rgb(194, 194, 194);
+  padding: 10px;
+  box-shadow: 0 0 15px #000;
 }
 
 .img_content{
-  text-align: center
+  text-align: center;
+}
+
+.img_content img{
+  width: 256px; height: 256px;
 }
