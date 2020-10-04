@@ -1,2 +1,2 @@
 # blackedge
-Tienda online 'BlackEdge' store.
+Tienda online 'BlackEdge'.
