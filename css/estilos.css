@@ -10,8 +10,10 @@ html, body{
   padding: 0px;
   margin: 0px;
   font-size: 12px;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Quicksand', sans-serif;
+
 }
+
 
 .BlackEdge_image{
   padding-left: 30px;
@@ -46,11 +48,17 @@ nav li{
 }
 
 nav li a{
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s;
   color: #c6c9c7;
   text-decoration: none;
 }
 
 nav li a:hover{
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s;
   color: white;
 }
 
@@ -84,19 +92,47 @@ nav li a:hover{
 }
 
 .row img{
-  background-color: transparent;
-  width: 256px; height: 256px;
-  box-shadow: 0 0 15px #000;
+  width: 300px; height: 500px;
+  box-shadow: 0 0 25px #000;
 }
 
 /* descripción de los productos index*/
 
 .desc-product{
+  max-width: 80%;
   text-align: left;
   font-size: 24px;
   margin-left: 5%;
   margin-top: 7%;
-  color: var(blackcolor);
+  color: var(--blackcolor);
+}
+
+.desc-product button{
+  -webkit-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  transition: ease 0.2s;
+  margin-top: 15px;
+  text-align: left;
+  width: 34%;
+  font-size: 24px;
+  color: #f0f0f0;
+  background-color: var(--blackcolor);
+  padding: 15px;
+  border-style: none;
+  text-align: center;
+  -webkit-box-shadow: 0 0 15px #000;
+  box-shadow: 0 0 15px #000;
+}
+
+.desc-product button:hover{
+  -webkit-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  transition: ease 0.2s;
+  margin-top: 17px;
+  color: #fff;
+  background-color: #000;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
 }
 
 .desc-product2{
@@ -104,8 +140,38 @@ nav li a:hover{
   font-size: 24px;
   margin-right: 5%;
   margin-top: 7%;
-  color: var(blackcolor);
+  color: var(--blackcolor);
 }
+
+.desc-product2 button{
+  -webkit-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  transition: ease 0.2s;
+  margin-top: 15px;
+  text-align: left;
+  width: 34%;
+  font-size: 24px;
+  color: #f0f0f0;
+  background-color: var(--blackcolor);
+  padding: 15px;
+  border-style: none;
+  text-align: center;
+  -webkit-box-shadow: 0 0 15px #000;
+  box-shadow: 0 0 15px #000;
+}
+
+.desc-product2 button:hover{
+  -webkit-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  transition: ease 0.2s;
+  margin-top: 17px;
+  color: #fff;
+  background-color: #000;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+}
+
+
 
 /*pie de página*/
 
