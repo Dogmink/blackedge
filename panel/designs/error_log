@@ -1,0 +1,8 @@
+[01-Dec-2020 06:54:49 UTC] PHP Fatal error:  Uncaught Error: Class 'BlackEdgeStore\Design' not found in /home/zc2ssf1t727c/public_html/panel/designs/index.php:51
+Stack trace:
+#0 {main}
+  thrown in /home/zc2ssf1t727c/public_html/panel/designs/index.php on line 51
+[01-Dec-2020 06:54:51 UTC] PHP Fatal error:  Uncaught Error: Class 'BlackEdgeStore\Categorias' not found in /home/zc2ssf1t727c/public_html/panel/designs/form_agregar.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/zc2ssf1t727c/public_html/panel/designs/form_agregar.php on line 49

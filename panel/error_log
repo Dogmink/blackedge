@@ -1,0 +1,8 @@
+[01-Dec-2020 08:33:53 UTC] PHP Fatal error:  Uncaught Error: Class 'BlackEdgeStore\User' not found in /home/zc2ssf1t727c/public_html/panel/loginactions.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/zc2ssf1t727c/public_html/panel/loginactions.php on line 3
+[01-Dec-2020 08:34:04 UTC] PHP Fatal error:  Uncaught Error: Class 'BlackEdgeStore\User' not found in /home/zc2ssf1t727c/public_html/panel/loginactions.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/zc2ssf1t727c/public_html/panel/loginactions.php on line 3
