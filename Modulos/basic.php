@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang='es'>
 <head><meta charset="gb18030">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link class='iconweb' rel="icon" type="image/png" href="/images/icon/shop.png" />
@@ -28,7 +28,7 @@
     </div>
     <div class="nav_options"></div>
       <ul>
-        <li><a href="#">FAQs</a></li>
+        <li><a href="#">FAQS</a></li>
         <li><a href="productos.php">PRODUCTOS</a></li>
         <?php
         if (isset($_SESSION['user_log'])) {
