@@ -3,7 +3,7 @@
     $divice = 'S/. ';
     $year = date('Y');
     require 'functions.php';
-    include '../resources/user.php'
+    include '../resources/user.php';
 
  ?>
 <!DOCTYPE html>

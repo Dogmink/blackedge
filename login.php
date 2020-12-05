@@ -1,5 +1,6 @@
 <?php
   require 'Modulos/basic.php';
+  include 'resources/user.php';
   $user = new BlackEdgeStore\User;
   $logErr = "";
   if (isset($_GET['logErr'])) {
