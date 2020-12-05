@@ -126,17 +126,15 @@ class User
   }
 
   function validateActiveUser(){
-    if (isset($_SESSION['user_log'])) {
-      $userLog = $_SESSION['user_log']
-      $sql= "SELECT COUNT(username) as user FROM user WHERE username = :username AND active = 0";
-      $stmt = $this->cn->prepare($sql);
-      $stmt->bindParam(':username', $userLog['username']);
-      $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-      if ($row['user']>0) {
-        ?>
-        <h2 class="brand-text">Por favor valide su correo electronico.</h2>
-        <?php
-      }
+    $userLog = $_SESSION['user_log']
+    $sql= "SELECT COUNT(username) as user FROM user WHERE username = :username AND active = 0";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':username', $userLog['username']);
+    $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+    if ($row['user']>0) {
+      ?>
+      <h2 class="brand-text">Por favor valide su correo electronico.</h2>
+      <?php
     }
   }
 
