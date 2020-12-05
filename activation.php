@@ -1,5 +1,6 @@
 <?php
   include 'resources/user.php';
+  $user = new BlackEdgeStore\User;
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -20,14 +21,14 @@
             <p class="brand-text">BlackEdge Store.</p>
           </div>
           <?php
-          activationEmail();
+          $user->activationEmail();
         } else {
           ?>
           <h1>Algo salio mal</h1>
           <h4>Se te redireccionará en un momento...</h4>
           <p class="brand-text">BlackEdge Store.</p>
           <?php
-          activationEmail()
+          $user->activationEmail()
            ?>
           <?php
         }

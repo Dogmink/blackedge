@@ -31,7 +31,7 @@
   </div>
 
 <?php
-  require 'Modulos/footer.php'
+  require 'Modulos/footer.php';
  ?>
 
 </div>
