@@ -24,12 +24,6 @@
 </head>
 <body>
   <nav class="fadeInDown">
-    <?php
-    if (isset($_SESSION['user_log'])) {
-      include '../resources/user.php';
-      validateActiveUser();
-    }
-     ?>
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack.png"></a>
     </div>
