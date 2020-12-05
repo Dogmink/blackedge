@@ -3,7 +3,7 @@
     $divice = 'S/. ';
     $year = date('Y');
     require 'functions.php';
-    include '../resources/user.php';
+
 
  ?>
 <!DOCTYPE html>
@@ -26,6 +26,7 @@
   <nav class="fadeInDown">
     <?php
     if (isset($_SESSION['user_log'])) {
+      include '../resources/user.php';
       validateActiveUser();
     }
      ?>
