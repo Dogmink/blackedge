@@ -3,6 +3,7 @@
     $divice = 'S/. ';
     $year = date('Y');
     require 'functions.php';
+    include '../resources/user.php'
 
  ?>
 <!DOCTYPE html>
@@ -23,6 +24,9 @@
 </head>
 <body>
   <nav class="fadeInDown">
+    <?php
+      validateActiveUser();
+     ?>
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack.png"></a>
     </div>

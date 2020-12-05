@@ -4,6 +4,7 @@ $user = new BlackEdgeStore\User;
 $username = "";
 $email = "";
 $password = "";
+$hash= "";
 
 
 
@@ -15,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(($_POST['password']) != ($_POST['password-confirm'])){
       ?>
       <script type="text/javascript">
-        window.location= '../register.php?err=2';
+        window.location= '../register.php?aler=2';
       </script>
       <?php
       die();
@@ -25,9 +26,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         'password'=>$_POST['password'],
         'email'=>$_POST['email'],
       );
+      $hash = md5(rand(0, 1000));
       $user->validateUsername($username);
       $user->validateEmail($email);
-      $user->userRegister($_params);
+      $user->userRegister($_params, $username, $email);
+
+
 
       }
     }

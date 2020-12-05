@@ -1,0 +1,40 @@
+:root{
+  --blackcolor: #272d2f;
+  --hovercolor1: #ff004c;
+  --hovercolor2: #00ffe8;
+}
+
+
+/*-------------Struc-----------*/
+html, body{
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  background-color: var(--blackcolor);
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.iconweb{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+
+.BlackEdge_image{
+  padding-left: 50px;
+}
+
+img.logo{
+  width: 300px; height:150px;
+}
+
+.body-activation{
+  text-align: center;
+  color: #fff;
+}
+
+.brand-text{
+  color: var(--hovercolor1);
+  text-align: center;
+}
