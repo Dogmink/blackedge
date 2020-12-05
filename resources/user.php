@@ -136,8 +136,6 @@ class User
         ?>
         <h2 class="brand-text">Por favor valide su correo electronico.</h2>
         <?php
-      } else {
-
       }
     }
   }
