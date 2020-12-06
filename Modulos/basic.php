@@ -22,6 +22,16 @@
   <title>BlackEdge</title>
 </head>
 <body>
+  <div class="contenido">
+    <?php
+    $user = $_SESSION['user_log'];
+    if ($user['active']==0) {
+      ?>
+      <p style="color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email, si no lo haces tu cuenta se eliminará en 30 días.</p>
+      <?php
+    }
+     ?>
+  </div>
   <nav class="fadeInDown">
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
