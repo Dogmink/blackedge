@@ -27,7 +27,7 @@
     $user = $_SESSION['user_log'];
     if ($user['active']==0) {
       ?>
-      <p style="color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email, si no lo haces tu cuenta se eliminará en 30 días.</p>
+      <p style="background-color: var(--blackcolor); padding: 30px 120px; color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email, si no lo haces tu cuenta se eliminará en 30 días.</p>
       <?php
     }
      ?>
