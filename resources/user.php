@@ -36,21 +36,22 @@ class User
   }
 
   function validateActiveAccount($username, $hash){
+    $user = $username;
     $sql = "SELECT COUNT(username) as useractive FROM user WHERE username = :username AND hash = :hash";
     $stmt = $this->cn->prepare($sql);
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':hash', $hash);
     $stmt->execute();
     $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
-    if ($row['useractive']==1) {}
-        activeAccount($username);
+    if ($row['useractive']>0) {}
+        activeAccount($user);
     }
   }
 
-  function activeAccount($username){
+  function activeAccount($user){
     $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
     $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':username', $user);
     $stmt->execute();
     ?>
     <!DOCTYPE html>
