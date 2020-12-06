@@ -21,7 +21,7 @@
         if ($logErr!=null) {
           ?> <p class="error-login"> <?php $user->errorLogin($logErr); ?> </p> <?php
         }
-         ?>
+          ?>
         <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Ingresa tu nombre de usuario" autocomplete="off"  required>
         <input class="input-login" type="password" name="password" value="" placeholder="Ingresa tu •••••••••" autocomplete="off" required>
         <input class="btn-panel" type="submit" value="Ingresar" name="accion">

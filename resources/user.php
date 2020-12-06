@@ -94,7 +94,7 @@ class User
                 <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
                 <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?email='.$email.'&hash='.$hash.'"><b>Activar cuenta</b></a>
                 <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
-                <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo2.png" alt="">
+                <img style="margin-top: 60px;height: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo2.png" alt="">
               </div>
             </div>
           </body>
