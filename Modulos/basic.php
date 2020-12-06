@@ -22,7 +22,7 @@
   <title>BlackEdge</title>
 </head>
 <body>
-  <div class="contenido">
+  <div class="contenido-alert-active">
     <?php
     $user = $_SESSION['user_log'];
     if ($user['active']==0) {

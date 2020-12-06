@@ -6,6 +6,14 @@
   justify-content: center;
 }
 
+.contenido-alert-active{
+  max-width: 1200px;
+  margin:auto;
+  color: var(--blackcolor);
+  margin-top: 15px;
+  justify-content: center;
+}
+
 .contenido-login{
   max-width: 1200px;
   margin:auto;
