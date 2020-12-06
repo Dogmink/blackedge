@@ -8,7 +8,6 @@ $email = '';
 if (isset($_GET['email']) && isset($_GET['hash'])) {
     $hash = $_GET['hash'];
     $email = $_GET['email'];
-      $validate = $user->validateActiveAccount($email, $hash);
         ?>
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
