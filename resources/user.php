@@ -62,7 +62,6 @@ class User
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
         $message = '
-        <!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>
             <meta charset="utf-8">
@@ -77,7 +76,10 @@ class User
           </body>
         </html>
               ';
-          $headers = 'From:noreply@blackedgestore.com . "\r\n"';
+          $headers = "MIME-Version: 1.0" . "\r\n";
+          $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
+          $headers .= 'From: name' . "\r\n";
+          $headers = 'From:noreply@blackedgestore.com' . "\r\n";
           mail($to, $subject, $message, $headers);
           ?>
           <script type="text/javascript">
