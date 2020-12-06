@@ -50,7 +50,7 @@ class User
     $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
     $stmt = $this->cn->prepare($sql);
     $stmt->bindParam(':email', $email);
-    $stmt->execute()
+    $stmt->execute();
   }
 
   function errorLogin($logErr){
