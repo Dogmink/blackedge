@@ -1,4 +1,5 @@
 <?php
+include 'resources/user.php';
 $user = new BlackEdgeStore\User;
 
 $hash = '';
