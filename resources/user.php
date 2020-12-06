@@ -77,7 +77,7 @@ class User
             <body>
               <h1>Gracias por registrarte en BlackEdge Store ".$username."</h1>
               <p>Activa tu <b>cuenta</b> con este enlace:</p><br>
-              <a href="blackedge.com/activeacount.php?email='.$email.'&hash='.$hash.'"></a>
+              <a href="blackedge.com/activeacount.php?email=".$email."&hash=".$hash.""></a>
               <p>No compartas tu credenciales con nadie.</p>
               <img src="blackedge.com/images/Logo/Logo.png" alt="">
             </body>
