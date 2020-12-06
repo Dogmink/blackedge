@@ -3,12 +3,12 @@ include 'resources/user.php';
 $user = new BlackEdgeStore\User;
 
 $hash = '';
-$email = '';
+$username = '';
 
-if (isset($_GET['email']) && isset($_GET['hash'])) {
+if (isset($_GET['username']) && isset($_GET['hash'])) {
     $hash = $_GET['hash'];
-    $email = $_GET['email'];
-    $user->validateActiveAccount($email, $hash);
+    $username = $_GET['username'];
+    $user->validateActiveAccount($username, $hash);
         ?>
         <!DOCTYPE html>
         <html lang="en" dir="ltr">

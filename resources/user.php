@@ -35,22 +35,24 @@ class User
     }
   }
 
-  function validateActiveAccount($email, $hash){
-    $sql = "SELECT COUNT(username) as useractive FROM user WHERE email = :email AND hash = :hash";
+  function validateActiveAccount($username, $hash){
+    $sql = "SELECT COUNT(username) as useractive FROM user WHERE username = :username AND hash = :hash";
     $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':email', 'braulio25sc@gmail.com');
+    $stmt->bindParam(':username', $username);
     $stmt->bindParam(':hash', $hash);
     $stmt->execute();
     $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
-    if ($row['useractive']==1) {
-        print $row['useractive'];
+    if ($row['useractive']==1) {}
+        $result = $row['useractive'];
+        $username = $result['username'];
+        activeAccount($username);
     }
   }
 
-  function activeAccount($email){
-    $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
+  function activeAccount($username){
+    $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
     $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':email', 'braulio25sc@gmail.com');
+    $stmt->bindParam(':username', $username);
     $stmt->execute();
   }
 
@@ -91,7 +93,7 @@ class User
               <div style="background-color: #000;color: #fff;width: 100%;height: 100%;text-align: center;padding-bottom: 100px;" class="body-email">
                 <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Bienvenido <b class="var-email">'.$username.'</b></h1>
                 <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
-                <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?email='.$email.'&hash='.$hash.'"><b>Activar cuenta</b></a>
+                <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?username='.$username.'&hash='.$hash.'"><b>Activar cuenta</b></a>
                 <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
                 <img style="margin-top: 60px;height: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo2.png" alt="">
               </div>
