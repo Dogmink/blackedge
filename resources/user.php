@@ -58,7 +58,6 @@ class User
       );
 
       if($result->execute($_array)){
-        sendEmail();
         ?>
         <script type="text/javascript">
           window.location= '../login.php';
