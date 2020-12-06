@@ -7,7 +7,7 @@ $email = '';
 
     $hash = $_GET['hash'];
     $email = $_GET['email'];
-      $validate = $user->validateActiveAccount($email, $hash);
+    
       if ($validate) {
         ?>
         <!DOCTYPE html>
