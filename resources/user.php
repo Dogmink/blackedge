@@ -61,16 +61,24 @@ class User
         $hash = $_array[':hash'];
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
-        $message ='
-          Gracias por registrarte en BlackEdge Store'.$username.'
-          Activa tu <b>cuenta</b> con este enlace:
-          blackedgestore.com/activeacount.php?email='.$email.'&hash='.$hash.'
-          No compartas tu credenciales con nadie.
-          Atte. BlackEdge Store
-        ';
-          $headers = "MIME-Version: 1.0" . "\r\n";
-          $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
-          $headers .= 'From: name' . "\r\n";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
+        $message = '
+        <!DOCTYPE html>
+        <html lang="en" dir="ltr">
+          <head>
+            <meta charset="utf-8">
+            <title>BlackEdge Activation Account</title>
+          </head>
+          <body>
+            <h1>Gracias por registrarte en BlackEdge Store ".$username."</h1>
+            <p>Activa tu <b>cuenta</b> con este enlace:</p><br>
+            <a href="blackedge.com/activeacount.php?email='.$email.'&hash='.$hash.'"></a>
+            <p>No compartas tu credenciales con nadie.</p>
+            <img src="blackedge.com/images/Logo/Logo.png" alt="">
+          </body>
+        </html>
+              ';
           $headers = 'From:noreply@blackedgestore.com' . "\r\n";
           mail($to, $subject, $message, $headers);
           ?>
