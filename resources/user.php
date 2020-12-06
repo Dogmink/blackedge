@@ -37,24 +37,22 @@ class User
 
 
 
-  function errorLogin($logErr){
+    function errorLogin($logErr){
         $logErr = "Las credenciales son incorrectas";
         print $logErr;
     }
 
 
   function userRegister($_params){
-      $sql = "INSERT INTO user (username, password, email, hash) VALUES (:username, SHA(:password), :email, :hash)";
+      $sql = "INSERT INTO user (username, password, email) VALUES (:username, SHA(:password), :email)";
 
       $result = $this->cn->prepare($sql);
 
-      $hash = md5(rand(0, 1000));
 
       $_array = array(
         ":username" => $_params['username'],
         ":password" => $_params['password'],
         ":email" => $_params['email'],
-        ":hash" => $hash;
       );
 
       if($result->execute($_array)){
@@ -65,12 +63,6 @@ class User
         <?php
       }
     }
-
-
-
-
-
-
   function validateUsername($username){
     $sql = "SELECT COUNT(username) as num FROM user WHERE username = :username";
     $stmt = $this->cn->prepare($sql);
