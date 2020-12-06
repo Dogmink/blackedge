@@ -6,11 +6,11 @@ $hash = '';
 $email = '';
 
 if (isset($_GET['email']) && isset($_GET['hash'])) {
-    print '<pre>';
-    print_r($_GET['email'], $_GET['hash']);
-    die();
     $hash = $_GET['hash'];
     $email = $_GET['email'];
+    print $hash;
+    print $email;
+    die();
       $validate = $user->validateActiveAccount($email, $hash);
       if ($validate) {
         ?>
