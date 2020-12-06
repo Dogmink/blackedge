@@ -43,7 +43,7 @@ class User
     $stmt->execute();
     $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['useractive']==1) {
-        activeAccount($email);
+        print $row['useractive'];
     }
   }
 

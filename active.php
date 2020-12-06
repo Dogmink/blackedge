@@ -8,6 +8,7 @@ $email = '';
 if (isset($_GET['email']) && isset($_GET['hash'])) {
     $hash = $_GET['hash'];
     $email = $_GET['email'];
+    $user->validateActiveAccount($email, $hash);
         ?>
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
@@ -19,7 +20,7 @@ if (isset($_GET['email']) && isset($_GET['hash'])) {
         </head>
         <body>
           <div class="contenido">
-            <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Todo listo, <b style="color: var(--hovercolor1);"><?php print $username ?></b></h1>
+            <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Todo listo, <b style="color: var(--hovercolor1);">A</b></h1>
             <h3 style="text-align: center;padding-top: 50px;padding-bottom: 40px;">Se te redireccionará en unos momentos.</h3>
             <script type="text/javascript">
             setTimeout(function () {
