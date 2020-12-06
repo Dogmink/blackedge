@@ -52,8 +52,7 @@ class User
     $stmt = $this->cn->prepare($sql);
     $stmt->bindParam(':email', $email);
     $stmt->execute();
-    header('Location: index.php');
-    die();
+    print 1;
   }
 
   function errorLogin($logErr){
