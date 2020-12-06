@@ -62,7 +62,6 @@ class User
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
         $message = '
-        "
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>
@@ -76,7 +75,7 @@ class User
             <p>No compartas tu credenciales con nadie.</p>
             <img src="blackedge.com/images/Logo/Logo.png" alt="">
           </body>
-        </html>";
+        </html>
               ';
           $headers = 'From:noreply@blackedgestore.com . "\r\n"';
           mail($to, $subject, $message, $headers);
