@@ -5,7 +5,7 @@ $user = new BlackEdgeStore\User;
 $hash = '';
 $email = '';
 
-if (isset($_GET['$hash']) && $_GET['hash']!=null && isset($_GET['$email']) && $_GET['email']!=null) {
+if (isset($_GET['$hash']) && isset($_GET['$email'])) {
     $hash = $_GET['hash'];
     $email = $_GET['email'];
       $validate = $user->validateActiveAccount($email, $hash);

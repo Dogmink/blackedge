@@ -40,6 +40,7 @@ class User
     $stmt = $this->cn->prepare($sql);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':hash', $hash);
+    $stmt->execute();
     $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['useractive']==1) {
         activeAccount($email);
