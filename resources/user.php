@@ -36,46 +36,42 @@ class User
   }
 
   function validateActiveAccount($username, $hash){
-    $user = $username;
     $sql = "SELECT COUNT(username) as useractive FROM user WHERE username = :username AND hash = :hash";
     $stmt = $this->cn->prepare($sql);
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':hash', $hash);
     $stmt->execute();
     $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
-    if ($row['useractive']>0) {}
-        activeAccount($user);
+    if ($row['useractive']>0) {
+      $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
+      $stmt = $this->cn->prepare($sql);
+      $stmt->bindParam(':username', $username);
+      $stmt->execute();
+      ?>
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>BlackEdge Store | Activación de cuenta</title>
+        <link rel="stylesheet" href="/css/grid.css">
+        <link rel="stylesheet" href="/css/estilos.css">
+      </head>
+      <body>
+        <div class="contenido">
+          <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Todo listo, <b style="color: var(--hovercolor1);">A</b></h1>
+          <h3 style="text-align: center;padding-top: 50px;padding-bottom: 40px;">Se te redireccionará en unos momentos.</h3>
+          <script type="text/javascript">
+          setTimeout(function () {
+            window.location.href = "index.php";
+          }, 3000);
+          </script>
+        </div>
+      </body>
+      </html>
+      <?php
     }
   }
 
-  function activeAccount($user){
-    $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
-    $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':username', $user);
-    $stmt->execute();
-    ?>
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <title>BlackEdge Store | Activación de cuenta</title>
-      <link rel="stylesheet" href="/css/grid.css">
-      <link rel="stylesheet" href="/css/estilos.css">
-    </head>
-    <body>
-      <div class="contenido">
-        <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Todo listo, <b style="color: var(--hovercolor1);">A</b></h1>
-        <h3 style="text-align: center;padding-top: 50px;padding-bottom: 40px;">Se te redireccionará en unos momentos.</h3>
-        <script type="text/javascript">
-        setTimeout(function () {
-          window.location.href = "index.php";
-        }, 3000);
-        </script>
-      </div>
-    </body>
-    </html>
-    <?php
-  }
 
   function errorLogin($logErr){
         $logErr = "Las credenciales son incorrectas";
