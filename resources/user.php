@@ -54,9 +54,8 @@ class User
         ":password" => $_params['password'],
         ":email" => $_params['email'],
       );
-
       if($result->execute($_array)){
-        $to=$_array[':email']
+        $to=$_array[':email'];
         $subject = 'BlackEdge Store | Activar Cuenta';
         $message = 'Mensaje de prueba.';
         $headers = 'from:noreply@blackedgestore.com';
