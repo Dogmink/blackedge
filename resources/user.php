@@ -35,12 +35,28 @@ class User
     }
   }
 
+  function validateActiveAccount($email, $hash){
+    $sql = "SELECT COUNT(username) as useractive FROM user WHERE email = :email AND hash = :hash";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':hash', $hash);
+    $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
+    if ($row['useractive']==1) {
+        activeAccount($email);
+    }
+  }
 
+  function activeAccount($email){
+    $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute()
+  }
 
-    function errorLogin($logErr){
+  function errorLogin($logErr){
         $logErr = "Las credenciales son incorrectas";
         print $logErr;
-    }
+  }
 
 
   function userRegister($_params){
@@ -76,7 +92,7 @@ class User
                 <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
                 <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?email='.$email.'&hash='.$hash.'"><b>Activar cuenta</b></a>
                 <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
-                <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo.png" alt="">
+                <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo2.png" alt="">
               </div>
             </div>
           </body>

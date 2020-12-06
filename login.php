@@ -29,6 +29,14 @@
               ta.val(letras)
             });
          </script>
+         <?php
+          if (isset($_GET['hash'])&& $_GET['hash'] != null && isset($_GET['email'])&& $_GET['email'] != null) {
+            ?>
+            <input type="hidden" name="hash" value="<?php print $_GET['hash'] ?>">
+            <input type="hidden" name="email" value="<?php print $_GET['email'] ?>">
+            <?php
+          }
+          ?>
         <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Ingresa tu nombre de usuario" autocomplete="off"  required>
         <input class="input-login" type="password" name="password" value="" placeholder="Ingresa tu •••••••••" autocomplete="off" required>
         <input class="btn-panel" type="submit" value="Ingresar" name="accion">
