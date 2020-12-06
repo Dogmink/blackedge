@@ -44,24 +44,24 @@ class User
 
 
   function userRegister($_params){
-      $sql = "INSERT INTO user (username, password, email) VALUES (:username, SHA(:password), :email)";
+      $sql = "INSERT INTO user (username, password, email, hash) VALUES (:username, SHA(:password), :email, :hash)";
 
       $result = $this->cn->prepare($sql);
-
+      $hash = md5(rand(0, 1000));
 
       $_array = array(
         ":username" => $_params['username'],
         ":password" => $_params['password'],
         ":email" => $_params['email'],
+        ":hash" => $hash;
       );
       if($result->execute($_array)){
-        $userlog =  $_SESSION['user_log'];
-        $username = $userlog['username'];
-        $email = $userlog['email'];
-        $hash = $userlog['hash'];
+        $username = $_array[':username'];
+        $email = $_array[':email'];
+        $hash = $_array[':hash'];
         $sql = "SELECT COUNT(username) as focususer FROM user WHERE email = :email AND active = 0";
         $stmt = $this->cn->prepare($sql);
-        $stmt->bindValue(':email', $email);
+        $stmt->bindParam(':email', $email);
         $stmt->execute();
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
         if ($row['focususer']==1) {
