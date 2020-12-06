@@ -38,7 +38,7 @@ class User
   function validateActiveAccount($email, $hash){
     $sql = "SELECT COUNT(username) as useractive FROM user WHERE email = :email AND hash = :hash";
     $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':email', 'braulio25sc@gmail.com');
     $stmt->bindParam(':hash', $hash);
     $stmt->execute();
     $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -50,9 +50,8 @@ class User
   function activeAccount($email){
     $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
     $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':email', 'braulio25sc@gmail.com');
     $stmt->execute();
-    print 1;
   }
 
   function errorLogin($logErr){
