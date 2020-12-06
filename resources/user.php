@@ -56,6 +56,11 @@ class User
       );
 
       if($result->execute($_array)){
+        $to=$_array[':email']
+        $subject = 'BlackEdge Store | Activar Cuenta';
+        $message = 'Mensaje de prueba.';
+        $headers = 'from:noreply@blackedgestore.com';
+        mail($to, $subject, $message, $headers);
         ?>
         <script type="text/javascript">
           window.location= '../login.php';
@@ -63,6 +68,7 @@ class User
         <?php
       }
     }
+
   function validateUsername($username){
     $sql = "SELECT COUNT(username) as num FROM user WHERE username = :username";
     $stmt = $this->cn->prepare($sql);
@@ -78,6 +84,7 @@ class User
       die();
     }
   }
+
   function validateEmail($email){
     $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
     $stmt = $this->cn->prepare($sql);
