@@ -23,14 +23,14 @@
         }
          ?>
          <script type="text/javascript">
-            $("#username").keyup(function(){
-              var ta      =   $("#username");
+            $("#nombre").keyup(function(){
+              var ta      =   $("#nombre");
               letras      =   ta.val().replace(/ /g, "");
               ta.val(letras)
             });
          </script>
-        <input class="input-login" type="text" name="username" id="username" value="" placeholder="Ingresa tu nombre de usuario"  required>
-        <input class="input-login" type="password" name="password" value="" placeholder="Ingresa tu •••••••••" required>
+        <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Ingresa tu nombre de usuario" autocomplete="off"  required>
+        <input class="input-login" type="password" name="password" value="" placeholder="Ingresa tu •••••••••" autocomplete="off" required>
         <input class="btn-panel" type="submit" value="Ingresar" name="accion">
         <p class="register-text">¿No tienes cuenta? <a class="register-text-link" href="register.php">Haz clic aquí</a></p>
       </form>

@@ -24,31 +24,31 @@
         }
          ?>
          <script type="text/javascript">
-            $("#username").keyup(function(){
-              var ta      =   $("#username");
+            $("#nombre").keyup(function(){
+              var ta      =   $("#nombre");
               letras      =   ta.val().replace(/ /g, "");
               ta.val(letras)
             });
-            $("#email").keyup(function(){
-              var ta      =   $("#email");
+            $("#correo").keyup(function(){
+              var ta      =   $("#correo");
               letras      =   ta.val().replace(/ /g, "");
               ta.val(letras)
             });
          </script>
-        <input class="input-login" type="text" name="username" id="username" value="" placeholder="Nombre de usuario" required>
+        <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
         <?php
         if ($err!=null && $err == 1) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
         }
          ?>
-        <input class="input-login" type="email" id="email" name="email" value="" placeholder="Correo" required>
+        <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
         <?php
         if ($err!=null && $err == 2) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
         }
          ?>
-        <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" required>
-        <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" required>
+        <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
+        <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="btn-panel" type="submit" value="Registrarse" name="accion">
         <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
       </form>
