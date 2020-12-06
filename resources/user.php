@@ -53,7 +53,7 @@ class User
         ":username" => $_params['username'],
         ":password" => $_params['password'],
         ":email" => $_params['email'],
-        ":hash" => $hash;
+        ":hash" => $hash
       );
       if($result->execute($_array)){
         $username = $_array[':username'];
