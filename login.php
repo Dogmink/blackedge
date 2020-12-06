@@ -22,7 +22,14 @@
           ?> <p class="error-login"> <?php $user->errorLogin($logErr); ?> </p> <?php
         }
          ?>
-        <input class="input-login" type="text" name="username" value="" placeholder="Ingresa tu nombre de usuario"  required>
+         <script type="text/javascript">
+            $("#username").keyup(function(){
+              var ta      =   $("#username");
+              letras      =   ta.val().replace(/ /g, "");
+              ta.val(letras)
+            });
+         </script>
+        <input class="input-login" type="text" name="username" id="username" value="" placeholder="Ingresa tu nombre de usuario"  required>
         <input class="input-login" type="password" name="password" value="" placeholder="Ingresa tu •••••••••" required>
         <input class="btn-panel" type="submit" value="Ingresar" name="accion">
         <p class="register-text">¿No tienes cuenta? <a class="register-text-link" href="register.php">Haz clic aquí</a></p>

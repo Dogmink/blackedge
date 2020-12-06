@@ -23,13 +23,25 @@
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
         }
          ?>
-        <input class="input-login" type="text" name="username" value="" placeholder="Nombre de usuario" required>
+         <script type="text/javascript">
+            $("#username").keyup(function(){
+              var ta      =   $("#username");
+              letras      =   ta.val().replace(/ /g, "");
+              ta.val(letras)
+            });
+            $("#email").keyup(function(){
+              var ta      =   $("#email");
+              letras      =   ta.val().replace(/ /g, "");
+              ta.val(letras)
+            });
+         </script>
+        <input class="input-login" type="text" name="username" id="username" value="" placeholder="Nombre de usuario" required>
         <?php
         if ($err!=null && $err == 1) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
         }
          ?>
-        <input class="input-login" type="email" name="email" value="" placeholder="Correo" required>
+        <input class="input-login" type="email" id="email" name="email" value="" placeholder="Correo" required>
         <?php
         if ($err!=null && $err == 2) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
