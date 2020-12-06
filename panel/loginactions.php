@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if ($_POST['accion']==='Ingresar'){
       $username = $_POST['username'];
       $password = $_POST['password'];
-        $result = $user->userLogin($username, $password);
+      $result = $user->userLogin($username, $password);
           if ($result) {
             session_start();
             $_SESSION['user_log'] = array(
@@ -53,7 +53,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
               'direc' => $result['direc'],
               'img_prof' => $result['img_prof']
             );
-        
+            if (isset($_POST['hash'])&& $_POST['hash'] != null && isset($_POST['email'])&& $_POST['email'] != null) {
+                header('Location: active.php?email='.$_POST['email'].'&hash='.$_POST['hash'].);
+            }
             ?>
             <script type="text/javascript">
               window.location= '../index.php';

@@ -35,6 +35,17 @@ class User
     }
   }
 
+  function activeAccount($email){
+    $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    if ($stamt->execute()) {
+      header('Location: index.php');
+      die();
+    }
+  }
+
   function validateActiveAccount($email, $hash){
     $sql = "SELECT COUNT(username) as useractive FROM user WHERE email = :email AND hash = :hash";
     $stmt = $this->cn->prepare($sql);
@@ -46,12 +57,7 @@ class User
     }
   }
 
-  function activeAccount($email){
-    $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
-    $stmt = $this->cn->prepare($sql);
-    $stmt->bindParam(':email', $email);
-    $stmt->execute();
-  }
+
 
   function errorLogin($logErr){
         $logErr = "Las credenciales son incorrectas";
