@@ -37,8 +37,6 @@ class User
 
 
 
-
-
   function errorLogin($logErr){
         $logErr = "Las credenciales son incorrectas";
         print $logErr;

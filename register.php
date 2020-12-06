@@ -23,18 +23,6 @@
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
         }
          ?>
-         <script type="text/javascript">
-            $("#nombre").keyup(function(){
-              var ta      =   $("#nombre");
-              letras      =   ta.val().replace(/ /g, "");
-              ta.val(letras)
-            });
-            $("#correo").keyup(function(){
-              var ta      =   $("#correo");
-              letras      =   ta.val().replace(/ /g, "");
-              ta.val(letras)
-            });
-         </script>
         <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
         <?php
         if ($err!=null && $err == 1) {
