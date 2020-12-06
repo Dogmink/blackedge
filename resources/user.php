@@ -62,7 +62,7 @@ class User
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
         $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $message = '
         <!DOCTYPE html>
         <html lang="en" dir="ltr">
