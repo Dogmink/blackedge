@@ -62,18 +62,14 @@ class User
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
         $message = '
-        <html lang="en" dir="ltr">
-          <head>
-            <meta charset="utf-8">
-            <title>BlackEdge Activation Account</title>
-          </head>
-          <body>
-            <h1>Gracias por registrarte en BlackEdge Store ".$username."</h1>
-            <p>Activa tu <b>cuenta</b> con este enlace:</p><br>
-            <a href="blackedge.com/activeacount.php?email='.$email.'&hash='.$hash.'"></a>
-            <p>No compartas tu credenciales con nadie.</p>
-            <img src="blackedge.com/images/Logo/Logo.png" alt="">
-          </body>
+          <html>'.
+          '<head><meta charset="utf-8"><title>BlackEdge Activation Account</title></head>'.'
+          <body><h1>Gracias por registrarte en BlackEdge Store ".$username."</h1>'.'
+            <p>Activa tu <b>cuenta</b> con este enlace:</p><br>'.'
+            <a href="blackedgestore.com/activeacount.php?email='.$email.'&hash='.$hash.'"></a>'.'
+            <p>No compartas tu credenciales con nadie.</p>'.'
+            <img src="blackedgestore.com/images/Logo/Logo2.png" alt="">'.'
+          </body>'.'
         </html>
               ';
           $headers = "MIME-Version: 1.0" . "\r\n";
