@@ -35,7 +35,25 @@ class User
     }
   }
 
+  function validateActiveAccount($email, $hash){
+    $sql = "SELECT COUNT(username) as useractive FROM user WHERE email = :email AND hash = :hash";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':hash', $hash);
+    $row =  $stmt->fetch(\PDO::FETCH_ASSOC);
+    if ($row['useractive']==1) {
+        activeAccount($email);
+    }
+  }
 
+  function activeAccount($email){
+    $sql = "UPDATE user SET active = 1, hash = null WHERE email = :email";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    header('Location: index.php');
+    die();
+  }
 
   function errorLogin($logErr){
         $logErr = "Las credenciales son incorrectas";
