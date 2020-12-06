@@ -27,7 +27,7 @@
     if ($user['active']==0) {
       ?>
       <div class="contenido-alert-active">
-        <p style="background-color: var(--blackcolor); padding: 30px 120px; color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email, si no lo haces tu cuenta se eliminará en 30 días.</p>
+        <p style=" color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email, si no lo haces tu cuenta se eliminará en 30 días.</p>
       </div>
       <?php
     }
