@@ -59,15 +59,9 @@ class User
         $username = $_array[':username'];
         $email = $_array[':email'];
         $hash = $_array[':hash'];
-        $sql = "SELECT COUNT(username) as focususer FROM user WHERE email = :email AND active = 0";
-        $stmt = $this->cn->prepare($sql);
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-        if ($row['focususer']==1) {
-          $to = $email;
-          $subject = "BlackEdge | Activación de cuenta.";
-          $message ='
+        $to = $email;
+        $subject = 'BlackEdge | Activación de cuenta.';
+        $message = '
               Gracias por registrarte en BlackEdge Store".$username."
               Activa tu cuenta con este enlace:
               blackedge.com/activeacount.php?email=".$email."&hash=".$hash."
@@ -75,15 +69,13 @@ class User
               ';
           $headers = 'From:noreply@blackedgestore.com . "\r\n"';
           mail($to, $subject, $message, $headers);
+          ?>
+          <script type="text/javascript">
+          window.location= '../login.php';
+          </script>
+          <?php
         }
       }
-        ?>
-        <script type="text/javascript">
-          window.location= '../login.php';
-        </script>
-        <?php
-      }
-    }
 
   function validateUsername($username){
     $sql = "SELECT COUNT(username) as num FROM user WHERE username = :username";
