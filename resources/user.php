@@ -62,15 +62,69 @@ class User
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
         $message = '
-          <html>
-            <head>
-              <title>Hay un nuevo pedido</title>
-              </head>
-              <body>
-               <h2>Hay un nuevo pedido</h2>
-	             <a href="https://www.miweb.com/pedidos/last.php">CLICK AQUI</a>
-               </body>
-          </html>
+        <html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+  <style>
+    .contenido{
+      max-width: 50%;
+      max-height: 1200px;
+      margin:auto;
+      color: var(--blackcolor);
+      margin-top: 150px;
+      justify-content: center;
+    }
+    .body-email{
+      background-color: #000;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-bottom: 100px;
+    }
+    .body-email>h1{
+      text-align: center;
+      padding-top: 120px;
+      padding-bottom: 40px;
+    }
+    .var-email{
+      color: #ff0063;
+    }
+    .body-email>p{
+      padding: 25px 25px;
+      font-size: 18px;
+    }
+    .var-link{
+      background-color: #ff0063;
+      padding: 14px;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+    }
+    .logo-email{
+      margin-top: 60px;
+      width: 30%;
+    }
+    body{
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+  <div class="contenido">
+    <div class="body-email">
+      <h1>Bienvenido <b class="var-email">Braulio</b></h1>
+      <p>Activa tu <b class="var-email">cuenta</b> con el siguiente botón:</p>
+      <a class="var-link" href="blackedgestore.com/active.php"><b>Activar cuenta</b></a>
+      <p class="text-email">No compartas tus credenciales con nadie.</p>
+      <img class="logo-email" src="https://blackedgestore.com/images/Logo/Logo.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
           ';
           $headers = "MIME-Version: 1.0" . "\r\n";
           $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
