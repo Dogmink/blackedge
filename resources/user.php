@@ -22,23 +22,6 @@ class User
   }
 
 
-
-  function alertValidate($username){
-    $sql = "SELECT COUNT(username) as usernoactive FROM user WHERE username = :username AND active = 0";
-    $stmt = $this->$cn->prepare($sql);
-    $stmt->bindParam(':username', $username);
-    $stmt->execute();
-    $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-    if($row['usernoactive']>0){
-        ?>
-        <div class="contenido-alert-active">
-          <p style=" color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email con el mensaje que se envió a tu correo, si no lo haces tu cuenta se eliminará en 30 días.</p>
-        </div>
-        <?php
-      }
-    }
-
-
   function userLogin($username, $password){
     $sql = "SELECT * FROM user WHERE username = :username AND password = SHA(:password)";
     $result = $this->cn->prepare($sql);

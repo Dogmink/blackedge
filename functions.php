@@ -10,7 +10,7 @@
       'cantidad' => $cantidad
     );
   }
-    
+
 
 
   function updateDesign($id,$cantidad = false){

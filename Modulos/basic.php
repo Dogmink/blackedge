@@ -3,8 +3,6 @@
     $divice = 'S/. ';
     $year = date('Y');
     require 'functions.php';
-    include 'resources/user.php';
-    $usuario = new BlackEdgeStore\User;
 
  ?>
 <!DOCTYPE html>
@@ -26,8 +24,15 @@
 <body>
     <?php
     $usr = $_SESSION['user_log'];
-    $username = $usr['username'];
-    $usuario->alertValidate($username);
+    $active = $usr['active'];
+    if ($active < 1) {
+      ?>
+      <div class="contenido-alert-active">
+        <p style=" color: var(--hovercolor1); font-size: 18px; text-align: center;">Valida tu email con el mensaje que se envió a tu correo, si no lo haces tu cuenta se eliminará en 30 días.</p>
+      </div>
+      <?php
+    }
+
      ?>
   <nav class="fadeInDown">
     <div class="BlackEdge_image">
