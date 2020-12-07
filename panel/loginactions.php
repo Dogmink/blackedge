@@ -51,7 +51,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
               'dni' => $result['dni'],
               'telf' => $result['telf'],
               'direc' => $result['direc'],
-              'img_prof' => $result['img_prof']
+              'img_prof' => $result['img_prof'],
+              'hash' => $result['hash'],
+              'active' => $result['active'],
+              'admin' => $result['admin']
             );
               ?>
               <script type="text/javascript">
