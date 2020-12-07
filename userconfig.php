@@ -6,6 +6,8 @@
 
 
     if (isset($_GET['edit']) & $_GET['edit'])==1) {
+      print 'se puede editar'.$user[];
+      /*
       ?>
 
       <div class="contenido">
@@ -60,7 +62,10 @@
       </div>
 
       <?php
+      */
     } else {
+        print 'No se puede editar'.$user;
+      /*
       ?>
 
       <div class="contenido">
@@ -114,7 +119,8 @@
       </form>
       </div>
 
-      <?php
+      <?php}
+      */
     }
 
   } else {
