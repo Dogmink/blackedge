@@ -37,7 +37,6 @@ class User
         <?php
       }
     }
-  }
 
 
   function userLogin($username, $password){
