@@ -174,7 +174,7 @@
       <div class="separator"></div>
       <div class="row-userconfig">
         <div class="col12">
-          <a class="btn-editar-userconfig" href="userconfig.php?edit=1">EDITAR DATOS</a>
+          <a class="btn-edit-userconfig" href="userconfig.php?edit=1">EDITAR DATOS</a>
         </div>
       </div>
     </form>
