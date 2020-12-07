@@ -24,11 +24,11 @@
       </div>
       <div class="row-userconfig">
         <div class="col6">
-          <input class="input-login" type="email" name="email" value="<?php print $usr['email']?>">
+          <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>">
           <span class="input-border"></span>
         </div>
         <div class="col6">
-          <input class="input-login" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
+          <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
           <span class="input-border"></span>
         </div>
       </div>
@@ -55,19 +55,19 @@
       </div>
       <div class="row-userconfig">
         <div class="col3">
-          <input class="input-login" type="text" name="nombres" value="<?php print $usr['nombres'] ?>">
+          <input class="input-userconfig" type="text" name="nombres" value="<?php print $usr['nombres'] ?>">
           <span class="input-border"></span>
         </div>
         <div class="col3">
-          <input class="input-login" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>">
+          <input class="input-userconfig" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>">
           <span class="input-border"></span>
         </div>
         <div class="col3">
-          <input class="input-login" type="number" name="dni" pattern=".{8,8}" maxlength="8" value="<?php print $usr['dni'] ?>">
+          <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value="<?php print $usr['dni'] ?>">
           <span class="input-border"></span>
         </div>
         <div class="col3">
-          <input class="input-login" type="number" name="telf" pattern=".{9,9}" maxlength="9" value="<?php print $usr['telf'] ?>">
+          <input class="input-userconfig" type="number" name="telf" pattern=".{9,9}" maxlength="9" value="<?php print $usr['telf'] ?>">
           <span class="input-border"></span>
         </div>
       </div>
@@ -79,7 +79,7 @@
       </div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="input-login" type="text" name="direc" value="<?php print $usr['direc'] ?>">
+          <input class="input-userconfig" type="text" name="direc" value="<?php print $usr['direc'] ?>">
           <span class="input-border"></span>
         </div>
       </div>
