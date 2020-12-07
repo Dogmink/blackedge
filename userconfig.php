@@ -1,7 +1,7 @@
 <?php
+    require 'Modulos/basic.php';
 
   if (isset($_SESSION['user_log'])) {
-    $user = $_SESSION['user_log'];
 
 
     if (isset($_GET['edit'])){
