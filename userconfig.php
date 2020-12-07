@@ -1,11 +1,11 @@
 <?php
   require 'Modulos/basic.php';
 
-  if (isset($_SESSION['user_log']) & $_SESSION['user_log'] != null) {
+  if (isset($_SESSION['user_log'])) {
     $user = $_SESSION['user_log'];
 
 
-    if (isset($_GET['edit']) & $_GET['edit'])==1) {
+    if (isset($_GET['edit'])){
       print 'se puede editar'.$user[];
       /*
       ?>
