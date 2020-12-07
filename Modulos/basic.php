@@ -51,7 +51,7 @@
           <li><a href="#" class="login-user"><?php print $user['username'];  ?></a>
             <ul>
               <li><a href="#">Perfil</a></li>
-              <li><a href="#">Configuración</a></li>
+              <li><a href="userconfig.php">Configuración</a></li>
               <li><a href="logout.php">Cerrar Sesión</a></li>
             </ul>
           </li>
