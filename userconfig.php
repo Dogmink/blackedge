@@ -5,7 +5,7 @@
 
 
     if (isset($_GET['edit'])){
-      print 'se puede editar'.$user[];
+      print 'se puede editar'.$user;
       /*
       ?>
 
