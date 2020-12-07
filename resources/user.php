@@ -69,7 +69,8 @@ class User
       </body>
       </html>
       <?php
-    } else {
+      $_SESSION['user_log'] = $VARIABLE_HOST;
+      } else {
       ?>
       <!DOCTYPE html>
       <html lang="en" dir="ltr">
