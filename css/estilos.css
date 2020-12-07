@@ -684,6 +684,83 @@ thead{
   color: var(--hovercolor1);
 }
 
+/* userconfig */
+
+.contenido-userconfig{
+  max-width: 1200px;
+  margin:auto;
+  color: var(--blackcolor);
+  justify-content: center;
+}
+
+.separator{
+  width: 70%;
+  background: #555555;
+  margin: 50px;
+}
+
+.row-userconfig{
+  display: flex;
+  justify-content: center;
+}
+
+.header-userconfig{
+  font-size: 25px;
+  color: #323744;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.input-userconfig{
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: none;
+  color: #ff004c;
+}
+
+.label-userconfig{
+  font-weight: 200;
+  font-size: 18px;
+  padding: 0 15px;
+  background: transparent;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3;
+}
+
+.input-border{
+  display:inline-block;
+  width:20px;
+  height: 1px;
+  background: #353635;
+  position: relative;
+  top:-10px;
+  -webkit-transition: all ease-in-out .15s;
+  -o-transition: all ease-in-out .15s;
+  transition: all ease-in-out .15s;
+}
+
+.input-userconfig:hover,
+.input-userconfig:active,
+.input-userconfig:focus{
+  outline: none;
+}
+
+.input-userconfig:hover+.input-border,
+.input-userconfig:active+.input-border,
+.input-userconfig:focus+.input-border{
+  width:80%;
+}
+
+.btn-edit-userconfig{
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(43, 39, 43);
+  color: #fff;
+  text-align: center;
+}
 
 
 
