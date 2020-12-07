@@ -69,7 +69,21 @@ class User
       </body>
       </html>
       <?php
-      $_SESSION['user_log'] = $VARIABLE_HOST;
+      $_SESSION['user_log'] = array(
+        'id' => $stmt['id'],
+        'username' => $stmt['username'],
+        'password' => $stmt['password'],
+        'email' => $stmt['email'],
+        'nombres' => $stmt['nombres'],
+        'apellidos' => $stmt['apellidos'],
+        'dni' => $stmt['dni'],
+        'telf' => $stmt['telf'],
+        'direc' => $stmt['direc'],
+        'img_prof' => $stmt['img_prof'],
+        'hash' => $stmt['hash'],
+        'active' => $stmt['active'],
+        'admin' => $stmt['admin']
+      );
       } else {
       ?>
       <!DOCTYPE html>
