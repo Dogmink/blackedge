@@ -7,6 +7,7 @@ $password = "";
 
 
 
+//------------------LOGIN USER--------------------------//
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if ($_POST['accion']==='Registrarse'){
@@ -70,4 +71,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
           }
         }
       }
+
+//-----------------------CONFIG USE------------------------------------//
+
+
+
+
+
  ?>
