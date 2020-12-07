@@ -113,11 +113,9 @@
       <div class="row-userconfig">
         <div class="col6">
           <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
-          <span class="input-border"></span>
         </div>
         <div class="col6">
           <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
-          <span class="input-border"></span>
         </div>
       </div>
       <div class="separator"></div>
@@ -144,19 +142,15 @@
       <div class="row-userconfig">
         <div class="col3">
           <input class="input-userconfig" type="text" name="nombres" value="<?php print $usr['nombres'] ?>"<?php if ($usr['nombres']!=null) { ?> readonly="readonly" <?php } ?>>
-          <span class="input-border"></span>
         </div>
         <div class="col3">
           <input class="input-userconfig" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>"<?php if ($usr['apellidos']!=null) { ?> readonly="readonly" <?php } ?>>
-          <span class="input-border"></span>
         </div>
         <div class="col3">
           <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value="<?php print $usr['dni'] ?>"<?php if ($usr['dni']!=null) { ?> readonly="readonly" <?php } ?>>
-          <span class="input-border"></span>
         </div>
         <div class="col3">
           <input class="input-userconfig" type="number" name="telf" pattern=".{8,9}" maxlength="9" value="<?php print $usr['telf'] ?>"<?php if ($usr['telf']!=null) { ?> readonly="readonly" <?php } ?>>
-          <span class="input-border"></span>
         </div>
       </div>
       <div class="separator"></div>
@@ -168,7 +162,6 @@
       <div class="row-userconfig">
         <div class="col12">
           <input class="input-userconfig" type="text" name="direc" value="<?php print $usr['direc'] ?>"<?php if ($usr['direc']!=null) { ?> readonly="readonly" <?php } ?>>
-          <span class="input-border"></span>
         </div>
       </div>
       <div class="separator"></div>
