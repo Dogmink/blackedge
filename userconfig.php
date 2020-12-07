@@ -5,7 +5,7 @@
 
 
     if (isset($_GET['edit'])){
-      print 'se puede editar'.$user;
+      print 'se puede editar'.$usr;
       /*
       ?>
 
@@ -63,7 +63,7 @@
       <?php
       */
     } else {
-        print 'No se puede editar'.$user;
+        print 'No se puede editar'.$usr;
       /*
       ?>
 
