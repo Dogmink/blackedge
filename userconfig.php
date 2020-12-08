@@ -10,7 +10,7 @@
     $usr = $_SESSION['user_log'];
     if (isset($_GET['edit']) & $_GET['edit'] != null){
       $edit = $_GET['edit'];
-      if ($edit = 1) {
+      if ($edit == 1) {
       ?>
       <div class="contenido-userconfig">
       <div class="row-userconfig">
