@@ -716,7 +716,9 @@ thead{
   width: 80%;
   padding: 10px 15px;
   margin-top: 20px;
-  border: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   color: #ff004c;
   font-size: 20px;
 }
@@ -725,7 +727,9 @@ thead{
   width: 80%;
   padding: 10px 15px;
   margin-top: 20px;
-  border:none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   color: #ff004c;
   font-size: 20px;
 }
@@ -754,8 +758,13 @@ thead{
 
 .input-userconfig:hover,
 .input-userconfig:active,
-.input-userconfig:focus{
-  outline: none;
+.input-userconfig:focus,
+.input-userconfig-readonly:hover,
+.input-userconfig-readonly:active,
+.input-userconfig-readonly:focus{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .btn-edit-userconfig{
