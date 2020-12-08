@@ -279,7 +279,7 @@
       </div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="input-userconfig-readonly" type="text" name="direc" value="<?php print $usr['direc'] ?>"<?php if ($usr['direc']!=null) { ?> readonly="readonly" <?php } ?>>
+          <input class="input-userconfig-readonly" type="text" name="direc" value="<?php print $usr['direc'] ?>" readonly="readonly">
         </div>
       </div>
       <div class="separator"></div>
