@@ -175,6 +175,7 @@ class User
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
+      $usr='';
       $usr = $_SESSION['user_log'];
       $result = $this->cn->prepare($sql);
         $_array = array(
@@ -191,7 +192,7 @@ class User
           return $result->fetch();
         return false;
         }
-  }
+      }
 
     function validateEmailUserconfig($email){
       $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
