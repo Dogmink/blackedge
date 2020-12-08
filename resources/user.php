@@ -174,16 +174,11 @@ class User
 
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
-      $sql = "UPDATE user SET email = :email, nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
+      $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
       $result = $this->cn->prepare($sql);
-      $hash = md5(rand(0, 1000));
-      $email = $_params['email'];
-      session_start();
-      $usr = $_SESSION['user_log'];
       if ($usr['email'] == $_params['email']) {
         $_array = array(
-          ":username" => $configuser['username'],
-          ":email" => $_params['email'],
+          ":username" => $usr['username'],
           ":nombres" => $_params['nombres'],
           ":apellidos" => $_params['apellidos'],
           ":dni" => $_params['dni'],
@@ -195,22 +190,6 @@ class User
         if($result->execute($_array)){
           return $result->fetch();
         return false;
-      } else if (!validateEmailUserconfig($email)) {
-          $_array = array(
-            ":username" => $usr['username'],
-            ":email" => $_params['email'],
-            ":nombres" => $_params['nombres'],
-            ":apellidos" => $_params['apellidos'],
-            ":dni" => $_params['dni'],
-            ":telf" => $_params['telf'],
-            ":direc" => $_params['direc'],
-            ":hash" => $hash,
-            ":active" => 0
-          );
-          if($result->execute($_array)){
-            return $result->fetch();
-          return false;
-        }
       }
     }
   }

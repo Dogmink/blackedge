@@ -75,10 +75,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 //-----------------------CONFIG USER------------------------------------//
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
-      if ($_POST['accion']==='GUARDAR CAMBIOS'){
+      if ($_POST['accion']==='GUARDAR CONFIG. DE COMPRA'){
         $email = $_POST['email']
         $_params = array(
-          'email'=>$_POST['email'],
           'nombres'=>$_POST['nombres'],
           'apellidos'=>$_POST['apellidos'],
           'dni'=>$_POST['dni'],
@@ -87,13 +86,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         );
         $result = $user->updateInfo($_params);
           if ($result) {
-            if($user->validateEmailUserconfig($email)){
-              ?>
-              <script type="text/javascript">
-              window.location= '../userconfig.php?edit=1&err=1';
-              </script>
-              <?php
-            }
             session_start();
             $_SESSION['user_log'] = array(
               'id' => $result['id'],

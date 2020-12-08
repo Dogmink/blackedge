@@ -9,7 +9,6 @@
     if (isset($_GET['edit']) & $_GET['edit'] == 1){
       ?>
       <div class="contenido-userconfig">
-      <form class="" action="./panel/loginactions.php" method="post">
       <div class="row-userconfig">
         <div class="col12">
           <p class="header-userconfig">Configuración de acceso</p>
@@ -26,17 +25,16 @@
       </div>
       <div class="row-userconfig">
         <div class="col6">
-          <?php
-          if ($err != null) {
-            ?>
-            <p style="color: #ff004c; font-size: 14px;">El correo ingresado ya se encuentra en uso, ingrese otro.</p>
-            <?php
-          }
-           ?>
-          <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>">
+          <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
         </div>
         <div class="col6">
           <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <a class="btn-edit-userconfig" href="userconfig.php?edit=2">EDITAR DATOS</a>
         </div>
       </div>
       <div class="separator"></div>
@@ -46,6 +44,7 @@
         </div>
       </div>
       <div class="separator"></div>
+      <form class="" action="./panel/loginactions.php" method="post">
       <div class="row-userconfig">
         <div class="col3">
           <label for="nombres" class="label-userconfig">Nombres</label>
@@ -88,10 +87,97 @@
       <div class="separator"></div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="btn-edit-userconfig" type="submit" name="accion" value="GUARDAR CAMBIOS">
+          <input class="btn-edit-userconfig" type="submit" name="accion" value="GUARDAR CONFIG. DE COMPRA">
         </div>
       </div>
     </form>
+    </div>
+      <?php
+    } else if(isset($_GET['edit']) & $_GET['edit'] == 2){
+      ?>
+      <div class="contenido-userconfig">
+      <form class="" action="./panel/loginactions.php" method="post">
+      <div class="row-userconfig">
+        <div class="col12">
+          <p class="header-userconfig">Configuración de acceso</p>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col6">
+          <label for="email" class="label-userconfig">Correo electronico</label>
+        </div>
+        <div class="col6">
+          <label for="password" class="label-userconfig">Contraseña</label>
+        </div>
+      </div>
+      <div class="row-userconfig">
+        <div class="col6">
+          <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>">
+        </div>
+        <div class="col6">
+          <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <input class="btn-edit-userconfig" type="submit" name="accion" value="GUARDAR CONFIG. DE ACC.">
+        </div>
+      </div>
+    </form>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <p class="header-userconfig">Configuración de información de compra.</p>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col3">
+          <label for="nombres" class="label-userconfig">Nombres</label>
+        </div>
+        <div class="col3">
+          <label for="apellidos" class="label-userconfig">Apellidos</label>
+        </div>
+        <div class="col3">
+          <label for="dni" class="label-userconfig">DNI</label>
+        </div>
+        <div class="col3">
+          <label for="telf" class="label-userconfig">Celular o Telefono</label>
+        </div>
+      </div>
+      <div class="row-userconfig">
+        <div class="col3">
+          <input class="input-userconfig" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
+        </div>
+        <div class="col3">
+          <input class="input-userconfig" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
+        </div>
+        <div class="col3">
+          <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value="<?php  if($usr['dni'] == 0){ print "";}else{print $usr['dni'];} ?>" readonly="readonly">
+        </div>
+        <div class="col3">
+          <input class="input-userconfig" type="number" name="telf" pattern=".{9,9}" maxlength="9" value="<?php  if($usr['dni'] == 0){ print "";}else{print $usr['dni'];} ?>" readonly="readonly">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <label for="direc" class="label-userconfig">Dirección</label>
+        </div>
+      </div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <input class="input-userconfig" type="text" name="direc" value="<?php print $usr['direc'] ?>" readonly="readonly">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <a class="btn-edit-userconfig" href="userconfig.php?edit=1">EDITAR DATOS</a>
+        </div>
+      </div>
     </div>
       <?php
     } else {
@@ -117,6 +203,12 @@
         </div>
         <div class="col6">
           <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="row-userconfig">
+        <div class="col12">
+          <a class="btn-edit-userconfig" href="userconfig.php?edit=2">EDITAR DATOS</a>
         </div>
       </div>
       <div class="separator"></div>
