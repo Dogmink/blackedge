@@ -239,10 +239,10 @@
       </div>
       <div class="row-userconfig">
         <div class="col3">
-          <input class="input-userconfig-readonly" type="text" name="nombres" value="<?php print $usr['nombres'] ?>"<?php if ($usr['nombres']!=null) { ?> readonly="readonly" <?php } ?>>
+          <input class="input-userconfig-readonly" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig-readonly" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>"<?php if ($usr['apellidos']!=null) { ?> readonly="readonly" <?php } ?>>
+          <input class="input-userconfig-readonly" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
         </div>
         <div class="col3">
           <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
