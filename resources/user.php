@@ -174,15 +174,13 @@ class User
 
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
-      session_start();
-      $configuser = $_SESSION['user_log'];
       $sql = "UPDATE user SET email = :email, nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
       $result = $this->cn->prepare($sql);
       $hash = md5(rand(0, 1000));
       $email = $_params['email'];
       session_start();
-      $configuser = $_SESSION['user_log'];
-      if ($configuser['email'] == $_params['email']) {
+      $usr = $_SESSION['user_log'];
+      if ($usr['email'] == $_params['email']) {
         $_array = array(
           ":username" => $configuser['username'],
           ":email" => $_params['email'],
@@ -199,7 +197,7 @@ class User
         return false;
       } else if (!validateEmailUserconfig($email)) {
           $_array = array(
-            ":username" => $configuser['username']
+            ":username" => $usr['username'],
             ":email" => $_params['email'],
             ":nombres" => $_params['nombres'],
             ":apellidos" => $_params['apellidos'],
