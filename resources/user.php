@@ -22,6 +22,8 @@ class User
   }
 
 
+/*------------- Login and validation account -------------*/
+
   function userLogin($username, $password){
     $sql = "SELECT * FROM user WHERE username = :username AND password = SHA(:password)";
     $result = $this->cn->prepare($sql);
@@ -45,68 +47,13 @@ class User
     if ($row['useractive']>0) {
       $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
       $stmt = $this->cn->prepare($sql);
-      $stmt->bindParam(':username', $username);
-      $stmt->execute();
-      ?>
-      <!DOCTYPE html>
-      <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>BlackEdge Store | Activación de cuenta</title>
-        <link rel="stylesheet" href="/css/grid.css">
-        <link rel="stylesheet" href="/css/estilos.css">
-      </head>
-      <body>
-        <div class="contenido">
-          <h1 style="font-size: 50px; text-align: center;padding-top: 120px;padding-bottom: 40px;">Todo listo, <b style="color: var(--hovercolor1);"><?php print $username ?></b></h1>
-          <h3 style="font-size: 25px; text-align: center;padding-top: 50px;padding-bottom: 40px;">Se te redireccionará en uno momento.</h3>
-          <script type="text/javascript">
-          setTimeout(function () {
-            window.location.href = "index.php";
-          }, 6000);
-          </script>
-        </div>
-      </body>
-      </html>
-      <?php
-      $_SESSION['user_log'] = array(
-        'id' => $stmt['id'],
-        'username' => $stmt['username'],
-        'password' => $stmt['password'],
-        'email' => $stmt['email'],
-        'nombres' => $stmt['nombres'],
-        'apellidos' => $stmt['apellidos'],
-        'dni' => $stmt['dni'],
-        'telf' => $stmt['telf'],
-        'direc' => $stmt['direc'],
-        'img_prof' => $stmt['img_prof'],
-        'hash' => $stmt['hash'],
-        'active' => $stmt['active'],
-        'admin' => $stmt['admin']
+      $_array = array(
+        'username' => $username,
       );
-      } else {
-      ?>
-      <!DOCTYPE html>
-      <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>BlackEdge Store | Activación de cuenta</title>
-        <link rel="stylesheet" href="/css/grid.css">
-        <link rel="stylesheet" href="/css/estilos.css">
-      </head>
-      <body>
-        <div class="contenido">
-          <h1 style="font-size: 50px; text-align: center;padding-top: 120px;padding-bottom: 40px;">Oops, algo salió <b style="color: var(--hovercolor1);">mal</b></h1>
-          <h3 style="font-size: 25px; text-align: center;padding-top: 50px;padding-bottom: 40px;">Se te redireccionará en uno momento.</h3>
-          <script type="text/javascript">
-          setTimeout(function () {
-            window.location.href = "index.php";
-          }, 6000);
-          </script>
-        </div>
-      </body>
-      </html>
-      <?php
+      if ($stmt->execute($_array)) {
+          return $stmt->fetch();
+        return false;
+      }
     }
   }
 
@@ -150,7 +97,7 @@ class User
                 <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
                 <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?username='.$username.'&hash='.$hash.'"><b>Activar cuenta</b></a>
                 <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
-                <img style="margin-top: 60px;height: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo2.png" alt="">
+                <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo.png" alt="">
               </div>
             </div>
           </body>
@@ -225,6 +172,61 @@ class User
 
   }
 
+/*----------------------Userconfig--------------*/
+  function updateInfo($_params){
+      session_start();
+      $configuser = $_SESSION['user_log'];
+      $sql = "UPDATE user SET email = :email, nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
+      $result = $this->cn->prepare($sql);
+      $hash = md5(rand(0, 1000));
+      $email = $_params['email']
+      session_start();
+      $configuser = $_SESSION['user_log'];
+      if ($configuser['email'] == $_params['email']) {
+        $_array = array(
+          ":username" => $configuser['username']
+          ":email" => $_params['email'],
+          ":nombres" => $_params['nombres'],
+          ":apellidos" => $_params['apellidos'],
+          ":dni" => $_params['dni'],
+          ":telf" => $_params['telf'],
+          ":direc" => $_params['direc'],
+          ":hash" => null;
+          ":active" => 1;
+        );
+        if($result->execute($_array)){
+          return $result->fetch();
+        return false;
+      } else if (!validateEmailUserconfig($email)) {
+          $_array = array(
+            ":username" => $configuser['username']
+            ":email" => $_params['email'],
+            ":nombres" => $_params['nombres'],
+            ":apellidos" => $_params['apellidos'],
+            ":dni" => $_params['dni'],
+            ":telf" => $_params['telf'],
+            ":direc" => $_params['direc'],
+            ":hash" => $hash;
+            ":active" => 0;
+          );
+          if($result->execute($_array)){
+            return $result->fetch();
+          return false;
+        }
+      }
+    }
+  }
 
+    function validateEmailUserconfig($email){
+      $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
+      $stmt = $this->cn->prepare($sql);
+      $stmt->bindValue(':email', $email);
+      $stmt->execute();
+      $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+      if ($row['mail']>0) {
+        return $stmt->fetch();
+      return false;
+      }
+    }
   }
  ?>

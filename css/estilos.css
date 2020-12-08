@@ -716,7 +716,9 @@ thead{
   width: 100%;
   padding: 10px 15px;
   margin-top: 20px;
-  border: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   color: #ff004c;
   font-size: 20px;
 }
@@ -731,29 +733,6 @@ thead{
   transition: all ease-in-out 0.3;
 }
 
-.input-border{
-  display:inline-block;
-  width:20px;
-  height: 1px;
-  background: #353635;
-  position: relative;
-  top:-10px;
-  -webkit-transition: all ease-in-out .15s;
-  -o-transition: all ease-in-out .15s;
-  transition: all ease-in-out .15s;
-}
-
-.input-userconfig:hover,
-.input-userconfig:active,
-.input-userconfig:focus{
-  outline: none;
-}
-
-.input-userconfig:hover+.input-border,
-.input-userconfig:active+.input-border,
-.input-userconfig:focus+.input-border{
-  width:80%;
-}
 
 .btn-edit-userconfig{
   padding: 20px;
