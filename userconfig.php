@@ -184,7 +184,8 @@
       </div>
     </div>
       <?php
-    } else {
+    }
+  } else {
       ?>
       <div class="contenido-userconfig">
       <div class="row-userconfig">
@@ -290,7 +291,6 @@
     </div>
       <?php
     }
-  }
 }else {
   header('Location: index.php');
 }
