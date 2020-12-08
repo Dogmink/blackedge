@@ -48,7 +48,7 @@ class User
       $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
       $stmt = $this->cn->prepare($sql);
       $_array = array(
-        'username' => $username,
+        'username' => $username
       );
       if ($stmt->execute($_array)) {
           return $stmt->fetch();
