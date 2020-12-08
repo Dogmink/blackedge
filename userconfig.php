@@ -245,7 +245,7 @@
           <input class="input-userconfig-readonly" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
+          <input class="input-userconfig-readonly" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
           <?php if($usr['dni']!=null){
              if($usr['dni'] == 0){
                 ?>""<?php
@@ -258,7 +258,7 @@
               ?>
         </div>
         <div class="col3">
-          <input class="input-userconfig" type="number" name="telf" pattern=".{8,9}" maxlength="9" value=
+          <input class="input-userconfig-readonly" type="number" name="telf" pattern=".{8,9}" maxlength="9" value=
           <?php if($usr['telf']!=null){
              if($usr['telf'] == 0){
                 ?>""<?php
