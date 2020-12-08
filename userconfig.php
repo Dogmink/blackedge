@@ -91,7 +91,7 @@
       <div class="separator"></div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="btn-edit-userconfig" type="submit" name="accion" value="GUARDAR CONFIG. DE COMPRA">
+          <input class="btn-edit-userconfig" type="submit" name="accion" value="GUARDAR">
         </div>
       </div>
     </form>
