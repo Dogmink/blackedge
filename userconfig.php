@@ -1,12 +1,16 @@
 <?php
     require 'Modulos/basic.php';
     $err = '';
+    $edit = '';
     if (isset($_GET['err']) && $_GET['err']!=null && is_numeric($_GET['err'])) {
       $err = $_GET['err'];
     }
 
   if (isset($_SESSION['user_log']) & $_SESSION['user_log'] != null ) {
-    if (isset($_GET['edit']) & $_GET['edit'] == 1){
+    $usr = $_SESSION['user_log'];
+    if (isset($_GET['edit']) & $_GET['edit'] != null){
+      $edit = $_GET['edit'];
+      if ($edit = 1) {
       ?>
       <div class="contenido-userconfig">
       <div class="row-userconfig">
@@ -25,10 +29,10 @@
       </div>
       <div class="row-userconfig">
         <div class="col6">
-          <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
         </div>
         <div class="col6">
-          <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
         </div>
       </div>
       <div class="separator"></div>
@@ -93,7 +97,7 @@
     </form>
     </div>
       <?php
-    } else if(isset($_GET['edit']) & $_GET['edit'] == 2){
+    } else if($edit == 2){
       ?>
       <div class="contenido-userconfig">
       <form class="" action="./panel/loginactions.php" method="post">
@@ -149,16 +153,16 @@
       </div>
       <div class="row-userconfig">
         <div class="col3">
-          <input class="input-userconfig" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value="<?php  if($usr['dni'] == 0){ print "";}else{print $usr['dni'];} ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="number" name="dni" pattern=".{8,8}" maxlength="8" value="<?php  if($usr['dni'] == 0){ print "";}else{print $usr['dni'];} ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig" type="number" name="telf" pattern=".{9,9}" maxlength="9" value="<?php  if($usr['dni'] == 0){ print "";}else{print $usr['dni'];} ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="number" name="telf" pattern=".{9,9}" maxlength="9" value="<?php  if($usr['dni'] == 0){ print "";}else{print $usr['dni'];} ?>" readonly="readonly">
         </div>
       </div>
       <div class="separator"></div>
@@ -169,7 +173,7 @@
       </div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="input-userconfig" type="text" name="direc" value="<?php print $usr['direc'] ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="text" name="direc" value="<?php print $usr['direc'] ?>" readonly="readonly">
         </div>
       </div>
       <div class="separator"></div>
@@ -199,10 +203,10 @@
       </div>
       <div class="row-userconfig">
         <div class="col6">
-          <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
         </div>
         <div class="col6">
-          <input class="input-userconfig" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
+          <input class="input-userconfig-readonly" type="password" name="password" value="<?php print $usr['password']?>" readonly="readonly">
         </div>
       </div>
       <div class="separator"></div>
@@ -234,10 +238,10 @@
       </div>
       <div class="row-userconfig">
         <div class="col3">
-          <input class="input-userconfig" type="text" name="nombres" value="<?php print $usr['nombres'] ?>"<?php if ($usr['nombres']!=null) { ?> readonly="readonly" <?php } ?>>
+          <input class="input-userconfig-readonly" type="text" name="nombres" value="<?php print $usr['nombres'] ?>"<?php if ($usr['nombres']!=null) { ?> readonly="readonly" <?php } ?>>
         </div>
         <div class="col3">
-          <input class="input-userconfig" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>"<?php if ($usr['apellidos']!=null) { ?> readonly="readonly" <?php } ?>>
+          <input class="input-userconfig-readonly" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>"<?php if ($usr['apellidos']!=null) { ?> readonly="readonly" <?php } ?>>
         </div>
         <div class="col3">
           <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
@@ -274,7 +278,7 @@
       </div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="input-userconfig" type="text" name="direc" value="<?php print $usr['direc'] ?>"<?php if ($usr['direc']!=null) { ?> readonly="readonly" <?php } ?>>
+          <input class="input-userconfig-readonly" type="text" name="direc" value="<?php print $usr['direc'] ?>"<?php if ($usr['direc']!=null) { ?> readonly="readonly" <?php } ?>>
         </div>
       </div>
       <div class="separator"></div>

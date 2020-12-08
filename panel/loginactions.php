@@ -5,8 +5,6 @@ $username = "";
 $email = "";
 $password = "";
 
-
-
 //------------------LOGIN USER--------------------------//
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){

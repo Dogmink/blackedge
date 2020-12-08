@@ -713,7 +713,7 @@ thead{
 }
 
 .input-userconfig{
-  width: 100%;
+  width: 80%;
   padding: 10px 15px;
   margin-top: 20px;
   border-top: 0;
@@ -722,6 +722,16 @@ thead{
   color: #ff004c;
   font-size: 20px;
 }
+
+.input-userconfig-readonly{
+  width: 80%;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border:none;
+  color: #ff004c;
+  font-size: 20px;
+}
+
 
 .label-userconfig{
   font-weight: 200;
