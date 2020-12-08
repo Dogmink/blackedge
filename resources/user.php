@@ -175,10 +175,10 @@ class User
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
-      $user = $_SESSION['user_log'];
+      $usr = $_SESSION['user_log'];
       $result = $this->cn->prepare($sql);
         $_array = array(
-          ":username" => $user['username'],
+          ":username" => $usr['username'],
           ":nombres" => $_params['nombres'],
           ":apellidos" => $_params['apellidos'],
           ":dni" => $_params['dni'],
