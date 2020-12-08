@@ -184,15 +184,15 @@ class User
       $configuser = $_SESSION['user_log'];
       if ($configuser['email'] == $_params['email']) {
         $_array = array(
-          ":username" => $configuser['username']
+          ":username" => $configuser['username'],
           ":email" => $_params['email'],
           ":nombres" => $_params['nombres'],
           ":apellidos" => $_params['apellidos'],
           ":dni" => $_params['dni'],
           ":telf" => $_params['telf'],
           ":direc" => $_params['direc'],
-          ":hash" => null;
-          ":active" => 1;
+          ":hash" => null,
+          ":active" => 1
         );
         if($result->execute($_array)){
           return $result->fetch();
@@ -206,8 +206,8 @@ class User
             ":dni" => $_params['dni'],
             ":telf" => $_params['telf'],
             ":direc" => $_params['direc'],
-            ":hash" => $hash;
-            ":active" => 0;
+            ":hash" => $hash,
+            ":active" => 0
           );
           if($result->execute($_array)){
             return $result->fetch();
