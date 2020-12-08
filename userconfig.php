@@ -248,7 +248,7 @@
           <input class="input-userconfig" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
           <?php if($usr['dni']!=null){
              if($usr['dni'] == 0){
-                ?>" <?php print ''; ?>"<?php
+                ?>""<?php
               }else{
                 ?>"<?php print $usr['dni']; ?>"<?php
               }  ?>
@@ -261,7 +261,7 @@
           <input class="input-userconfig" type="number" name="telf" pattern=".{8,9}" maxlength="9" value=
           <?php if($usr['telf']!=null){
              if($usr['telf'] == 0){
-                ?>" <?php print ''; ?>"<?php
+                ?>""<?php
               }else{
                 ?>"<?php print $usr['telf']; ?>"<?php
               }  ?>
