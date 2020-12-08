@@ -76,7 +76,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
       if ($_POST['accion']==='GUARDAR CONFIG. DE COMPRA'){
-        $email = $_POST['email']
         $_params = array(
           'nombres'=>$_POST['nombres'],
           'apellidos'=>$_POST['apellidos'],

@@ -175,10 +175,10 @@ class User
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
+      $user = $_SESSION['user_log'];
       $result = $this->cn->prepare($sql);
-      if ($usr['email'] == $_params['email']) {
         $_array = array(
-          ":username" => $usr['username'],
+          ":username" => $user['username'],
           ":nombres" => $_params['nombres'],
           ":apellidos" => $_params['apellidos'],
           ":dni" => $_params['dni'],
@@ -190,8 +190,7 @@ class User
         if($result->execute($_array)){
           return $result->fetch();
         return false;
-      }
-    }
+        }
   }
 
     function validateEmailUserconfig($email){
