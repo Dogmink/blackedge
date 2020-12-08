@@ -179,7 +179,7 @@ class User
       $sql = "UPDATE user SET email = :email, nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
       $result = $this->cn->prepare($sql);
       $hash = md5(rand(0, 1000));
-      $email = $_params['email']
+      $email = $_params['email'];
       session_start();
       $configuser = $_SESSION['user_log'];
       if ($configuser['email'] == $_params['email']) {
