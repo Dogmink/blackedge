@@ -23,9 +23,9 @@
 </head>
 <body>
     <?php
-    $usr = $_SESSION['user_log'];
-    $active = $usr['active'];
     if (isset($_SESSION['user_log'])) {
+      $user = $_SESSION['user_log'];
+      $active = $user['active'];
       if ($active != 1) {
         ?>
         <div class="contenido-alert-active">
