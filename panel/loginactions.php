@@ -101,6 +101,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
               'active' => $result['active'],
               'admin' => $result['admin']
           );
+          ?>
+          <script type="text/javascript">
+          window.location= '../userconfig.php';
+          </script>
+          <?php
         }
       }
  ?>
