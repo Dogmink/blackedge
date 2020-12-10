@@ -172,6 +172,8 @@ class User
 
 /*----------------------Userconfig--------------*/
   function actualizarInfo($parametros){
+        $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
+        $stmt = $this->cn->prepare($sql);
         $arreglo = array(
           ':username' => $parametros['username'],
           ':nombres' => $parametros['nombres'],
@@ -180,9 +182,19 @@ class User
           ':telf' => $parametros['telf'],
           ':direc' => $parametros['direc']
         );
-            print '<pre>';
-            print_r($arreglo);
+        if ($stmt->execute($arreglo)) {
+          $sql = "SELECT * FROM user WHERE username = :username";
+          $result = $this->cn->prepare($sql);
+          $arreglo2 = array(
+            ':username' => $parametros['username']
+          );
+          if ($result->execute($arreglo2)) {
+                return $result->fetch();
+              return false;
           }
+        }
+      }
+}
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";

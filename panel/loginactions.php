@@ -82,7 +82,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       'telf' => $_POST['telf'],
       'direc' => $_POST['direc']
     );
-    $user->actualizarInfo($parametros);
+    $resultado = $user->actualizarInfo($parametros);
+    if ($resultado) {
+      print '<pre>';
+      print_r($resultado);
+    }
   }
 }
 
