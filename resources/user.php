@@ -32,7 +32,8 @@ class User
       'password' => $password
     );
     if ($result->execute($_array)) {
-      return true;
+        return $result->fetch();
+      return false;
     }
   }
 
@@ -48,10 +49,9 @@ class User
       $stmt = $this->cn->prepare($sql);
       $stmt->bindParam(':username', $username);
       if ($stmt->execute()) {
-        return true;
+            return $stmt->fetch();
+          return false;
       }
-    } else {
-      return false;
     }
   }
 
@@ -183,10 +183,8 @@ class User
       $res->bindParam(':telf', $_params['telf']);
       $res->bindParam(':direc', $_params['direc']);
         if($res->execute($_array)){
-        return true;
-      }else {
-        return false;
-      }
+              return $res->fetch();
+            return false;
       }
 
     // function validateEmailUserconfig($email){
