@@ -71,18 +71,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       }
 
 //-----------------------CONFIG USER------------------------------------//
-
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-      if ($_POST['accion']==='GUARDAR'){
-            print 'Se actualizó la información';
-
-        }  else {
-          print 'Ocurrió un problema con result';
-        }
-      }else {
-       print 'Ocurrio un problema con accion';
-      }
-    }else {
-      print 'No hay acceso al post';
-    }
  ?>
