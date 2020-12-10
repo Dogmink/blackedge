@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="separator"></div>
-      <form class="" action="./panel/loginactions.php" method="post">
+      <form class="" action="./panel/loginactions.php" method="POST">
       <div class="row-userconfig">
         <div class="col3">
           <label for="nombres" class="label-userconfig">Nombres</label>

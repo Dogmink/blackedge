@@ -88,7 +88,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
           window.location= '../userconfig.php';
           </script>
           <?php
+        }  else {
+          print 'Ocurrió un problema con result';
         }
+      }else {
+       print 'Ocurrio un problema con accion';
       }
+    }else {
+      print 'No hay acceso al post';
     }
  ?>
