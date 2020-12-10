@@ -174,7 +174,7 @@ class User
 
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
-      $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
+      $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
       $usr = '';
       $usr = $_SESSION['user_log'];
       $res->bindParam(':username', $username);

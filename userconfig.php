@@ -1,12 +1,12 @@
 <?php
     require 'Modulos/basic.php';
     $err = '';
-    $edit = '';
     if (isset($_GET['err']) && $_GET['err']!=null && is_numeric($_GET['err'])) {
       $err = $_GET['err'];
     }
 
   if (isset($_SESSION['user_log']) & $_SESSION['user_log'] != null ) {
+    $edit = '';
     $usr = $_SESSION['user_log'];
     if (isset($_GET['edit']) & $_GET['edit'] != null){
       $edit = $_GET['edit'];
