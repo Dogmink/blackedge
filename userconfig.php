@@ -6,9 +6,9 @@
       $err = $_GET['err'];
     }
 
-  if (isset($_SESSION['user_log']) & $_SESSION['user_log'] != null ) {
+  if (isset($_SESSION['user_log']) && $_SESSION['user_log'] != null ) {
     $usr = $_SESSION['user_log'];
-    if (isset($_GET['edit']) & $_GET['edit'] != null){
+    if (isset($_GET['edit']) && $_GET['edit'] != null){
       $edit = $_GET['edit'];
       if ($edit == 1) {
       ?>

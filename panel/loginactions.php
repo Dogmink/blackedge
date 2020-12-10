@@ -74,8 +74,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if ($_POST['accion']==='GUARDAR'){
-    session_start();
-    $user = $_SESSION['user_log'];
     $_params = array(
       'username'=> $_POST['username'];
       'nombres' => $_POST['nombres'],
