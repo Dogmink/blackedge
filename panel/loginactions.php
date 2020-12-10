@@ -83,27 +83,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         );
         $result = $user->updateInfo($_params);
           if ($result) {
-            session_start();
-            $_SESSION['user_log'] = array(
-              'id' => $result['id'],
-              'username' => $result['username'],
-              'password' => $result['password'],
-              'email' => $result['email'],
-              'nombres' => $result['nombres'],
-              'apellidos' => $result['apellidos'],
-              'dni' => $result['dni'],
-              'telf' => $result['telf'],
-              'direc' => $result['direc'],
-              'img_prof' => $result['img_prof'],
-              'hash' => $result['hash'],
-              'active' => $result['active'],
-              'admin' => $result['admin']
-            );
-          ?>
-          <script type="text/javascript">
-          window.location= '../userconfig.php';
-          </script>
-          <?php
+            print 'Se actualizó la información'
+          
         }  else {
           print 'Ocurrió un problema con result';
         }
