@@ -175,9 +175,8 @@ class User
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
       $usr = '';
       $usr = $_SESSION['user_log'];
-      $res->bindParam(':username', $username);
       $res = $this->cn->prepare($sql);
-      $res->bindParam(':username', $username);
+      $res->bindParam(':username', $usr);
       $res->bindParam(':nombres', $_params['nombres'];
       $res->bindParam(':apellidos', $_params['apellidos']);
       $res->bindParam(':dni', $_params['dni']);
