@@ -186,11 +186,11 @@ class User
           $sql = "SELECT * FROM user WHERE username = :username";
           $result = $this->cn->prepare($sql);
           $arreglo2 = array(
-            ':username' => $parametros['username'],
+            ':username' => $parametros['username']
           );
           if ($result->execute($arreglo2)) {
-                return $result->fetch();
-              return false;
+            print '<pre>';
+            print_r($result->fetch());
           }
         }
       }
