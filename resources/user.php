@@ -171,18 +171,19 @@ class User
   }
 
 /*----------------------Userconfig--------------*/
-  function actualizarInfo($_params){
-      $_array = array(
-        ':username' => $_params['username'],
-        ':nombres' => $_params['nombres'],
-        ':apellidos' => $_params['apellidos'],
-        ':dni' => $_params['dni'],
-        ':telf' => $_params['telf'],
-        ':direc' => $_params['direc']
+  function actualizarInfo($parametros){
+      $arreglo = array(
+        ':username' => $parametros['username'],
+        ':nombres' => $parametros['nombres'],
+        ':apellidos' => $parametros['apellidos'],
+        ':dni' => $parametros['dni'],
+        ':telf' => $parametros['telf'],
+        ':direc' => $parametros['direc']
       );
         print '<pre>';
-        print_r($_array);
-    }
+        print_r($arreglo);
+  }
+}
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
@@ -195,5 +196,4 @@ class User
     //   return false;
     //   }
     // }
-}
  ?>

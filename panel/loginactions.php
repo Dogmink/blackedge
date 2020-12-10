@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if ($_POST['accion']==='GUARDAR'){
-    $_params = array(
+    $parametros = array(
       'username'=> $_POST['username'];
       'nombres' => $_POST['nombres'],
       'apellidos' => $_POST['apellidos'],
@@ -82,7 +82,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       'telf' => $_POST['telf'],
       'direc' => $_POST['direc']
     );
-    $user->actualizarInfo($_params);
+    $user->actualizarInfo($parametros);
   }
 }
 
