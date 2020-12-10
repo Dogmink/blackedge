@@ -172,8 +172,6 @@ class User
 
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
-      $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
-      $stmt = $this->cn->prepare($sql);
       $_array = array(
         ':username' => $_params['username'],
         ':nombres' => $_params['nombres'],
