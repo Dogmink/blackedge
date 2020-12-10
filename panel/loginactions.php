@@ -71,4 +71,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       }
 
 //-----------------------CONFIG USER------------------------------------//
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+  if ($_POST['accion']==='GUARDAR'){
+    $_params = array(
+      'nombres' => $_POST['nombres'],
+      'apellidos' => $_POST['apellidos'],
+      'dni' => $_POST['dni'],
+      'telf' => $_POST['telf'],
+      'direc' => $_POST['direc']
+    );
+    $user->updateInfo($_params);
+      }
+    }
+
  ?>

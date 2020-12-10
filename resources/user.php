@@ -175,18 +175,38 @@ class User
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
       $usr = '';
       $usr = $_SESSION['user_log'];
-      $res = $this->cn->prepare($sql);
-      $res->bindParam(':username', $usr);
-      $res->bindParam(':nombres', $_params['nombres']);
-      $res->bindParam(':apellidos', $_params['apellidos']);
-      $res->bindParam(':dni', $_params['dni']);
-      $res->bindParam(':telf', $_params['telf']);
-      $res->bindParam(':direc', $_params['direc']);
-        if($res->execute($_array)){
-              return $res->fetch();
-            return false;
+      $stmt = $this->cn->prepare($sql);
+      $_array = array(
+        ':username' => $usr['username'],
+        ':nombres' => $_params['nombres'],
+        ':apellidos' => $_params['apellidos'],
+        ':dni' => $_params['dni'],
+        ':telf' => $_params['telf'],
+        ':direc' => $_params['direc']
+      );
+      if ($stmt->execute($_array)) {
+        $sql = "SELECT * FROM user WHERE username = :username";
+        $result = $this->cn->prepare($sql);
+        $result->bindParam(':username', $usr['username']);
+        if ($result->execute()) {
+          $_SESSION['user_log'] = array(
+            'id' => $result['id'],
+            'username' => $result['username'],
+            'password' => $result['password'],
+            'email' => $result['email'],
+            'nombres' => $result['nombres'],
+            'apellidos' => $result['apellidos'],
+            'dni' => $result['dni'],
+            'telf' => $result['telf'],
+            'direc' => $result['direc'],
+            'img_prof' => $result['img_prof'],
+            'hash' => $result['hash'],
+            'active' => $result['active'],
+            'admin' => $result['admin']
+          );
         }
-  }
+      }
+    }
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
