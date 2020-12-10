@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
       if ($_POST['accion']==='GUARDAR'){
-            print 'Se actualizó la información'
+            print 'Se actualizó la información';
 
         }  else {
           print 'Ocurrió un problema con result';
