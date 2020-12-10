@@ -81,7 +81,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       'telf' => $_POST['telf'],
       'direc' => $_POST['direc']
     );
-    print 'se guardaron los datos.';
+    $user->updateInfo();
       }
     }
 
