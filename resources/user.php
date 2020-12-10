@@ -171,7 +171,7 @@ class User
   }
 
 /*----------------------Userconfig--------------*/
-  function updateInfo($_params){
+  function actualizarInfo($_params){
       $_array = array(
         ':username' => $_params['username'],
         ':nombres' => $_params['nombres'],
