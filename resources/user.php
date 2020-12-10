@@ -182,18 +182,9 @@ class User
           ':telf' => $parametros['telf'],
           ':direc' => $parametros['direc']
         );
-        if ($stmt->execute($arreglo)) {
-          $sql = "SELECT * FROM user WHERE username = :username";
-          $result = $this->cn->prepare($sql);
-          $arreglo2 = array(
-            ':username' => $parametros['username']
-          );
-          if ($result->execute($arreglo2)) {
             print '<pre>';
-            print_r($result->fetch());
+            print_r($arreglo);
           }
-        }
-      }
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
