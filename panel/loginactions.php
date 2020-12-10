@@ -75,7 +75,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if ($_POST['accion']==='GUARDAR'){
     $parametros = array(
-      'username'=> $_POST['username'];
+      'username'=> $_POST['username'],
       'nombres' => $_POST['nombres'],
       'apellidos' => $_POST['apellidos'],
       'dni' => $_POST['dni'],
