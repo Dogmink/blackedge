@@ -182,10 +182,8 @@ class User
         ':telf' => $_params['telf'],
         ':direc' => $_params['direc']
       );
-      if ($stmt->execute($_array)) {
         print '<pre>';
-        print_r($stmt);
-      }
+        print_r($_array);
     }
 
     // function validateEmailUserconfig($email){
