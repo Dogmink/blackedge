@@ -47,12 +47,9 @@ class User
     if ($row['useractive']>0) {
       $sql = "UPDATE user SET active = 1, hash = null WHERE username = :username";
       $stmt = $this->cn->prepare($sql);
-      $_array = array(
-        'username' => $username
-      );
-      if ($stmt->execute($_array)) {
-          return $stmt->fetch();
-        return false;
+      $stmt->bindParam(':username', $username);
+      if ($stmt->execute()) {
+        return true;
       }
     }
   }
@@ -179,13 +176,12 @@ class User
       $usr = $_SESSION['user_log'];
       $res->bindParam(':username', $username);
       $res = $this->cn->prepare($sql);
-        $_array = array(
-          ":nombres" => $_params['nombres'],
-          ":apellidos" => $_params['apellidos'],
-          ":dni" => $_params['dni'],
-          ":telf" => $_params['telf'],
-          ":direc" => $_params['direc'],
-        );
+      $res->bindParam(':username', $username);
+      $res->bindParam(':nombres', $_params['nombres'];
+      $res->bindParam(':apellidos', $_params['apellidos']);
+      $res->bindParam(':dni', $_params['dni']);
+      $res->bindParam(':telf', $_params['telf']);
+      $res->bindParam(':direc', $_params['direc']);
         if($res->execute($_array)){
           return $res->fetch();
         return false;
