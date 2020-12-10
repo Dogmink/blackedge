@@ -185,7 +185,8 @@ class User
         if($res->execute($_array)){
               return $res->fetch();
             return false;
-      }
+        }
+  }
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
@@ -198,5 +199,5 @@ class User
     //   return false;
     //   }
     // }
-  }
+}
  ?>
