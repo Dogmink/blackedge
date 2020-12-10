@@ -183,15 +183,8 @@ class User
         ':direc' => $_params['direc']
       );
       if ($stmt->execute($_array)) {
-        $sql = "SELECT * FROM user WHERE username = :username";
-        $result = $this->cn->prepare($sql);
-        $_array = array(
-          ':username' => $_params['username'],
-        );
-        if ($result->execute()) {
-              return $result->fetch();
-            return false;
-        }
+        print '<pre>';
+        print_r($stmt);
       }
     }
 
