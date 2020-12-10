@@ -177,7 +177,7 @@ class User
       $usr = $_SESSION['user_log'];
       $res = $this->cn->prepare($sql);
       $res->bindParam(':username', $usr);
-      $res->bindParam(':nombres', $_params['nombres'];
+      $res->bindParam(':nombres', $_params['nombres']);
       $res->bindParam(':apellidos', $_params['apellidos']);
       $res->bindParam(':dni', $_params['dni']);
       $res->bindParam(':telf', $_params['telf']);
