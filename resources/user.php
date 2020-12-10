@@ -175,11 +175,11 @@ class User
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc, hash = :hash, active = :active WHERE username = :username";
-      $usr='';
+      $usr = '';
       $usr = $_SESSION['user_log'];
-      $result = $this->cn->prepare($sql);
+      $res->bindParam(':username', $username);
+      $res = $this->cn->prepare($sql);
         $_array = array(
-          ":username" => $usr['username'],
           ":nombres" => $_params['nombres'],
           ":apellidos" => $_params['apellidos'],
           ":dni" => $_params['dni'],
@@ -188,22 +188,22 @@ class User
           ":hash" => null,
           ":active" => 1
         );
-        if($result->execute($_array)){
-          return $result->fetch();
+        if($res->execute($_array)){
+          return $res->fetch();
         return false;
         }
       }
 
-    function validateEmailUserconfig($email){
-      $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
-      $stmt = $this->cn->prepare($sql);
-      $stmt->bindValue(':email', $email);
-      $stmt->execute();
-      $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-      if ($row['mail']>0) {
-        return $stmt->fetch();
-      return false;
-      }
-    }
+    // function validateEmailUserconfig($email){
+    //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
+    //   $stmt = $this->cn->prepare($sql);
+    //   $stmt->bindValue(':email', $email);
+    //   $stmt->execute();
+    //   $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+    //   if ($row['mail']>0) {
+    //     return $stmt->fetch();
+    //   return false;
+    //   }
+    // }
   }
  ?>
