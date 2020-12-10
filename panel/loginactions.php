@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if ($_POST['accion']==='GUARDAR'){
-    
+      print 'se guardaron los datos.';
       }
     }
 
