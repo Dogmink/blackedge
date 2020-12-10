@@ -185,8 +185,6 @@ class User
           ":dni" => $_params['dni'],
           ":telf" => $_params['telf'],
           ":direc" => $_params['direc'],
-          ":hash" => null,
-          ":active" => 1
         );
         if($res->execute($_array)){
           return $res->fetch();
