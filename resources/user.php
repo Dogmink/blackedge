@@ -173,11 +173,9 @@ class User
 /*----------------------Userconfig--------------*/
   function updateInfo($_params){
       $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
-      $usr = '';
-      $usr = $_SESSION['user_log'];
       $stmt = $this->cn->prepare($sql);
       $_array = array(
-        ':username' => $usr['username'],
+        ':username' => $_params['username'],
         ':nombres' => $_params['nombres'],
         ':apellidos' => $_params['apellidos'],
         ':dni' => $_params['dni'],
@@ -187,23 +185,12 @@ class User
       if ($stmt->execute($_array)) {
         $sql = "SELECT * FROM user WHERE username = :username";
         $result = $this->cn->prepare($sql);
-        $result->bindParam(':username', $usr['username']);
+        $_array = array(
+          ':username' => $_params['username'],
+        );
         if ($result->execute()) {
-          $_SESSION['user_log'] = array(
-            'id' => $result['id'],
-            'username' => $result['username'],
-            'password' => $result['password'],
-            'email' => $result['email'],
-            'nombres' => $result['nombres'],
-            'apellidos' => $result['apellidos'],
-            'dni' => $result['dni'],
-            'telf' => $result['telf'],
-            'direc' => $result['direc'],
-            'img_prof' => $result['img_prof'],
-            'hash' => $result['hash'],
-            'active' => $result['active'],
-            'admin' => $result['admin']
-          );
+              return $result->fetch();
+            return false;
         }
       }
     }

@@ -29,6 +29,7 @@
       </div>
       <div class="row-userconfig">
         <div class="col6">
+          <input type="hidden" name="username" value="<?php print $usr['username'] ?>">
           <input class="input-userconfig-readonly" type="email" name="email" value="<?php print $usr['email']?>" readonly="readonly">
         </div>
         <div class="col6">
@@ -117,6 +118,7 @@
       </div>
       <div class="row-userconfig">
         <div class="col6">
+          <input type="hidden" name="username" value="<?php print $usr['username'] ?>">
           <input class="input-userconfig" type="email" name="email" value="<?php print $usr['email']?>">
         </div>
         <div class="col6">
