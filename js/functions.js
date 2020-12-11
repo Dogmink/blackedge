@@ -16,7 +16,7 @@ if (formulario) {
         body: datos
       });
     } else {
-      textError.innerHTML('Las <b>contraseñas</b> no coinciden.')
+      textError.innerHTML = 'Las <b>contraseñas</b> no coinciden.';
     }
   });
 }
