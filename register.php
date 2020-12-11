@@ -1,5 +1,5 @@
 <?php
-  require 'Modulos/basic.php';
+  include 'Modulos/basic.php';  
   include 'resources/user.php';
   $user = new BlackEdgeStore\User;
   $err = "";
