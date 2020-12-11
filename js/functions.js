@@ -1,6 +1,6 @@
 let errorlog = document.getElementById('error-log-text');
 
-document.form-register.submit(function(e) {
+document.formRegister.submit(function(e) {
   e.preventDefault();
   let datos = new FormData(formulario);
 
