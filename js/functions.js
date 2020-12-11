@@ -1,6 +1,6 @@
 function register() {
   let formulario = document.getElementById('form-register');
-  let error-log = document.getElementById('error-log-text')
+  let errorlog = document.getElementById('error-log-text');
 
   formulario.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -16,7 +16,7 @@ function register() {
         body: datos
       });
     } else {
-      error-log.innerHTML = 'Las <b>contraseñas</b> no coinciden.'
+      errorlog.innerHTML = 'Las <b>contraseñas</b> no coinciden.';
     }
   });
 }
