@@ -15,7 +15,7 @@ function register() {
         body: datos
       });
     } else {
-      echo '<p class = "error-login">Las contraseñas no coinciden</p>';
+      document.write('<p class = "error-login">Las contraseñas no coinciden</p>');
     }
   });
 }
