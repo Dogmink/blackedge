@@ -17,7 +17,7 @@
   <div class="row-login">
     <div class="col8">
       <p class="login-header">Register</p>
-      <form class="form-login" name="form-register" >
+      <form class="form-login" name="form-register" id="form-register" >
         <?php
         if ($err!=null && $err == 0) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
