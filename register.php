@@ -20,7 +20,7 @@
   <div class="row-login">
     <div class="col8">
       <p class="login-header">Register</p>
-      <form class="form-login" id="formRegister">
+      <form class="form-login" id="formulario">
         <?php
         if ($err!=null && $err == 0) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php

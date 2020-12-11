@@ -1,4 +1,4 @@
-var formulario = document.getElementById('formRegister');
+var formulario = document.getElementById('formulario');
 var textError = document.getElementById('logErrorText');
 
 if (formulario) {
