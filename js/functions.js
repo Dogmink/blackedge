@@ -18,4 +18,3 @@ formulario.addEventListener('submit', function(e) {
     errorlog.innerHTML = 'Las <b>contraseñas</b> no coinciden.';
   }
 });
-}
