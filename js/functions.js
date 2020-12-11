@@ -1,4 +1,3 @@
-function register() {
   let formulario = document.getElementById('formRegister');
   let textError = document.getElementById('logErrorText');
 
@@ -6,4 +5,3 @@ function register() {
     e.preventDefault();
     console.log('me diste un clic.')
   });
-}
