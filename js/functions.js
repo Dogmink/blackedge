@@ -1,4 +1,4 @@
-let formRegiser = document.getElementById('formRegister');
+let formulario = document.getElementById('formRegister');
 let errorlog = document.getElementById('error-log-text');
 
 formulario.addEventListener('submit', function(e) {
