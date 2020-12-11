@@ -1,6 +1,7 @@
+let formRegiser = document.getElementById('formRegister');
 let errorlog = document.getElementById('error-log-text');
 
-document.formRegister.submit(function(e) {
+document.formRegister(submit, function(e) {
   e.preventDefault();
   let datos = new FormData(formulario);
 
@@ -17,3 +18,7 @@ document.formRegister.submit(function(e) {
     errorlog.innerHTML = 'Las <b>contraseñas</b> no coinciden.';
   }
 });
+
+function userRegister(){
+
+}

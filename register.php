@@ -17,7 +17,7 @@
   <div class="row-login">
     <div class="col8">
       <p class="login-header">Register</p>
-      <form class="form-login" name="formRegister" id="formRegister" >
+      <form class="form-login" id="formRegister" >
         <?php
         if ($err!=null && $err == 0) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
@@ -33,7 +33,7 @@
         <p class="error-login" id="error-log-text"></p>
         <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
-        <input class="btn-panel" type="submit" value="Registrarse" name="accion">
+        <button class="btn-panel" type="submit" name="register">Registrarse</button>
         <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
       </form>
     </div>
