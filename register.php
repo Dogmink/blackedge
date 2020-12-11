@@ -1,6 +1,9 @@
 <?php
-  include 'Modulos/basic.php';  
+  require 'Modulos/basic.php';
   include 'resources/user.php';
+  ?>
+  <script src="js/functions.js" charset="utf-8"></script>
+  <?php
   $user = new BlackEdgeStore\User;
   $err = "";
   if (isset($_GET['err'])) {
