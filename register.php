@@ -2,7 +2,20 @@
   require 'Modulos/basic.php';
   include 'resources/user.php';
   ?>
-  <script src="js/functions.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+  var formulario = document.getElementById('formulario');
+  var textError = document.getElementById('logErrorText');
+
+  if (formulario) {
+    formulario.addEventListener('submit', function(e){
+      e.preventDefault();
+      console.log('me diste un clic.');
+    });
+  }else{
+    console.log('No se encontró formulario.');
+  }
+  </script>
   <?php
   $user = new BlackEdgeStore\User;
   $err = "";
