@@ -1,5 +1,5 @@
 function register() {
-  let formulario = document.getElementById('form-register');
+  let formulario = document.getElementById('formRegister');
 
   formulario.addEventListener('submit', function(e) {
     e.preventDefault();
