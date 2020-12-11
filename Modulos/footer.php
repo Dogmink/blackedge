@@ -9,7 +9,6 @@
     <h3>info@blackedgestore.com</h3>
   </div>
 </footer>
-
-
+  <script src="js/functions.js" charset="utf-8"></script>
 </body>
 </html>
