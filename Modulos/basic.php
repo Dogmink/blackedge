@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/anim.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/mobile.css">
+  <script src="js/functions.js" charset="utf-8"></script>
   <title>BlackEdge</title>
 </head>
 <body>

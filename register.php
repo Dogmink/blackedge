@@ -17,7 +17,7 @@
   <div class="row-login">
     <div class="col8">
       <p class="login-header">Register</p>
-      <form class="form-login" action="./panel/loginactions.php" method="POST" enctype="multipart/form-data">
+      <form class="form-login" id="form-register" >
         <?php
         if ($err!=null && $err == 0) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
