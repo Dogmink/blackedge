@@ -30,7 +30,7 @@
         }
          ?>
         <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
-        <p class="error-login" id="error-log-text"></p>
+        <p class="error-login" id="logErrorText"></p>
         <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
         <button class="btn-panel" type="submit" name="register">Registrarse</button>
