@@ -30,11 +30,9 @@
         }
          ?>
         <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
-        <?php
-        if ($err!=null && $err == 2) {
-          ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
-        }
-         ?>
+        <script type="text/javascript">
+          register();
+        </script>
         <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="btn-panel" type="submit" value="Registrarse" name="accion">
