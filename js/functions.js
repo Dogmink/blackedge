@@ -1,5 +1,5 @@
-formulario = document.getElementById('formRegister');
-textError = document.getElementById('logErrorText');
+var formulario = document.getElementById('formRegister');
+var textError = document.getElementById('logErrorText');
 
 formulario.addEventListener('submit', function(e) {
   e.preventDefault();
