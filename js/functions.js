@@ -1,7 +1,6 @@
-let formulario = document.getElementById('form-register');
 let errorlog = document.getElementById('error-log-text');
 
-formulario.addEventListener('submit', function(e) {
+document.form-register.submit(function(e) {
   e.preventDefault();
   let datos = new FormData(formulario);
 
