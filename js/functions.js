@@ -6,4 +6,6 @@ if (formulario) {
     e.preventDefault();
     console.log('me diste un clic.');
   });
+}else{
+  console.log('No se encontró formulario.');
 }
