@@ -31,20 +31,24 @@ $password = "";
 //       }
 //     }
 
+$accion = $_POST['Registrarse'];
 
+if ($accion == "Registrarse") {
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
   $cpassword = $_POST['password-confirm'];
 
-    $_params = array(
-      'username'=>$username,
-      'password'=>$password,
-      'email'=>$email
-          );
-          $user->validateUsername($username);
-          $user->validateEmail($email);
-          $user->userRegister($_params);
+  $_params = array(
+    'username'=>$username,
+    'password'=>$password,
+    'email'=>$email
+  );
+  $user->validateUsername($username);
+  $user->validateEmail($email);
+  $user->userRegister($_params);  
+}
+
 
 
 
