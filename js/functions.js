@@ -31,19 +31,16 @@ function validarEmail(valor) {
 $(document).ready(function() {
       $("#pushData").click(function(e) {
         e.preventDefault();
-          validate();
-          let validation = validate();
-          if (validation) {
             $.post("../panel/loginactions.php", $("#formulario").serialize(), function(res){
+            console.log('enviando datos...');
             if (res == 1) {
+              console.log('se enviaron los datos');
               $("#success").delay(30).fadeIn("slow");
               window.location('../login.php');
             } else {
+              console.log('no se enciaron los datos');
               $("#fail").delay(30).fadeIn("slow");
             }
           });
-        } else {
-          validate();
-        }
       });
     });
