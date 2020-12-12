@@ -31,7 +31,7 @@ $password = "";
 //       }
 //     }
 
-$accion = $_POST['Registrarse'];
+$accion = $_POST['accion'];
 
 if ($accion == "Registrarse") {
   $username = $_POST['username'];
@@ -46,7 +46,7 @@ if ($accion == "Registrarse") {
   );
   $user->validateUsername($username);
   $user->validateEmail($email);
-  $user->userRegister($_params);  
+  $user->userRegister($_params);
 }
 
 
