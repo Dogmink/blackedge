@@ -33,7 +33,7 @@ $password = "";
 
 $accion = $_POST['accion'];
 
-if ($accion == "Registrarse") {
+if ($accion == "registro") {
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
