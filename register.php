@@ -18,6 +18,9 @@
     <div class="col8">
       <p class="login-header">Register</p>
       <form id="formulario" class="form-login">
+        <div id="success" style="display: none">
+          <p class="error-login">Ocurrió un error al <b>registrarte</b>, intentalo de nuevo.</p>
+        </div>
         <?php
         if ($err!=null && $err == 0) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
@@ -30,10 +33,9 @@
         }
          ?>
         <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
-        <p class="error-login" id="logErrorText"></p>
         <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
-        <button class="btn-panel" type="submit" name="register">Registrarse</button>
+        <input id="pushData" class="btn-panel" type="submit" name="accion" value="Registrarse">
         <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
       </form>
     </div>

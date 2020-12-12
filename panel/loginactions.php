@@ -32,11 +32,6 @@ $password = "";
 //     }
 
 
-  $accion = $_POST['accion']
-
-
-
-if ($accion == 'Registrarse') {
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];

@@ -22,9 +22,12 @@
           ?> <p class="error-login"> <?php $user->errorLogin($logErr); ?> </p> <?php
         }
           ?>
+        <div id="success" style="display: none">
+          <p class="error-login">Haz sido <b>registrado</b> correctamente, ahora <b>inicia sesión</b>.</p>
+        </div>
         <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Ingresa tu nombre de usuario" autocomplete="off"  required>
         <input class="input-login" type="password" name="password" value="" placeholder="Ingresa tu •••••••••" autocomplete="off" required>
-        <input class="btn-panel" type="submit" value="Ingresar" name="accion">
+        <input class="btn-panel" value="Ingresar" name="accion">
         <p class="register-text">¿No tienes cuenta? <a class="register-text-link" href="register.php">Haz clic aquí</a></p>
       </form>
     </div>
