@@ -44,8 +44,7 @@ $password = "";
           );
           $user->validateUsername($username);
           $user->validateEmail($email);
-          $user->userRegister($_params)
-}
+          $user->userRegister($_params);
 
 
 
