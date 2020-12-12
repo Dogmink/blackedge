@@ -1,9 +1,7 @@
 let formulario = document.getElementById('formulario');
 let textError = document.getElementById('logErrorText');
 
-if (formulario) {
-  validate();
-}
+
 
 
 function validate() {
@@ -21,10 +19,12 @@ function validate() {
   });
 }
 
-let validation = validate();
+
 
 $(document).ready(function() {
       $("#pushData").click(function(e) {
+          validate();
+          let validation = validate();
           e.preventDefault();
           if (validation) {
             $.post("../panel/loginactions.php", $("#formulario").serialize(), function(res){
