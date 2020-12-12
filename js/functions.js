@@ -25,16 +25,5 @@ $(document).ready(function() {
       $("#pushData").click(function(e) {
           e.preventDefault();
           console.log('Me haces click');
-          break;
-          if (validation) {
-            $.post("../panel/loginactions.php", $("#formulario").serialize(), function(res){
-            if (res == 1) {
-              $("#success").delay(30).fadeIn("fast");
-              window.location('../login.php');
-            } else {
-              $("#fail").delay(30).fadeIn("fast");
-            }
-          });
-        }
       });
     });
