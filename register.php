@@ -17,7 +17,7 @@
   <div class="row-login">
     <div class="col8">
       <p class="login-header">Register</p>
-      <form id="formulario" class="form-login">
+      <form id="formulario" class="form-login" method="post">
         <div id="fail" style="display: none">
           <p class="error-login">Ocurrió un error al <b>registrarte</b>, intentalo de nuevo.</p>
         </div>
