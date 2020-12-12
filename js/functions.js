@@ -24,7 +24,8 @@ function validate() {
 let validation = validate();
 
 $(document).ready(function() {
-      $("#pushData").click(function() {
+      $("#pushData").click(function(e) {
+        e.preventDefault();
           if (validation) {
             $.post("../panel/loginactions.php", $("#formulario").serialize(), function(res));
             if (res == 1) {
