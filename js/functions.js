@@ -33,6 +33,10 @@ $(document).ready(function() {
         e.preventDefault();
             $.post("panel/loginactions.php", $("#formulario").serialize(), function(res){
             console.log('enviando datos...');
+            .then( res => res.json());
+            .then( data => {
+              console.log(data)
+            });
             if (res == 1) {
               console.log('se enviaron los datos');
               $("#success").delay(30).fadeIn("slow");

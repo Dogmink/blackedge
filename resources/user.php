@@ -105,6 +105,7 @@ class User
           $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
           $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
           mail($to, $subject, $message, $headers);
+          echo json_encode('1');
           ?>
           <script type="text/javascript">
           window.location= '../login.php';
@@ -125,6 +126,7 @@ class User
         window.location= '../register.php?err=0';
       </script>
       <?php
+      echo json_encode('2');
       die();
     }
   }
@@ -141,6 +143,7 @@ class User
         window.location= '../register.php?err=1';
       </script>
       <?php
+      echo json_encode('3');
       die();
     }
   }
