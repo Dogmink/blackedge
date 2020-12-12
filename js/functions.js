@@ -31,7 +31,7 @@ function validarEmail(valor) {
 $(document).ready(function() {
       $("#pushData").click(function(e) {
         e.preventDefault();
-            $.post("../panel/loginactions.php", $("#formulario").serialize(), function(res){
+            $.post("panel/loginactions.php", $("#formulario").serialize(), function(res){
             console.log('enviando datos...');
             if (res == 1) {
               console.log('se enviaron los datos');
