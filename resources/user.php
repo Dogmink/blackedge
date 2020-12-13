@@ -106,11 +106,6 @@ class User
           $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
           mail($to, $subject, $message, $headers);
           echo json_encode('1');
-          ?>
-          <script type="text/javascript">
-          window.location= '../login.php';
-          </script>
-          <?php
         }
       }
 
@@ -121,11 +116,6 @@ class User
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['num']>0) {
-      ?>
-      <script type="text/javascript">
-        window.location= '../register.php?err=0';
-      </script>
-      <?php
       echo json_encode('2');
       die();
     }
@@ -138,11 +128,6 @@ class User
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['mail']>0) {
-      ?>
-      <script type="text/javascript">
-        window.location= '../register.php?err=1';
-      </script>
-      <?php
       echo json_encode('3');
       die();
     }

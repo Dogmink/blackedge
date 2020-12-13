@@ -44,8 +44,6 @@ $(document).ready(function() {
             } else {
               console.log('no se enciaron los datos');
               $("#fail").delay(30).fadeIn("slow");
-              window.location= 'index.php';
-              window.location= '../index.php';
             }
           });
       });
