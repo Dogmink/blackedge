@@ -105,7 +105,7 @@ class User
           $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
           $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
           mail($to, $subject, $message, $headers);
-          return echo json_encode('1');
+          return 1;
         }
       }
 
