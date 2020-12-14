@@ -21,7 +21,7 @@ let formulario = $("#pushData");
     }else {
       fetch("panel/loginactions.php", {
         method: 'POST',
-        body datos,
+        body: datos
       });
     }
 
