@@ -44,12 +44,17 @@ if ($accion == "registro") {
     'password'=>$password,
     'email'=>$email
   );
-  $user->validateUsername($username);
-  $user->validateEmail($email);
-  $user->userRegister($_params);
+  $vUsername = $user->validateUsername($username);
+  $vEmail = $user->validateEmail($email);
+
+  if ($vUsername == 2) {
+    echo json_encode("Este nombre de usuario ya está en uso.");
+  } else if ($vEmail == 3) {
+    echo json_encode("Este correo electronico ya está en uso.");
+  } else {
+    $user->userRegister($_params);
+  }
 }
-
-
 
 
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
