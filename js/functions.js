@@ -1,6 +1,10 @@
 let formulario = $("#pushData");
 
-
+if (formulario) {
+  console.log('formulario existe');
+} else {
+  console.log('formulario no existe');
+}
 
 $(document).ready(function() {
   formulario.addEventListener('submit', function(e) {
