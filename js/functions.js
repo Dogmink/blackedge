@@ -2,7 +2,7 @@ let formulario = $("#pushData");
 
 
 
-
+$(document).ready(function() {
   formulario.addEventListener('submit', function(e) {
     e.preventDefault();
     let datos = new FormData(formulario);
@@ -15,21 +15,22 @@ let formulario = $("#pushData");
     if (dPasssword != dCPassword) {
       $("#failPass").delay(30).fadeIn("slow");
       window.location('../login.php');
-    }else  if (vEmail == false) {
+    } else if (vEmail == false) {
       $("#failEmail").delay(30).fadeIn("slow");
       window.location('../login.php');
-    }else {
+    } else {
       fetch("panel/loginactions.php", {
         method: 'POST',
         body: datos
       });
     }
   });
+});
 
 function validarEmail(valor) {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
-   alert("La dirección de email " + valor + " es correcta.");
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)) {
+    alert("La dirección de email " + valor + " es correcta.");
   } else {
-   alert("La dirección de email es incorrecta.");
+    alert("La dirección de email es incorrecta.");
   }
 }
