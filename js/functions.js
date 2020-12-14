@@ -24,10 +24,7 @@ let formulario = $("#pushData");
         body: datos
       });
     }
-
-
   });
-}
 
 function validarEmail(valor) {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
