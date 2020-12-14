@@ -1,4 +1,4 @@
-let formulario = getElementById('pushData');
+let formulario = getElementById('formulario');
 
 document.addEventListener('DOMContentLoaded', function () {
   formulario.addEventListener('submit', function(e) {
