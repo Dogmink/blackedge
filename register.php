@@ -18,9 +18,6 @@
     <div class="col8">
       <p class="login-header">Register</p>
       <form id="formulario" class="form-login" method="post">
-        <div id="fail" style="display: none">
-          <p class="error-login">Ocurrió un error al <b>registrarte</b>, intentalo de nuevo.</p>
-        </div>
         <?php
         if ($err!=null && $err == 0) {
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
@@ -32,7 +29,13 @@
           ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
         }
          ?>
+        <div id="failEmail" style="display: none">
+          <p class="error-login">Ingresa un <b>correo electronico</b> valido.</p>
+        </div>
         <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
+        <div id="failPass" style="display: none">
+          <p class="error-login">Las <b>contraseñas</b> no coinciden</p>
+        </div>
         <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
         <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
         <input type="hidden" name="accion" value="registro">
