@@ -7,7 +7,7 @@ if (formulario) {
 }
 
 $(document).ready(function() {
-  formulario.addEventListener('submit', function(e) {
+  formulario.click(function(e) {
     e.preventDefault();
     let datos = new FormData(formulario);
     let dUsername = datos.get('username');
