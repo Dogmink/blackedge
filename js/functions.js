@@ -1,7 +1,7 @@
 let formulario = getElementById('pushData');
 
 document.addEventListener('DOMContentLoaded', function () {
-  formulario.click(function(e) {
+  formulario.addEventListener('submit', function(e) {
     e.preventDefault();
     let datos = new FormData(formulario);
     let dUsername = datos.get('username');
