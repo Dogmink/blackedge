@@ -1,12 +1,6 @@
-let formulario = $("#pushData");
+let formulario = getElementById('pushData');
 
-if (formulario) {
-  console.log('formulario existe');
-} else {
-  console.log('formulario no existe');
-}
-
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function () {
   formulario.click(function(e) {
     e.preventDefault();
     let datos = new FormData(formulario);
@@ -18,10 +12,8 @@ $(document).ready(function() {
 
     if (dPasssword != dCPassword) {
       $("#failPass").delay(30).fadeIn("slow");
-      window.location('../login.php');
     } else if (vEmail == false) {
       $("#failEmail").delay(30).fadeIn("slow");
-      window.location('../login.php');
     } else {
       fetch("panel/loginactions.php", {
         method: 'POST',
