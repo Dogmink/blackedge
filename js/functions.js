@@ -20,8 +20,8 @@ let formulario = $("#pushData");
       window.location('../login.php');
     }else {
       fetch("panel/loginactions.php", {
-        method: 'POST';
-        body datos;
+        method: 'POST',
+        body datos,
       });
     }
 
