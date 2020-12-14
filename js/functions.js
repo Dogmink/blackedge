@@ -1,5 +1,4 @@
-let formulario = document.getElementById('formulario');
-let textError = document.getElementById('logErrorText');
+let formulario = $("#pushData");
 
 
 
@@ -14,10 +13,10 @@ let textError = document.getElementById('logErrorText');
     let vEmail = validarEmail(datos.get('email'));
 
     if (dPasssword != dCPassword) {
-      $("#fail").delay(30).fadeIn("slow");
+      $("#failPass").delay(30).fadeIn("slow");
       window.location('../login.php');
     }else  if (vEmail == false) {
-      $("#success").delay(30).fadeIn("slow");
+      $("#failEmail").delay(30).fadeIn("slow");
       window.location('../login.php');
     }else {
       fetch("panel/loginactions.php", {
@@ -37,24 +36,3 @@ function validarEmail(valor) {
    alert("La dirección de email es incorrecta.");
   }
 }
-
-// $(document).ready(function() {
-//       $("#pushData").click(function(e) {
-//         e.preventDefault();
-//             $.post("panel/loginactions.php", $("#formulario").serialize(), function(res){
-//             console.log('enviando datos...');
-//             .then( res => res.json());
-//             .then( data => {
-//               console.log(data)
-//             });
-//             if (res == 1) {
-//               console.log('se enviaron los datos');
-//               $("#success").delay(30).fadeIn("slow");
-//               window.location('../login.php');
-//             } else {
-//               console.log('no se enciaron los datos');
-//               $("#fail").delay(30).fadeIn("slow");
-//             }
-//           });
-//       });
-//     });
