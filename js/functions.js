@@ -7,7 +7,10 @@ formulario.addEventListener('submit', function(e) {
   fetch('../panel/loginactions.php', {
       method: 'POST',
       body: datos
-    })
-    .then(res => res.json())
-    console.log(res);
+    });
+  fetch('../panel/loginactions.php')
+  .then(response => response.json())
+  if (response.json == 1) {
+    console.log('Usuario registrado.');
+  }
 })
