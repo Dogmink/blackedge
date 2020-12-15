@@ -18,17 +18,9 @@
     <div class="col8">
       <p class="login-header">Register</p>
       <form id="formulario" class="form-login">
-        <?php
-        if ($err!=null && $err == 0) {
-          ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
-        }
-         ?>
+      
         <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
-        <?php
-        if ($err!=null && $err == 1) {
-          ?> <p class="error-login"> <?php $error = $user->validateErr($err); ?> </p> <?php
-        }
-         ?>
+      
         <div id="failEmail" style="display: none">
           <p class="error-login">Ingresa un <b>correo electronico</b> valido.</p>
         </div>

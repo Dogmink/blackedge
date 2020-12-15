@@ -33,30 +33,32 @@ $password = "";
 
 $accion = $_POST['accion'];
 
-if ($accion == "registro") {
-  $username = $_POST['username'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  $cpassword = $_POST['password-confirm'];
-  echo json_encode('Datos recibidos.');
+echo json_encode($accion);
 
-  $_params = array(
-    'username'=>$username,
-    'password'=>$password,
-    'email'=>$email
-  );
-  $vUsername = $user->validateUsername($username);
-  $vEmail = $user->validateEmail($email);
-
-  if ($vUsername == 2) {
-    echo json_encode('Este nombre de usuario ya está en uso.');
-  } else if ($vEmail == 3) {
-    echo json_encode('Este correo electronico ya está en uso.');
-  } else {
-    $user->userRegister($_params);
-    echo json_encode(1);
-  }
-}
+// if ($accion == "registro") {
+//   $username = $_POST['username'];
+//   $email = $_POST['email'];
+//   $password = $_POST['password'];
+//   $cpassword = $_POST['password-confirm'];
+//   echo json_encode('Datos recibidos.');
+//
+//   $_params = array(
+//     'username'=>$username,
+//     'password'=>$password,
+//     'email'=>$email
+//   );
+//   $vUsername = $user->validateUsername($username);
+//   $vEmail = $user->validateEmail($email);
+//
+//   if ($vUsername == 2) {
+//     echo json_encode('Este nombre de usuario ya está en uso.');
+//   } else if ($vEmail == 3) {
+//     echo json_encode('Este correo electronico ya está en uso.');
+//   } else {
+//     $user->userRegister($_params);
+//     echo json_encode(1);
+//   }
+// }
 
 
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
