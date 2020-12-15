@@ -9,7 +9,5 @@ formulario.addEventListener('submit', function(e) {
       body: datos
     })
     .then(res => res.json())
-  .then(data => {
-    console.log(data)
-  })
+    console.log(res.json);
 })
