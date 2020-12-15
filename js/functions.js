@@ -4,7 +4,7 @@ formulario.addEventListener('submit', function(e) {
   e.preventDefault();
   let datos = new FormData(formulario);
 
-  fetch('panel/loginactions.php', {
+  fetch('useractions.php', {
       method: 'POST',
       body: datos
     })
