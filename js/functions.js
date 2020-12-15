@@ -3,6 +3,13 @@ let formulario = document.getElementById('formulario');
   formulario.addEventListener('submit', function(e) {
     e.preventDefault();
      let datos = new FormData(formulario);
-     console.log(datos.get('username'));
-     console.log(datos.get('email'));
+
+     fetch('panel/loginactions.php',{
+       method: 'POST',
+       body: datos
+     });
+     .then( res => res.json());
+     .then( data => {
+       console.log(data);
+     });
 });

@@ -38,6 +38,7 @@ if ($accion == "registro") {
   $email = $_POST['email'];
   $password = $_POST['password'];
   $cpassword = $_POST['password-confirm'];
+  echo json_encode("Datos recibidos.");
 
   $_params = array(
     'username'=>$username,
