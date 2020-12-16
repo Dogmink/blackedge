@@ -1,7 +1,13 @@
 let formulario = document.getElementById('formulario');
+let formlarioLog = document.getElementById('formularioLog');
 let errEmail = document.getElementById('failEmail');
 let errUsername = document.getElementById('failUsername');
 let errPassword = document.getElementById('failPass');
+let successReg = document.getElementById('successReg');
+let formRegister = document.getElementById('formLogin');
+let formLogin = document.getElementById('formLogin');
+let linkForm = document.getElementById("linkRegister");
+let turnForm = true;
 
 formulario.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -18,7 +24,9 @@ formulario.addEventListener('submit', function (e) {
     .then(data => {
       console.log(data)
       if (data == 1) {
-        console.log('El usuario se ha registrado satisfactoriamente.')
+        formRegister.style.display = 'none'
+        formLogin.style.display = 'block'
+        successReg.style.display = 'block'
       } else if (data == 2) {
         errUsername.style.display = 'block'
       } else if (data == 3) {
@@ -31,13 +39,15 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-  function remake(e) {
-    var val = e.value;
-    var id = e.id;
-    e.outerHTML = e.outerHTML;
-    document.getElementById('input').value = val;
-    return true;
+linkForm.addEventListener('click', function(e){
+  e,preventDefault();
+  turnForm = !turnForm
+  if (turnForm) {
+    formLogin.style.display = 'none'
+    formRegister.style.display = 'block'
+  }else{
+    formLogin.style.display = 'block'
+    formRegister.style.display = 'none'
   }
 });
 
