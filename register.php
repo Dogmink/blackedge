@@ -47,15 +47,14 @@
     }
 
      ?>
-
-  <div class="contenido align-login fadeInUp">
+    <div class="contenido align-login fadeInUp" id="formLogin" style="display: block;">
     <div class="row">
       <div class="col8 margin-logo-login align-login">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
       </div>
       <div class="col8 margin-login">
         <div class="content-login">
-          <p class="login-header">REGISTER</p>
+          <p class="login-header">INGRESAR</p>
           <form id="formulario" class="form-login">
             <div id="failUsername" style="display: none">
               <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
@@ -84,32 +83,42 @@
     </div>
   </div>
 
-  <!-- <div class="contenido fadeInDown">
-    <div class="BlackEdge_image">
-      <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
-    </div>
-        <div class = "content-login">
-         <p class="login-header">Register</p>
-         <form id="formulario" class="form-login">
-           <div id="failUsername" style="display: none">
-             <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
-           </div>
-           <input id="input" class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
-           <div id="failEmail" style="display: none">
-             <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
-           </div>
-           <input id="input" class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
-           <div id="failPass" style="display: none">
-             <p class="error-login">Las <b>contraseñas</b> no coinciden</p>
-           </div>
-           <input id="input" class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
-           <input id="input" class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
-           <input id="input" type="hidden" name="accion" value="registro">
-           <input id="input" id="pushData" class="btn-login" type="submit">
-           <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
-         </form>
+
+  <div class="contenido align-login fadeInUp" id="formRegister" style="display: none;">
+    <div class="row">
+      <div class="col8 margin-logo-login align-login">
+        <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
+      </div>
+      <div class="col8 margin-login">
+        <div class="content-login">
+          <p class="login-header">REGISTRARSE</p>
+          <form id="formulario" class="form-login">
+            <div id="failUsername" style="display: none">
+              <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
+            </div>
+            <input id="input" class="input-login" type="text" name="username" id="nombre" value=""
+              placeholder="Nombre de usuario" autocomplete="off" required>
+            <div id="failEmail" style="display: none">
+              <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
+            </div>
+            <input id="input" class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo"
+              autocomplete="off" required>
+            <div id="failPass" style="display: none">
+              <p class="error-login">Las <b>contraseñas</b> no coinciden</p>
+            </div>
+            <input id="input" class="input-login" type="password" name="password" value="" placeholder="•••••••••"
+              autocomplete="off" required>
+            <input id="input" class="input-login" type="password" name="password-confirm" value=""
+              placeholder="•••••••••" autocomplete="off" required>
+            <input id="input" type="hidden" name="accion" value="registro">
+            <input id="input" id="pushData" class="btn-login" type="submit">
+            <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a>
+            </p>
+          </form>
         </div>
-   </div> -->
+      </div>
+    </div>
+  </div>
   <?php
   require 'Modulos/footer.php';
  ?>
