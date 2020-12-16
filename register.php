@@ -42,7 +42,7 @@
     }
 
      ?>
-  <nav class="fadeInDown">
+  <nav class="contenido fadeInDown">
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
     </div>
@@ -69,7 +69,7 @@
          </form>
         </div>
       </ul>
-    </nav>
+   </nav>
 <?php
   require 'Modulos/footer.php';
  ?>
