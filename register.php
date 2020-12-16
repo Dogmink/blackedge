@@ -53,7 +53,7 @@
       <div class="col6">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
       </div>
-      <div class="col6">
+      <div class="col6 margin-login">
         <div class="content-login">
           <p class="login-header">Register</p>
           <form id="formulario" class="form-login">
