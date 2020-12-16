@@ -19,11 +19,11 @@
       <p class="login-header">Register</p>
       <form id="formulario" class="form-login">
         <div id="failUsername" style="display: none">
-          <p class="error-login">Ingresa un <b>correo electronico</b> valido.</p>
+          <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
         </div>
         <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
         <div id="failEmail" style="display: none">
-          <p class="error-login">Ingresa un <b>correo electronico</b> valido.</p>
+          <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
         </div>
         <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
         <div id="failPass" style="display: none">
