@@ -31,7 +31,7 @@
   <title>BlackEdge</title>
 </head>
 
-<body>
+<body class="body-register">
   <?php
     if (isset($_SESSION['user_log'])) {
       $user = $_SESSION['user_log'];
