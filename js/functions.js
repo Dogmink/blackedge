@@ -12,12 +12,6 @@ formulario.addEventListener('submit', function(e) {
     })
     .then(res => res.json())
     .then(data => {
-      if(data == 3){
-        console.log('Este email ya se encuentra en uso.');
-      } else if(data == 2){
-        console.log('Este nombre de usuario ya está en uso.');
-      } else {
-        console.log('Ocurrió un problema al registrarse, intentanlo nuevamente.')
-      }
+      console.log(data);
     })
 })
