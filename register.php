@@ -65,9 +65,8 @@
               autocomplete="off" required>
             <input id="input" type="hidden" name="accion" value="registro">
             <input id="input" id="pushData" class="btn-login" type="submit">
-            <p class="register-text">¿Aún no tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí></button></p>
-            </p>
           </form>
+            < class="register-text">¿Aún no tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí</button></p>
         </div>
       </div>
     </div>
@@ -102,9 +101,8 @@
               placeholder="•••••••••" autocomplete="off" required>
             <input id="input" type="hidden" name="accion" value="registro">
             <input id="input" id="pushData" class="btn-login" type="submit">
-            <p class="register-text">¿Ya tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí></button></p>
-            </p>
           </form>
+            <p class="register-text">¿Ya tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí</button></p>
         </div>
       </div>
     </div>
