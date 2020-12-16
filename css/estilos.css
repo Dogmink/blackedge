@@ -179,13 +179,13 @@ ul li:hover {
   width: 100%;
   font-size: 24px;
   color: #f0f0f0;
-  background-color:  rgb(255, 0, 64); 
+  background-color: var(--hovercolor1); 
   padding: 15px;
   border-style: none;
   text-align: center;
   -webkit-box-shadow: 0 0 15px #000;
   box-shadow: 0 0 15px #000;
-  -webkit-box-shadow: 0 0 15px var(--hovercolor1) inset;
+  -webkit-box-shadow: 0 0 15px #390b75 inset;
   box-shadow: 0 0 15px #390b75 inset;
 }
 
