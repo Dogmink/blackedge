@@ -197,9 +197,10 @@ ul li:hover {
 }
 
 .error-login {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--hovercolor1);
-  padding: 5px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .login-user {
