@@ -13,6 +13,11 @@ html, body {
   font-family: 'Quicksand', sans-serif;
 }
 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #ff0037;
+}  
+
 .iconweb {
   -webkit-filter: invert(100%);
   filter: invert(100%);
