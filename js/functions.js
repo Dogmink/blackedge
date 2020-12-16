@@ -31,11 +31,13 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+  function remake(e) {
+    var val = e.value;
+    var id = e.id;
+    e.outerHTML = e.outerHTML;
+    document.getElementById('input').value = val;
+    return true;
+  }
+});
 
-function remake(e) {
-  var val = e.value;
-  var id = e.id;
-  e.outerHTML = e.outerHTML;
-  document.getElementById('input').value = val;
-  return true;
-}
