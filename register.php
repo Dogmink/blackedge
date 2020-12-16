@@ -49,28 +49,25 @@
     <div class="nav_options"></div>
       <ul>
         <li>
-        <div class="row-login">
-          <div class="col12">
-            <p class="login-header">Register</p>
-            <form id="formulario" class="form-login">
-              <div id="failUsername" style="display: none">
-                <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
-              </div>
-              <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
-              <div id="failEmail" style="display: none">
-                <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
-              </div>
-              <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
-              <div id="failPass" style="display: none">
-                <p class="error-login">Las <b>contraseñas</b> no coinciden</p>
-              </div>
-              <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
-              <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
-              <input type="hidden" name="accion" value="registro">
-              <input id="pushData" class="btn-panel" type="submit">
-              <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
-            </form>
-          </div>
+         <p class="login-header">Register</p>
+         <form id="formulario" class="form-login">
+           <div id="failUsername" style="display: none">
+             <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
+           </div>
+           <input class="input-login" type="text" name="username" id="nombre" value="" placeholder="Nombre de usuario" autocomplete="off" required>
+           <div id="failEmail" style="display: none">
+             <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
+           </div>
+           <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo" autocomplete="off" required>
+           <div id="failPass" style="display: none">
+             <p class="error-login">Las <b>contraseñas</b> no coinciden</p>
+           </div>
+           <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
+           <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
+           <input type="hidden" name="accion" value="registro">
+           <input id="pushData" class="btn-panel" type="submit">
+           <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
+         </form>
         </li>
       </ul>
     </nav>
