@@ -13,18 +13,19 @@
     if($password != $cPassword){
       echo json_encode(4);
     }else{
-    $parametros = array(
+    $_params = array(
       'username'=>$_POST['username'],
       'password'=>$_POST['password'],
       'email'=>$_POST['email']
     );
     $vUsername = $user->validateUsername($username);
     $vEmail = $user->validateEmail($email);
+    $userRegister = $user->userRegister($_params);
     if ($vUsername) {
       echo json_encode(2);
     } else if ($vEmail) {
       echo json_encode(3);
-    } else {
+    } else if (condition) {
       echo json_encode(1);
     }
   }
