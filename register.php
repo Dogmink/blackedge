@@ -47,12 +47,12 @@
     }
 
      ?>
-  <div class="contenido align-login fadeInUp" id="formLogin" style="display: block;">
+  <div class="contenido align-login fadeInUp">
     <div class="row">
       <div class="col8 margin-logo-login align-login">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
       </div>
-      <div class="col8 margin-login">
+      <div class="col8 margin-login" id="formLogin" style="display: block;">
         <div class="content-login">
           <p class="login-header">INGRESAR</p>
           <form id="formulario" class="form-login">
@@ -66,19 +66,10 @@
             <input id="input" type="hidden" name="accion" value="registro">
             <input id="input" id="pushData" class="btn-login" type="submit">
           </form>
-            < class="register-text">¿Aún no tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí</button></p>
+            <p class="register-text">¿Aún no tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí</button></p>
         </div>
       </div>
-    </div>
-  </div>
-
-
-  <div class="contenido align-login fadeInUp" id="formRegister" style="display: none;">
-    <div class="row">
-      <div class="col8 margin-logo-login align-login">
-        <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
-      </div>
-      <div class="col8 margin-login">
+      <div class="col8 margin-login" id="formRegister" style="display: none;">
         <div class="content-login">
           <p class="login-header">REGISTRARSE</p>
           <form id="formulario" class="form-login">
