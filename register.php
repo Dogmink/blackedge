@@ -31,7 +31,7 @@
   <title>BlackEdge</title>
 </head>
 
-<body class="body-register">
+<body>
   <?php
     if (isset($_SESSION['user_log'])) {
       $user = $_SESSION['user_log'];
@@ -49,7 +49,7 @@
      ?>
 
   <div class="contenido align-login fadeInUp">
-    <div class="row login-contrainer">
+    <div class="row">
       <div class="col8 margin-logo-login align-login">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
       </div>

@@ -13,10 +13,6 @@ html, body {
   font-family: 'Quicksand', sans-serif;
 }
 
-.body-register{
-  background-image: url('/images/web/1.jpg');
-  background-size: cover;
-}
 
 .input-login:-webkit-autofill,
 .input-login:-webkit-autofill:hover,
@@ -221,13 +217,6 @@ ul li:hover {
   box-sizing: content-box;
   width: 110%;
 }
-
-.login-contrainer{
-  padding: 50px;
-  background-color: #fff;
-  box-shadow: #000;
-  -webkit-box-shadow: 0 0 15px #000;
-  }
 
 .margin-login{
   margin-left: 50px;
