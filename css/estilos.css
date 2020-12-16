@@ -13,10 +13,10 @@ html, body {
   font-family: 'Quicksand', sans-serif;
 }
 
-input .input-login:-webkit-autofill,
-input .input-login:-webkit-autofill:hover,
-input .input-login:-webkit-autofill:focus,
-input .input-login:-webkit-autofill:active {
+.input-login:-webkit-autofill,
+.input-login:-webkit-autofill:hover,
+.input-login:-webkit-autofill:focus,
+.input-login:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   -webkit-text-fill-color: var(--hovercolor1);
 }
