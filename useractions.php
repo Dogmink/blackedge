@@ -10,13 +10,17 @@
     $password = $_POST['password'];
     $cPassword = $_POST['password-confirm'];
     
+    if($password != $cPassword){
+      echo json_encode(4);
+    }else{
     $parametros = array(
       'username'=>$_POST['username'],
       'password'=>$_POST['password'],
       'email'=>$_POST['email']
     );
-    
-    echo json_encode(1);
+    $vUsername = $user->validateUsername($username);
+    $vEmail = 
   }
+}
   
 ?>

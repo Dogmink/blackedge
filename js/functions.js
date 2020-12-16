@@ -1,6 +1,7 @@
 let formulario = document.getElementById('formulario');
 let errEmail = document.getElementById('failEmail');
 let errUsername = document.getElementById('failUsername');
+let errPassword = document.getElementById('failPass');
 
 formulario.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -15,6 +16,8 @@ formulario.addEventListener('submit', function(e) {
       console.log(data)
       if (data == 1) {
         console.log('Es valor 1, eso quiere decir que estoy funcionando.')
+      } else if (data == 4){
+        errPassword.style.display = 'block'
       }
     })
 })
