@@ -4,6 +4,7 @@
   color: var(--blackcolor);
   margin-top: 150px;
   justify-content: center;
+  min-height: cal(100vh - 100px - 300px);
 }
 
 .contenido-alert-active {
