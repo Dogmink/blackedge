@@ -208,7 +208,13 @@ ul li:hover {
 
 .content-login{
   box-sizing: content-box;
-  width: 150%;
+  width: 800%;
+}
+
+.align-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*----------Panel-------------*/

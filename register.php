@@ -48,7 +48,7 @@
 
      ?>
 
-  <div class="contenido">
+  <div class="contenido align-login">
     <div class="row">
       <div class="col6">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
