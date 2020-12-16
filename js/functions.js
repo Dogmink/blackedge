@@ -3,7 +3,7 @@ let errEmail = document.getElementById('failEmail');
 let errUsername = document.getElementById('failUsername');
 let errPassword = document.getElementById('failPass');
 
-formulario.addEventListener('submit', function(e) {
+formulario.addEventListener('submit', function (e) {
   e.preventDefault();
   let datos = new FormData(formulario);
   errEmail.style.display = 'none';
@@ -19,14 +19,23 @@ formulario.addEventListener('submit', function(e) {
       console.log(data)
       if (data == 1) {
         console.log('El usuario se ha registrado satisfactoriamente.')
-      }else if (data == 2) {
+      } else if (data == 2) {
         errUsername.style.display = 'block'
-      }else if (data == 3) {
+      } else if (data == 3) {
         errEmail.style.display = 'block'
-      } else if (data == 4){
+      } else if (data == 4) {
         errPassword.style.display = 'block'
       } else {
         console.log('Ocurrió un error, intenta registrate de nuevo.')
       }
     })
 })
+
+
+function remake(e) {
+  var val = e.value;
+  var id = e.id;
+  e.outerHTML = e.outerHTML;
+  document.getElementById('input').value = val;
+  return true;
+}
