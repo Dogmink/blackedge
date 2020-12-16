@@ -46,8 +46,8 @@
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
     </div>
-      <ul>
-        <li>
+      <ul class = "ul-login">
+        <li class = "li-login">
          <p class="login-header">Register</p>
          <form id="formulario" class="form-login">
            <div id="failUsername" style="display: none">
