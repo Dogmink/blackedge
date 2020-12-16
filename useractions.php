@@ -1,6 +1,5 @@
 <?php
-  include 'resources/user.php';
-  $user = new BlackEdgeStore\User;
+  
   $accion = $_POST['accion'];
 
   if ($accion == "registro") {
@@ -15,6 +14,8 @@
       'password'=>$password,
       'email'=>$email
     );
+    include 'resources/user.php';
+    $user = new BlackEdgeStore\User;
     $vUsername = $user->validateUsername($username);
     $vEmail = $user->validateEmail($email);
   
