@@ -3,6 +3,8 @@
   $accion = $_POST['accion'];
 
   if ($accion == "registro") {
+    include 'resources/user.php';
+    $user = new BlackEdgeStore\User;
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
