@@ -12,9 +12,9 @@ formulario.addEventListener('submit', function(e) {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      console.log(data)
       if (data == 1) {
-        console.log('Es valor 1, eso quiere decir que estoy funcionando.');
+        console.log('Es valor 1, eso quiere decir que estoy funcionando.')
       }
     })
 })
