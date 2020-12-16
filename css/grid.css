@@ -7,6 +7,13 @@
   min-height: calc(100vh - 100px - 300px);
 }
 
+.search-bar-content{
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  margin-top: 100px;
+}
+
 .contenido-alert-active {
   max-width: 1200px;
   margin: auto;
