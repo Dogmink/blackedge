@@ -116,7 +116,8 @@ class User
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['num']>0) {
-      return 2;
+      return true;
+      die();
     }
   }
 
@@ -127,7 +128,8 @@ class User
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['mail']>0) {
-      return 3;
+      return true;
+      die();
     }
   }
 

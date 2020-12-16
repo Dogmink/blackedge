@@ -15,9 +15,15 @@ formulario.addEventListener('submit', function(e) {
     .then(data => {
       console.log(data)
       if (data == 1) {
-        console.log('Es valor 1, eso quiere decir que estoy funcionando.')
+        console.log('El usuario se ha registrado satisfactoriamente.')
+      }else if (data == 2) {
+        errUsername.style.display = 'block'
+      }else if (data == 3) {
+        errEmail.style.display = 'block'
       } else if (data == 4){
         errPassword.style.display = 'block'
+      } else {
+        console.log('Ocurrió un error, intenta registrate de nuevo.')
       }
     })
 })

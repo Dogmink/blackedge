@@ -19,7 +19,12 @@
       'email'=>$_POST['email']
     );
     $vUsername = $user->validateUsername($username);
-    $vEmail = 
+    $vEmail = $user->validateEmail($email);
+    if ($vUsername) {
+      echo json_encode(2);
+    } else if ($vEmail) {
+      echo json_encode(3);
+    }
   }
 }
   
