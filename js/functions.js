@@ -6,6 +6,9 @@ let errPassword = document.getElementById('failPass');
 formulario.addEventListener('submit', function(e) {
   e.preventDefault();
   let datos = new FormData(formulario);
+  errEmail.style.display = 'none';
+  errUsername.style.display = 'none';
+  errPassword.style.display = 'none';
 
   fetch('https://blackedgestore.com/useractions.php', {
       method: 'POST',
