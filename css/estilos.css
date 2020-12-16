@@ -13,33 +13,14 @@ html, body {
   font-family: 'Quicksand', sans-serif;
 }
 
-input .input-login:-webkit-autofill {
-  -webkit-box-shadow:0 0 0 50px white inset;
-  -webkit-text-fill-color: var(--hovercolor1);
-  -webkit-background-fill-color: #fff;
-  background: transparent;
+input .input-login:-webkit-autofill,
+input .input-login:-webkit-autofill:hover,
+input .input-login:-webkit-autofill:focus,
+input .input-login:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s !important;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  -webkit-text-fill-color: var(--hovercolor1) !important;
 }
-
-input.input-login:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 0px #000, 0 0 0 50px white inset;
-  -webkit-text-fill-color: var(--hovercolor1);
-  background: transparent;
-}  
-Fuente 
-
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 50px white inset;
-  -webkit-text-fill-color: #333;
-  -webkit-background-fill-color: #fff;
-  background: transparent;
-}
-
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 50px #000, 0 0 0 50px white inset;
-  -webkit-text-fill-color: #333;
-  background: transparent;
-}  
-Fuente 
 
 .iconweb {
   -webkit-filter: invert(100%);
