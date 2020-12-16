@@ -40,7 +40,7 @@ formulario.addEventListener('submit', function (e) {
 })
 
 linkForm.addEventListener('click', function(e){
-  e,preventDefault();
+  e.preventDefault();
   turnForm = !turnForm
   if (turnForm) {
     formLogin.style.display = 'none'
