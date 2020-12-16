@@ -64,7 +64,7 @@
            <input class="input-login" type="password" name="password" value="" placeholder="•••••••••" autocomplete="off" required>
            <input class="input-login" type="password" name="password-confirm" value="" placeholder="•••••••••" autocomplete="off" required>
            <input type="hidden" name="accion" value="registro">
-           <input id="pushData" class="btn-panel" type="submit">
+           <input id="pushData" class="btn-login" type="submit">
            <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
          </form>
         </li>
