@@ -42,11 +42,10 @@
     }
 
      ?>
-  <nav class="contenido fadeInDown">
+  <div class="contenido fadeInDown">
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
     </div>
-      <ul class = "ul-login">
         <div class = "content-login">
          <p class="login-header">Register</p>
          <form id="formulario" class="form-login">
@@ -68,8 +67,7 @@
            <p class="register-text">¿Ya tienes cuenta? <a class="register-text-link" href="login.php">Haz clic aquí</a></p>
          </form>
         </div>
-      </ul>
-   </nav>
+   </div>
 <?php
   require 'Modulos/footer.php';
  ?>
