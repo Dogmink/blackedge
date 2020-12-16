@@ -50,7 +50,7 @@
       <ul>
         <li>
         <div class="row-login">
-          <div class="col8">
+          <div class="col12">
             <p class="login-header">Register</p>
             <form id="formulario" class="form-login">
               <div id="failUsername" style="display: none">
