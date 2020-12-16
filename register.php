@@ -70,8 +70,6 @@
         </div>
       </ul>
     </nav>
-
-
 <?php
   require 'Modulos/footer.php';
  ?>
