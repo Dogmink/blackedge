@@ -15,8 +15,6 @@ html, body {
 
 body{
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .input-login:-webkit-autofill,
