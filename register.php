@@ -55,7 +55,7 @@
       </div>
       <div class="col8 margin-login">
         <div class="content-login">
-          <p class="login-header">Register</p>
+          <p class="login-header">REGISTER</p>
           <form id="formulario" class="form-login">
             <div id="failUsername" style="display: none">
               <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
