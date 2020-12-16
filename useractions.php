@@ -16,7 +16,7 @@
       'email'=>$_POST['email']
     );
     
-    echo json_encode($parametros);
+    echo json_encode(1);
   }
   
 ?>
