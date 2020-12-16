@@ -24,6 +24,8 @@
       echo json_encode(2);
     } else if ($vEmail) {
       echo json_encode(3);
+    } else {
+      echo json_encode(1);
     }
   }
 }
