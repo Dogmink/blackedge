@@ -42,6 +42,7 @@ nav ul {
 }
 
 nav ul .ul-login {
+  box-sizing: content-box;
   display: block;
   font-size: 24px;
   width: 150%;
@@ -53,6 +54,7 @@ nav li {
 }
 
 nav li .li-login {
+  box-sizing: content-box;
   list-style: none;
   width: 150%;
 }
@@ -186,6 +188,12 @@ ul li:hover {
 
 .login-user {
   text-transform: uppercase;
+}
+
+.content-login{
+  width: 100%;
+  box-sizing: content-box;
+  padding: 20px;
 }
 
 /*----------Panel-------------*/
