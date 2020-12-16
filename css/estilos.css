@@ -14,24 +14,30 @@ html, body {
 }
 
 input .input-login:-webkit-autofill {
-  -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
-  -webkit-text-fill-color: #333;
+  -webkit-box-shadow:0 0 0 0px white inset;
+  -webkit-text-fill-color: var(--hovercolor1);
+  -webkit-background-fill-color: #fff;
+  background: transparent;
 }
 
 input.input-login:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 50px #000, 0 0 0 50px white inset;
-  -webkit-text-fill-color: #333;
+  -webkit-box-shadow: 0 0 0 0px #000, 0 0 0 50px white inset;
+  -webkit-text-fill-color: var(--hovercolor1);
+  background: transparent;
 }  
 Fuente 
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+  -webkit-box-shadow: 0 0 0 50px white inset;
   -webkit-text-fill-color: #333;
+  -webkit-background-fill-color: #fff;
+  background: transparent;
 }
 
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px #000, 0 0 0 50px white inset;
   -webkit-text-fill-color: #333;
+  background: transparent;
 }  
 Fuente 
 
