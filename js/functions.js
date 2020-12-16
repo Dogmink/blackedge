@@ -6,7 +6,7 @@ formulario.addEventListener('submit', function(e) {
   e.preventDefault();
   let datos = new FormData(formulario);
 
-  fetch('useractions.php', {
+  fetch('blackedgestore.com/useractions.php', {
       method: 'POST',
       body: datos
     })
