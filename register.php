@@ -46,7 +46,6 @@
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
     </div>
-    <div class="nav_options"></div>
       <ul>
         <li>
          <p class="login-header">Register</p>
