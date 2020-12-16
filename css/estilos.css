@@ -44,7 +44,7 @@ nav ul {
 nav ul .ul-login {
   display: flex;
   font-size: 24px;
-  width: 100%;
+  width: 150%;
 }
 
 nav li {
@@ -54,7 +54,7 @@ nav li {
 
 nav li .li-login {
   list-style: none;
-  width: 100%;
+  width: 150%;
 }
 
 nav li a {
