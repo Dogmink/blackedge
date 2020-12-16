@@ -211,6 +211,11 @@ ul li:hover {
   width: 80%;
 }
 
+.margin-login{
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
 .align-login{
   display: flex;
   justify-content: center;
