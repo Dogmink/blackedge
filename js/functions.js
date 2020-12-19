@@ -44,14 +44,15 @@ formulario.addEventListener('submit', function (e) {
       if (turnForm = false) {
         formLogin.style.display = 'none';
         formRegister.style.display = 'block';
+        turnForm = true;
       } else {
         formLogin.style.display = 'block';
         formRegister.style.display = 'none';
+        turnForm = false;
       }
     }
 
     linkForm.addEventListener('click', function (e){
-      turnForm = !turnForm
       formularioDinamic()
     })
 
