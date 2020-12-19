@@ -51,7 +51,7 @@ formulario.addEventListener('submit', function (e) {
     }
 
     linkForm.addEventListener('click', function (e){
-      turnForm = !turnForm;
-      formularioDinamic();
+      turnForm = !turnForm
+      formularioDinamic()
     })
 
