@@ -61,5 +61,6 @@ switch(turnForm){
     linkForm.addEventListener('click', function (e){
       turnForm = 2;
     });
+  break;
 }
 
