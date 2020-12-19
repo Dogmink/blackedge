@@ -45,22 +45,22 @@ switch(turnForm){
   formRegister.style.display = 'none';
   formLogin.style.display = 'block';
     linkForm.addEventListener('click', function (e){
-      turnForm = 2;
-    });
+      turnForm = 2
+    })
   break;
   case 2:
   formLogin.style.display = 'none';
   formRegister.style.display = 'block';
     linkForm.addEventListener('click', function (e){
-      turnForm = 1;
-    });
+      turnForm = 1
+    })
   break;
   default:
     formRegister.style.display = 'none';
     formLogin.style.display = 'block';
     linkForm.addEventListener('click', function (e){
-      turnForm = 2;
-    });
+      turnForm = 2
+    })
   break;
 }
 
