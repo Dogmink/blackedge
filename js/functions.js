@@ -7,7 +7,7 @@ let successReg = document.getElementById('successReg');
 let formRegister = document.getElementById('formRegister');
 let formLogin = document.getElementById('formLogin');
 let linkForm = document.getElementById("linkRegister");
-let turnForm;
+let turnForm = 1;
 
 
 formulario.addEventListener('submit', function (e) {
@@ -53,13 +53,6 @@ switch(turnForm){
   formRegister.style.display = 'block';
     linkForm.addEventListener('click', function (e){
       turnForm = 1
-    })
-  break;
-  default:
-    formRegister.style.display = 'none';
-    formLogin.style.display = 'block';
-    linkForm.addEventListener('click', function (e){
-      turnForm = 2
     })
   break;
 }
