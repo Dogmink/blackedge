@@ -41,25 +41,25 @@ formulario.addEventListener('submit', function (e) {
 })
 
 switch(turnForm){
-  case true: 
+  case 1: 
   formRegister.style.display = 'none';
   formLogin.style.display = 'block';
     linkForm.addEventListener('click', function (e){
-      turnForm = !turnForm;
+      turnForm = 2;
     });
   break;
-  case false:
+  case 2:
   formLogin.style.display = 'none';
   formRegister.style.display = 'block';
     linkForm.addEventListener('click', function (e){
-      turnForm = !turnForm;
+      turnForm = 1;
     });
   break;
   default:
     formRegister.style.display = 'none';
     formLogin.style.display = 'block';
     linkForm.addEventListener('click', function (e){
-      turnForm = !turnForm;
+      turnForm = 2;
     });
 }
 
