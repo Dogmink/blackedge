@@ -7,7 +7,7 @@ require 'Modulos/basic.php';
     <script>
     {
       alert("Inicia sesión para añadir productos al carrito.");
-      window.location= 'login.php';
+      window.location= 'register.php';
     }
     </script>
     <?php
