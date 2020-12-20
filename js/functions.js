@@ -40,8 +40,15 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
-linkForm.addEventListener('click', function(){
-  formLogin.toggle()
-  formRegister.toggle()
-})
+function changeForm(){
+  if (formRegister.style.display == 'none') {
+    formLogin.style.display = 'block'
+    formRegister.style.display = 'none'
+  } else {
+    formLogin.style.display = 'none'
+    formRegister.style.display == 'block'
+  }
+}
+
+
 

@@ -93,7 +93,7 @@
             <input id="input" type="hidden" name="accion" value="registro">
             <input id="input" id="pushData" class="btn-login" type="submit">
           </form>
-            <p class="register-text">¿Ya tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí</button></p>
+            <p class="register-text">¿Ya tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>
       </div>
     </div>
