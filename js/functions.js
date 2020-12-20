@@ -40,7 +40,7 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
-linkForm.click(function(e){
+$('#linkForm').click(function(e){
   e.preventDefault();
   turnForm = !turnForm
   if (turnForm) {
