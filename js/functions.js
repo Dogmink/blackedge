@@ -40,15 +40,13 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
+
 function changeForm(){
-  if (formRegister.style.display == 'none') {
-    formLogin.style.display = 'block'
-    formRegister.style.display = 'none'
-  } else {
-    formLogin.style.display = 'none'
-    formRegister.style.display == 'block'
+  if (formRegister.style.display == 'block') {
+    formRegister.style.display = 'none';
+    formLogin.style.display = 'block';
+  } else if (formLogin.style.display == 'block') {
+    formLogin.style.display = 'none';
+    formRegister.style.display = 'block';
   }
 }
-
-
-
