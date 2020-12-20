@@ -20,16 +20,17 @@
     );
     $vUsername = $user->validateUsername($username);
     $vEmail = $user->validateEmail($email);
-    $userRegister = $user->userRegister($_params);
     if ($vUsername) {
       echo json_encode(2);
       die();
     } else if ($vEmail) {
       echo json_encode(3);
       die();
-    } else {
+    } else  if ($vEmail == false && $vUsername == false) {
       $user->userRegister($_params);
       echo json_encode(1);
+    } else {
+      echo json_encode(404);
     }
     
   }
