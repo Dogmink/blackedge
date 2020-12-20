@@ -59,12 +59,12 @@
             <div id="errMatch" style="display: none">
               <p class="error-login">Las <b>credenciales</b> son incorrectas.</p>
             </div>
-            <input class="input-login" type="text" name="username" id="nombre" value=""
+            <input class="input-login" type="text" name="username" value=""
               placeholder="Nombre de usuario" autocomplete="off" required>
             <input class="input-login" type="password" name="password" value="" placeholder="•••••••••"
               autocomplete="off" required>
             <input type="hidden" name="accion" value="Ingresar">
-            <input id="pushData" class="btn-login" type="submit">
+            <input class="btn-login" type="submit">
           </form>
             <p class="register-text">¿Aún no tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>
@@ -76,7 +76,7 @@
             <div id="failUsername" style="display: none">
               <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
             </div>
-            <input class="input-login" type="text" name="username" id="nombre" value=""
+            <input class="input-login" type="text" name="username" value=""
               placeholder="Nombre de usuario" autocomplete="off" required>
             <div id="failEmail" style="display: none">
               <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
@@ -91,7 +91,7 @@
             <input class="input-login" type="password" name="password-confirm" value=""
               placeholder="•••••••••" autocomplete="off" required>
             <input type="hidden" name="accion" value="registro">
-            <input id="pushData" class="btn-login" type="submit">
+            <input class="btn-login" type="submit">
           </form>
             <p class="register-text">¿Ya tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>

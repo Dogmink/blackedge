@@ -10,15 +10,15 @@ let linkForm = document.getElementById("linkRegister");
 let errMatch = document.getElementById('errMatch');
 let turnForm;
 
-
-formulario.addEventListener('submit', function (e) {
-  e.preventDefault();
-  let datos = new FormData(formulario);
-  errEmail.style.display = 'none';
-  errUsername.style.display = 'none';
-  errPassword.style.display = 'none';
-
-  fetch('https://blackedgestore.com/useractions.php', {
+if (formulario) {
+  formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let datos = new FormData(formulario);
+    errEmail.style.display = 'none';
+    errUsername.style.display = 'none';
+    errPassword.style.display = 'none';
+    
+    fetch('https://blackedgestore.com/useractions.php', {
       method: 'POST',
       body: datos
     })
@@ -37,15 +37,16 @@ formulario.addEventListener('submit', function (e) {
         console.log('Ocurrió un error, intenta registrate de nuevo.')
       }
     })
-})
-
-
-formlarioLog.addEventListener('submit', function (e) {
-  e.preventDefault();
-  let datos = new FormData(formularioLog);
-  errMatch.style.display = 'none';
-
-  fetch('https://blackedgestore.com/useractions.php', {
+  })
+}
+  
+if (formlarioLog) {
+  formlarioLog.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let datos = new FormData(formularioLog);
+    errMatch.style.display = 'none';
+    
+    fetch('https://blackedgestore.com/useractions.php', {
       method: 'POST',
       body: datos
     })
@@ -60,11 +61,12 @@ formlarioLog.addEventListener('submit', function (e) {
         console.log('Ocurrió un error, intenta ingresar de nuevo.')
       }
     })
-})
-
-function changeForm(){
-  if (formRegister.style.display == 'block') {
-    formRegister.style.display = 'none';
+  })
+}
+  
+  function changeForm(){
+    if (formRegister.style.display == 'block') {
+      formRegister.style.display = 'none';
     formLogin.style.display = 'block';
   } else if (formLogin.style.display == 'block') {
     formLogin.style.display = 'none';
