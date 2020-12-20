@@ -40,16 +40,8 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
-linkForm.addEventListener('click', function(e){
-  e.preventDefault();
-  turnForm = !turnForm
-  if (turnForm) {
-    formLogin.style.display = 'none'
-    formRegister.style.display = 'block'
-  }
-  if(turnForm == false){
-    formLogin.style.display = 'block'
-    formRegister.style.display = 'none'
-  }
+linkForm.addEventListener('click', function(){
+  formLogin.toggle()
+  formRegister.toggle()
 })
 
