@@ -42,7 +42,7 @@ formulario.addEventListener('submit', function (e) {
 
 formlarioLog.addEventListener('submit', function (e) {
   e.preventDefault();
-  let datos = new FormData(formulario);
+  let datos = new FormData(formularioLog);
   errMatch.style.display = 'none';
 
   fetch('https://blackedgestore.com/useractions.php', {
