@@ -13,16 +13,16 @@
       if ($edit == 1) {
       ?>
       <div class="contenido-userconfig">
-      <div class="row-userconfig">
-        <div class="col12">
-          <p class="header-userconfig">Configuración de acceso</p>
+        <div class="row-userconfig">
+          <div class="col12">
+            <p class="header-userconfig">Configuración de acceso</p>
+         </div>
         </div>
-      </div>
       <div class="separator"></div>
-      <div class="row-userconfig">
-        <div class="col6">
-          <label for="email" class="label-userconfig">Correo electronico</label>
-        </div>
+        <div class="row-userconfig">
+          <div class="col6">
+           <label for="email" class="label-userconfig">Correo electronico</label>
+         </div>
         <div class="col6">
           <label for="password" class="label-userconfig">Contraseña</label>
         </div>
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="separator"></div>
-      <form class="" action="./panel/loginactions.php" method="POST">
+      <form class="" action="./panel/loginactions.php" id = "formUserInfo">
       <div class="row-userconfig">
         <div class="col3">
           <label for="nombres" class="label-userconfig">Nombres</label>
@@ -101,7 +101,7 @@
     } else if($edit == 2){
       ?>
       <div class="contenido-userconfig">
-      <form class="" action="./panel/loginactions.php" method="post">
+      <form class="" id="formUserAccess">
       <div class="row-userconfig">
         <div class="col12">
           <p class="header-userconfig">Configuración de acceso</p>
