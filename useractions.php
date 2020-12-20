@@ -28,14 +28,8 @@
       echo json_encode(3);
       die();
     } else {
-      echo json_encode(404);
-      die();
-    }
-
-
-    if ($userRegister) {
+      $user->userRegister($_params);
       echo json_encode(1);
-      die();
     }
     
   }
