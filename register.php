@@ -66,7 +66,7 @@
             <input id="input" type="hidden" name="accion" value="registro">
             <input id="input" id="pushData" class="btn-login" type="submit">
           </form>
-            <p class="register-text">¿Aún no tienes cuenta? <button id="linkRegister" class="register-text-link">Haz click aquí</button></p>
+            <p class="register-text">¿Aún no tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>
       </div>
       <div class="col8 margin-login" id="formRegister" style="display: none;">
