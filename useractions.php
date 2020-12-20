@@ -36,7 +36,7 @@
   }
 }
 
-  if ($accoin =='Ingresar'){
+  if ($accion =='Ingresar'){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $result = $user->userLogin($username, $password);
