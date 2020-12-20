@@ -55,16 +55,16 @@
       <div class="col8 margin-login" id="formLogin" style="display: block;">
         <div class="content-login">
           <p class="login-header">INGRESAR</p>
-          <form id="formulario" class="form-login">
-            <div id="failUsername" style="display: none">
+          <form id="formularioLog" class="form-login">
+            <div id="errMatch" style="display: none">
               <p class="error-login">Las <b>credenciales</b> son incorrectas.</p>
             </div>
-            <input id="input" class="input-login" type="text" name="username" id="nombre" value=""
+            <input class="input-login" type="text" name="username" id="nombre" value=""
               placeholder="Nombre de usuario" autocomplete="off" required>
-            <input id="input" class="input-login" type="password" name="password" value="" placeholder="•••••••••"
+            <input class="input-login" type="password" name="password" value="" placeholder="•••••••••"
               autocomplete="off" required>
-            <input id="input" type="hidden" name="accion" value="registro">
-            <input id="input" id="pushData" class="btn-login" type="submit">
+            <input type="hidden" name="accion" value="Ingresar">
+            <input id="pushData" class="btn-login" type="submit">
           </form>
             <p class="register-text">¿Aún no tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>
@@ -76,22 +76,22 @@
             <div id="failUsername" style="display: none">
               <p class="error-login">El <b>nombre de usuario</b> ya está en uso.</p>
             </div>
-            <input id="input" class="input-login" type="text" name="username" id="nombre" value=""
+            <input class="input-login" type="text" name="username" id="nombre" value=""
               placeholder="Nombre de usuario" autocomplete="off" required>
             <div id="failEmail" style="display: none">
               <p class="error-login">El <b>correo electronico</b> ya está en uso.</p>
             </div>
-            <input id="input" class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo"
+            <input class="input-login" type="email" id="correo" name="email" value="" placeholder="Correo"
               autocomplete="off" required>
             <div id="failPass" style="display: none">
               <p class="error-login">Las <b>contraseñas</b> no coinciden</p>
             </div>
-            <input id="input" class="input-login" type="password" name="password" value="" placeholder="•••••••••"
+            <input class="input-login" type="password" name="password" value="" placeholder="•••••••••"
               autocomplete="off" required>
-            <input id="input" class="input-login" type="password" name="password-confirm" value=""
+            <input class="input-login" type="password" name="password-confirm" value=""
               placeholder="•••••••••" autocomplete="off" required>
-            <input id="input" type="hidden" name="accion" value="registro">
-            <input id="input" id="pushData" class="btn-login" type="submit">
+            <input type="hidden" name="accion" value="registro">
+            <input id="pushData" class="btn-login" type="submit">
           </form>
             <p class="register-text">¿Ya tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>

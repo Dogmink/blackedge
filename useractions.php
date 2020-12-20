@@ -32,5 +32,32 @@
     }
   }
 }
+
+  if ($accoin =='Ingresar'){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $result = $user->userLogin($username, $password);
+        if ($result) {
+          session_start();
+          $_SESSION['user_log'] = array(
+            'id' => $result['id'],
+            'username' => $result['username'],
+            'password' => $result['password'],
+            'email' => $result['email'],
+            'nombres' => $result['nombres'],
+            'apellidos' => $result['apellidos'],
+            'dni' => $result['dni'],
+            'telf' => $result['telf'],
+            'direc' => $result['direc'],
+            'img_prof' => $result['img_prof'],
+            'hash' => $result['hash'],
+            'active' => $result['active'],
+            'admin' => $result['admin']
+          );
+          echo json_encode(1);
+        }else {
+          echo json_encode(2);
+        }
+      }
   
 ?>

@@ -7,6 +7,7 @@ let successReg = document.getElementById('successReg');
 let formRegister = document.getElementById('formRegister');
 let formLogin = document.getElementById('formLogin');
 let linkForm = document.getElementById("linkRegister");
+let errMatch = document.getElementById('errMatch');
 let turnForm;
 
 
@@ -25,9 +26,7 @@ formulario.addEventListener('submit', function (e) {
     .then(data => {
       console.log(data)
       if (data == 1) {
-        formRegister.style.display = 'none'
-        formLogin.style.display = 'block'
-        successReg.style.display = 'block'
+        changeForm()
       } else if (data == 2) {
         errUsername.style.display = 'block'
       } else if (data == 3) {
@@ -40,6 +39,28 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
+
+formlarioLog.addEventListener('submit', function (e) {
+  e.preventDefault();
+  let datos = new FormData(formulario);
+  errMatch.style.display = 'none';
+
+  fetch('https://blackedgestore.com/useractions.php', {
+      method: 'POST',
+      body: datos
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      if (data == 1) {
+        window.location = '../index.php'
+      } else if (data == 2) {
+        errMatch.style.display = 'block'
+      } else {
+        console.log('Ocurrió un error, intenta ingresar de nuevo.')
+      }
+    })
+})
 
 function changeForm(){
   if (formRegister.style.display == 'block') {
