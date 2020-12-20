@@ -47,7 +47,7 @@
     }
 
      ?>
-  <div class="contenido-login align-login fadeInUp">
+  <div class="contenido align-login fadeInUp">
     <div class="row">
       <div class="col8 margin-logo-login align-login">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
