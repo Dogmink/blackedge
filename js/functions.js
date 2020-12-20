@@ -7,7 +7,7 @@ let successReg = document.getElementById('successReg');
 let formRegister = document.getElementById('formRegister');
 let formLogin = document.getElementById('formLogin');
 let linkForm = document.getElementById("linkRegister");
-let turnForm = true;
+let turnForm;
 
 
 formulario.addEventListener('submit', function (e) {
@@ -40,19 +40,16 @@ formulario.addEventListener('submit', function (e) {
     })
 })
 
-    function formularioDinamic(){
-      if (turnForm = false) {
-        formLogin.style.display = 'none';
-        formRegister.style.display = 'block';
-        turnForm = true;
-      } else {
-        formLogin.style.display = 'block';
-        formRegister.style.display = 'none';
-        turnForm = false;
-      }
-    }
-
-    linkForm.addEventListener('click', function (e){
-      formularioDinamic()
-    })
+linkForm.addEventListener('click', function(e){
+  e.preventDefault();
+  turnForm = !turnForm
+  if (turnForm) {
+    formLogin.style.display = 'none'
+    formRegister.style.display = 'block'
+  }
+  if(turnForm == false){
+    formLogin.style.display = 'block'
+    formRegister.style.display = 'none'
+  }
+});
 
