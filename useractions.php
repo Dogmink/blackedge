@@ -23,12 +23,16 @@
     $userRegister = $user->userRegister($_params);
     if ($vUsername) {
       echo json_encode(2);
+      die();
     } else if ($vEmail) {
       echo json_encode(3);
+      die();
     } else if ($userRegister) {
       echo json_encode(1);
+      die();
     }else {
       echo json_encode(404);
+      die();
     }
   }
 }
@@ -55,8 +59,10 @@
             'admin' => $result['admin']
           );
           echo json_encode(1);
+          die();
         }else {
           echo json_encode(2);
+          die();
         }
       }
   
