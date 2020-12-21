@@ -16,8 +16,11 @@
 }
 
 
-.scaleAnimation{
-  animation: scaleAnim .5s;
+.scaleAnim{
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-name: scaleAnim;
+  animation-name: scaleAnim;
 }
 
 @keyframes scaleAnim{
