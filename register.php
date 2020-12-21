@@ -52,7 +52,7 @@
       <div class="col8 margin-logo-login align-login">
         <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
       </div>
-      <div class="col8 margin-login fadeIn" id="formLogin" style="display: block;">
+      <div class="col8 margin-login scaleAnim" id="formLogin" style="display: block;">
         <div class="content-login">
           <p class="login-header">INGRESAR</p>
           <form id="formularioLog" class="form-login">
@@ -69,7 +69,7 @@
             <p class="register-text">¿Aún no tienes cuenta? <a href="#" onclick="javascript:changeForm()" class="register-text-link">Haz click aquí</a></p>
         </div>
       </div>
-      <div class="col8 margin-login fadeIn" id="formRegister" style="display: none;">
+      <div class="col8 margin-login scaleAnim" id="formRegister" style="display: none;">
         <div class="content-login">
           <p class="login-header">REGISTRARSE</p>
           <form id="formulario" class="form-login">
