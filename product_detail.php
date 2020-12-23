@@ -26,8 +26,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
                 </div>
                 <div class="col4">
                     <p class="descProductDetail">Descripción: <br> <?php print $result['design_desc'] ?></p>
-                    <p class="priceProductDetail"><?php print 'S/.'.$result['precio']?></p>
-                    <a class="btnProductDetail" href="shopping-cart.php">Agregar al carrito</a>
+                    <a class="btnProductDetail" href="shopping-cart.php"> <p class="priceProductDetail"><?php print 'S/.'.$result['precio']?></p> Agregar al carrito</a>
                 </div>
             </div>
         </div>

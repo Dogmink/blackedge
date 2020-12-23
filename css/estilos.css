@@ -845,7 +845,8 @@ thead {
 }
 
 .priceProductDetail{
-  color: var(--blackcolor);
+  color: #01ff80;
+  text-shadow: #01ff6b;
   font-size: 20px;
   font-weight: 300;
   text-align: left;
