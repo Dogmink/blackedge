@@ -19,7 +19,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
                         $img = 'images/'.$result['img'];
                         if(file_exists($img)){
                     ?>
-                        <img src="<?php print $img; ?>" width="70%">
+                        <img class="imgProductDetail" src="<?php print $img; ?>">
                     <?php }else{?>
                         SIN FOTO
                     <?php } ?>

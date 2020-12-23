@@ -823,6 +823,12 @@ thead {
 
 /* ----------------PRODUCT DETAIL--------------- */
 
+.imgProductDetail{
+  box-shadow: var(--blackcolor);
+  width: 75%;
+}
+
+
 .nameProductDetail{
   color: var(--hovercolor1);
   font-size: 32px;
