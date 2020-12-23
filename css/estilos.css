@@ -845,8 +845,7 @@ thead {
 }
 
 .priceProductDetail{
-  color: #01ff80;
-  text-shadow: #01ff6b;
+  color: var(--blackcolor);
   font-size: 20px;
   font-weight: 300;
   text-align: left;
@@ -855,8 +854,8 @@ thead {
 .btnProductDetail{
   color: #f0f0f0;
   background-color: var(--blackcolor);
-  padding: 20px;
-  font-size: 20px;
+  padding: 6px;
+  font-size: 14px;
   text-decoration: none;
 }
 
