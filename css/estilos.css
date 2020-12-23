@@ -831,11 +831,13 @@ thead {
 
 
 .nameProductDetail{
-  color: var(--hovercolor1);
+  background-color: var(--hovercolor1);
+  color: #f0f0f0;
   font-size: 64px;
   font-weight: 300;
   text-align: center;
   letter-spacing: 10px;
+  margin: 0 100px;
 }
 
 .descProductDetail{
