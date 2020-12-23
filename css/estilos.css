@@ -824,15 +824,16 @@ thead {
 /* ----------------PRODUCT DETAIL--------------- */
 
 .imgProductDetail{
-  box-shadow: 0 0 25px var(--blackcolor), ;
+  box-shadow: 0 0 25px var(--blackcolor);
+  -webkit-box-shadow: 0 0 25px var(--blackcolor);
   width: 75%;
 }
 
 
 .nameProductDetail{
   color: var(--hovercolor1);
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 64px;
+  font-weight:bold;
   text-align: center;
 }
 
@@ -840,7 +841,7 @@ thead {
   color: var(--blackcolor);
   font-size: 18px;
   font-weight: 200;
-  text-align: right;
+  text-align: left;
 }
 
 .priceProductDetail{
