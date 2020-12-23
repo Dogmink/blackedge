@@ -18,16 +18,16 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
                         $img = 'images/'.$result['img'];
                         if(file_exists($img)){
                     ?>
-                        <img src="<?php print $img; ?>" width="90%">
+                        <img src="<?php print $img; ?>" width="70%">
                     <?php }else{?>
                         SIN FOTO
                     <?php } ?>
                 </div>
                 <div class="col6">
-                    <h1><?php print $result['name'] ?></h1>
-                    <p><?php print $result['design_desc'] ?></p>
-                    <p><?php print 'S/.'.$result['precio']?></p>
-                    <a href="shopping-cart.php">Agregar al carrito</a>
+                    <h1 class="nameProductDetail"><?php print $result['name'] ?></h1>
+                    <p class="descProductDetail"><?php print $result['design_desc'] ?></p>
+                    <p class="priceProductDetail"><?php print 'S/.'.$result['precio']?></p>
+                    <a class="btnProductDetail" href="shopping-cart.php">Agregar al carrito</a>
                 </div>
             </div>
         </div>
