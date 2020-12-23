@@ -860,8 +860,8 @@ thead {
   background-color: var(--blackcolor);
   padding: 20px;
   font-size: 14px;
-  margin: 0 100px;
   width: 80%;
+  text-align: center;
 }
 
 
