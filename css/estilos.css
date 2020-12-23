@@ -824,7 +824,7 @@ thead {
 /* ----------------PRODUCT DETAIL--------------- */
 
 .imgProductDetail{
-  box-shadow: var(--blackcolor);
+  box-shadow: 0 0 25px var(--blackcolor), ;
   width: 75%;
 }
 
