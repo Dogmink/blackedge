@@ -833,8 +833,9 @@ thead {
 .nameProductDetail{
   color: var(--hovercolor1);
   font-size: 64px;
-  font-weight:bold;
+  font-weight: 300;
   text-align: center;
+  letter-spacing: 10px;
 }
 
 .descProductDetail{
@@ -855,13 +856,9 @@ thead {
   display: block;
   color: #f0f0f0;
   background-color: var(--blackcolor);
-  padding: 6px;
+  padding: 20px;
   font-size: 14px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  text-decoration: none;
+  margin: 20px;
 }
 
 

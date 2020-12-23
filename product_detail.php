@@ -39,6 +39,10 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
         </div>
 
         <?php
+        require 'Modulos/footer.php';
+        ?>
+        </div>
+        <?php
     }
 }else{
     header('Location: productos.php');
