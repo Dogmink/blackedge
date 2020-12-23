@@ -825,7 +825,7 @@ thead {
 
 .nameProductDetail{
   color: var(--hovercolor1);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   text-align: center;
 }
@@ -849,6 +849,7 @@ thead {
   background-color: var(--blackcolor);
   padding: 20px;
   font-size: 20px;
+  text-decoration: none;
 }
 
 
