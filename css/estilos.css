@@ -557,12 +557,14 @@ legend {
   color: var(--blackcolor);
 }
 
-.desc-product button {
+
+.btnIndex {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 15px;
   text-align: left;
+  text-decoration: none;
   width: 34%;
   font-size: 24px;
   color: #f0f0f0;
@@ -574,7 +576,7 @@ legend {
   box-shadow: 0 0 15px #000;
 }
 
-.desc-product button:hover {
+.btnIndex:hover {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
