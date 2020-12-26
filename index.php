@@ -39,7 +39,7 @@ if($cantidad > 0){
     <div class="desc-product">
       <h1><?php print $item['name'] ?></h1>
       <p><?php print $item['design_desc'] ?></p>
-      <button class="btnIndex" onclick="location.href='product_deatil.php?id=<?php print $item['id']?>'">Ver más</button>
+      <button class="btnIndex" onclick="location.href='product_detail.php?id=<?php print $item['id']?>'">Ver más</button>
       <p class="p_cat"><?php print $item['name_cat'] ?></p>
 
     </div>
@@ -55,7 +55,7 @@ $rightcontent = true;
     <div class="desc-product2">
       <h1><?php print $item['name'] ?></h1>
       <p><?php print $item['design_desc'] ?></p>
-      <button class="btnIndex" onclick="location.href='product_deatil.php?id=<?php print $item['id']?>'">Ver más</button>
+      <button class="btnIndex" onclick="location.href='product_detail.php?id=<?php print $item['id']?>'">Ver más</button>
       <p class="p_cat"><?php print $item['name_cat'] ?></p>
     </div>
   </div>
