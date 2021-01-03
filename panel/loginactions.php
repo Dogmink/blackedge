@@ -40,11 +40,8 @@ $password = "";
             <?php
           }
         }
-      }
 
 //-----------------------CONFIG USER------------------------------------//
-
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if ($_POST['accion']==='GUARDAR'){
     $parametros = array(
       'username'=> $_POST['username'],
@@ -79,6 +76,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         <?php
     }
   }
+
 }
 
  ?>
