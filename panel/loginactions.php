@@ -5,9 +5,6 @@ $username = "";
 $email = "";
 $password = "";
 
-<?php
-
-
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if ($_POST['accion']==='Ingresar'){
       $username = $_POST['username'];
