@@ -1,7 +1,7 @@
 
 
 <?php
-require 'Modulos/basic.php'
+require 'Modulos/basic.php';
 ?>
 
 <div class="main_section fadeIn">
