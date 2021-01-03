@@ -5,32 +5,7 @@ $username = "";
 $email = "";
 $password = "";
 
-//------------------LOGIN USER--------------------------//
-
-// if($_SERVER['REQUEST_METHOD'] === 'POST'){
-//   if ($_POST['accion']==='Registrarse'){
-//     $username = $_POST['username'];
-//     $email = $_POST['email'];
-//     if(($_POST['password']) != ($_POST['password-confirm'])){
-//       ?>
-<!-- //       <script type="text/javascript">
-//         window.location= '../register.php?err=2';
-//       </script> -->
-//       <?php
-//       die();
-//     }
-//       $_params = array(
-//         'username'=>$_POST['username'],
-//         'password'=>$_POST['password'],
-//         'email'=>$_POST['email']
-//       );
-//       $user->validateUsername($username);
-//       $user->validateEmail($email);
-//       $user->userRegister($_params);
-//
-//       }
-//     }
-
+<?php
 
 
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
