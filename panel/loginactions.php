@@ -22,8 +22,5 @@ $password = "";
         </script>
         <?php
     }
-  }
-
-}
 
  ?>
