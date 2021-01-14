@@ -9,8 +9,6 @@
   if (isset($_SESSION['user_log']) && $_SESSION['user_log'] != null ) {
     $usr = $_SESSION['user_log'];
     echo json_encode($usr);
-    if (isset($_GET['edit']) && $_GET['edit'] != null){
-      $edit = $_GET['edit'];
       ?>
       <div class="contenido-userconfig">
       <div class="row-userconfig">

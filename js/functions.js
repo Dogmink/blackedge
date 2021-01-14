@@ -76,10 +76,8 @@ function changeForm() {
 
 
 let formUserconfig = document.getElementById('fUserconfig');
-let errSave = document.getElementById('errSave');
 
 if (formUserconfig) {
-    errSave.style.display = 'none';
     fetch('https://blackedgestore.com/userconfig.php')
     .then(response => response.json())
     .then(data => {
