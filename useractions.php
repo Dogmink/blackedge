@@ -65,4 +65,12 @@
         }
       }
   
+  if ($accion == 'GUARDAR') {
+    $username = $_SESSION['userlog'];
+    $nombres = $_POST['name'];
+    $apellidos = $_POST['apellidos'];
+    $dni = $_POST['dni'];
+    $telf = $_POST['telf'];
+    $direc = $_POST['direc'];
+  }
 ?>

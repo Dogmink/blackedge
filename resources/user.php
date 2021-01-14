@@ -155,7 +155,6 @@ class User
       </script>
       <?php
     }
-
   }
 
 /*----------------------Userconfig--------------*/
@@ -170,9 +169,14 @@ class User
           ':telf' => $parametros['telf'],
           ':direc' => $parametros['direc']
         );
-        $stmt->execute(); 
+        $result = $stmt->execute($arreglo);
+        if ($result) {
+          return $result;
         }
       }
+
+
+  }
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
