@@ -83,6 +83,6 @@ if (formUserconfig) {
     fetch('https://blackedgestore.com/userconfig.php')
     .then(response => response.json())
     .then(data => {
-      debugger
+      console.log(data)
     })
 }
