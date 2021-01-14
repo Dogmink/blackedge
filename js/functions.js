@@ -79,14 +79,11 @@ let formUserconfig = document.getElementById('fUserconfig');
 let errSave = document.getElementById('errSave');
 
 if (formUserconfig) {
-  formUserconfig.addEventListener('submit', function(e){
-    e.preventDefault();
-    let datos = new FormData(formUserconfig);
     errSave.style.display = 'none';
     fetch('https://blackedgestore.com/userconfig.php')
     .then(response => response.json())
-    .then(dataUserconfig => {
-      console.log(dataUserconfig)
+    .then(data => {
+      debugger
     })
   })
 }
