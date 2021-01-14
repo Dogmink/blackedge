@@ -115,8 +115,7 @@
     </div>
     </form>
       <?php
-    }
-  }else {
+    } else {
     header('Location: index.php');
   }
   
