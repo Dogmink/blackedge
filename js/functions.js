@@ -85,5 +85,4 @@ if (formUserconfig) {
     .then(data => {
       debugger
     })
-  }
 }
