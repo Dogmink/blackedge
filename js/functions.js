@@ -81,12 +81,12 @@ let errSave = document.getElementById('errSave');
 if (formUserconfig) {
   formUserconfig.addEventListener('submit', function(e){
     e.preventDefault();
-    let data = new FormData(formUserconfig);
+    let datos = new FormData(formUserconfig);
     errSave.style.display = 'none';
     fetch('https://blackedgestore.com/userconfig.php')
     .then(response => response.json())
-    .then(data => {
-      console.log(data)
+    .then(dataUserconfig => {
+      console.log(dataUserconfig)
     })
   })
 }
