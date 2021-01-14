@@ -122,4 +122,6 @@
     header('Location: index.php');
   }
   
+  require 'Modulos/footer.php'
   ?>
+
