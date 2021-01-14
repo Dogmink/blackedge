@@ -62,7 +62,7 @@
           <label for="telf" class="label-userconfig">Celular o Telefono</label>
         </div>
       </div>
-      <form action="">
+      <form id="formUserconfig">
       <div class="row-userconfig">
         <div class="col3">
           <input class="input-userconfig-readonly" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
