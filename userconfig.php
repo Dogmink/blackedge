@@ -8,7 +8,6 @@
 
   if (isset($_SESSION['user_log']) && $_SESSION['user_log'] != null ) {
     $usr = $_SESSION['user_log'];
-    echo json_encode($usr);
       ?>
       <div class="contenido-userconfig">
       <div class="row-userconfig">
@@ -63,13 +62,13 @@
       <form id="fUserconfig">
       <div class="row-userconfig">
         <div class="col3">
-          <input class="input-userconfig-readonly" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" id="fNombres" type="text" name="nombres" value="<?php print $usr['nombres'] ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig-readonly" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" id="fApellidos" type="text" name="apellidos" value="<?php print $usr['apellidos'] ?>" readonly="readonly">
         </div>
         <div class="col3">
-          <input class="input-userconfig-readonly" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
+          <input class="input-userconfig-readonly" id="fDNI" type="number" name="dni" pattern=".{8,8}" maxlength="8" value=
           <?php if($usr['dni']!=null){
             if($usr['dni'] == 0){
               ?>""<?php
@@ -82,7 +81,7 @@
               ?>
         </div>
         <div class="col3">
-          <input class="input-userconfig-readonly" type="number" name="telf" pattern=".{8,9}" maxlength="9" value=
+          <input class="input-userconfig-readonly" id=fTelf type="number" name="telf" pattern=".{8,9}" maxlength="9" value=
           <?php if($usr['telf']!=null){
             if($usr['telf'] == 0){
               ?>""<?php
@@ -103,13 +102,13 @@
       </div>
       <div class="row-userconfig">
         <div class="col12">
-          <input class="input-userconfig-readonly" type="text" name="direc" value="<?php print $usr['direc'] ?>" readonly="readonly">
+          <input class="input-userconfig-readonly" id="fDirec" type="text" name="direc" value="<?php print $usr['direc'] ?>" readonly="readonly">
         </div>
       </div>
       <div class="separator"></div>
       <div class="row-userconfig">
         <div class="col12">
-          <a class="btn-edit-userconfig" href="userconfig.php?edit=1">EDITAR DATOS</a>
+          <button class="btn-edit-userconfig" onclick="btnChange()" id="btnUserconfigShop" >Editar Datos</button>
         </div>
       </div>
     </div>

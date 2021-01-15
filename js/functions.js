@@ -84,3 +84,9 @@ if (formUserconfig) {
       console.log(data)
     })
 }
+
+
+let btnUserconfigShop = getElementById('btnUserconfigShop');
+function btnChange(){
+  btnUserconfigShop.innerHTML = 'GUARDAR';
+}
