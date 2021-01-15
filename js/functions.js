@@ -93,8 +93,16 @@ if (formUserconfig) {
       fPassword.value = data.password
       fNombres.value = data.nombres
       fApellidos.value = data.apellidos
-      fDNI.value = data.dni
-      fTelf.value = data.telf
+      if (data.dni == 0) {
+        fDNI.value = "";
+      }else{
+        fDNI.value = data.dni
+      }
+      if (data.telf == 0) {
+        fTelf.value = "";
+      }else{
+        fTelf.value = data.telf
+      }
       fDirec.value = data.direc
     })
 }
