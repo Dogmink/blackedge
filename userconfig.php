@@ -88,7 +88,7 @@
       <div class="separator"></div>
       <div class="row-userconfig">
         <div class="col12">
-          <button class="btn-edit-userconfig" onclick="btnChange()" id="btnUserconfigShop" >Editar Datos</button>
+          <input type="submit" onclick="btnChange()" id="btnUserconfigShop" value="Editar Datos">
         </div>
       </div>
     </div>

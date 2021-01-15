@@ -110,5 +110,5 @@ if (formUserconfig) {
 
 let btnUserconfigShop = document.getElementById('btnUserconfigShop');
 function btnChange(){
-  btnUserconfigShop.innerHTML = 'GUARDAR';
+  btnUserconfigShop.value = 'GUARDAR';
 }
