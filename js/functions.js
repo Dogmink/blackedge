@@ -78,7 +78,7 @@ function changeForm() {
 let formUserconfig = document.getElementById('fUserconfig');
 
 if (formUserconfig) {
-    fetch('https://blackedgestore.com/userconfig.php')
+    fetch('https://blackedgestore.com/complemento.php')
     .then(response => response.json())
     .then(data => {
       console.log(data)
