@@ -109,7 +109,8 @@ if (formUserconfig) {
 
 
 let btnUserconfigShop = document.getElementById('btnUserconfigShop');
-function btnChange(e){
+
+btnUserconfigShop.addEventListener('onclick', function (e) {
   e.preventDefault();
   btnUserconfigShop.value = 'GUARDAR';
   fNombres.readonly = '';
@@ -117,6 +118,5 @@ function btnChange(e){
   fDNI.readonly = '';
   fTelf.readonly = '';
   fDirec.readonly = '';
-}
-
+})
 
