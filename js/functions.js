@@ -109,6 +109,7 @@ if (formUserconfig) {
 
 
 let btnUserconfigShop = document.getElementById('btnUserconfigShop');
-function btnChange(){
+function btnChange(e){
+  e.addEventListener();
   btnUserconfigShop.value = 'GUARDAR';
 }
