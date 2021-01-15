@@ -76,17 +76,31 @@ function changeForm() {
 
 
 let formUserconfig = document.getElementById('fUserconfig');
+let fNombres = document.getElementById('fNombres');
+let fApellidos = document.getElementById('fApellidos');
+let fDNI = document.getElementById('fDNI');
+let fTelf = document.getElementById('fTelf');
+let fDirec = document.getElementById('fDirec');
+let fEmail = document.getElementById('fEmail');
+let fPassword = document.getElementById('fPassword');
 
 if (formUserconfig) {
     fetch('https://blackedgestore.com/complemento.php')
     .then(response => response.json())
     .then(data => {
       console.log(data)
+      fEmail.value = data.email
+      fPassword.value = data.password
+      fNombres.value = data.nombres
+      fApellidos.value = data.apellidos
+      fDNI.value = data.dni
+      fTelf.value = data.telf
+      fDirec.value = data.direc
     })
 }
 
 
-let btnUserconfigShop = getElementById('btnUserconfigShop');
+let btnUserconfigShop = document.getElementById('btnUserconfigShop');
 function btnChange(){
   btnUserconfigShop.innerHTML = 'GUARDAR';
 }
