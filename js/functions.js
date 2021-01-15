@@ -110,6 +110,13 @@ if (formUserconfig) {
 
 let btnUserconfigShop = document.getElementById('btnUserconfigShop');
 function btnChange(e){
-  e.addEventListener();
+  e.preventDefault();
   btnUserconfigShop.value = 'GUARDAR';
+  fNombres.readonly = '';
+  fApellidos.readonly = '';
+  fDNI.readonly = '';
+  fTelf.readonly = '';
+  fDirec.readonly = '';
 }
+
+
