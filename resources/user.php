@@ -171,7 +171,9 @@ class User
         );
         $result = $stmt->execute($arreglo);
         if ($result) {
-          return $result;
+          return true;
+        }else{
+          return false;
         }
       }
 

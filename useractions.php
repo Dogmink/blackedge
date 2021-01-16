@@ -4,6 +4,10 @@
   
   $accion = $_POST['accion'];
   
+
+// =====================LOGIN AND REGISTER==============================
+
+
   if($accion == 'registro'){
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -65,12 +69,26 @@
         }
       }
   
+
+// =================USERCONFIG========================
+
+
+
   if ($accion == 'GUARDAR') {
-    $username = $_SESSION['userlog'];
-    $nombres = $_POST['name'];
-    $apellidos = $_POST['apellidos'];
-    $dni = $_POST['dni'];
-    $telf = $_POST['telf'];
-    $direc = $_POST['direc'];
+    $parametros = array(
+      'username' => $_SESSION['userlog'],
+      'nombres' => $_POST['name'],
+      'apellidos' => $_POST['apellidos'],
+      'dni' => $_POST['dni'],
+      'telf' => $_POST['telf'],
+      'direc' => $_POST['direc']
+    );
+    $result = $user->actualizarInfo($parametros);
+    if ($result) {
+      echo json_encode(1);
+      die();
+    }else{
+      echo json_encode(2);
+    }
   }
 ?>

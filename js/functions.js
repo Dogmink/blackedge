@@ -1,3 +1,6 @@
+// ==========================LOGIN AND REGISTER===============================
+
+
 let formulario = document.getElementById('formulario');
 let formlarioLog = document.getElementById('formularioLog');
 let errEmail = document.getElementById('failEmail');
@@ -75,6 +78,11 @@ function changeForm() {
 }
 
 
+
+// ============================USERCONFIG=====================================
+
+
+
 let formUserconfig = document.getElementById('fUserconfig');
 let fNombres = document.getElementById('fNombres');
 let fApellidos = document.getElementById('fApellidos');
@@ -85,7 +93,7 @@ let fEmail = document.getElementById('fEmail');
 let fPassword = document.getElementById('fPassword');
 
 if (formUserconfig) {
-    fetch('https://blackedgestore.com/complemento.php')
+  fetch('https://blackedgestore.com/complemento.php')
     .then(response => response.json())
     .then(data => {
       console.log(data)
@@ -95,12 +103,12 @@ if (formUserconfig) {
       fApellidos.value = data.apellidos
       if (data.dni == 0) {
         fDNI.value = "";
-      }else{
+      } else {
         fDNI.value = data.dni
       }
       if (data.telf == 0) {
         fTelf.value = "";
-      }else{
+      } else {
         fTelf.value = data.telf
       }
       fDirec.value = data.direc
@@ -122,12 +130,35 @@ if (formUserconfig) {
           fApellidos.setAttribute('class', 'input-userconfig');
           fDNI.setAttribute('class', 'input-userconfig');
           fTelf.setAttribute('class', 'input-userconfig');
-          fDirec.setAttribute('class', 'input-userconfig');         
+          fDirec.setAttribute('class', 'input-userconfig');
+        } else {
+          let datos = new FormData(formUserconfig);
+          fetch('https://blackedgestore.com/useractions.php', {
+            method: 'POST',
+            body: datos
+          })
+          .then(respuesta=>respuesta.json())
+          .then(data=>{
+            console.log(data)
+            
+          })
+
+
+          // btnUCShop.value = 'Editar Datos';
+          // // ATRIBUTOS
+          // fNombres.removeAttribute('readonly');
+          // fApellidos.removeAttribute('readonly');
+          // fDNI.removeAttribute('readonly');
+          // fTelf.removeAttribute('readonly');
+          // fDirec.removeAttribute('readonly');
+          // // CLASE
+          // fNombres.setAttribute('class', 'input-userconfig');
+          // fApellidos.setAttribute('class', 'input-userconfig');
+          // fDNI.setAttribute('class', 'input-userconfig');
+          // fTelf.setAttribute('class', 'input-userconfig');
+          // fDirec.setAttribute('class', 'input-userconfig');        
         }
 
       })
     })
 }
-
-
-
