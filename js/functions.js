@@ -105,11 +105,11 @@ if (formUserconfig) {
       }
       fDirec.value = data.direc
 
-      let btnUserconfigShop = document.getElementById('btnUserconfigShop');
-      
-      btnUserconfigShop.addEventListener('submit', function (e) {
+      let btnUCShop = document.getElementById('btnUserconfigShop');
+
+      formUserconfig.addEventListener('submit', function (e) {
         e.preventDefault();
-        btnUserconfigShop.value = 'GUARDAR';
+        btnUCShop.value = 'GUARDAR';
         fNombres.readonly = '';
         fApellidos.readonly = '';
         fDNI.readonly = '';
