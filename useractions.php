@@ -73,7 +73,7 @@
 // =================USERCONFIG========================
 
 
-
+  echo json_encode("accion no pasó if");
   if ($accion == 'GUARDAR') {
     $parametros = array(
       'username' => $_SESSION['userlog'],
@@ -83,6 +83,7 @@
       'telf' => $_POST['telf'],
       'direc' => $_POST['direc']
     );
+    echo json_encode("accion = GUARDAR");
     $result = $user->actualizarInfo($parametros);
     if ($result) {
       echo json_encode(1);
