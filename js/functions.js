@@ -104,21 +104,20 @@ if (formUserconfig) {
         fTelf.value = data.telf
       }
       fDirec.value = data.direc
+
+      let btnUserconfigShop = document.getElementById('btnUserconfigShop');
+      
+      btnUserconfigShop.addEventListener('submit', function (e) {
+        e.preventDefault();
+        btnUserconfigShop.value = 'GUARDAR';
+        fNombres.readonly = '';
+        fApellidos.readonly = '';
+        fDNI.readonly = '';
+        fTelf.readonly = '';
+        fDirec.readonly = '';
+      })
     })
 }
 
 
-let btnUserconfigShop = document.getElementById('btnUserconfigShop');
-
-if(btnUserconfigShop){
-  btnUserconfigShop.addEventListener('submit', function (e) {
-    e.preventDefault();
-    btnUserconfigShop.value = 'GUARDAR';
-    fNombres.readonly = '';
-    fApellidos.readonly = '';
-    fDNI.readonly = '';
-    fTelf.readonly = '';
-    fDirec.readonly = '';
-  })
-}
 
