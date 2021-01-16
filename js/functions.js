@@ -110,13 +110,15 @@ if (formUserconfig) {
 
 let btnUserconfigShop = document.getElementById('btnUserconfigShop');
 
-btnUserconfigShop.addEventListener('onclick', function (e) {
-  e.preventDefault();
-  btnUserconfigShop.value = 'GUARDAR';
-  fNombres.readonly = '';
-  fApellidos.readonly = '';
-  fDNI.readonly = '';
-  fTelf.readonly = '';
-  fDirec.readonly = '';
-})
+if(btnUserconfigShop){
+  btnUserconfigShop.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btnUserconfigShop.value = 'GUARDAR';
+    fNombres.readonly = '';
+    fApellidos.readonly = '';
+    fDNI.readonly = '';
+    fTelf.readonly = '';
+    fDirec.readonly = '';
+  })
+}
 
