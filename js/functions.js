@@ -110,11 +110,11 @@ if (formUserconfig) {
       formUserconfig.addEventListener('submit', function (e) {
         e.preventDefault();
         btnUCShop.value = 'GUARDAR';
-        fNombres.setAttribute('readonly', false);
-        fApellidos.setAttribute('readonly', false);
-        fDNI.setAttribute('readonly', false);
-        fTelf.setAttribute('readonly', false);
-        fDirec.setAttribute('readonly', false);
+        fNombres.setAttribute('readonly', "");
+        fApellidos.setAttribute('readonly', "");
+        fDNI.setAttribute('readonly', "");
+        fTelf.setAttribute('readonly', "");
+        fDirec.setAttribute('readonly', "");
       })
     })
 }
