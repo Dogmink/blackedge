@@ -109,7 +109,7 @@ if (formUserconfig) {
 
       formUserconfig.addEventListener('submit', function (e) {
         e.preventDefault();
-        if (btnUCShop.value == 'EDITAR DATOS') {
+        if (btnUCShop.value == 'Editar Datos') {
           btnUCShop.value = 'GUARDAR';
           // ATRIBUTOS
           fNombres.removeAttribute('readonly');
@@ -118,11 +118,11 @@ if (formUserconfig) {
           fTelf.removeAttribute('readonly');
           fDirec.removeAttribute('readonly');
           // CLASE
-          fNombres.className('input-userconfig');
-          fApellidos.className('input-userconfig');
-          fDNI.className('input-userconfig');
-          fTelf.className('input-userconfig');
-          fDirec.className('input-userconfig');         
+          fNombres.setAttribute('class', 'input-userconfig');
+          fApellidos.setAttribute('class', 'input-userconfig');
+          fDNI.setAttribute('class', 'input-userconfig');
+          fTelf.setAttribute('class', 'input-userconfig');
+          fDirec.setAttribute('class', 'input-userconfig');         
         }
 
       })
