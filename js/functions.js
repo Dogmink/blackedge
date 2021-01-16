@@ -137,7 +137,7 @@ if (formUserconfig) {
             method: 'POST',
             body: datos
           })
-          .then(respuesta => respuesta.json())
+          .then(rpt => rpt.json())
           .then(data => {
             console.log(data)   
           })
