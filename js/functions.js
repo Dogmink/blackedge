@@ -109,12 +109,22 @@ if (formUserconfig) {
 
       formUserconfig.addEventListener('submit', function (e) {
         e.preventDefault();
-        btnUCShop.value = 'GUARDAR';
-        fNombres.removeAttribute('readonly');
-        fApellidos.removeAttribute('readonly');
-        fDNI.removeAttribute('readonly');
-        fTelf.removeAttribute('readonly');
-        fDirec.removeAttribute('readonly');
+        if (btnUCShop.value == 'EDITAR DATOS') {
+          btnUCShop.value = 'GUARDAR';
+          // ATRIBUTOS
+          fNombres.removeAttribute('readonly');
+          fApellidos.removeAttribute('readonly');
+          fDNI.removeAttribute('readonly');
+          fTelf.removeAttribute('readonly');
+          fDirec.removeAttribute('readonly');
+          // CLASE
+          fNombres.className('input-userconfig');
+          fApellidos.className('input-userconfig');
+          fDNI.className('input-userconfig');
+          fTelf.className('input-userconfig');
+          fDirec.className('input-userconfig');         
+        }
+
       })
     })
 }
