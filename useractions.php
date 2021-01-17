@@ -92,6 +92,4 @@
       // die();
     // }else{
       // echo json_encode(2);
-    }
-  }
 ?>
