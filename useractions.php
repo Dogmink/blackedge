@@ -71,24 +71,23 @@
   
 
 // =================USERCONFIG========================
-    
-  // if ($accion == 'GUARDAR') {
+
+  if ($accion == 'GUARDAR') {
+    $usr = $_SESSION['userlog'];
     $parametros = array(
-      'nombres' => $_POST['name'],
+      'username' => $usr['username'],
+      'nombres' => $_POST['nombres'],
       'apellidos' => $_POST['apellidos'],
       'dni' => $_POST['dni'],
       'telf' => $_POST['telf'],
-      'direc' => $_POST['direc'],
-      'accion' => $_POST['accion']
+      'direc' => $_POST['direc']
     );
-
-    echo json_encode($parametros);
-
-    // echo json_encode("accion = GUARDAR");
-    // $result = $user->actualizarInfo($parametros);
-    // if ($result) {
-      // echo json_encode(1);
-      // die();
-    // }else{
-      // echo json_encode(2);
+    $result = $user->actualizarInfo($parametros);
+    if ($result) {
+      echo json_encode(1);
+      die();
+    }else{
+      echo json_encode(2);
+    }
+  }
 ?>
