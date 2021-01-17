@@ -134,13 +134,13 @@ if (formUserconfig) {
         } else {
           let datos = new FormData(formUserconfig);
           fetch('https://blackedgestore.com/useractions.php', {
-            method: 'POST',
-            body: datos
-          })
-          .then(rpt => rpt.json())
-          .then(data => {
-            console.log(data)   
-          })
+              method: 'POST',
+              body: datos
+            })
+            .then(rpt => rpt.json())
+            .then(data => {
+              console.log(data)
+            })
 
 
           // btnUCShop.value = 'Editar Datos';
