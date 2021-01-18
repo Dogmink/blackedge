@@ -84,7 +84,7 @@
     );
     $result = $user->actualizarInfo($parametros);
     if ($result) {
-      echo json_encode(1);
+      echo json_encode($result);
       die();
     }else{
       echo json_encode(2);
