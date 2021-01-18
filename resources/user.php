@@ -171,7 +171,7 @@ class User
         );
         $result = $stmt->execute($arreglo);
         if ($result) {
-          return true;
+          return $result;
           die();
         }else{
           return false;
