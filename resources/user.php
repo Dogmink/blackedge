@@ -159,7 +159,7 @@ class User
 
 /*----------------------Userconfig--------------*/
   function actualizarInfo($parametros){
-        $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
+        $sql = "UPDATE user SET nombres = ':nombres', apellidos = ':apellidos', dni = ':dni', telf = ':telf', direc = ':direc'  WHERE username = ':username'";
         $stmt = $this->cn->prepare($sql);
         $arreglo = array(
           ':username' => $parametros['username'],
@@ -170,7 +170,11 @@ class User
           ':direc' => $parametros['direc']
         );
         $result = $stmt->execute($arreglo);
-        return $result;
+        if ($result) {
+          return true;
+        }else{
+          return false;
+        }
       }
 
     }
