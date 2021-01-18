@@ -173,6 +173,8 @@ class User
         return $result;
       }
 
+    }
+
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
     //   $stmt = $this->cn->prepare($sql);
