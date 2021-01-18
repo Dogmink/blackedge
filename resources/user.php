@@ -169,7 +169,8 @@ class User
           ':telf' => $parametros['telf'],
           ':direc' => $parametros['direc']
         );
-        $stmt->execute($arreglo);
+        $result = $stmt->execute($arreglo);
+        return $result;
         }
       }
 
