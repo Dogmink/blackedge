@@ -83,12 +83,7 @@
       'direc' => $_POST['direc']
     );
     $result = $user->actualizarInfo($parametros);
-    if ($result) {
       echo json_encode($result);
       die();
-    }else{
-      echo json_encode(2);
-      die();
-    }
   }
 ?>
