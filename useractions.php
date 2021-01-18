@@ -75,7 +75,7 @@
   if ($accion == 'GUARDAR') {
     $usr = $_SESSION['userlog'];
     $parametros = array(
-      'username' => $usr['username'],
+      'id' => $usr['id'],
       'nombres' => $_POST['nombres'],
       'apellidos' => $_POST['apellidos'],
       'dni' => $_POST['dni'],
