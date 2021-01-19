@@ -73,6 +73,7 @@
 // =================USERCONFIG========================
 
   if ($accion == 'GUARDAR') {
+    session_start();
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
     $dni = $_POST['dni'];
