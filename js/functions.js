@@ -91,73 +91,96 @@ let fTelf = document.getElementById('fTelf');
 let fDirec = document.getElementById('fDirec');
 let fEmail = document.getElementById('fEmail');
 let fPassword = document.getElementById('fPassword');
+let changeData;
 
 if (formUserconfig) {
-  fetch('https://blackedgestore.com/complemento.php')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      fEmail.value = data.email
-      fPassword.value = data.password
-      fNombres.value = data.nombres
-      fApellidos.value = data.apellidos
-      if (data.dni == 0) {
-        fDNI.value = "";
-      } else {
-        fDNI.value = data.dni
-      }
-      if (data.telf == 0) {
-        fTelf.value = "";
-      } else {
-        fTelf.value = data.telf
-      }
-      fDirec.value = data.direc
+  changeUserData();
+  let btnUCShop = document.getElementById('btnUserconfigShop');
 
-      let btnUCShop = document.getElementById('btnUserconfigShop');
 
-      formUserconfig.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (btnUCShop.value == 'Editar Datos') {
-          btnUCShop.value = 'GUARDAR';
-          // ATRIBUTOS
-          fNombres.removeAttribute('readonly');
-          fApellidos.removeAttribute('readonly');
-          fDNI.removeAttribute('readonly');
-          fTelf.removeAttribute('readonly');
-          fDirec.removeAttribute('readonly');
-          // CLASE
-          fNombres.setAttribute('class', 'input-userconfig');
-          fApellidos.setAttribute('class', 'input-userconfig');
-          fDNI.setAttribute('class', 'input-userconfig');
-          fTelf.setAttribute('class', 'input-userconfig');
-          fDirec.setAttribute('class', 'input-userconfig');
+  formUserconfig.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (btnUCShop.value == 'Editar Datos') {
+      btnUCShop.value = 'GUARDAR';
+      // ATRIBUTOS
+      fNombres.removeAttribute('readonly');
+      fApellidos.removeAttribute('readonly');
+      fDNI.removeAttribute('readonly');
+      fTelf.removeAttribute('readonly');
+      fDirec.removeAttribute('readonly');
+      // CLASE
+      fNombres.setAttribute('class', 'input-userconfig');
+      fApellidos.setAttribute('class', 'input-userconfig');
+      fDNI.setAttribute('class', 'input-userconfig');
+      fTelf.setAttribute('class', 'input-userconfig');
+      fDirec.setAttribute('class', 'input-userconfig');
+    } else {
+      let datos = new FormData(formUserconfig);
+      fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          newUserData = data
+          console.log(newUserData)
+          changeData = false;
+          changeUserData();
+        })
+      btnUCShop.value = 'Editar Datos';
+      // ATRIBUTOS
+      fNombres.setAttribute('readonly', 'readonly');
+      fApellidos.setAttribute('readonly', 'readonly');
+      fDNI.setAttribute('readonly', 'readonly');
+      fTelf.setAttribute('readonly', 'readonly');
+      fDirec.setAttribute('readonly', 'readonly');
+      // CLASE
+      fNombres.setAttribute('class', 'input-userconfig-readonly');
+      fApellidos.setAttribute('class', 'input-userconfig-readonly');
+      fDNI.setAttribute('class', 'input-userconfig-readonly');
+      fTelf.setAttribute('class', 'input-userconfig-readonly');
+      fDirec.setAttribute('class', 'input-userconfig-readonly');
+    }
+  })
+}
+
+function changeUserData() {
+  if (changeData) {
+    fetch('https://blackedgestore.com/complemento.php')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        fEmail.value = data.email
+        fPassword.value = data.password
+        fNombres.value = data.nombres
+        fApellidos.value = data.apellidos
+        if (data.dni == 0) {
+          fDNI.value = "";
         } else {
-          let datos = new FormData(formUserconfig);
-          fetch('https://blackedgestore.com/useractions.php', {
-              method: 'POST',
-              body: datos
-            })
-            .then(rpt => rpt.json())
-            .then(data => {
-              console.log(data)
-            })
-
-
-          // btnUCShop.value = 'Editar Datos';
-          // // ATRIBUTOS
-          // fNombres.removeAttribute('readonly');
-          // fApellidos.removeAttribute('readonly');
-          // fDNI.removeAttribute('readonly');
-          // fTelf.removeAttribute('readonly');
-          // fDirec.removeAttribute('readonly');
-          // // CLASE
-          // fNombres.setAttribute('class', 'input-userconfig');
-          // fApellidos.setAttribute('class', 'input-userconfig');
-          // fDNI.setAttribute('class', 'input-userconfig');
-          // fTelf.setAttribute('class', 'input-userconfig');
-          // fDirec.setAttribute('class', 'input-userconfig');        
+          fDNI.value = data.dni
         }
-
+        if (data.telf == 0) {
+          fTelf.value = "";
+        } else {
+          fTelf.value = data.telf
+        }
+        fDirec.value = data.direc
       })
-    })
+  } else {
+    fEmail.value = newUserData.email
+    fPassword.value = newUserData.password
+    fNombres.value = newUserData.nombres
+    fApellidos.value = newUserData.apellidos
+    if (data.dni == 0) {
+      fDNI.value = "";
+    } else {
+      fDNI.value = newUserData.dni
+    }
+    if (data.telf == 0) {
+      fTelf.value = "";
+    } else {
+      fTelf.value = newUserData.telf
+    }
+    fDirec.value = newUserData.direc
+  }
 }
