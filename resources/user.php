@@ -159,7 +159,7 @@ class User
 
 /*----------------------Userconfig--------------*/
   function actualizarInfo($parametros){
-        $sql = "UPDATE 'user' SET 'nombres' = :nombres, 'apellidos' = :apellidos, 'dni' = :dni, 'telf' = :telf, 'direc' = :direc  WHERE 'id' = :id";
+        $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE id = :id";
         $stmt = $this->cn->prepare($sql);
         $arreglo = array(
           ':nombres' => $parametros['nombres'],
