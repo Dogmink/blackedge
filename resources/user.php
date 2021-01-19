@@ -161,7 +161,7 @@ class User
   function actualizarInfo($parametros){
         $sql = "UPDATE `user` SET `nombres` = :nombres, `apellidos` = :apellidos, `dni` = :dni, `telf` = :telf, `direc` = :direc  WHERE `id` = :id";
         $stmt = $this->cn->prepare($sql);
-        $arreglo = array(
+        $_array = array(
           ':nombres' => $parametros['nombres'],
           ':apellidos' => $parametros['apellidos'],
           ':dni' => $parametros['dni'],
@@ -169,8 +169,7 @@ class User
           ':direc' => $parametros['direc'],
           ':id' => $parametros['id']
         );
-        $result = $stmt->execute($arreglo);
-        if ($result) {
+        if ($stmt->execute($_array)) {
           return true;
         }else{
           return false;
