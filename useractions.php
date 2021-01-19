@@ -47,19 +47,19 @@
         if ($result) {
           session_start();
           $_SESSION['user_log'] = array(
-            'id' => $result['id'],
-            'username' => $result['username'],
-            'password' => $result['password'],
-            'email' => $result['email'],
-            'nombres' => $result['nombres'],
-            'apellidos' => $result['apellidos'],
-            'dni' => $result['dni'],
-            'telf' => $result['telf'],
-            'direc' => $result['direc'],
-            'img_prof' => $result['img_prof'],
-            'hash' => $result['hash'],
-            'active' => $result['active'],
-            'admin' => $result['admin']
+            'id'=>$result['id'],
+            'username'=>$result['username'],
+            'password'=>$result['password'],
+            'email'=>$result['email'],
+            'nombres'=>$result['nombres'],
+            'apellidos'=>$result['apellidos'],
+            'dni'=>$result['dni'],
+            'telf'=>$result['telf'],
+            'direc'=>$result['direc'],
+            'img_prof'=>$result['img_prof'],
+            'hash'=>$result['hash'],
+            'active'=>$result['active'],
+            'admin'=>$result['admin']
           );
           echo json_encode(1);
           die();
@@ -73,14 +73,20 @@
 // =================USERCONFIG========================
 
   if ($accion == 'GUARDAR') {
+    $nombres = $_POST['nombres'];
+    $apellidos = $_POST['apellidos'];
+    $dni = $_POST['dni'];
+    $telf = $_POST['telf'];
+    $direc = $_POST['direc'];
     $usr = $_SESSION['userlog'];
+    $u_id = $usr['id'];
     $parametros = array(
-      'id' => $usr['id'],
-      'nombres' => $_POST['nombres'],
-      'apellidos' => $_POST['apellidos'],
-      'dni' => $_POST['dni'],
-      'telf' => $_POST['telf'],
-      'direc' => $_POST['direc']
+      'id' => $u_id,
+      'nombres' => $nombres,
+      'apellidos' => $apellidos,
+      'dni' => $dni,
+      'telf' => $telf,
+      'direc' => $direc
     );
     $result = $user->actualizarInfo($parametros);
     if ($result) {
@@ -88,6 +94,7 @@
       die();
     }else{
       echo json_encode(2);
+      die();
     }
   }
 ?>

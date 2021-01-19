@@ -162,12 +162,12 @@ class User
         $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE id = :id";
         $stmt = $this->cn->prepare($sql);
         $arreglo = array(
-          ':id' => $parametros['id'],
-          ':nombres' => $parametros['nombres'],
-          ':apellidos' => $parametros['apellidos'],
-          ':dni' => $parametros['dni'],
-          ':telf' => $parametros['telf'],
-          ':direc' => $parametros['direc']
+          ":nombres" => $parametros['nombres'],
+          ":apellidos" => $parametros['apellidos'],
+          ":dni" => $parametros['dni'],
+          ":telf" => $parametros['telf'],
+          ":direc" => $parametros['direc'],
+          ":id" => $parametros['id']
         );
         $result = $stmt->execute($arreglo);
         if ($result) {
