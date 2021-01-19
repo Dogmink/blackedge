@@ -78,7 +78,7 @@
     $dni = $_POST['dni'];
     $telf = $_POST['telf'];
     $direc = $_POST['direc'];
-    $usr = $_SESSION['userlog'];
+    $usr = $_SESSION['user_log'];
     $u_id = $usr['id'];
     $parametros = array(
       'id' => $u_id,
