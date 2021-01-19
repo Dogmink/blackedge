@@ -161,15 +161,13 @@ class User
   function actualizarInfo($parametros){
         $sql = "UPDATE `user` SET `nombres` = :nombres, `apellidos` = :apellidos, `dni` = :dni, `telf` = :telf, `direc` = :direc  WHERE `id` = :id";
         $stmt = $this->cn->prepare($sql);
-        $_array = array(
-          ':nombres' => $parametros['nombres'],
-          ':apellidos' => $parametros['apellidos'],
-          ':dni' => $parametros['dni'],
-          ':telf' => $parametros['telf'],
-          ':direc' => $parametros['direc'],
-          ':id' => $parametros['id']
-        );
-        if ($stmt->execute($_array)) {
+        $stmt->bindParam(':nombres',$parametros['nombres']);
+        $stmt->bindParam(':apellidos',$parametros['apellidos']);
+        $stmt->bindParam(':dni',$parametros['dni']);
+        $stmt->bindParam(':telf',$parametros['telf']);
+        $stmt->bindParam(':direc',$parametros['direc']);
+        $stmt->bindParam(':id',$parametros['id']);
+        if ($stmt->execute()){
           return true;
         }else{
           return false;
