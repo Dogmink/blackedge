@@ -144,17 +144,17 @@ if (formUserconfig) {
           })
           btnUCShop.value = 'Editar Datos';
           // ATRIBUTOS
-          fNombres.removeAttribute('readonly');
-          fApellidos.removeAttribute('readonly');
-          fDNI.removeAttribute('readonly');
-          fTelf.removeAttribute('readonly');
-          fDirec.removeAttribute('readonly');
+          fNombres.setAttribute('readonly', 'readonly');
+          fApellidos.setAttribute('readonly', 'readonly');
+          fDNI.setAttribute('readonly', 'readonly');
+          fTelf.setAttribute('readonly', 'readonly');
+          fDirec.setAttribute('readonly', 'readonly');
           // CLASE
-          fNombres.setAttribute('class', 'input-userconfig');
-          fApellidos.setAttribute('class', 'input-userconfig');
-          fDNI.setAttribute('class', 'input-userconfig');
-          fTelf.setAttribute('class', 'input-userconfig');
-          fDirec.setAttribute('class', 'input-userconfig');        
+          fNombres.setAttribute('class', 'input-userconfig-readonly');
+          fApellidos.setAttribute('class', 'input-userconfig-readonly');
+          fDNI.setAttribute('class', 'input-userconfig-readonly');
+          fTelf.setAttribute('class', 'input-userconfig-readonly');
+          fDirec.setAttribute('class', 'input-userconfig-readonly');        
         }
         
       })

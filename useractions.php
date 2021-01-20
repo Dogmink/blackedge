@@ -92,6 +92,12 @@
     $result = $user->actualizarInfo($parametros);
     if ($result) {
       echo json_encode($parametros);
+      $u_data = $_SESSION['user_log'];
+      $u_data['nombres'] = $_POST['nombres'];
+      $u_data['apellidos'] = $_POST['apellidos'];
+      $u_data['dni'] = $_POST['dni'];
+      $u_data['telf'] = $_POST['telf'];
+      $u_data['direc'] = $_POST['direc'];
       die();
     }else{
       echo json_encode(2);
