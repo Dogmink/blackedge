@@ -140,8 +140,7 @@ if (formUserconfig) {
           fTelf.addEventListener('input', function () {
             if (this.value.length > 9)
               this.value = this.value.slice(0, 9);
-          })
-
+          });
         }
         if (btnUCShop.value == 'GUARDAR') {
           let datos = new FormData(formUserconfig);
