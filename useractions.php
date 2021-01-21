@@ -93,12 +93,7 @@
     if ($result) {
       echo json_encode($parametros);
       session_start();
-      $u_data = $_SESSION['user_log'];
-      $u_data['nombres'] = $nombres;
-      $u_data['apellidos'] = $apellidos;
-      $u_data['dni'] = $dni;
-      $u_data['telf'] = $telf;
-      $u_data['direc'] = $direc;
+      $_SESSION['user_log'] = $parametros;
       die();
     }else{
       echo json_encode(2);
