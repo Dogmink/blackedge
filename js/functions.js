@@ -132,7 +132,8 @@ if (formUserconfig) {
           fDNI.setAttribute('class', 'input-userconfig');
           fTelf.setAttribute('class', 'input-userconfig');
           fDirec.setAttribute('class', 'input-userconfig');
-        } else {
+        } 
+        if(btnUCShop.value == 'GUARDAR') {
           let datos = new FormData(formUserconfig);
           fetch('https://blackedgestore.com/useractions.php', {
             method: 'POST',
