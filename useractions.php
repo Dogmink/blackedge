@@ -92,6 +92,7 @@
     $result = $user->actualizarInfo($parametros);
     if ($result) {
       echo json_encode($parametros);
+      session_start();
       $u_data = $_SESSION['user_log'];
       $u_data['nombres'] = $nombres;
       $u_data['apellidos'] = $apellidos;

@@ -153,7 +153,7 @@ if (formUserconfig) {
           fNombres.setAttribute('class', 'input-userconfig-readonly');
           fApellidos.setAttribute('class', 'input-userconfig-readonly');
           fDNI.setAttribute('class', 'input-userconfig-readonly');
-          fTelf.setAttribute('class', 'input-userconfig-readonly');
+          fTelf.setAttribute('class', 'input-userconfig-readonly'); 
           fDirec.setAttribute('class', 'input-userconfig-readonly');        
         }
         
