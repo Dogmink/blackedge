@@ -84,6 +84,7 @@
     $u_username = $usr['username'];
     $u_email = $usr['email'];
     $u_password = $usr['password'];
+    $u_active = $usr['active'];
     $parametros = array(
       'id' => $u_id,
       'username' => $u_username,
@@ -93,7 +94,8 @@
       'apellidos' => $apellidos,
       'dni' => $dni,
       'telf' => $telf,
-      'direc' => $direc
+      'direc' => $direc,
+      'active' => $u_active
     );
     $result = $user->actualizarInfo($parametros);
     if ($result) {

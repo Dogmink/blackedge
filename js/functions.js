@@ -1,3 +1,23 @@
+// =============================USER===============================
+
+let activeAlert = document.getElementById('activeAlert');
+
+if (activeAlert) {
+  fetch('https://blackedgestore.com/complemento.php')
+    .then(response => response.json())
+    .then(data => {
+      if (data.active == 0) {
+        activeAlert.style.display = 'block';
+      }else{
+        activeAlert.style.display = 'none';
+      }
+    })
+}
+
+
+
+
+
 // ==========================LOGIN AND REGISTER===============================
 
 
@@ -113,65 +133,63 @@ if (formUserconfig) {
         fTelf.value = data.telf
       }
       fDirec.value = data.direc
-
-
-      // CONDICIONES
-
-
-      fDNI.addEventListener('input', function () {
-        if (this.value.length > 8)
-          this.value = this.value.slice(0, 8);
-      })
-      fTelf.addEventListener('input', function () {
-        if (this.value.length > 9)
-          this.value = this.value.slice(0, 9);
-      })
-
-      // INTERACCIÓN
-
-      let btnUCShop = document.getElementById('btnUserconfigShop');
-
-      formUserconfig.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (btnUCShop.value == 'Editar Datos') {
-          btnUCShop.value = 'GUARDAR';
-          // ATRIBUTOS
-          fNombres.removeAttribute('readonly');
-          fApellidos.removeAttribute('readonly');
-          fDNI.removeAttribute('readonly');
-          fTelf.removeAttribute('readonly');
-          fDirec.removeAttribute('readonly');
-          // CLASE
-          fNombres.setAttribute('class', 'input-userconfig');
-          fApellidos.setAttribute('class', 'input-userconfig');
-          fDNI.setAttribute('class', 'input-userconfig');
-          fTelf.setAttribute('class', 'input-userconfig');
-          fDirec.setAttribute('class', 'input-userconfig');
-        } else {
-          let datos = new FormData(formUserconfig);
-          fetch('https://blackedgestore.com/useractions.php', {
-              method: 'POST',
-              body: datos
-            })
-            .then(rpt => rpt.json())
-            .then(data => {
-              console.log(data)
-            })
-          btnUCShop.value = 'Editar Datos';
-          // ATRIBUTOS
-          fNombres.setAttribute('readonly', 'readonly');
-          fApellidos.setAttribute('readonly', 'readonly');
-          fDNI.setAttribute('readonly', 'readonly');
-          fTelf.setAttribute('readonly', 'readonly');
-          fDirec.setAttribute('readonly', 'readonly');
-          // CLASE
-          fNombres.setAttribute('class', 'input-userconfig-readonly');
-          fApellidos.setAttribute('class', 'input-userconfig-readonly');
-          fDNI.setAttribute('class', 'input-userconfig-readonly');
-          fTelf.setAttribute('class', 'input-userconfig-readonly');
-          fDirec.setAttribute('class', 'input-userconfig-readonly');
-        }
-
-      })
     })
+
+  // CONDICIONES
+
+
+  fDNI.addEventListener('input', function () {
+    if (this.value.length > 8)
+      this.value = this.value.slice(0, 8);
+  })
+  fTelf.addEventListener('input', function () {
+    if (this.value.length > 9)
+      this.value = this.value.slice(0, 9);
+  })
+
+  // INTERACCIÓN
+
+  let btnUCShop = document.getElementById('btnUserconfigShop');
+
+  formUserconfig.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (btnUCShop.value == 'Editar Datos') {
+      btnUCShop.value = 'GUARDAR';
+      // ATRIBUTOS
+      fNombres.removeAttribute('readonly');
+      fApellidos.removeAttribute('readonly');
+      fDNI.removeAttribute('readonly');
+      fTelf.removeAttribute('readonly');
+      fDirec.removeAttribute('readonly');
+      // CLASE
+      fNombres.setAttribute('class', 'input-userconfig');
+      fApellidos.setAttribute('class', 'input-userconfig');
+      fDNI.setAttribute('class', 'input-userconfig');
+      fTelf.setAttribute('class', 'input-userconfig');
+      fDirec.setAttribute('class', 'input-userconfig');
+    } else {
+      let datos = new FormData(formUserconfig);
+      fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          console.log(data)
+        })
+      btnUCShop.value = 'Editar Datos';
+      // ATRIBUTOS
+      fNombres.setAttribute('readonly', 'readonly');
+      fApellidos.setAttribute('readonly', 'readonly');
+      fDNI.setAttribute('readonly', 'readonly');
+      fTelf.setAttribute('readonly', 'readonly');
+      fDirec.setAttribute('readonly', 'readonly');
+      // CLASE
+      fNombres.setAttribute('class', 'input-userconfig-readonly');
+      fApellidos.setAttribute('class', 'input-userconfig-readonly');
+      fDNI.setAttribute('class', 'input-userconfig-readonly');
+      fTelf.setAttribute('class', 'input-userconfig-readonly');
+      fDirec.setAttribute('class', 'input-userconfig-readonly');
+    }
+  })
 }
