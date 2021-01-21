@@ -3,7 +3,6 @@
 let activeAlert = document.getElementById('activeAlert');
 
 if (activeAlert) {
-  activeAlert.style.display = 'none';
   fetch('https://blackedgestore.com/complemento.php')
     .then(response => response.json())
     .then(data => {
