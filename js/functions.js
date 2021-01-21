@@ -8,8 +8,6 @@ if (activeAlert) {
     .then(data => {
       if (data.active == 0) {
         activeAlert.style.display = 'block';
-      }else{
-        activeAlert.style.display = 'none';
       }
     })
 }
