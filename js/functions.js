@@ -114,6 +114,21 @@ if (formUserconfig) {
       }
       fDirec.value = data.direc
 
+
+      // CONDICIONES
+
+
+      fDNI.addEventListener('input', function () {
+        if (this.value.length > 8)
+          this.value = this.value.slice(0, 8);
+      })
+      fTelf.addEventListener('input', function () {
+        if (this.value.length > 9)
+          this.value = this.value.slice(0, 9);
+      })
+
+      // INTERACCIÓN
+
       let btnUCShop = document.getElementById('btnUserconfigShop');
 
       formUserconfig.addEventListener('submit', function (e) {
@@ -132,15 +147,6 @@ if (formUserconfig) {
           fDNI.setAttribute('class', 'input-userconfig');
           fTelf.setAttribute('class', 'input-userconfig');
           fDirec.setAttribute('class', 'input-userconfig');
-          // CONDICIONES
-          fDNI.addEventListener('input', function () {
-            if (this.value.length > 8)
-              this.value = this.value.slice(0, 8);
-          })
-          fTelf.addEventListener('input', function () {
-            if (this.value.length > 9)
-              this.value = this.value.slice(0, 9);
-          })
         }
         if (btnUCShop.value == 'GUARDAR') {
           let datos = new FormData(formUserconfig);
