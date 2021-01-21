@@ -25,7 +25,7 @@
     if (isset($_SESSION['user_log'])) {
         ?>
         <div id="activeAlert">
-          <p class="activeAlert" style=" color: #f0f0f0; font-size: 18px; text-align: center;">Valida tu email con el mensaje que se envió a tu correo, si no lo haces tu cuenta se eliminará en 30 días.</p>
+          <p class="activeAlert">Valida tu email con el mensaje que se envió a tu correo, si no lo haces tu cuenta se eliminará en 30 días.</p>
         </div>
         <?php
     }
