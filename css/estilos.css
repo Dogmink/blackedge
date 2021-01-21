@@ -50,9 +50,6 @@ img.logo {
 .activeAlert {
   max-width: 1200;
   height: 0px;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  border-top: 30px solid var(--blackcolor);
   background-color: var(--blackcolor);
   margin: auto;
   color: #f0f0f0;
