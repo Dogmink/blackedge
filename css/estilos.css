@@ -48,7 +48,7 @@ img.logo {
 /* -------------USER----------------- */
 
 .activeAlert {
-  max-width: 800;
+  max-width: 1000;
   background-color: var(--blackcolor);
   margin: auto;
   color: #f0f0f0;
