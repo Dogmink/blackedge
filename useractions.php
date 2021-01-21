@@ -93,7 +93,7 @@
     if ($result) {
       echo json_encode($parametros);
       session_start();
-      $_SESSION['user_log'] = $parametros;
+      $_SESSION['user_log'] += $parametros;
       die();
     }else{
       echo json_encode(2);
