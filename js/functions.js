@@ -94,7 +94,7 @@ let fPassword = document.getElementById('fPassword');
 let changeData = false;
 
 if (formUserconfig) {
-    fetch('https://blackedgestore.com/complemento.php')
+  fetch('https://blackedgestore.com/complemento.php')
     .then(response => response.json())
     .then(data => {
       console.log(data)
@@ -113,9 +113,9 @@ if (formUserconfig) {
         fTelf.value = data.telf
       }
       fDirec.value = data.direc
-      
+
       let btnUCShop = document.getElementById('btnUserconfigShop');
-      
+
       formUserconfig.addEventListener('submit', function (e) {
         e.preventDefault();
         if (btnUCShop.value == 'Editar Datos') {
@@ -132,17 +132,27 @@ if (formUserconfig) {
           fDNI.setAttribute('class', 'input-userconfig');
           fTelf.setAttribute('class', 'input-userconfig');
           fDirec.setAttribute('class', 'input-userconfig');
-        } 
-        if(btnUCShop.value == 'GUARDAR') {
+          // CONDICIONES
+          fDNI.addEventListener('input', function () {
+            if (this.value.length > 8)
+              this.value = this.value.slice(0, 8);
+          });
+          fTelf.addEventListener('input', function () {
+            if (this.value.length > 9)
+              this.value = this.value.slice(0, 9);
+          })
+
+        }
+        if (btnUCShop.value == 'GUARDAR') {
           let datos = new FormData(formUserconfig);
           fetch('https://blackedgestore.com/useractions.php', {
-            method: 'POST',
-            body: datos
-          })
-          .then(rpt => rpt.json())
-          .then(data => {
-            console.log(data)
-          })
+              method: 'POST',
+              body: datos
+            })
+            .then(rpt => rpt.json())
+            .then(data => {
+              console.log(data)
+            })
           btnUCShop.value = 'Editar Datos';
           // ATRIBUTOS
           fNombres.setAttribute('readonly', 'readonly');
@@ -154,10 +164,10 @@ if (formUserconfig) {
           fNombres.setAttribute('class', 'input-userconfig-readonly');
           fApellidos.setAttribute('class', 'input-userconfig-readonly');
           fDNI.setAttribute('class', 'input-userconfig-readonly');
-          fTelf.setAttribute('class', 'input-userconfig-readonly'); 
-          fDirec.setAttribute('class', 'input-userconfig-readonly');        
+          fTelf.setAttribute('class', 'input-userconfig-readonly');
+          fDirec.setAttribute('class', 'input-userconfig-readonly');
         }
-        
+
       })
     })
-  }
+}
