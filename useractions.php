@@ -81,8 +81,14 @@
     $direc = $_POST['direc'];
     $usr = $_SESSION['user_log'];
     $u_id = $usr['id'];
+    $u_username = $usr['username'];
+    $u_email = $usr['email'];
+    $u_password = $usr['password'];
     $parametros = array(
       'id' => $u_id,
+      'username' => $u_username,
+      'email' => $u_email,
+      'password' => $u_password,
       'nombres' => $nombres,
       'apellidos' => $apellidos,
       'dni' => $dni,
@@ -93,7 +99,7 @@
     if ($result) {
       echo json_encode($parametros);
       session_start();
-      $_SESSION['user_log'] += $parametros;
+      $_SESSION['user_log'] = $parametros;
       die();
     }else{
       echo json_encode(2);
