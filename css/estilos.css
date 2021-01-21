@@ -6,7 +6,8 @@
 }
 
 /*-------------Struc-----------*/
-html, body {
+html,
+body {
   padding: 0px;
   margin: 0px;
   font-size: 12px;
@@ -42,6 +43,20 @@ input :-webkit-autofill:active {
 img.logo {
   width: 400px;
 }
+
+
+/* -------------USER----------------- */
+
+.activeAlert {
+    max-width: 1200;
+    height: 0px;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-top: 800px solid var(--blackcolor);
+    margin: auto;
+}
+
+
 
 /* -------------Nav---------------*/
 nav {
@@ -182,7 +197,7 @@ ul li:hover {
   width: 100%;
   font-size: 24px;
   color: #f0f0f0;
-  background-color: var(--hovercolor1); 
+  background-color: var(--hovercolor1);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -213,20 +228,20 @@ ul li:hover {
   text-transform: uppercase;
 }
 
-.content-login{
+.content-login {
   box-sizing: content-box;
   width: 150%;
 }
 
-.margin-login{
+.margin-login {
   margin-left: 50px;
 }
 
-.margin-logo-login{
+.margin-logo-login {
   margin-right: 100px;
 }
 
-.align-login{
+.align-login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -825,14 +840,14 @@ thead {
 
 /* ----------------PRODUCT DETAIL--------------- */
 
-.imgProductDetail{
+.imgProductDetail {
   box-shadow: 0 0 25px var(--blackcolor);
   -webkit-box-shadow: 0 0 25px var(--blackcolor);
   width: 75%;
 }
 
 
-.nameProductDetail{
+.nameProductDetail {
   background-color: var(--blackcolor);
   color: #f0f0f0;
   font-size: 64px;
@@ -842,14 +857,14 @@ thead {
   margin: 0 250px;
 }
 
-.descProductDetail{
+.descProductDetail {
   color: var(--blackcolor);
   font-size: 18px;
   font-weight: 200;
   text-align: left;
 }
 
-.priceProductDetail{
+.priceProductDetail {
   color: var(--blackcolor);
   font-size: 20px;
   font-weight: 300;
@@ -857,7 +872,7 @@ thead {
   width: 80%;
 }
 
-.btnProductDetail{
+.btnProductDetail {
   display: block;
   color: #f0f0f0;
   background-color: var(--blackcolor);
@@ -868,7 +883,7 @@ thead {
   text-decoration: none;
 }
 
-.rowBtnDetailProduct{
+.rowBtnDetailProduct {
   display: flex;
   padding-top: 20px;
   justify-content: center;

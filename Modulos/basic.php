@@ -24,14 +24,10 @@
     <?php
     if (isset($_SESSION['user_log'])) {
       $user = $_SESSION['user_log'];
-      $active = $user['active'];
-      if ($active != 1) {
         ?>
-        <div class="contenido-alert-active">
+        <div class="activeAlert" id="activeAlert">
           <p style=" color: var(--hovercolor1); font-size: 18px; text-align: center;"><b>Valida tu email con el mensaje que se envió a tu correo, si no lo haces tu cuenta se eliminará en 30 días.</b></p>
         </div>
-        <?php
-      }
     }
 
      ?>
