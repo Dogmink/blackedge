@@ -142,18 +142,15 @@ class User
     print $error[$err];
   }
 
-  function validateLog($userlog){
-    $sql = "SELECT COUNT(id) as userid FROM user WHERE id = :id";
+
+  function checkUser($username){
+    $sql = "SELECT * FROM user WHERE username = :username";
     $stmt = $this->cn->prepare($sql);
-    $stmt->bindValue(':email', $userlog['id']);
+    $stmt->bindParam(':username', $username);
     $stmt->execute();
-    $r=$stmt->fetch(\PDO::FETCH_ASSOC);
-    if ($r['userid']>0) {
-      ?>
-      <script type="text/javascript">
-        window.location= '../index.php';
-      </script>
-      <?php
+    $result=$stmt->fetch(\PDO::FETCH_ASSOC);
+    if ($result) {
+      return $result;
     }
   }
 

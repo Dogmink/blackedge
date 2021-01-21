@@ -87,21 +87,18 @@
     $u_active = $usr['active'];
     $parametros = array(
       'id' => $u_id,
-      'username' => $u_username,
-      'email' => $u_email,
-      'password' => $u_password,
       'nombres' => $nombres,
       'apellidos' => $apellidos,
       'dni' => $dni,
       'telf' => $telf,
       'direc' => $direc,
-      'active' => $u_active
     );
     $result = $user->actualizarInfo($parametros);
     if ($result) {
       echo json_encode($parametros);
       session_start();
-      $_SESSION['user_log'] = $parametros;
+      $dataUpdate = $user->checkUser($u_username);
+      $_SESSION['user_log'] = $dataUpdate;
       die();
     }else{
       echo json_encode(2);
