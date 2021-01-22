@@ -110,7 +110,6 @@ let fTelf = document.getElementById('fTelf');
 let fDirec = document.getElementById('fDirec');
 let fEmail = document.getElementById('fEmail');
 let fPassword = document.getElementById('fPassword');
-let changeData = false;
 
 // CONFIG DE ACCESO
 

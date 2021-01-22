@@ -41,13 +41,13 @@
             <input type="submit" class="btn-edit-userconfig" value="Reenviar código de activación">
           </div>
         </div>
+      </form>
         <div class="separator"></div>
         <div class="row-userconfig">
           <div class="col12">
             <p class="header-userconfig">Configuración de información de compra.</p>
           </div>
         </div>
-      </form>
         <div class="separator"></div>
         <div class="row-userconfig">
         <div class="col3">
