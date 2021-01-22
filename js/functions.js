@@ -8,7 +8,7 @@ if (activeAlert) {
     .then(data => {
       if (data.active == 0) {
         activeAlert.style.display = 'block';
-      }else{
+      } else {
         activeAlert.style.display = 'none';
       }
     })
@@ -101,9 +101,54 @@ function changeForm() {
 
 // ============================USERCONFIG=====================================
 
+let formUserconfig = document.getElementById('fUserconfig');
+let cfgAccess = document.getElementById('cfgAccess');
+let fNombres = document.getElementById('fNombres');
+let fApellidos = document.getElementById('fApellidos');
+let fDNI = document.getElementById('fDNI');
+let fTelf = document.getElementById('fTelf');
+let fDirec = document.getElementById('fDirec');
+let fEmail = document.getElementById('fEmail');
+let fPassword = document.getElementById('fPassword');
+let changeData = false;
+
 // CONFIG DE ACCESO
 
+if (cfgAccess) {
+  let btnUC = document.getElementById('btnUserconfig');
 
+  cfgAccess.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (btnUC.value == 'Editar Datos') {
+      btnUC.value = 'GUARDAR';
+      // ATRIBUTOS
+      fEmail.removeAttribute('readonly');
+      fPassword.removeAttribute('readonly');
+
+      // CLASE
+      fEmail.setAttribute('class', 'input-userconfig');
+      fPassword.setAttribute('class', 'input-userconfig');
+
+    } else {
+      let datos = new FormData(formUserconfig);
+      fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          console.log(data)
+        })
+      btnUC.value = 'Editar Datos';
+      // ATRIBUTOS
+      fEmail.setAttribute('readonly', 'readonly');
+      fPassword.setAttribute('readonly', 'readonly');
+      // CLASE
+      fEmail.setAttribute('class', 'input-userconfig-readonly');
+      fPassword.setAttribute('class', 'input-userconfig-readonly');
+    }
+  })
+}
 
 
 
@@ -115,15 +160,7 @@ function changeForm() {
 
 
 // CONFIG DE COMPRA
-let formUserconfig = document.getElementById('fUserconfig');
-let fNombres = document.getElementById('fNombres');
-let fApellidos = document.getElementById('fApellidos');
-let fDNI = document.getElementById('fDNI');
-let fTelf = document.getElementById('fTelf');
-let fDirec = document.getElementById('fDirec');
-let fEmail = document.getElementById('fEmail');
-let fPassword = document.getElementById('fPassword');
-let changeData = false;
+
 
 if (formUserconfig) {
   fetch('https://blackedgestore.com/complemento.php')
