@@ -24,28 +24,32 @@
           <label for="password" class="label-userconfig">Contraseña</label>
         </div>
       </div>
-      <div class="row-userconfig">
-        <div class="col6">
-          <input class="input-userconfig-readonly" id="fEmail" type="email" name="email" value="" readonly="readonly">
+      <form id="cfgAccess">
+        <div class="row-userconfig">
+          <div class="col6">
+            <input class="input-userconfig-readonly" id="fEmail" type="email" name="email" value="" readonly="readonly">
+          </div>
+          <div class="col6">
+            <input class="input-userconfig-readonly" id="fPassword" type="password" name="password" value="" readonly="readonly">
+          </div>
         </div>
-        <div class="col6">
-          <input class="input-userconfig-readonly" id="fPassword" type="password" name="password" value="" readonly="readonly">
+        <div class="separator"></div>
+        <div class="row-userconfig">
+          <div class="col6">
+            <input type="hidden" name="accion" value="GUARDAR">
+            <input class="btn-edit-userconfig" type="submit" id="btnUserconfig" value="Editar Datos">
+            <input type="submit" class="btn-edit-userconfig" value="Reenviar código de activación">
+          </div>
         </div>
-      </div>
-      <div class="separator"></div>
-      <div class="row-userconfig">
-        <div class="col12">
-          <a class="btn-edit-userconfig" href="userconfig.php?edit=2">EDITAR DATOS</a>
+        <div class="separator"></div>
+        <div class="row-userconfig">
+          <div class="col12">
+            <p class="header-userconfig">Configuración de información de compra.</p>
+          </div>
         </div>
-      </div>
-      <div class="separator"></div>
-      <div class="row-userconfig">
-        <div class="col12">
-          <p class="header-userconfig">Configuración de información de compra.</p>
-        </div>
-      </div>
-      <div class="separator"></div>
-      <div class="row-userconfig">
+      </form>
+        <div class="separator"></div>
+        <div class="row-userconfig">
         <div class="col3">
           <label for="nombres" class="label-userconfig">Nombres</label>
         </div>

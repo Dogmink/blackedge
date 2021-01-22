@@ -101,8 +101,20 @@ function changeForm() {
 
 // ============================USERCONFIG=====================================
 
+// CONFIG DE ACCESO
 
 
+
+
+
+
+
+
+
+
+
+
+// CONFIG DE COMPRA
 let formUserconfig = document.getElementById('fUserconfig');
 let fNombres = document.getElementById('fNombres');
 let fApellidos = document.getElementById('fApellidos');
