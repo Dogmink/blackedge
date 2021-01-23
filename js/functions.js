@@ -115,6 +115,7 @@ let fPassword = document.getElementById('fPassword');
 
 if (cfgAccess) {
   let btnUC = document.getElementById('btnUserconfig');
+  let resendActive = document.getElementById('resendActive');
 
   cfgAccess.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -129,7 +130,28 @@ if (cfgAccess) {
       fPassword.setAttribute('class', 'input-userconfig');
 
     } else {
-      let datos = new FormData(formUserconfig);
+      let datos = new FormData(cfgAccess);
+      fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          console.log(data)
+        })
+      btnUC.value = 'Editar Datos';
+      // ATRIBUTOS
+      fEmail.setAttribute('readonly', 'readonly');
+      fPassword.setAttribute('readonly', 'readonly');
+      // CLASE
+      fEmail.setAttribute('class', 'input-userconfig-readonly');
+      fPassword.setAttribute('class', 'input-userconfig-readonly');
+    }
+  })
+
+  resendActive.addEventListener('onclick', function (e) {
+    e.preventDefault();
+      let datos = new FormData(cfgAccess);
       fetch('https://blackedgestore.com/useractions.php', {
           method: 'POST',
           body: datos
