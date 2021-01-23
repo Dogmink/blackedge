@@ -150,7 +150,6 @@ class User
           return 1;
         }
       }
-  }
 
   
   function validateUsername($username){
