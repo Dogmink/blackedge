@@ -168,8 +168,7 @@ if (cfgAccess) {
       fEmail.setAttribute('class', 'input-userconfig-readonly');
       fPassword.setAttribute('class', 'input-userconfig-readonly');
     })
-    }
-}
+  }
 
 
 
