@@ -117,7 +117,7 @@ if (cfgAccess) {
   let btnUC = document.getElementById('btnUserconfig');
   let resendActive = document.getElementById('resendActive');
 
-  btnUC.addEventListener('onclick', function (e) {
+  cfgAccess.addEventListener('submit', function (e) {
     e.preventDefault();
     if (btnUC.value == 'Editar Datos') {
       btnUC.value = 'GUARDAR';
@@ -169,6 +169,7 @@ if (cfgAccess) {
       fPassword.setAttribute('class', 'input-userconfig-readonly');
     })
     }
+}
 
 
 
