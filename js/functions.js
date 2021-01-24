@@ -117,7 +117,7 @@ if (cfgAccess) {
   let btnUC = document.getElementById('btnUserconfig');
   let resendActive = document.getElementById('resendActive');
 
-  cfgAccess.addEventListener('submit', function (e) {
+  btnUC.addEventListener('onclick', function (e) {
     e.preventDefault();
     if (btnUC.value == 'Editar Datos') {
       btnUC.value = 'GUARDAR';
