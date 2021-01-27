@@ -111,10 +111,10 @@
   if ($accion == 'resend') {
     session_start();
     $usr = $_SESSION['user_log'];
-    $u_username = $usr['username'];
+    $username = $usr['username'];
     $email = $POST['email'];
     
-    $result = $user->resendEmailActivation($u_username);
+    $result = $user->resendEmailActivation($username);
         $hash = $result['hash'];
         $to = $email;
         $subject = 'BlackEdge | Activación de cuenta.';
