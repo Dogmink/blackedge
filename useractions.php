@@ -103,7 +103,7 @@
       $_SESSION['user_log'] = $dataUpdate;
       die();
     }else{
-      echo json_encode(3);
+      echo json_encode(22);
       die();
     }
   }
