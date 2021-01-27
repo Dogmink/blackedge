@@ -115,10 +115,10 @@
     $email = $POST['email'];
     
     $result = $user->resendEmailActivation($username);
-        $hash = $result['hash'];
-        $to = $email;
-        $subject = 'BlackEdge | Activación de cuenta.';
-        $message = '
+    $hash = $result['hash'];
+    $to = $email;
+    $subject = 'BlackEdge | Activación de cuenta.';
+    $message = '
         <html>
           <head>
             <meta charset="utf-8">
@@ -131,7 +131,7 @@
               <div style="background-color: #000;color: #fff;width: 100%;height: 100%;text-align: center;padding-bottom: 100px;" class="body-email">
                 <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Bienvenido <b class="var-email">'.$username.'</b></h1>
                 <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
-                <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?username='.$u_username.'&hash='.$hash.'"><b>Activar cuenta</b></a>
+                <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?username='.$username.'&hash='.$hash.'"><b>Activar cuenta</b></a>
                 <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
                 <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo.png" alt="">
               </div>
@@ -139,9 +139,9 @@
           </body>
         </html>
           ';
-          $headers = "MIME-Version: 1.0" . "\r\n";
-          $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
-          $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
-          mail($to, $subject, $message, $headers);
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
+    mail($to, $subject, $message, $headers);
   }
 ?>
