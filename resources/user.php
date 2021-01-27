@@ -172,6 +172,8 @@ class User
   function actualizarInfo($parametros){
         $sql = "UPDATE `user` SET `password` = :password, `email` = :email, `nombres` = :nombres, `apellidos` = :apellidos, `dni` = :dni, `telf` = :telf, `direc` = :direc  WHERE `id` = :id";
         $stmt = $this->cn->prepare($sql);
+        $stmt->bindParam(':password',$parametros['password']);
+        $stmt->bindParam(':email',$parametros['email']);
         $stmt->bindParam(':nombres',$parametros['nombres']);
         $stmt->bindParam(':apellidos',$parametros['apellidos']);
         $stmt->bindParam(':dni',$parametros['dni']);
@@ -183,9 +185,9 @@ class User
         }else{
           return false;
         }
-      }
+  }
 
-    }
+}
 
     // function validateEmailUserconfig($email){
     //   $sql = "SELECT COUNT(email) as mail FROM user WHERE email = :email";
