@@ -113,47 +113,68 @@ let fPassword = document.getElementById('fPassword');
 
 
 
+
+
+
+
+
 // CONFIG DE COMPRA
 
 
 if (formUserconfig) {
   fetch('https://blackedgestore.com/complemento.php')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      fEmail.value = data.email
-      fPassword.value = data.password
-      fNombres.value = data.nombres
-      fApellidos.value = data.apellidos
-      if (data.dni == 0) {
-        fDNI.value = "";
-      } else {
-        fDNI.value = data.dni
-      }
-      if (data.telf == 0) {
-        fTelf.value = "";
-      } else {
-        fTelf.value = data.telf
-      }
-      fDirec.value = data.direc
-    })
-
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    fEmail.value = data.email
+    fPassword.value = data.password
+    fNombres.value = data.nombres
+    fApellidos.value = data.apellidos
+    if (data.dni == 0) {
+      fDNI.value = "";
+    } else {
+      fDNI.value = data.dni
+    }
+    if (data.telf == 0) {
+      fTelf.value = "";
+    } else {
+      fTelf.value = data.telf
+    }
+    fDirec.value = data.direc
+  })
+  
   // CONDICIONES
-
-
+  
+  
   fDNI.addEventListener('input', function () {
     if (this.value.length > 8)
-      this.value = this.value.slice(0, 8);
+    this.value = this.value.slice(0, 8);
   })
   fTelf.addEventListener('input', function () {
     if (this.value.length > 9)
-      this.value = this.value.slice(0, 9);
+    this.value = this.value.slice(0, 9);
   })
+  
+  
+  // REENVIO DE CÓDIGO
 
+  cfgAccess.addEventListener('submit', function(e){
+    e.preventDefault();
+    let datos = new FormData(cfgAccess);
+    fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          console.log(data)
+        })
+  })
+  
   // INTERACCIÓN
-
+  
   let btnUCShop = document.getElementById('btnUserconfigShop');
-
+  
   formUserconfig.addEventListener('submit', function (e) {
     e.preventDefault();
     if (btnUCShop.value == 'Editar Datos') {

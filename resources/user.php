@@ -116,38 +116,9 @@ class User
       $hash = md5(rand(0, 1000));
       $result->bindParam(':username', $username);
       $result->bindParam(':hash', $hash);
-      if($result->execute($_array)){
-        $username = $_array[':username'];
-        $email = $_array[':email'];
-        $hash = $_array[':hash'];
-        $to = $email;
-        $subject = 'BlackEdge | Activación de cuenta.';
-        $message = '
-        <html>
-          <head>
-            <meta charset="utf-8">
-            <title></title>
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
-          </head>
-          <body style="font-family: "Montserrat", sans-serif;">
-            <div style="max-width: 600px;max-height: 1200px;margin:auto;color: var(--blackcolor);margin-top: 150px;justify-content: center;">
-              <div style="background-color: #000;color: #fff;width: 100%;height: 100%;text-align: center;padding-bottom: 100px;" class="body-email">
-                <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Bienvenido <b class="var-email">'.$username.'</b></h1>
-                <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
-                <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?username='.$username.'&hash='.$hash.'"><b>Activar cuenta</b></a>
-                <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
-                <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo.png" alt="">
-              </div>
-            </div>
-          </body>
-        </html>
-          ';
-          $headers = "MIME-Version: 1.0" . "\r\n";
-          $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
-          $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
-          mail($to, $subject, $message, $headers);
-          return 1;
+      if($result->execute()){
+          $data = checkUser();
+          return $data;
         }
       }
 
@@ -199,7 +170,7 @@ class User
 
 /*----------------------Userconfig--------------*/
   function actualizarInfo($parametros){
-        $sql = "UPDATE `user` SET `nombres` = :nombres, `apellidos` = :apellidos, `dni` = :dni, `telf` = :telf, `direc` = :direc  WHERE `id` = :id";
+        $sql = "UPDATE `user` SET `password` = :password, `email` = :email, `nombres` = :nombres, `apellidos` = :apellidos, `dni` = :dni, `telf` = :telf, `direc` = :direc  WHERE `id` = :id";
         $stmt = $this->cn->prepare($sql);
         $stmt->bindParam(':nombres',$parametros['nombres']);
         $stmt->bindParam(':apellidos',$parametros['apellidos']);

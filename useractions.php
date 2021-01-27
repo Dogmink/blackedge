@@ -74,6 +74,8 @@
 
   if ($accion == 'GUARDAR') {
     session_start();
+    $password = $POST['password'];
+    $email = $POST['email'];
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
     $dni = $_POST['dni'];
@@ -82,11 +84,11 @@
     $usr = $_SESSION['user_log'];
     $u_id = $usr['id'];
     $u_username = $usr['username'];
-    $u_email = $usr['email'];
-    $u_password = $usr['password'];
     $u_active = $usr['active'];
     $parametros = array(
       'id' => $u_id,
+      'password' => $password,
+      'email' => $email,
       'nombres' => $nombres,
       'apellidos' => $apellidos,
       'dni' => $dni,
@@ -104,5 +106,42 @@
       echo json_encode(2);
       die();
     }
+  }
+
+  if ($accion == 'resend') {
+    session_start();
+    $usr = $_SESSION['user_log'];
+    $u_username = $usr['username'];
+    $email = $POST['email'];
+    
+    $result = $user->resendEmailActivation($u_username);
+        $hash = $result['hash'];
+        $to = $email;
+        $subject = 'BlackEdge | Activación de cuenta.';
+        $message = '
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <title></title>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+          </head>
+          <body style="font-family: "Montserrat", sans-serif;">
+            <div style="max-width: 600px;max-height: 1200px;margin:auto;color: var(--blackcolor);margin-top: 150px;justify-content: center;">
+              <div style="background-color: #000;color: #fff;width: 100%;height: 100%;text-align: center;padding-bottom: 100px;" class="body-email">
+                <h1 style="text-align: center;padding-top: 120px;padding-bottom: 40px;">Bienvenido <b class="var-email">'.$username.'</b></h1>
+                <p style="padding: 25px 25px;font-size: 18px;" >Activa tu <b style="padding: 25px 10px;font-size: 18px;" class="var-email">cuenta</b> con el siguiente botón:</p>
+                <a style="background-color: #ff0063;padding: 14px;color: #fff;text-decoration: none;text-align: center;" class="var-link" href="blackedgestore.com/active.php?username='.$u_username.'&hash='.$hash.'"><b>Activar cuenta</b></a>
+                <p style="padding: 25px 25px;font-size: 18px;" class="text-email">No compartas tus credenciales con nadie.</p>
+                <img style="margin-top: 60px;width: 300px;"class="logo-email" src="https://blackedgestore.com/images/Logo/Logo.png" alt="">
+              </div>
+            </div>
+          </body>
+        </html>
+          ';
+          $headers = "MIME-Version: 1.0" . "\r\n";
+          $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
+          $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
+          mail($to, $subject, $message, $headers);
   }
 ?>

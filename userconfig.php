@@ -36,7 +36,7 @@
         <div class="separator"></div>
         <div class="row-userconfig">
           <div class="col12">
-            <input type="hidden" name="accion" value="GUARDAR">
+            <input type="hidden" name="accion" value="resend">
             <input type="submit" class="btn-edit-userconfig" id="resendActive" value="Reenviar código de activación">
       </form>
           </div>
