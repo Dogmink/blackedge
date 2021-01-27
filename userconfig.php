@@ -37,9 +37,8 @@
         <div class="row-userconfig">
           <div class="col12">
             <input type="hidden" name="accion" value="GUARDAR">
-            <input class="btn-edit-userconfig" type="submit" id="btnUserconfig" value="Editar Datos">
-      </form>
             <input type="submit" class="btn-edit-userconfig" id="resendActive" value="Reenviar código de activación">
+      </form>
           </div>
         </div>
         <div class="separator"></div>
