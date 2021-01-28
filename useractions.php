@@ -154,7 +154,7 @@
         die();
       }
     }else{
-      echo json_encode(3);
+      echo json_encode(34);
     }
   }
 ?>
