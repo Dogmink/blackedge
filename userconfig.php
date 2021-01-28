@@ -36,7 +36,7 @@
         <div class="separator"></div>
         <div class="row-userconfig">
           <div class="col12">
-            <button type="submit" class="btn-edit-userconfig" id="resendActive" >Reenviar código de activación</button> 
+            <button  class="btn-edit-userconfig" id="resendActive" onclick="resend();" >Reenviar código de activación</button> 
           </div>
         </div>
         <div class="separator"></div>
@@ -88,8 +88,8 @@
       <div class="separator"></div>
       <div class="row-userconfig">
         <div class="col12">
-          <input type="hidden" name="accion" value="GUARDAR">
-          <button class="btn-edit-userconfig" type="submit" id="btnUserconfigShop">Editar Datos</button>
+          <input type="hidden" id="identificator" name="accion" value="GUARDAR">
+          <input class="btn-edit-userconfig" type="submit" id="btnUserconfigShop" value="Editar Datos">
         </div>
       </div>
     </div>

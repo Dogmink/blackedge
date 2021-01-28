@@ -110,6 +110,7 @@ let fTelf = document.getElementById('fTelf');
 let fDirec = document.getElementById('fDirec');
 let fEmail = document.getElementById('fEmail');
 let fPassword = document.getElementById('fPassword');
+let identificator = document.getElementById('identificator');
 
 
 
@@ -158,27 +159,17 @@ if (formUserconfig) {
   
   // REENVIO DE CÓDIGO
 
-  resendActive.addEventListener('onclick', function(e){
-    e.preventDefault();
-    let datos = new FormData(cfgAccess);
-    fetch('https://blackedgestore.com/useractions.php', {
-          method: 'POST',
-          body: datos
-        })
-        .then(rpt => rpt.json())
-        .then(data => {
-          console.log(data)
-        })
-  })
   
   // INTERACCIÓN
   
   let btnUCShop = document.getElementById('btnUserconfigShop');
   
-  btnUCShop.addEventListener('onclick', function (e) {
+  formUserconfig.addEventListener('submit', function (e) {
     e.preventDefault();
     if (btnUCShop.value == 'Editar Datos') {
       btnUCShop.value = 'GUARDAR';
+      identificator.value = 'GUARDAR';
+      
       // ATRIBUTOS
       fNombres.removeAttribute('readonly');
       fApellidos.removeAttribute('readonly');
@@ -216,4 +207,17 @@ if (formUserconfig) {
       fDirec.setAttribute('class', 'input-userconfig-readonly');
     }
   })
+}
+
+function resend(){
+  let datos = new FormData(formUserconfig);
+  identificator.value = 'resend';
+  fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          console.log(data)
+        })
 }
