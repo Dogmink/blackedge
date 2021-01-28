@@ -36,7 +36,7 @@
         <div class="separator"></div>
         <div class="row-userconfig">
           <div class="col12">
-            <button  class="btn-edit-userconfig" id="resendActive" onclick="resend();" >Reenviar código de activación</button> 
+            <p  class="btn-edit-userconfig" id="resendActive" onclick="resend();" >Reenviar código de activación</p> 
           </div>
         </div>
         <div class="separator"></div>
