@@ -24,6 +24,7 @@
           <label for="password" class="label-userconfig">Contraseña</label>
         </div>
       </div>
+      <form id="fUserconfig">
       <form id="cfgAccess">
         <div class="row-userconfig">
           <div class="col6">
@@ -62,7 +63,6 @@
           <label for="telf" class="label-userconfig">Celular o Telefono</label>
         </div>
       </div>
-      <form id="fUserconfig">
       <div class="row-userconfig">
         <div class="col3">
           <input class="input-userconfig-readonly" id="fNombres" type="text" name="nombres" value="" readonly="readonly">
