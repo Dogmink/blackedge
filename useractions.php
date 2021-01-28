@@ -110,7 +110,7 @@
 
   if ($accion == 'resend') {
     session_start();
-    $email = $POST['email'];
+    $email = $_POST['email'];
     $usr = $_SESSION['user_log'];
     $username = $usr['username'];
     $u_active = $usr['active'];
