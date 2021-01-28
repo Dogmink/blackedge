@@ -74,8 +74,8 @@
 
   if ($accion == 'GUARDAR') {
     session_start();
-    $password = $POST['password'];
-    $email = $POST['email'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
     $dni = $_POST['dni'];
