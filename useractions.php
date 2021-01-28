@@ -147,7 +147,7 @@
           $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
           $headers.= 'from: BlackEdgeStore Team <noreply@blackedgestore.com>' . "\r\n";
           mail($to, $subject, $message, $headers);
-          echo json_encode('Todo bien, amigo');
+          echo json_encode($email);
         die();
       }else{
         echo json_encode(2);
