@@ -117,8 +117,7 @@ class User
       $result->bindParam(':username', $username);
       $result->bindParam(':hash', $hash);
       if($result->execute()){
-          $data = checkUser($username);
-          return $data;
+          return true;
         }
       }
 

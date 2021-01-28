@@ -116,7 +116,8 @@
     $u_active = $usr['active'];
     if ($u_active == 0) {
       $result = $user->resendEmailActivation($username);
-      if ($result!=null) {
+      if ($result) {
+        $dataUpdate = $user->checkUser($username);
         $_SESSION['user_log'] = $dataUpdate;
         $hash = $dataUpdate['hash'];
         $to = $email;
