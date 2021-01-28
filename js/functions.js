@@ -175,7 +175,7 @@ if (formUserconfig) {
   
   let btnUCShop = document.getElementById('btnUserconfigShop');
   
-  formUserconfig.addEventListener('submit', function (e) {
+  btnUCShop.addEventListener('onclick', function (e) {
     e.preventDefault();
     if (btnUCShop.value == 'Editar Datos') {
       btnUCShop.value = 'GUARDAR';
