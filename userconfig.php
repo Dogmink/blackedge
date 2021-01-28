@@ -25,7 +25,6 @@
         </div>
       </div>
       <form id="fUserconfig">
-      <form id="cfgAccess">
         <div class="row-userconfig">
           <div class="col6">
             <input class="input-userconfig-readonly" id="fEmail" type="email" name="email" value="" readonly="readonly">
@@ -37,9 +36,7 @@
         <div class="separator"></div>
         <div class="row-userconfig">
           <div class="col12">
-            <input type="hidden" name="accion" value="resend">
-            <input type="submit" class="btn-edit-userconfig" id="resendActive" value="Reenviar código de activación">
-      </form>
+            <button type="submit" class="btn-edit-userconfig" id="resendActive" >Reenviar código de activación</button> 
           </div>
         </div>
         <div class="separator"></div>

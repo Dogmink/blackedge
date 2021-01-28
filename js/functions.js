@@ -158,7 +158,7 @@ if (formUserconfig) {
   
   // REENVIO DE CÓDIGO
 
-  cfgAccess.addEventListener('submit', function(e){
+  resendActive.addEventListener('onclick', function(e){
     e.preventDefault();
     let datos = new FormData(cfgAccess);
     fetch('https://blackedgestore.com/useractions.php', {
