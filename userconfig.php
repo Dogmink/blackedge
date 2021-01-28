@@ -89,7 +89,7 @@
       <div class="row-userconfig">
         <div class="col12">
           <input type="hidden" name="accion" value="GUARDAR">
-          <input class="btn-edit-userconfig" type="submit" id="btnUserconfigShop" value="Editar Datos">
+          <button class="btn-edit-userconfig" type="submit" id="btnUserconfigShop">Editar Datos</button>
         </div>
       </div>
     </div>
