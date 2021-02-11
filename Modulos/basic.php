@@ -35,7 +35,7 @@
     <ul class="navbar-nav">
       <li class="logo">
         <a href="#" class="nav-link">
-          <span class="link-text logo-text">Fireship</span>
+          <span class="link-text logo-text">BlackEdgeStore</span>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -87,7 +87,7 @@
               ></path>
             </g>
           </svg>
-          <span class="link-text">Cats</span>
+          <span class="link-text">Dark Art</span>
         </a>
       </li>
 
@@ -116,7 +116,7 @@
               ></path>
             </g>
           </svg>
-          <span class="link-text">Aliens</span>
+          <span class="link-text">Aesthetic Art</span>
         </a>
       </li>
 
@@ -145,7 +145,7 @@
               ></path>
             </g>
           </svg>
-          <span class="link-text">Space</span>
+          <span class="link-text">Japan Art</span>
         </a>
       </li>
 
@@ -174,7 +174,7 @@
               ></path>
             </g>
           </svg>
-          <span class="link-text">Shuttle</span>
+          <span class="link-text">MISC</span>
         </a>
       </li>
 
@@ -186,7 +186,7 @@
             aria-hidden="true"
             focusable="false"
             data-prefix="fad"
-            data-icon="moon-stars"
+            data-icon="skeleton"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"

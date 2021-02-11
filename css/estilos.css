@@ -92,44 +92,58 @@ nav {
   flex-direction: column;
 }
 
-/*-----User Nav----------*/
-ul>li>ul {
-  display: none;
-  position: absolute;
-  -webkit-transition: ease 0.5s;
-  -o-transition: ease 0.5s;
-  transition: ease 0.5s;
-  padding: 0px;
-  margin: 0;
-  text-decoration: none;
-}
 
-ul>li:hover>ul {
-  display: block;
-  -webkit-transition: ease 0.5s;
-  -o-transition: ease 0.5s;
-  transition: ease 0.5s;
-  padding: 5px 0px;
-}
-
-ul>li>ul>li {
-  padding: 5px;
-}
-
-ul>li>ul>li a {
-  margin: 0;
-  padding: 0;
-}
-
-ul li:hover {
-  display: block;
-  -webkit-transition: ease 0.5s;
-  -o-transition: ease 0.5s;
-  transition: ease 0.5s;
-}
 
 .icon-shop-nav {
   width: 30px;
+}
+
+/* ================ Contenido Principal ===================== */
+
+main{
+  margin-left:5rem;
+  padding: 1rem;
+}
+
+.main_section {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 52px;
+  align-content: center;
+  justify-content: center;
+}
+
+.products {
+  max-height: 50px;
+  padding: 20%;
+  display: inherit;
+}
+
+.product {
+  padding: 10px;
+  margin-top: -240px;
+}
+
+.product .content {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 15px #000;
+}
+
+.img_content {
+  text-align: center;
+}
+
+.design_product {
+  width: 300px;
+  height: 500px;
+  box-shadow: 0 0 25px #000;
+}
+
+.p_cat {
+  font-size: 15px;
+  color: #000;
 }
 
 /*..... LOG USER -------------*/
@@ -507,53 +521,7 @@ legend {
   width: 100%;
 }
 
-/* ================ Contenido Principal ===================== */
 
-main{
-  margin-left:5rem;
-  padding: 1rem;
-}
-
-.main_section {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  font-size: 52px;
-  align-content: center;
-  justify-content: center;
-}
-
-.products {
-  max-height: 50px;
-  padding: 20%;
-  display: inherit;
-}
-
-.product {
-  padding: 10px;
-  margin-top: -240px;
-}
-
-.product .content {
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0 0 15px #000;
-}
-
-.img_content {
-  text-align: center;
-}
-
-.design_product {
-  width: 300px;
-  height: 500px;
-  box-shadow: 0 0 25px #000;
-}
-
-.p_cat {
-  font-size: 15px;
-  color: #000;
-}
 
 /* descripción de los productos index*/
 .desc-product {
