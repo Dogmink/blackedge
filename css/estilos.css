@@ -25,8 +25,8 @@ body::-webkit-scrollbar-track{
   background: black;
 }
 
-body::-webkit-slider-thumb{
-  background: #250f42;
+body::-webkit-scrollbar-thumb{
+  background: #52189e;
 }
 
 
