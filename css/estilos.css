@@ -3,6 +3,7 @@
   --blackcolor: rgb(39, 45, 47);
   --hovercolor1: #ff004c;
   --hovercolor2: #00ffe8;
+  --hovercolor-primary1: #3E3030;
 }
 
 /*-------------Struc-----------*/
@@ -61,50 +62,19 @@ img.logo {
 
 /* -------------Nav---------------*/
 nav {
-  display: flex;
-  padding-bottom: 150px;
-  padding-top: 100px;
-  color: var(--blackcolor);
-  justify-content: space-around;
-  align-items: center;
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--hovercolor-primary1);
 }
 
-nav ul {
-  display: flex;
-  font-size: 24px;
-}
-
-nav ul .ul-login {
-  box-sizing: content-box;
-  display: block;
-  font-size: 24px;
-  width: 150%;
-}
-
-nav li {
-  padding-left: 20px;
+.navbar-nav{
   list-style: none;
-}
-
-nav li .li-login {
-  box-sizing: content-box;
-  list-style: none;
-  width: 150%;
-}
-
-nav li a {
-  -webkit-transition: ease 0.3s;
-  -o-transition: ease 0.3s;
-  transition: ease 0.3s;
-  color: var(--blackcolor);
   text-decoration: none;
-}
-
-nav li a:hover {
-  -webkit-transition: ease 0.3s;
-  -o-transition: ease 0.3s;
-  transition: ease 0.3s;
-  color: #ff004c;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /*-----User Nav----------*/
@@ -523,6 +493,12 @@ legend {
 }
 
 /* ================ Contenido Principal ===================== */
+
+.main{
+  margin-left:5rem;
+  padding: 1rem;
+}
+
 .main_section {
   width: 100%;
   padding: 50px 0;

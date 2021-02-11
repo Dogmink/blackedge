@@ -31,29 +31,29 @@
     }
 
      ?>
-  <nav class="fadeInDown">
+  <nav class="fadeInDown navbar">
     <div class="BlackEdge_image">
       <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
     </div>
     <div class="nav_options"></div>
-      <ul>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="productos.php">PRODUCTOS</a></li>
+      <ul class="navbar-nav">
+        <li class="navbar-item"><a href="#">FAQs</a></li>
+        <li class="navbar-item"><a href="productos.php">PRODUCTOS</a></li>
         <?php
         if (isset($_SESSION['user_log'])) {
           $user = $_SESSION['user_log'];
           ?>
-          <li><a href="#" class="login-user"><?php print $user['username'];  ?></a>
-            <ul>
-              <li><a href="#">Perfil</a></li>
-              <li><a href="userconfig.php">Configuración</a></li>
-              <li><a href="logout.php">Cerrar Sesión</a></li>
+          <li class="navbar-item"><a href="#" class="login-user"><?php print $user['username'];  ?></a>
+            <ul class="navbar-nav">
+              <li class="navbar-item"><a href="#">Perfil</a></li>
+              <li class="navbar-item"><a href="userconfig.php">Configuración</a></li>
+              <li class="navbar-item"><a href="logout.php">Cerrar Sesión</a></li>
             </ul>
           </li>
           <?php
         }else{
           ?>
-          <li><a href="register.php">LOGIN</a></li>
+          <li class="navbar-item" ><a href="register.php">LOGIN</a></li>
           <?php
         }
          ?>
