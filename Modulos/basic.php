@@ -74,10 +74,11 @@
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-          <svg version="1.1" id="Capa_1" focusable="false" xmlns="http://www.w3.org/2000/svg"
+          <svg aria-hidden="true" role="img" version="1.1" id="Capa_1" focusable="false" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
             style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <path
+              fill="currentColor"
               d="M487.4,315.7l-42.6-24.6c4.3-23.2,4.3-47,0-70.2l42.6-24.6c4.9-2.8,7.1-8.6,5.5-14c-11.1-35.6-30-67.8-54.7-94.6
 	            c-3.8-4.1-10-5.1-14.8-2.3L380.8,110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7c-36.7-8.2-74.3-7.8-109.2,0
 	            c-5.5,1.2-9.4,6.1-9.4,11.7V75c-22.2,7.9-42.8,19.8-60.8,35.1L88.7,85.5c-4.9-2.8-11-1.9-14.8,2.3c-24.7,26.7-43.6,58.9-54.7,94.6
