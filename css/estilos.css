@@ -1026,7 +1026,7 @@ thead {
 footer {
   padding-top: 200px;
   position: absolute;
-  color: var(--blackcolor);
+  color: var(--text-primary);
   justify-content: space-around;
   display: flex;
   width: 100%;
