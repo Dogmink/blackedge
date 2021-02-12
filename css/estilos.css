@@ -86,6 +86,7 @@ nav {
   height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
+  z-index: 999;
 }
 
 .navbar-nav{
@@ -261,9 +262,6 @@ nav {
 .solar #solarIcon {
   display: block;
 }
-
-
-
 
 .icon-shop-nav {
   width: 30px;
