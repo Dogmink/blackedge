@@ -172,9 +172,6 @@ nav {
   transition: var(--transition-speed);
 }
 
-.navbar:hover .logo svg {
-  transform: rotate(-180deg);
-}
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
