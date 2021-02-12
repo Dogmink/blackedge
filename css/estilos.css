@@ -19,7 +19,7 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 12px;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   color: var(--text-primary);
 }
 
