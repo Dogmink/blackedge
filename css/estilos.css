@@ -10,6 +10,8 @@
   --bg-primary: #302c35;
   --bg-secondary: #26262c;
   --bg-shadow: #1a1a1d;
+  --btn-primary: #2d1f3d;
+  --btn-seondary: #22182c;
   --transition-speed: 600ms;
   font-size: 16px;
 }
@@ -231,6 +233,8 @@ nav {
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --btn-primary: rgb(16, 31, 54);
+  --btn-secondary: rgb(14, 16, 39);
 }
 
 .light {
@@ -238,14 +242,10 @@ nav {
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
+  --btn-primary: rgb(16, 31, 54);
+  --btn-secondary: rgb(14, 16, 39);
 }
 
-.solar {
-  --text-primary: #576e75;
-  --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
-  --bg-secondary: #f5e5b8;
-}
 
 .theme-icon {
   display: none;
@@ -712,7 +712,7 @@ legend {
   width: 34%;
   font-size: 24px;
   color: var(--text-secondary);
-  background-color: var(--bg-primary);
+  background-color: var(--btn-primary);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -725,8 +725,8 @@ legend {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 17px;
-  color: #fff;
-  background-color: var(--bg-shadow);
+  color: var(--text-secondary);
+  background-color: var(--btn-seondary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
@@ -747,8 +747,8 @@ legend {
   text-align: left;
   width: 34%;
   font-size: 24px;
-  color: #f0f0f0;
-  background-color: var(--text-secondary);
+  color: var(--text-secondary);
+  background-color: var(--btn-primary);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -761,8 +761,8 @@ legend {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 17px;
-  color: #fff;
-  background-color: var(--bg-shadow);
+  color: var(--text-primary);
+  background-color: var(--btn-seondary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
@@ -834,8 +834,8 @@ legend {
 
 .seeMore_btn {
   width: 80%;
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--btn-primary);
+  color: var(--text-secondary);
   padding: 15px;
 }
 
@@ -960,8 +960,8 @@ thead {
 .btn-edit-userconfig {
   padding: 20px;
   font-size: 20px;
-  background-color: rgb(43, 39, 43);
-  color: #fff;
+  background-color: var(--btn-primary);
+  color: var(--text-primary);
   text-align: center;
   text-decoration: none;
 }
@@ -970,14 +970,14 @@ thead {
 /* ----------------PRODUCT DETAIL--------------- */
 
 .imgProductDetail {
-  box-shadow: 0 0 25px var(--blackcolor);
-  -webkit-box-shadow: 0 0 25px var(--blackcolor);
+  box-shadow: 0 0 25px #000;
+  -webkit-box-shadow: 0 0 25px #000;
   width: 75%;
 }
 
 
 .nameProductDetail {
-  background-color: var(--blackcolor);
+  background-color: var(--text-secondary);
   color: #f0f0f0;
   font-size: 64px;
   font-weight: 300;
@@ -987,14 +987,14 @@ thead {
 }
 
 .descProductDetail {
-  color: var(--blackcolor);
+  color: var(--text-primary);
   font-size: 18px;
   font-weight: 200;
   text-align: left;
 }
 
 .priceProductDetail {
-  color: var(--blackcolor);
+  color: var(--text-primary);
   font-size: 20px;
   font-weight: 300;
   text-align: left;
@@ -1003,8 +1003,8 @@ thead {
 
 .btnProductDetail {
   display: block;
-  color: #f0f0f0;
-  background-color: var(--blackcolor);
+  color: var(--text-secondary);
+  background-color: var(--btn-primary);
   padding: 20px;
   font-size: 14px;
   width: 80%;
