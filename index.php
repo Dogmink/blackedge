@@ -3,7 +3,7 @@ require 'Modulos/basic.php';
 ?>
 <main>
   <div class="main_section fadeIn">
-    <div id="bg_button">IMPÓN <b>ESTILO</b> A TUS AMBIENTES.
+    <div id="bg_button"> RECIÉN AGREGADOS.
     </div>
   </div>
   <div class="contenido_index fadeInUp">

@@ -7,8 +7,9 @@
   font-family: 'Quicksand', sans-serif;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
-  --bg-primary: #2c2830;
-  --bg-secondary: #1d1d22;
+  --bg-primary: #302c35;
+  --bg-secondary: #26262c;
+  --bg-shadow: #1a1a1d;
   --transition-speed: 600ms;
   font-size: 16px;
 }
@@ -711,8 +712,8 @@ legend {
   text-decoration: none;
   width: 34%;
   font-size: 24px;
-  color: #f0f0f0;
-  background-color: var(--blackcolor);
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -726,7 +727,7 @@ legend {
   transition: ease 0.2s;
   margin-top: 17px;
   color: #fff;
-  background-color: #000;
+  background-color: var(--bg-shadow);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
