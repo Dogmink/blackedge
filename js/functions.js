@@ -225,8 +225,8 @@ function resend(){
 // ==============THEME=========================
 
 const themeMap = {
-  dark: "solar",
-  solar: "dark"
+  dark: "light",
+  light: "dark",
 };
 
 const theme = localStorage.getItem('theme')
