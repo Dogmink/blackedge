@@ -296,7 +296,7 @@ main{
 }
 
 .product .content {
-  background-color: white;
+  background-color: var(--text-secondary);
   padding: 10px;
   box-shadow: 0 0 15px #000;
 }
@@ -313,7 +313,7 @@ main{
 
 .p_cat {
   font-size: 15px;
-  color: #000;
+  color: var(--text-secondary);
 }
 
 /*..... LOG USER -------------*/
@@ -699,7 +699,7 @@ legend {
   font-size: 24px;
   margin-left: 5%;
   margin-top: 7%;
-  color: var(--blackcolor);
+  color: var(--text-secondary);
 }
 
 
@@ -737,7 +737,7 @@ legend {
   font-size: 24px;
   margin-right: 3%;
   margin-top: 7%;
-  color: var(--blackcolor);
+  color: var(--text-primary);
 }
 
 .desc-product2 button {
@@ -749,7 +749,7 @@ legend {
   width: 34%;
   font-size: 24px;
   color: #f0f0f0;
-  background-color: var(--blackcolor);
+  background-color: var(--text-secondary);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -763,7 +763,7 @@ legend {
   transition: ease 0.2s;
   margin-top: 17px;
   color: #fff;
-  background-color: #000;
+  background-color: var(--bg-shadow);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
@@ -820,11 +820,11 @@ legend {
   display: flex;
   justify-content: space-around;
   font-size: 18px;
-  color: var(--blackcolor);
+  color: var(--text-primary);
 }
 
 .nameDesign-shop {
-  color: var(--blackcolor);
+  color: var(--text-secondary);
   font-size: 25px;
   text-align: center;
 }
@@ -835,8 +835,8 @@ legend {
 
 .seeMore_btn {
   width: 80%;
-  background: var(--blackcolor);
-  color: #f0f0f0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   padding: 15px;
 }
 
@@ -863,7 +863,7 @@ thead {
   transition: ease 0.2s;
   width: 4%;
   font-size: 14px;
-  color: var(--blackcolor);
+  color: var(--text-primary);
   padding: 10px;
   border-style: none;
   text-align: center;
@@ -881,7 +881,7 @@ thead {
 .contenido-userconfig {
   max-width: 1200px;
   margin: auto;
-  color: var(--blackcolor);
+  color: var(--text-primary);
   justify-content: center;
 }
 
