@@ -225,8 +225,7 @@ function resend(){
 // ==============THEME=========================
 
 const themeMap = {
-  dark: "light",
-  light: "solar",
+  dark: "solar",
   solar: "dark"
 };
 
