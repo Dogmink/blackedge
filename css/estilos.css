@@ -1033,4 +1033,5 @@ footer {
   align-self: flex-end;
   font-size: 14px;
   align-content: flex-end;
+  background: var(--bg-secondary);
 }
