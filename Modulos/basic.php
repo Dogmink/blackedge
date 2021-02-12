@@ -38,7 +38,7 @@
   <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
-        <a href="#" class="nav-link">
+        <a href="index.php" class="nav-link">
           <span class="link-text logo-text">BlackEdge</span>
           <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img"
             version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -839,7 +839,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="index.php" class="nav-link">
+        <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -940,7 +940,7 @@
         <a href="#" class="nav-link">
 		  <svg  class="theme-icon" id="SolarIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-		  	<path d="M256,0C115.2,0,0,115.2,0,256s115.2,256,256,256s256-115.2,256-256S396.8,0,256,0z M256,480
+		  	<path fill="currentColor" d="M256,0C115.2,0,0,115.2,0,256s115.2,256,256,256s256-115.2,256-256S396.8,0,256,0z M256,480
 		  		c-124.8,0-224-99.2-224-224c0-76.8,38.4-147.2,102.4-188.8c-3.2,19.2-6.4,41.6-6.4,60.8c0,156.8,128,284.8,284.8,288
 		  		C371.2,457.6,316.8,480,256,480z"
 				class="fa-secondary"
@@ -948,7 +948,7 @@
 		  </svg>
 		  <svg class="theme-icon" id="darkIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-			<path  d="M256,0C115.2,0,0,115.2,0,256s115.2,256,256,256s256-115.2,256-256S396.8,0,256,0z"
+			<path fill="currentColor" d="M256,0C115.2,0,0,115.2,0,256s115.2,256,256,256s256-115.2,256-256S396.8,0,256,0z"
 			  	   class="fa-primary"
 			/>
 			</svg>
