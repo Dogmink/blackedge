@@ -938,7 +938,7 @@
 
       <li class="nav-item" id="themeButton">
         <a href="#" class="nav-link">
-		  <svg  class="theme-icon" id="SolarIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		  <svg  class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 		  	<path fill="currentColor" d="M256,0C115.2,0,0,115.2,0,256s115.2,256,256,256s256-115.2,256-256S396.8,0,256,0z M256,480
 		  		c-124.8,0-224-99.2-224-224c0-76.8,38.4-147.2,102.4-188.8c-3.2,19.2-6.4,41.6-6.4,60.8c0,156.8,128,284.8,284.8,288
