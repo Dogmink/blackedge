@@ -72,7 +72,7 @@
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            class="svg-inline--fa fa-cat fa-w-16 fa-9x"
+            class="svg-inline--fas fa-skull fa-w-16 fa-9x"
           >
             <g class="fa-group">
               <path
@@ -186,7 +186,7 @@
             aria-hidden="true"
             focusable="false"
             data-prefix="fad"
-            data-icon="skeleton"
+            data-icon="moon-stars"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
