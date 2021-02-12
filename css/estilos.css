@@ -19,8 +19,8 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 12px;
-  background-color: rgb(29, 28, 31);
-  color: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 body::-webkit-scrollbar{
