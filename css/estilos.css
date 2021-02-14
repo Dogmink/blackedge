@@ -13,6 +13,9 @@
   --btn-primary: #2d1f3d;
   --btn-seondary: #22182c;
   --transition-speed: 600ms;
+  --logo-primary: #F1EFCE;
+  --logo-secondary: #8C8B6F;
+
   font-size: 16px;
 }
 
@@ -138,11 +141,11 @@ nav {
 }
 
 .fa-primary{
-  color: #F1EFCE
+  color: var(--logo-primary);
 }
 
 .fa-secondary{
-  color: #8C8B6F;
+  color: var(--logo-secondary);
 }
 
 .fa-primary,
@@ -233,8 +236,10 @@ nav {
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --btn-primary: rgb(16, 31, 54);
-  --btn-secondary: rgb(14, 16, 39);
+  --btn-primary: #101f36;
+  --btn-secondary: #0e1027;
+  --logo-primary: #F1EFCE;
+  --logo-secondary: #8C8B6F;
 }
 
 .light {
@@ -242,8 +247,10 @@ nav {
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
-  --btn-primary: rgb(16, 31, 54);
-  --btn-secondary: rgb(14, 16, 39);
+  --btn-primary: #2c5592;
+  --btn-secondary: #212780;
+  --logo-primary: #101a3b;
+  --logo-secondary: #07081a;
 }
 
 
