@@ -2,10 +2,10 @@
 require 'Modulos/basic.php';
 ?>
 <main>
-  <div class="main_section fadeIn">
+  <!-- <div class="main_section fadeIn">
     <div id="bg_button"> RECIÉN AGREGADOS.
     </div>
-  </div>
+  </div> -->
   <div class="contenido_index fadeInUp">
 
     <?php
