@@ -15,6 +15,7 @@
   --transition-speed: 600ms;
   --logo-primary: #F1EFCE;
   --logo-secondary: #8C8B6F;
+  --text-btn: #ececec;
 
   font-size: 16px;
 }
@@ -247,10 +248,10 @@ nav {
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
-  --btn-primary: #a9b9d8;
-  --btn-secondary: #8585bb;
-  --logo-primary: #293e5e;
-  --logo-secondary: #231f4e;
+  --btn-primary: #101f36;
+  --btn-secondary: #0e1027;
+  --logo-primary: #4a788d;
+  --logo-secondary: #36547a;
 }
 
 
@@ -372,8 +373,8 @@ main{
   text-align: left;
   width: 100%;
   font-size: 24px;
-  color: #f0f0f0;
-  background-color: var(--hovercolor1);
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -479,8 +480,8 @@ main{
   text-align: left;
   width: 100%;
   font-size: 24px;
-  color: #f0f0f0;
-  background-color: var(--blackcolor);
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 25px;
   border-style: none;
   text-align: center;
@@ -493,8 +494,8 @@ main{
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 17px;
-  color: #fff;
-  background-color: #000;
+  color: var(--text-btn);
+  background-color: var(--btn-secondary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
@@ -550,8 +551,8 @@ option {
   margin-top: 50px;
   width: 100%;
   font-size: 18px;
-  color: #f0f0f0;
-  background-color: var(--blackcolor);
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 20px;
   border-style: none;
   text-align: center;
@@ -563,8 +564,8 @@ option {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
-  color: #fff;
-  background-color: #000;
+  color: var(--text-btn);
+  background-color: var(--btn-secondary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
@@ -575,8 +576,8 @@ option {
   transition: ease 0.2s;
   width: 100%;
   font-size: 18px;
-  color: #f0f0f0;
-  background-color: var(--blackcolor);
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 20px 267px;
   text-decoration: none;
   text-align: center;
@@ -588,7 +589,7 @@ option {
 .btn-cancelar:hover {
   text-decoration: none;
   text-decoration-style: none;
-  color: #f0f0f0;
+  color: var(--text-btn);
   box-shadow: 0 0 0px #000;
 }
 
@@ -599,8 +600,8 @@ option {
   transition: ease 0.2s;
   width: 5%;
   font-size: 18px;
-  color: #f0f0f0;
-  background-color: var(--blackcolor);
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 15px;
   border-style: none;
   text-align: center;
@@ -614,8 +615,8 @@ option {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 17px;
-  color: #fff;
-  background-color: #000;
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
 }
@@ -625,8 +626,8 @@ option {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   font-size: 12px;
-  color: #f0f0f0;
-  background-color: #f20d4b;
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 6px;
   border-style: none;
   text-align: center;
@@ -640,8 +641,8 @@ option {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
-  color: #fff;
-  background-color: #d1265e;
+  color: var(--text-btn);
+  background-color: var(--hovercolor1);
   text-decoration: none;
   -webkit-box-shadow: 0 0 0px #000;
   box-shadow: 0 0 0px #000;
@@ -652,8 +653,8 @@ option {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   font-size: 12px;
-  color: #f0f0f0;
-  background-color: #f2d40d;
+  color: var(--text-btn);
+  background-color: var(--btn-primary);
   padding: 6px;
   border-style: none;
   text-align: center;
@@ -667,7 +668,7 @@ option {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
-  color: #fff;
+  color: var(--text-secondary);
   background-color: #f2d40d;
   text-decoration: none;
   -webkit-box-shadow: 0 0 0px #000;
@@ -718,7 +719,7 @@ legend {
   text-decoration: none;
   width: 34%;
   font-size: 24px;
-  color: var(--text-secondary);
+  color: var(--text-btn);
   background-color: var(--btn-primary);
   padding: 15px;
   border-style: none;
@@ -732,7 +733,7 @@ legend {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 17px;
-  color: var(--text-secondary);
+  color: var(--text-btn);
   background-color: var(--btn-seondary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
@@ -754,7 +755,7 @@ legend {
   text-align: left;
   width: 34%;
   font-size: 24px;
-  color: var(--text-secondary);
+  color: var(--text-btn);
   background-color: var(--btn-primary);
   padding: 15px;
   border-style: none;
@@ -768,7 +769,7 @@ legend {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin-top: 17px;
-  color: var(--text-primary);
+  color: var(--text-btn);
   background-color: var(--btn-seondary);
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
@@ -842,7 +843,7 @@ legend {
 .seeMore_btn {
   width: 80%;
   background: var(--btn-primary);
-  color: var(--text-secondary);
+  color: var(--text-btn);
   padding: 15px;
 }
 
@@ -869,7 +870,7 @@ thead {
   transition: ease 0.2s;
   width: 4%;
   font-size: 14px;
-  color: var(--text-primary);
+  color: var(--text-btn);
   padding: 10px;
   border-style: none;
   text-align: center;
@@ -968,7 +969,7 @@ thead {
   padding: 20px;
   font-size: 20px;
   background-color: var(--btn-primary);
-  color: var(--text-primary);
+  color: var(--text-btn);
   text-align: center;
   text-decoration: none;
 }
@@ -1010,7 +1011,7 @@ thead {
 
 .btnProductDetail {
   display: block;
-  color: var(--text-secondary);
+  color: var(--text-btn);
   background-color: var(--btn-primary);
   padding: 20px;
   font-size: 14px;
