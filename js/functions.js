@@ -247,6 +247,6 @@ function toggleTheme() {
 document.getElementById('themeButton').onclick = toggleTheme;
 
 
-navItems = document.querySelectorAll('.nav-item').forEach;
+navItems = document.querySelectorAll('.nav-item');
 console.log(navItems);
-navItems.style.display = 'none';
+navItems[0].style.display = 'none';
