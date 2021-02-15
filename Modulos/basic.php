@@ -617,7 +617,7 @@
           </svg>
         </a>
       </li>
-	<div>
+
       <li class="nav-item">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
@@ -736,8 +736,7 @@
           <span class="link-text">Themify</span>
         </a>
       </li>
-	</div>
-	</ul>
+    </ul>
   </nav>
 
   <!-- Aquí acaba el nav -->
