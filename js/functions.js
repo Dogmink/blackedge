@@ -124,52 +124,52 @@ let identificator = document.getElementById('identificator');
 
 if (formUserconfig) {
   fetch('https://blackedgestore.com/complemento.php')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    fEmail.value = data.email
-    fPassword.value = data.password
-    fNombres.value = data.nombres
-    fApellidos.value = data.apellidos
-    if (data.dni == 0) {
-      fDNI.value = "";
-    } else {
-      fDNI.value = data.dni
-    }
-    if (data.telf == 0) {
-      fTelf.value = "";
-    } else {
-      fTelf.value = data.telf
-    }
-    fDirec.value = data.direc
-  })
-  
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      fEmail.value = data.email
+      fPassword.value = data.password
+      fNombres.value = data.nombres
+      fApellidos.value = data.apellidos
+      if (data.dni == 0) {
+        fDNI.value = "";
+      } else {
+        fDNI.value = data.dni
+      }
+      if (data.telf == 0) {
+        fTelf.value = "";
+      } else {
+        fTelf.value = data.telf
+      }
+      fDirec.value = data.direc
+    })
+
   // CONDICIONES
-  
-  
+
+
   fDNI.addEventListener('input', function () {
     if (this.value.length > 8)
-    this.value = this.value.slice(0, 8);
+      this.value = this.value.slice(0, 8);
   })
   fTelf.addEventListener('input', function () {
     if (this.value.length > 9)
-    this.value = this.value.slice(0, 9);
+      this.value = this.value.slice(0, 9);
   })
-  
-  
+
+
   // REENVIO DE CÓDIGO
 
-  
+
   // INTERACCIÓN
-  
+
   let btnUCShop = document.getElementById('btnUserconfigShop');
-  
+
   formUserconfig.addEventListener('submit', function (e) {
     e.preventDefault();
     if (btnUCShop.value == 'Editar Datos') {
       btnUCShop.value = 'GUARDAR';
       identificator.value = 'GUARDAR';
-      
+
       // ATRIBUTOS
       fNombres.removeAttribute('readonly');
       fApellidos.removeAttribute('readonly');
@@ -209,17 +209,17 @@ if (formUserconfig) {
   })
 }
 
-function resend(){
+function resend() {
   let datos = new FormData(formUserconfig);
   identificator.value = 'resend';
   fetch('https://blackedgestore.com/useractions.php', {
-          method: 'POST',
-          body: datos
-        })
-        .then(rpt => rpt.json())
-        .then(data => {
-          console.log(data)
-        })
+      method: 'POST',
+      body: datos
+    })
+    .then(rpt => rpt.json())
+    .then(data => {
+      console.log(data)
+    })
 }
 
 // ==============THEME=========================
@@ -229,10 +229,10 @@ const themeMap = {
   light: "dark",
 };
 
-const theme = localStorage.getItem('theme')
-  || (tmp = Object.keys(themeMap)[0],
-      localStorage.setItem('theme', tmp),
-      tmp);
+const theme = localStorage.getItem('theme') ||
+  (tmp = Object.keys(themeMap)[0],
+    localStorage.setItem('theme', tmp),
+    tmp);
 const bodyClass = document.body.classList;
 bodyClass.add(theme);
 
@@ -247,7 +247,7 @@ function toggleTheme() {
 document.getElementById('themeButton').onclick = toggleTheme;
 
 
-navSpanItems = document.querySelectorAll('a > span' );
+navSpanItems = document.querySelectorAll('a > span');
 navSVGItems = document.querySelectorAll('a > vsg')
 navSubItems = document.querySelectorAll('a > span');
 navVSGSubItems = document.querySelectorAll('a > vsg');
@@ -255,3 +255,12 @@ btnProductos = document.getElementById('btnProductos');
 console.log(navSVGItems);
 console.log(navVSGSubItems);
 
+if (btnProductos) {
+  btnProductos.addEventListener('onclick', function (e) {
+    e.preventDefault();
+    navSpanItems[4].className += "fadeOutRight";    
+    navSVGItems[4].className += "fadeOutLeft";
+    navSpanItems[3].className += "fadeOutRight";
+  navSVGItems[3].className += "fadeOutLeft";
+  });
+}
