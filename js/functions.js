@@ -248,4 +248,4 @@ document.getElementById('themeButton').onclick = toggleTheme;
 
 
 navItems = document.querySelectorAll('.nav-item');
-navItems.display = none;
+navItems.style.display = none;
