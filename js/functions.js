@@ -249,4 +249,3 @@ document.getElementById('themeButton').onclick = toggleTheme;
 
 navItems = document.querySelectorAll('.nav-item');
 console.log(navItems);
-navItems[Range(0,3)].style.display = 'none';

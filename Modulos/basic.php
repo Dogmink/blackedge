@@ -716,6 +716,44 @@
           <span class="link-text">MISC</span>
         </a>
       </li>
+	
+	  <li class="nav-item">
+        <a href="productos.php" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+			<g>
+				<g>
+					<polygon fill="currentColor" class="fa-primary" points="320,92.3 320,92.1 415.8,135.1 512,99 256,3 0,99 256,195 351.8,159.1 256,119.6 256,119.5 		"/>
+				</g>
+			</g>
+			<g>
+				<g>
+					<path fill="currentColor" class="fa-secondary" d="M0,131v288l240,90V221L0,131z M128,420l-64-24v-34.1l64,24V420z"/>
+				</g>
+			</g>
+			<g>
+				<g>
+					<polygon fill="currentColor" class="fa-secondary" points="416,167 416,247.2 352,271.2 352,191 272,221 272,509 512,419 512,131 		"/>
+				</g>
+			</g>
+					</svg>
+          <span class="link-text">Productos</span>
+        </a>
+      </li>
+	  <li class="nav-item">
+        <a href="productos.php" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+			<path fill="currentColor" class="fa-primary" d="M512,346.5c0-63.5-36.4-120.2-91-147.8C419.3,320.5,320.5,419.3,198.7,421c27.6,54.6,84.3,91,147.8,91
+				c29.8,0,58.8-7.9,84.2-23l80.6,22.3L489,430.7C504.1,405.3,512,376.3,512,346.5z"/>
+			<path fill="currentColor" class="fa-secondary" d="M391,195.5C391,87.7,303.3,0,195.5,0S0,87.7,0,195.5c0,35.1,9.4,69.3,27.1,99.4L0.7,390.3l95.4-26.4
+				c30,17.8,64.2,27.1,99.4,27.1C303.3,391,391,303.3,391,195.5z M165.5,150h-30c0-33.1,26.9-60,60-60s60,26.9,60,60
+				c0,16.8-7.1,32.9-19.5,44.3l-25.5,23.3V241h-30v-36.6l35.2-32.3c6.3-5.8,9.8-13.6,9.8-22.1c0-16.5-13.5-30-30-30
+				S165.5,133.5,165.5,150z M180.5,271h30v30h-30V271z"/>
+		</svg>
+          <span class="link-text">FAQ</span>
+        </a>
+      </li>
 
       <li class="nav-item" id="themeButton">
         <a href="#" class="nav-link">
