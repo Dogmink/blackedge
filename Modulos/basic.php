@@ -618,7 +618,7 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -637,7 +637,7 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -663,7 +663,7 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -696,7 +696,7 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-sub-item">
         <a href="productos.php" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -718,7 +718,7 @@
       </li>
 	
 	  <li class="nav-item">
-        <a href="productos.php" class="nav-link">
+        <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 			<g>
@@ -741,7 +741,7 @@
         </a>
       </li>
 	  <li class="nav-item">
-        <a href="productos.php" class="nav-link">
+        <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 			<path fill="currentColor" class="fa-primary" d="M512,346.5c0-63.5-36.4-120.2-91-147.8C419.3,320.5,320.5,419.3,198.7,421c27.6,54.6,84.3,91,147.8,91

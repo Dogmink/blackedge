@@ -114,6 +114,11 @@ nav {
   margin-top: auto;
 }
 
+.nav-sub-item{
+  width: 100%;
+  display: none;
+}
+
 .nav-link{
   display: flex;
   align-items: center;
