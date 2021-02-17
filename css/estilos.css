@@ -93,6 +93,7 @@ nav {
   position: fixed;
   background-color: var(--bg-primary);
   z-index: 999;
+  overflow: hidden;
 }
 
 .navbar-nav{
