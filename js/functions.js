@@ -247,10 +247,10 @@ function toggleTheme() {
 document.getElementById('themeButton').onclick = toggleTheme;
 
 
-navSpanItems = document.querySelectorAll('span');
-navSVGItems = document.querySelectorAll('vsg')
-navSubItems = document.querySelectorAll('span');
-navVSGSubItems = document.querySelectorAll('vsg');
+navSpanItems = document.getElementsByName('primary-span-item');
+navSVGItems = document.getElementsByName('primary-svg-item');
+navSubItems = document.getElementsByName('secondary-span-item');
+navVSGSubItems = document.getElementsByName('secondary-svg-item');
 btnProductos = document.getElementById('btnProductos');
 console.log(navSVGItems);
 console.log(navVSGSubItems);
