@@ -252,8 +252,12 @@ navSVGItems = document.getElementsByName('primary-svg-item');
 navSpanSubItems = document.getElementsByName('secondary-span-item');
 navVSGSubItems = document.getElementsByName('secondary-svg-item');
 btnProductos = document.getElementById('btnProductos');
-liSecondary = document.getElementsByName('li-secondary');
-liPrimary = document.getElementsByName('li-primary');
+liPrimary1 = docuemnt.getElementById('li-primary1');
+liPrimary2 = docuemnt.getElementById('li-primary2');
+liSecondary1 = docuemnt.getElementById('li-secondary1');
+liSecondary2 = docuemnt.getElementById('li-secondary2');
+liSecondary3 = docuemnt.getElementById('li-secondary3');
+liSecondary4 = docuemnt.getElementById('li-secondary4');
 console.log(navSVGItems);
 console.log(navVSGSubItems);
 
@@ -274,5 +278,5 @@ function toggleIcons(){
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
-    setTimeout(function(){liPrimary[0].style.display = "none"; liPrimary[1].style.display = "none";},900);
+    setTimeout(function(){liPrimary1.style.display = "none"; liPrimary2.style.display = "none";},900);
 }

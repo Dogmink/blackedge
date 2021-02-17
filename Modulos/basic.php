@@ -618,7 +618,7 @@
         </a>
       </li>
 
-      <li name="li-secondary" class="nav-sub-item">
+      <li id="li-secondary1" class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -637,7 +637,7 @@
         </a>
       </li>
 
-      <li name="li-secondary" class="nav-sub-item">
+      <li id="li-secondary2" class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -663,7 +663,7 @@
         </a>
       </li>
 
-      <li name="li-secondary" class="nav-sub-item">
+      <li id="li-secondary3" class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -696,7 +696,7 @@
         </a>
       </li>
 
-      <li name="li-secondary" class="nav-sub-item">
+      <li id="li-secondary4" class="nav-sub-item">
         <a href="productos.php" class="nav-link">
           <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -717,7 +717,7 @@
         </a>
       </li>
 	
-	  <li namne="li-primary" class="nav-item">
+	  <li id="li-primary1" class="nav-item">
         <a id="btnProductos" onclick="toggleIcons()" href="#" class="nav-link">
           <svg name="primary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -740,7 +740,7 @@
           <span name="primary-span-item" class="link-text">Productos</span>
         </a>
       </li>
-	  <li namne="li-primary" class="nav-item">
+	  <li id="li-primary2" class="nav-item">
         <a href="#" class="nav-link">
           <svg name="primary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
