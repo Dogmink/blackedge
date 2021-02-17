@@ -267,11 +267,8 @@ if (btnProductos) {
 
 function toggleIcons(){
   console.log('Hola')
-  if (navSpanItems[0].style.display == null) {
-    console.log('hola2')
     navSpanItems[0].className += "fadeOutRight";    
     navSVGItems[0].className += "fadeOutLeft";
     navSpanItems[1].className += "fadeOutRight";
     navSVGItems[1].className += "fadeOutLeft";
-  }
 }
