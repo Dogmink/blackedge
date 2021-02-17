@@ -106,7 +106,7 @@
 
 @keyframes fadeOutRight{
   0%{opacity: 1; margin-right: 0px;}
-  100%{opacity: 0; margin-right: 20rem; display: none;}
+  100%{opacity: 0; margin-left: 20rem; display: none;}
 }
 
 .fadeInLeft{
