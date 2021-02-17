@@ -284,8 +284,6 @@ function toggleIcons(){
     navVSGSubItems[3].setAttribute('class', 'fadeInLeft');
     navSpanSubItems[4].setAttribute('class', 'fadeInRight');
     navVSGSubItems[4].setAttribute('class', 'fadeInLeft');
-    navSpanSubItems[5].setAttribute('class', 'fadeInRight');
-    navVSGSubItems[5].setAttribute('class', 'fadeInLeft');
     setTimeout(function(){
       liPrimaryProduct.style.display = "none"; 
       liPrimaryFaq.style.display = "none"; 
@@ -306,8 +304,6 @@ function toggleIcons(){
     navVSGSubItems[3].setAttribute('class', 'fadeOutLeft');
     navSpanSubItems[4].setAttribute('class', 'fadeOutRight');
     navVSGSubItems[4].setAttribute('class', 'fadeOutLeft');
-    navSpanSubItems[5].setAttribute('class', 'fadeOutRight');
-    navVSGSubItems[5].setAttribute('class', 'fadeOutLeft');
 
     navSpanItems[0].setAttribute('class', 'fadeInRight');
     navSVGItems[0].setAttribute('class', 'fadeInLeft');
