@@ -619,7 +619,7 @@
       </li>
 	  
 	  <li id="li-secondary-volver" class="nav-sub-item">
-        <a href="#" class="nav-link">
+        <a href="#" class="nav-link" onclick="toggleIcons()">
 			<svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 			viewBox="0 0 96.2 96.2" style="enable-background:new 0 0 96.2 96.2;" xml:space="preserve">
 				<g>
