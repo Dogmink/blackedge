@@ -249,9 +249,11 @@ document.getElementById('themeButton').onclick = toggleTheme;
 
 navSpanItems = document.getElementsByName('primary-span-item');
 navSVGItems = document.getElementsByName('primary-svg-item');
-navSubItems = document.getElementsByName('secondary-span-item');
+navSpanSubItems = document.getElementsByName('secondary-span-item');
 navVSGSubItems = document.getElementsByName('secondary-svg-item');
 btnProductos = document.getElementById('btnProductos');
+liSecondary = document.getElementsByName('li-secondary');
+liPrimary = document.getElementsByName('li-primary');
 console.log(navSVGItems);
 console.log(navVSGSubItems);
 
@@ -261,7 +263,8 @@ if (btnProductos) {
     navSpanItems[0].className += "fadeOutRight";    
     navSVGItems[0].className += "fadeOutLeft";
     navSpanItems[1].className += "fadeOutRight";
-  navSVGItems[1].className += "fadeOutLeft";
+    navSVGItems[1].className += "fadeOutLeft";
+    
   });
 }
 
@@ -271,4 +274,5 @@ function toggleIcons(){
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
+    setTimeout(function(){liPrimary.style.display = "none";},900);
 }
