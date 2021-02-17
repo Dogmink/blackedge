@@ -274,5 +274,5 @@ function toggleIcons(){
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
-    setTimeout(function(){liPrimary.style.display = "none";},900);
+    setTimeout(function(){liPrimary[0].style.display = "none"; liPrimary[1].style.display = "none";},900);
 }
