@@ -91,8 +91,8 @@
 }
 
 @keyframes fadeInRight{
-  0%{opacity: 0; margin-left: 20rem;}
-  100%{opacity: 1; margin-top: 0px;}
+  0%{opacity: 0; margin-right: 20rem;}
+  100%{opacity: 1; margin-right: 0px;}
 }
 
 .fadeOutRight{
@@ -105,8 +105,8 @@
 }
 
 @keyframes fadeOutRight{
-  0%{opacity: 1; margin-left: 0px;}
-  100%{opacity: 0; margin-top: 20rem;}
+  0%{opacity: 1; margin-right: 0px;}
+  100%{opacity: 0; margin-right: 20rem; display: none;}
 }
 
 .fadeInLeft{
@@ -120,7 +120,7 @@
 
 @keyframes fadeInLeft{
   0%{opacity: 0; margin-left: -20rem;}
-  100%{opacity: 1; margin-top: 0px;}
+  100%{opacity: 1; margin-left: 0px;}
 }
 
 .fadeOutLeft{
@@ -134,5 +134,5 @@
 
 @keyframes fadeOutLeft{
   0%{opacity: 1; margin-left: 0px;}
-  100%{opacity: 0; margin-top: -20rem;}
+  100%{opacity: 0; margin-left: -20rem; display: none;}
 }
