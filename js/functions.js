@@ -252,12 +252,12 @@ navSVGItems = document.getElementsByName('primary-svg-item');
 navSpanSubItems = document.getElementsByName('secondary-span-item');
 navVSGSubItems = document.getElementsByName('secondary-svg-item');
 btnProductos = document.getElementById('btnProductos');
-liPrimary1 = docuemnt.getElementById('li-primary1');
-liPrimary2 = docuemnt.getElementById('li-primary2');
-liSecondary1 = docuemnt.getElementById('li-secondary1');
-liSecondary2 = docuemnt.getElementById('li-secondary2');
-liSecondary3 = docuemnt.getElementById('li-secondary3');
-liSecondary4 = docuemnt.getElementById('li-secondary4');
+liPrimary1 = document.getElementById('li-primary1');
+liPrimary2 = document.getElementById('li-primary2');
+liSecondary1 = document.getElementById('li-secondary1');
+liSecondary2 = document.getElementById('li-secondary2');
+liSecondary3 = document.getElementById('li-secondary3');
+liSecondary4 = document.getElementById('li-secondary4');
 console.log(navSVGItems);
 console.log(navVSGSubItems);
 
