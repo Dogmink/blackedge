@@ -620,11 +620,11 @@
 
       <li id="li-secondary1" class="nav-sub-item">
         <a href="#" class="nav-link">
-          <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <path class="fa-primary" fill="currentColor"
-              d="M256,0C148.2,0,60.8,87.4,60.8,195.2S148.2,512,256,512s195.2-209,195.2-316.8S363.8,0,256,0z M136.2,216.8
+              d="M256,0C148.2,0,6 0.8,87.4,60.8,195.2S148.2,512,256,512s195.2-209,195.2-316.8S363.8,0,256,0z M136.2,216.8
 	            c-18.1-18.1-10.6-40,7.5-58.1s40-25.7,58.1-7.5c18.1,18.1,18.1,47.5,0,65.6C183.7,234.9,154.3,234.9,136.2,216.8z M256,437.3
 	            c-31.8,0-57.6-34.4-57.6-76.8s25.8-76.8,57.6-76.8s57.6,34.4,57.6,76.8S287.8,437.3,256,437.3z M375.8,216.8
 	            c-18.1,18.1-47.5,18.1-65.6,0c-18.1-18.1-18.1-47.5,0-65.6c18.1-18.1,40-10.6,58.1,7.5C386.4,176.8,393.9,198.7,375.8,216.8z" />
@@ -633,13 +633,13 @@
 	            c-4.2,4.2-9,7.4-14.1,9.7C354.1,338.8,309.7,512,256,512c107.8,0,195.2-209,195.2-316.8C451.2,87.4,363.8,0,256,0z" />
           </svg>
 
-          <span name="secondary-span-item" class="link-text">Dark Art</span>
+          <span name="secondary-span-item" class="link-text FadeInRight">Dark Art</span>
         </a>
       </li>
 
       <li id="li-secondary2" class="nav-sub-item">
         <a href="#" class="nav-link">
-          <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 494 494" style="enable-background:new 0 0 494 494;" xml:space="preserve">
             <g>
@@ -659,13 +659,13 @@
 	              c11.7-18.9,24.4-38.4,37.8-57.7l15.1-21.2c20.8-29,43.1-56.9,66.7-83.6c16.5-18.8,34.2-36.5,53.1-53c40.3-34.5,58-33.8,63.8-32
 	              s9.7,8.1,12.1,18.5c1.1,5.3,6,8.8,11.4,8.3c5.3-0.5,9.4-4.8,9.7-10.1C425.5,37.8,411.6,19.1,399.5,10.3z" />
           </svg>
-          <span name="secondary-span-item" class="link-text">Aesthetic Art</span>
+          <span name="secondary-span-item" class="link-text FadeInRight">Aesthetic Art</span>
         </a>
       </li>
 
       <li id="li-secondary3" class="nav-sub-item">
         <a href="#" class="nav-link">
-          <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 42.1 42.1" style="enable-background:new 0 0 42.1 42.1;" xml:space="preserve">
             <g>
@@ -692,13 +692,13 @@
               </g>
             </g>
           </svg>
-          <span name="secondary-span-item" class="link-text">Japan Art</span>
+          <span name="secondary-span-item" class="link-text FadeInRight">Japan Art</span>
         </a>
       </li>
 
       <li id="li-secondary4" class="nav-sub-item">
         <a href="productos.php" class="nav-link">
-          <svg name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <g>
@@ -713,7 +713,7 @@
             <path fill="currentColor" class="fa-primary" d="M448,320c-35.3,0-64-28.7-64-64s28.7-64,64-64s64,28.7,64,64S483.3,320,448,320z M448,224c-17.6,0-32,14.4-32,32
 	                s14.4,32,32,32c17.6,0,32-14.4,32-32S465.6,224,448,224z" />
           </svg>
-          <span name="secondary-span-item" class="link-text">MISC</span>
+          <span name="secondary-span-item" class="link-text FadeInRight">MISC</span>
         </a>
       </li>
 	

@@ -278,5 +278,12 @@ function toggleIcons(){
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
-    setTimeout(function(){liPrimary1.style.display = "none"; liPrimary2.style.display = "none";},700);
+    setTimeout(function(){
+      liPrimary1.style.display = "none"; 
+      liPrimary2.style.display = "none"; 
+      liSecondary1.style.display = "block";
+      liSecondary2.style.display = "block";
+      liSecondary3.style.display = "block";
+      liSecondary4.style.display = "block";
+    },700);
 }
