@@ -273,6 +273,19 @@ function toggleIcons(){
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
+
+    navSpanSubItems[0].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[0].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[1].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[1].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[2].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[2].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[3].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[3].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[4].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[4].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[5].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[5].setAttribute('class', 'fadeInLeft');
     setTimeout(function(){
       liPrimaryProduct.style.display = "none"; 
       liPrimaryFaq.style.display = "none"; 
