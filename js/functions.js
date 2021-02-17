@@ -267,8 +267,8 @@ if (btnProductos) {
 
 function toggleIcons(){
   console.log('Hola')
-    navSpanItems[0].className += "fadeOutRight";    
-    navSVGItems[0].className += "fadeOutLeft";
-    navSpanItems[1].className += "fadeOutRight";
-    navSVGItems[1].className += "fadeOutLeft";
+    navSpanItems[0].setAttribute('class', 'fadeOutRight');
+    navSVGItems[0].setAttribute('class', 'fadeOutLeft';
+    navSpanItems[1].setAttribute('class', 'fadeOutRight';
+    navSVGItems[1].setAttribute('class', 'fadeOutLeft';
 }
