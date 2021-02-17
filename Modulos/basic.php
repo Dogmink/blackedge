@@ -617,27 +617,69 @@
           </svg>
         </a>
       </li>
+	  
+	  <li id="li-secondary-volver" class="nav-sub-item">
+        <a href="#" class="nav-link">
+          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 494 494" style="enable-background:new 0 0 494 494;" xml:space="preserve">
+            <g>
+				<path fill="currentColor" class="fa-primary" d="M75.2,0.6l-57.6,46c-1,0.8-1,2.4,0,3.1l57.6,46c0.7,0.5,1.7,0.7,2.6,0.4c0.2-0.1,0.3-0.1,0.4-0.2c0.7-0.4,1.1-1,1.1-1.8
+					v-92c0-0.7-0.4-1.4-1.1-1.8c-0.1-0.1-0.3-0.1-0.4-0.2C76.9-0.2,75.9,0,75.2,0.6z"/>
+			</g>
+          </svg>
+          <span name="secondary-span-item" class="link-text FadeInRight">Volver</span>
+        </a>
+      </li>
 
-      <li id="li-secondary1" class="nav-sub-item">
+      <li id="li-secondary-darkart" class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <path class="fa-primary" fill="currentColor"
-              d="M256,0C148.2,0,6 0.8,87.4,60.8,195.2S148.2,512,256,512s195.2-209,195.2-316.8S363.8,0,256,0z M136.2,216.8
-	            c-18.1-18.1-10.6-40,7.5-58.1s40-25.7,58.1-7.5c18.1,18.1,18.1,47.5,0,65.6C183.7,234.9,154.3,234.9,136.2,216.8z M256,437.3
-	            c-31.8,0-57.6-34.4-57.6-76.8s25.8-76.8,57.6-76.8s57.6,34.4,57.6,76.8S287.8,437.3,256,437.3z M375.8,216.8
-	            c-18.1,18.1-47.5,18.1-65.6,0c-18.1-18.1-18.1-47.5,0-65.6c18.1-18.1,40-10.6,58.1,7.5C386.4,176.8,393.9,198.7,375.8,216.8z" />
-            <path class="fa-secondary" fill="currentColor"
-              d="M256,0c50.8,0,93.2,64.7,104.1,151.5c2.8,2.1,5.5,4.6,8.1,7.2c18.1,18.1,25.7,40,7.5,58.1
-	            c-4.2,4.2-9,7.4-14.1,9.7C354.1,338.8,309.7,512,256,512c107.8,0,195.2-209,195.2-316.8C451.2,87.4,363.8,0,256,0z" />
+           	 <g>
+				<path fill="currentColor" class="fa-secondary" d="M88.1,537.5C88.1,537.5,88.1,537.2,88.1,537.5"/>
+				<path fill="currentColor" class="fa-primary" d="M497.2,54c-3.7-48.7-25.4-55.1-67.6-53.9C324.9,2.9,221.5,20,116.8,21.2c-5.2,0-8.6,4-8.9,8.9
+					c-8.3,89-13.5,178.4-19.6,267.8c-5.8,80.8-21.1,160-4.6,240.8c0.9,4.9,9.5,4,8.9-1.2c0-0.9,0-1.5-0.3-2.4
+					c9.2-5.2,18.1-10.1,26.3-16.5c9.2,11.3,18.7,22,30,31.8c3.1,2.8,7.3,2.8,10.4,0c10.1-8.9,19.3-18.4,28.5-28.2
+					c7.6,9.2,13.8,19,20.2,29.4c2.8,4.3,8,4.6,11.9,1.5c11-9.2,21.4-18.7,31.8-28.2l0,0c9.2,8.9,18.4,17.4,27.5,26.3
+					c2.8,3.4,7.6,4.9,11,1.5c7.3-10.4,17.4-16.2,30.6-17.4c5.2,8.3,13.5,18.4,19.6,26c1.8,2.4,6.7,3.1,9.2,1.2
+					c12.9-9.8,23.9-20.8,34.3-32.7c8.9,15,17.4,29.7,29.7,42.2c4.3,4.3,11.3,2.1,13.2-3.4c3.4-10.4,7-20.5,10.7-30.6
+					c9.2,11.6,18.7,23,28.5,34.3c6.7,7.6,17.7-3.4,11.3-11.3c-1.8-2.1-3.4-4-5.2-6.1c3.1-2.8,4.6-6.7,2.4-11.3
+					c-29.4-57.8,1.8-151.5,5.2-213.6C484.3,239.7,503.9,143.3,497.2,54z M471.5,182.8c-1.5-20.2-10.1-38.6-27.2-46.8
+					c-5.8-2.8-12.5,1.2-12.9,7c-90.6,24.8-172.9-18.1-264.7-20.8c-2.4,0-4,1.2-4.6,2.8c-44.4,3.7-17.7,84.5,0.9,103.7
+					c19.6,20.2,53.2,18.7,75.6,5.5c25.1-14.7,38.3-44.7,41.9-72.5c17.7,4.6,36.1,8.9,53.9,11.9c8.3,49.9,49,103.1,104.7,78.6
+					c14.7-6.4,24.8-21.7,29.7-39.2c-2.4,30.9-4.6,61.5-6.4,92.7c-3.4,64.3-30.6,154.2-13.5,221.2c-2.4-3.1-4.9-5.8-7.3-9.2
+					c-4.3-5.8-11.9-4.9-14.4,1.8c-4,10.4-7.3,20.8-11,31.5c-9.5-11.9-16.5-25.1-24.5-38.6c-2.4-4-8.9-5.5-12.2-1.5
+					c-5.5,7-11.6,14.1-17.7,20.8c-17.1,19-26-0.9-35.8-16.5c-2.1-3.4-6.7-5.2-10.4-2.8c-12.9,8.6-14.4,9.8-26,19.9
+					c-8.6,7.3-24.2-8-31.8-13.2c2.4-5.5-4.3-13.2-10.1-8.9c-11,8.3-21.1,17.1-31.5,26.3c-6.7-10.7-14.1-21.1-22.6-30.6
+					c-2.8-3.1-8-2.8-10.7,0c-9.5,10.1-19,19.9-29.1,29.4c-10.4-9.8-19.9-20.5-29.1-31.8c-2.4-2.8-7.7-2.8-10.1,0
+					c-7,7.6-15,14.1-23.3,20.2c-9.5-113.5,14.7-231.3,22.6-344.2c2.1-33,4.9-66.1,7.7-98.8c4-48.3,31.8-41.6,72.2-44.1
+					c64.3-3.7,128.2-12.2,192.5-16.8c24.2-1.8,78.3-11.6,89.7,21.1c9.5,27.5,3.4,62.4,0.3,90.9C474.6,148.5,473,165.7,471.5,182.8z
+					 M415.5,200c6.4-2.4,10.4-8.3,12.2-14.7c1.5-5.5,0.9-12.9-2.1-18.4c4.9-2.1,9.8-4.6,14.1-8c1.8,2.8,3.4,5.5,4.9,8.6
+					c5.5,22.6,0,46.8-26,54.5c-31.8,9.2-52.9-19.3-62.1-45.9c9.8,0.9,19.6,0.9,28.8,0.3c-0.3,0.9-0.3,1.5,0,2.4
+					C388.9,191.4,400.5,206.1,415.5,200z M165.5,134.8c0.6-0.3,0.9-1.2,0.9-1.8h0.3c7.6,0.9,16.2,2.4,24.8,4.3
+					c-6.4,12.9-3.7,30.9,9.8,37.9c18.4,9.8,30.3-11,30.6-26.6c0-0.3,0-0.6,0-0.6c8.9,2.4,18.1,5.2,27.5,7.6c-0.9,0.3-1.8,0.6-2.8,1.5
+					c-0.3,0.3-0.6,0.9-0.9,1.2c-2.8-0.9-6.4,0-8,2.4c-6.7,12.2-9.2,24.5-19.9,34.9c-11.3,10.7-28.5,12.5-41.9,6.1
+					c-15-7.3-21.1-23.6-22.3-39.2c-0.6-6.4-0.3-12.9,0.3-19.3c0.3-2.1,0.6-4.3,1.5-6.4C165.8,135.4,165.8,134.8,165.5,134.8z"/>
+				<path fill="currentColor" class="fa-secondary" d="M413.7,354.8c-2.8,0-4.6,1.5-5.5,3.4c-1.5-0.6-3.7-0.6-5.8,0.3c-30.9,15-84.8,1.2-117.2-2.4c-41-4.3-83.2-11.9-124.5-11.3
+					c0-0.3,0-0.3,0.3-0.3c1.5-2.4-1.8-5.2-4-3.1c-26.9,27.5,19.6,56.9,43.1,32.1c8,20.8,31.2,25.1,49.6,11c8.9,23.9,37.3,25.1,52,6.1
+					c1.5,4.9,5.2,9.2,11.6,11.6c11,4.6,21.7-0.3,29.1-8c4,8.9,11.3,15.3,22.6,16.2c10.7,0.9,18.1-5.5,22.6-13.8c1.8,2.4,4.3,4.6,7,6.4
+					c8.6,4.9,19.3,3.7,27.8-0.6c8.6-4.3,15-12.5,14.7-22.3C437.5,368.6,425.3,355.1,413.7,354.8z M158.1,351.7
+					c12.9,1.2,26,2.8,38.9,4.6C187.2,382.6,153.3,373.8,158.1,351.7z M259.7,371.9c-0.6-6.4-8-8.3-11.6-3.1
+					c-16.5,21.7-36.4,11.3-38.3-10.1c29.1,4.6,57.8,9.5,86.9,13.5C290,393,262.2,402.2,259.7,371.9z M312.1,375.3c0-0.3,0-0.9,0-1.2
+					c6.4,0.9,15.9,2.8,26.3,4C330.7,394,304.7,397.9,312.1,375.3z M352.2,379.9c9.2,0.9,18.7,1.5,27.2,0.9
+					C375.1,398.9,355.2,401.3,352.2,379.9z M416.4,391.2c-4.6,2.8-10.7,4.3-15.9,2.1c-3.7-1.5-6.1-4.6-8.3-8c0.6-2.1,0.9-4.3,1.2-6.4
+					c8.3-1.8,14.4-5.5,17.4-11.3c2.8,2.1,6.1,4,8.9,6.4c1.2,1.2,2.1,2.1,2.8,3.7c0.3,0.3,0.9,2.8,0.6,2.1
+					C423.8,384.2,421,388.1,416.4,391.2z"/>
+			 </g>
           </svg>
 
           <span name="secondary-span-item" class="link-text FadeInRight">Dark Art</span>
         </a>
       </li>
 
-      <li id="li-secondary2" class="nav-sub-item">
+      <li id="li-secondary-aesthetic" class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -663,7 +705,7 @@
         </a>
       </li>
 
-      <li id="li-secondary3" class="nav-sub-item">
+      <li id="li-secondary-japan" class="nav-sub-item">
         <a href="#" class="nav-link">
           <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -696,7 +738,7 @@
         </a>
       </li>
 
-      <li id="li-secondary4" class="nav-sub-item">
+      <li id="li-secondary-misc" class="nav-sub-item">
         <a href="productos.php" class="nav-link">
           <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -717,7 +759,7 @@
         </a>
       </li>
 	
-	  <li id="li-primary1" class="nav-item">
+	  <li id="li-primary-product" class="nav-item">
         <a id="btnProductos" onclick="toggleIcons()" href="#" class="nav-link">
           <svg name="primary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -740,7 +782,7 @@
           <span name="primary-span-item" class="link-text">Productos</span>
         </a>
       </li>
-	  <li id="li-primary2" class="nav-item">
+	  <li id="li-primary-faq" class="nav-item">
         <a href="#" class="nav-link">
           <svg name="primary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -756,6 +798,36 @@
       </li>
 
       <li class="nav-item" id="themeButton">
+	 	 <a href="productos.php" class="nav-link">
+          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+				<path fill="currentColor" color="fa-primary" d="M204.3,231.6c13.6,10.5,32,16.4,51.7,16.4s38-5.8,51.7-16.4c12.5-9.7,19.4-22.2,19.4-35.2s-6.9-25.5-19.4-35.2
+					c-13.6-10.5-32-16.4-51.7-16.4s-38,5.8-51.7,16.4c-12.5,9.7-19.4,22.2-19.4,35.2S191.8,221.9,204.3,231.6L204.3,231.6z M241,181.4
+					h30v30h-30V181.4z"/>
+				<path fill="currentColor" color="fa-secondary" d="M131.8,85.3c33.3-29,77.4-45,124.2-45s90.9,16,124.2,45c5.4,4.7,10.3,9.6,14.9,14.8C375.6,41.9,320.7,0,256,0
+					S136.4,41.9,116.9,100.1C121.5,94.9,126.5,90,131.8,85.3L131.8,85.3z"/>
+				<path fill="currentColor" color="fa-primary" d="M394.3,293.7c-4.4,4.8-9.1,9.5-14.1,13.9c-33.3,29-77.4,45-124.2,45s-90.9-16-124.2-45c-5-4.4-9.7-9-14.1-13.9
+					c20.2,56.9,74.4,97.7,138.3,97.7S374.1,350.6,394.3,293.7z"/>
+				<path fill="currentColor" color="fa-secondary" d="M256,322.6c80.9,0,146.7-56.6,146.7-126.2S336.9,70.3,256,70.3s-146.7,56.6-146.7,126.2S175.1,322.6,256,322.6z M186,137.5
+					c18.9-14.6,43.7-22.6,70-22.6s51.2,8,70,22.6c20,15.5,31,36.4,31,58.9s-11,43.4-31,58.9c-18.9,14.6-43.7,22.6-70,22.6
+					s-51.2-8-70-22.6c-20-15.5-31-36.4-31-58.9S166,153,186,137.5z"/>
+				<path fill="currentColor" color="fa-primary" d="M420.2,359.6c-1.3,0-29.9-0.1-29.9-0.1c-3,3.5-13.3,14-15.3,15.8c-7.8,58.7-58.1,104.2-119,104.2S144.8,434,137,375.3
+					c-2-1.8-12.3-12.3-15.3-15.8c0,0-28.7,0-29.9,0.1c3,41.2,21.3,79.4,51.5,107.8C173.9,496.2,214,512,256,512s82.1-15.8,112.7-44.6
+					C398.9,439,417.2,400.8,420.2,359.6z"/>
+				<path fill="currentColor" color="fa-secondary" d="M187.2,407.5c-3.4-1.5-6.8-3-10.1-4.7c15.3,27.8,44.9,46.7,78.9,46.7s63.6-18.9,78.9-46.7c-3.3,1.7-6.7,3.2-10.1,4.7
+					c-21.8,9.2-44.9,13.9-68.8,13.9S209,416.7,187.2,407.5z"/>
+				<path fill="currentColor" color="fa-primary" d="M449.8,365.5c-4.4,47.3-25.8,91.1-60.6,123.7c-9.1,8.6-18.9,16.2-29.3,22.7h70.4c31-32.7,51.8-72.8,60.7-116.7
+					C480.3,382,466.1,371.6,449.8,365.5L449.8,365.5z"/>
+				<path fill="currentColor" color="fa-secondary" d="M62.2,365.5C45.9,371.6,31.7,382,21,395.3c8.9,43.9,29.7,84,60.7,116.7h70.4c-10.4-6.6-20.2-14.2-29.3-22.7
+					C88,456.6,66.6,412.8,62.2,365.5L62.2,365.5z"/>
+				<path fill="currentColor" color="fa-primary" d="M510.4,437.4c-9.5,26.8-23.2,51.9-40.7,74.6H512v-56.9C512,449.1,511.4,443.2,510.4,437.4z"/>
+				<path fill="currentColor" color="fa-secondary" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
+			</g>
+          </svg>
+          <span name="secondary-span-item" class="link-text FadeInRight">MISC</span>
+        </a>
         <a href="#" class="nav-link">
 		  <svg  class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">

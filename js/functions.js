@@ -247,43 +247,62 @@ function toggleTheme() {
 document.getElementById('themeButton').onclick = toggleTheme;
 
 
+
+// =================== ICONOS DINAMICOS ============================
+
+
 navSpanItems = document.getElementsByName('primary-span-item');
 navSVGItems = document.getElementsByName('primary-svg-item');
 navSpanSubItems = document.getElementsByName('secondary-span-item');
 navVSGSubItems = document.getElementsByName('secondary-svg-item');
 btnProductos = document.getElementById('btnProductos');
-liPrimary1 = document.getElementById('li-primary1');
-liPrimary2 = document.getElementById('li-primary2');
-liSecondary1 = document.getElementById('li-secondary1');
-liSecondary2 = document.getElementById('li-secondary2');
-liSecondary3 = document.getElementById('li-secondary3');
-liSecondary4 = document.getElementById('li-secondary4');
+liPrimaryProducts = document.getElementById('li-primary-products');
+liPrimaryFaq = document.getElementById('li-primary-faq');
+liSecondaryVolver = document.getElementById('li-secondary-volver');
+liSecondaryDarkArt = document.getElementById('li-secondary-darkart');
+liSecondaryAesthetic = document.getElementById('li-secondary-aesthetic');
+liSecondaryJapan = document.getElementById('li-secondary-japan');
+liSecondaryMisc = document.getElementById('li-secondary-misc');
 console.log(navSVGItems);
 console.log(navVSGSubItems);
 
-if (btnProductos) {
-  btnProductos.addEventListener('onclick', function (e) {
-    e.preventDefault();
-    navSpanItems[0].className += "fadeOutRight";    
-    navSVGItems[0].className += "fadeOutLeft";
-    navSpanItems[1].className += "fadeOutRight";
-    navSVGItems[1].className += "fadeOutLeft";
-    
-  });
-}
 
 function toggleIcons(){
-  console.log('Hola')
+  if (liPrimary1.style.display != "none") {
     navSpanItems[0].setAttribute('class', 'fadeOutRight');
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
     setTimeout(function(){
-      liPrimary1.style.display = "none"; 
-      liPrimary2.style.display = "none"; 
-      liSecondary1.style.display = "block";
-      liSecondary2.style.display = "block";
-      liSecondary3.style.display = "block";
-      liSecondary4.style.display = "block";
+      liPrimaryProducts.style.display = "none"; 
+      liPrimaryFaq.style.display = "none"; 
+      liSecondaryVolver.style.display = "block";
+      liSecondaryDarkArt.style.display = "block";
+      liSecondaryAesthetic.style.display = "block";
+      liSecondaryJapan.style.display = "block";
+      liSecondaryMisc.style.display = "block";
     },700);
+  } else{
+    navSpanSubItems[0].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[0].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[1].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[1].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[2].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[2].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[3].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[3].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[4].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[4].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[5].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[5].setAttribute('class', 'fadeOutLeft');
+    setTimeout(function(){
+      liPrimaryProducts.style.display = "block"; 
+      liPrimaryFaq.style.display = "block"; 
+      liSecondaryVolver.style.display = "none";
+      liSecondaryDarkArt.style.display = "none";
+      liSecondaryAesthetic.style.display = "none";
+      liSecondaryJapan.style.display = "none";
+      liSecondaryMisc.style.display = "none";
+    },700);
+  }
 }
