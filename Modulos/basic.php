@@ -620,14 +620,13 @@
 	  
 	  <li id="li-secondary-volver" class="nav-sub-item">
         <a href="#" class="nav-link">
-          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 494 494" style="enable-background:new 0 0 494 494;" xml:space="preserve">
-            <g>
-				<path fill="currentColor" class="fa-primary" d="M75.2,0.6l-57.6,46c-1,0.8-1,2.4,0,3.1l57.6,46c0.7,0.5,1.7,0.7,2.6,0.4c0.2-0.1,0.3-0.1,0.4-0.2c0.7-0.4,1.1-1,1.1-1.8
-					v-92c0-0.7-0.4-1.4-1.1-1.8c-0.1-0.1-0.3-0.1-0.4-0.2C76.9-0.2,75.9,0,75.2,0.6z"/>
-			</g>
-          </svg>
+			<svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 			viewBox="0 0 96.2 96.2" style="enable-background:new 0 0 96.2 96.2;" xml:space="preserve">
+				<g>
+					<path fill="currentColor" class="fa-primary" d="M75.2,0.6l-57.6,46c-1,0.8-1,2.4,0,3.1l57.6,46c0.7,0.5,1.7,0.7,2.6,0.4c0.2-0.1,0.3-0.1,0.4-0.2c0.7-0.4,1.1-1,1.1-1.8
+						v-92c0-0.7-0.4-1.4-1.1-1.8c-0.1-0.1-0.3-0.1-0.4-0.2C76.9-0.2,75.9,0,75.2,0.6z"/>
+				</g>
+			</svg>
           <span name="secondary-span-item" class="link-text FadeInRight">Volver</span>
         </a>
       </li>
@@ -797,7 +796,7 @@
         </a>
       </li>
 
-      <li class="nav-item" id="themeButton">
+      <li class="nav-item">
 	 	 <a href="register.php" class="nav-link">
           <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -828,7 +827,7 @@
           </svg>
           <span name="secondary-span-item" class="link-text FadeInRight">Login / Register</span>
         </a>
-        <a href="#" class="nav-link">
+        <a href="#" class="nav-link"  id="themeButton">
 		  <svg  class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 		  	<path fill="currentColor" d="M256,0C115.2,0,0,115.2,0,256s115.2,256,256,256s256-115.2,256-256S396.8,0,256,0z M256,480
