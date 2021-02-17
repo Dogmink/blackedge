@@ -264,3 +264,12 @@ if (btnProductos) {
   navSVGItems[1].className += "fadeOutLeft";
   });
 }
+
+function toggleIcons(){
+  if (navSpanItems[0].style.display == null) {
+    navSpanItems[0].className += "fadeOutRight";    
+    navSVGItems[0].className += "fadeOutLeft";
+    navSpanItems[1].className += "fadeOutRight";
+    navSVGItems[1].className += "fadeOutLeft";
+  }
+}
