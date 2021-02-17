@@ -798,7 +798,7 @@
       </li>
 
       <li class="nav-item" id="themeButton">
-	 	 <a href="productos.php" class="nav-link">
+	 	 <a href="register.php" class="nav-link">
           <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -826,7 +826,7 @@
 				<path fill="currentColor" color="fa-secondary" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
 			</g>
           </svg>
-          <span name="secondary-span-item" class="link-text FadeInRight">MISC</span>
+          <span name="secondary-span-item" class="link-text FadeInRight">Login / Register</span>
         </a>
         <a href="#" class="nav-link">
 		  <svg  class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

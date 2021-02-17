@@ -256,7 +256,7 @@ navSVGItems = document.getElementsByName('primary-svg-item');
 navSpanSubItems = document.getElementsByName('secondary-span-item');
 navVSGSubItems = document.getElementsByName('secondary-svg-item');
 btnProductos = document.getElementById('btnProductos');
-liPrimaryProducts = document.getElementById('li-primary-products');
+liPrimaryProduct = document.getElementById('li-primary-product');
 liPrimaryFaq = document.getElementById('li-primary-faq');
 liSecondaryVolver = document.getElementById('li-secondary-volver');
 liSecondaryDarkArt = document.getElementById('li-secondary-darkart');
@@ -268,7 +268,7 @@ console.log(navVSGSubItems);
 
 
 function toggleIcons(){
-  if (liPrimaryProducts.style.display != "none") {
+  if (liPrimaryProduct.style.display != "none") {
     navSpanItems[0].setAttribute('class', 'fadeOutRight');
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
