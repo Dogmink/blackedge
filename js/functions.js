@@ -258,9 +258,9 @@ console.log(navVSGSubItems);
 if (btnProductos) {
   btnProductos.addEventListener('onclick', function (e) {
     e.preventDefault();
-    navSpanItems[4].className += "fadeOutRight";    
-    navSVGItems[4].className += "fadeOutLeft";
-    navSpanItems[3].className += "fadeOutRight";
-  navSVGItems[3].className += "fadeOutLeft";
+    navSpanItems[0].className += "fadeOutRight";    
+    navSVGItems[0].className += "fadeOutLeft";
+    navSpanItems[1].className += "fadeOutRight";
+  navSVGItems[1].className += "fadeOutLeft";
   });
 }
