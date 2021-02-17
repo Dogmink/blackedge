@@ -295,6 +295,11 @@ function toggleIcons(){
     navVSGSubItems[4].setAttribute('class', 'fadeOutLeft');
     navSpanSubItems[5].setAttribute('class', 'fadeOutRight');
     navVSGSubItems[5].setAttribute('class', 'fadeOutLeft');
+
+    navSpanItems[0].setAttribute('class', 'fadeInRight');
+    navSVGItems[0].setAttribute('class', 'fadeInLeft');
+    navSpanItems[1].setAttribute('class', 'fadeInRight');
+    navSVGItems[1].setAttribute('class', 'fadeInLeft');
     setTimeout(function(){
       liPrimaryProduct.style.display = "block"; 
       liPrimaryFaq.style.display = "block"; 
