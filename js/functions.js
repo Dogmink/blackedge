@@ -274,7 +274,7 @@ function toggleIcons(){
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
     navSVGItems[1].setAttribute('class', 'fadeOutLeft');
     setTimeout(function(){
-      liPrimaryProducts.style.display = "none"; 
+      liPrimaryProduct.style.display = "none"; 
       liPrimaryFaq.style.display = "none"; 
       liSecondaryVolver.style.display = "block";
       liSecondaryDarkArt.style.display = "block";
@@ -296,7 +296,7 @@ function toggleIcons(){
     navSpanSubItems[5].setAttribute('class', 'fadeOutRight');
     navVSGSubItems[5].setAttribute('class', 'fadeOutLeft');
     setTimeout(function(){
-      liPrimaryProducts.style.display = "block"; 
+      liPrimaryProduct.style.display = "block"; 
       liPrimaryFaq.style.display = "block"; 
       liSecondaryVolver.style.display = "none";
       liSecondaryDarkArt.style.display = "none";
