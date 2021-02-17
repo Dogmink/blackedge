@@ -104,7 +104,7 @@
   animation-name: fadeOutRight;
 }
 
-@keyframes fadeOutLeft{
+@keyframes fadeOutRight{
   0%{opacity: 1; margin-left: 0px;}
   100%{opacity: 0; margin-top: 20rem;}
 }
@@ -118,7 +118,7 @@
   animation-name: fadeInLeft;
 }
 
-@keyframes fadeInRight{
+@keyframes fadeInLeft{
   0%{opacity: 0; margin-left: -20rem;}
   100%{opacity: 1; margin-top: 0px;}
 }
