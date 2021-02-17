@@ -268,7 +268,7 @@ console.log(navVSGSubItems);
 
 
 function toggleIcons(){
-  if (liPrimary1.style.display != "none") {
+  if (liPrimaryProducts.style.display != "none") {
     navSpanItems[0].setAttribute('class', 'fadeOutRight');
     navSVGItems[0].setAttribute('class', 'fadeOutLeft');
     navSpanItems[1].setAttribute('class', 'fadeOutRight');
