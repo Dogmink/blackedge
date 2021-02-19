@@ -704,6 +704,11 @@ legend {
   width: 90%;
 }
 
+td{
+  text-align: center;
+  padding: 15px 0px;
+}
+
 
 
 /* descripción de los productos index*/
