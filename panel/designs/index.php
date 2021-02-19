@@ -4,14 +4,7 @@
 <main>
       <div class="container">
         <div class="row">
-          <div class="col12">
-            <div class="pull-right">
-              <a href="form_agregar.php" class="btn-agregar">+ Nuevo</a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col12">
+          <div class="col10">
             <fieldset>
               <legend>Diseños</legend>
               <table class="col12">
@@ -75,6 +68,11 @@
                   </tbody>
               </table>
             </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col12">
+              <a href="form_agregar.php" class="btn-agregar">Nuevo</a>
           </div>
         </div>
       </div>
