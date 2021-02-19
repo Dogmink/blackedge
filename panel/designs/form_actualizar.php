@@ -38,7 +38,7 @@
                         <div class="col6">
                           <div class="form-input">
                               <label class="label-panel">Categoria</label>
-                              <select class="form-selectcat" name="cat_id" requiered>
+                              <select class="input-panel" name="cat_id" requiered>
                                 <?php
                                 require '../../resources/categorias.php';
                                 $categ = new BlackEdgeStore\Categorias;
