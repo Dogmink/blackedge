@@ -447,6 +447,7 @@ main{
 
 option{
   background-color: var(--bg-secondary);
+  padding: 15px;
 }
 
 .input-panel:focus, 
