@@ -68,25 +68,25 @@
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <g>
-            	<path class="fa-secondary" d="M56,56v36.7L92.7,56L56,56z"/>
-            	<path class="fa-secondary" d="M280,296H136v-16h144v-16H136v-16h144v-24c0-4.4,3.6-8,8-8h40V24H24v400h112v-72c0-4.4,3.6-8,8-8h136V296z
+            	<path class="fa-secondary" fill="currentColor" d="M56,56v36.7L92.7,56L56,56z"/>
+            	<path class="fa-secondary" fill="currentColor" d="M280,296H136v-16h144v-16H136v-16h144v-24c0-4.4,3.6-8,8-8h40V24H24v400h112v-72c0-4.4,3.6-8,8-8h136V296z
             		 M136,56h176v16H136V56z M136,88h176v16H136V88z M136,152h176v16H136V152z M136,184h176v16H136V184z M40,144c0-4.4,3.6-8,8-8h64
             		c4.4,0,8,3.6,8,8v64c0,4.4-3.6,8-8,8H48c-4.4,0-8-3.6-8-8V144z M120,400c0,4.4-3.6,8-8,8H48c-4.4,0-8-3.6-8-8v-64c0-4.4,3.6-8,8-8
             		h64c4.4,0,8,3.6,8,8V400z M120,243.3V304c0,4.4-3.6,8-8,8H48c-4.4,0-8-3.6-8-8v-64c0-4.4,3.6-8,8-8h60.7l13.7-13.7l11.3,11.3
             		L120,243.3z M120,51.3V112c0,4.4-3.6,8-8,8H48c-4.4,0-8-3.6-8-8V48c0-4.4,3.6-8,8-8h60.7l13.7-13.7l11.3,11.3L120,51.3z"/>
-            	<path class="fa-secondary" d="M104,104V67.3L67.3,104H104z"/>
-            	<path class="fa-secondary" d="M104,296v-36.7L67.3,296H104z"/>
-            	<path class="fa-secondary" d="M56,344h48v48H56V344z"/>
-            	<path class="fa-secondary" d="M56,248v36.7L92.7,248L56,248z"/>
-            	<path class="fa-primary" d="M216,360h32v32h-32V360z"/>
-            	<path class="fa-primary" d="M264,400c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8v-40h-48v128h160V360h-48V400z M296,472h-32v-16h32V472z M296,440h-32v-16
+            	<path class="fa-secondary" fill="currentColor" d="M104,104V67.3L67.3,104H104z"/>
+            	<path class="fa-secondary" fill="currentColor" d="M104,296v-36.7L67.3,296H104z"/>
+            	<path class="fa-secondary" fill="currentColor" d="M56,344h48v48H56V344z"/>
+            	<path class="fa-secondary" fill="currentColor" d="M56,248v36.7L92.7,248L56,248z"/>
+            	<path class="fa-primary" fill="currentColor" d="M216,360h32v32h-32V360z"/>
+            	<path class="fa-primary" fill="currentColor" d="M264,400c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8v-40h-48v128h160V360h-48V400z M296,472h-32v-16h32V472z M296,440h-32v-16
             		h32V440z"/>
-            	<path class="fa-primary" d="M392,360h32v32h-32V360z"/>
-            	<path class="fa-primary" d="M360,232h16v32h-16V232z"/>
-            	<path class="fa-primary" d="M440,360v40c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8v-40h-48v128h160V360H440z M472,472h-32v-16h32V472z M472,440h-32v-16h32
+            	<path class="fa-primary" fill="currentColor" d="M392,360h32v32h-32V360z"/>
+            	<path class="fa-primary" fill="currentColor" d="M360,232h16v32h-16V232z"/>
+            	<path class="fa-primary" fill="currentColor" d="M440,360v40c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8v-40h-48v128h160V360H440z M472,472h-32v-16h32V472z M472,440h-32v-16h32
             		V440z"/>
-            	<path class="fa-primary" d="M440,344V232h-48v40c0,4.4-3.6,8-8,8h-32c-4.4,0-8-3.6-8-8v-40h-48v112H440z M424,328h-32v-16h32V328z"/>
-            	<path class="fa-secondary" d="M56,152h48v48H56V152z"/>
+            	<path class="fa-primary" fill="currentColor" d="M440,344V232h-48v40c0,4.4-3.6,8-8,8h-32c-4.4,0-8-3.6-8-8v-40h-48v112H440z M424,328h-32v-16h32V328z"/>
+            	<path class="fa-secondary" fill="currentColor" d="M56,152h48v48H56V152z"/>
             </g>
           </svg>
 

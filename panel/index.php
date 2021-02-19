@@ -5,14 +5,14 @@
     if ($user[admin] == 9) {
       require '../Modulos/basicPanel.php';
       ?>
-      
+
 
 
 
 
 
       <?php
-      require '../Modulos/footer.php';
+      require '../Modulos/footerPanel.php';
     }else{
       header('Location: ../index.php');
     } 
