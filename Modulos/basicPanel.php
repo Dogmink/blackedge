@@ -64,7 +64,7 @@
 
       <li id="li-secondary-darkart" class="nav-sub-item">
         <a href="#" class="nav-link">
-          <svg class="FadeInLeft" name="secondary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
             <g>
@@ -96,7 +96,7 @@
 
       <li id="li-primary-product" class="nav-item">
         <a id="btnProductos" onclick="toggleIcons()" href="#" class="nav-link">
-          <svg name="primary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 			<g>
 				<g>
@@ -120,7 +120,7 @@
 
 	  <li id="li-primary-faq" class="nav-item">
         <a href="#" class="nav-link">
-          <svg name="primary-svg-item" aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
              <path class="fa-secondary" fill="currentColor" d="M224,230.6l-112-112L45.7,185l-11.3-11.3L112,96l112,112l60-60l44,44l98.3-98.3l11.3,11.3L328,214.6l-44-44
 	            L224,230.6z"/>
