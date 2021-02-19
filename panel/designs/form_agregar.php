@@ -24,7 +24,7 @@
                               <select class="form-selectcat" name="cat_id" requiered>
                                 <option class="form-selectcat" value="">--SELECT--</option>
                                 <?php
-                                require '../../resources/design.php';
+                                require '../../resources/categorias.php';
                                 $categ = new BlackEdgeStore\Categorias;
                                 $info_cat = $categ->mostrar();
                                 $cantidad = count($info_cat);
@@ -79,8 +79,7 @@
           </div>
         </div>
       </div>
-
-      </main>
-      <?php
-        require '../../Modulos/footerPanel.php';
-      ?>
+    </main>
+  <?php
+    require '../../Modulos/footerPanel.php';
+  ?>
