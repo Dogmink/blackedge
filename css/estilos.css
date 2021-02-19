@@ -441,6 +441,13 @@ main{
   border-top: 1px;
   border-width: thin;
   width: 90%;
+  background-color: transparent;
+}
+
+.input-panel:focus, 
+.input-panel:active,
+.input-panel:hover{
+  outline: none;
 }
 
 .panel-header {
@@ -476,7 +483,6 @@ option {
   padding: 7px 10px;
   height: 42px;
   font-size: 1em;
-  color: var(--blackcolor);
   font-family: 'Quicksand', sans-serif;
   position: relative;
   transition: all 0.25s ease;
@@ -488,7 +494,7 @@ option {
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
   margin: 50px 20px;
-  width: 100%;
+  width: 90%;
   font-size: 18px;
   color: var(--text-btn);
   background-color: var(--btn-primary);
@@ -513,7 +519,7 @@ option {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
-  width: 100%;
+  width: 90%;
   font-size: 18px;
   color: var(--text-btn);
   background-color: var(--btn-primary);
