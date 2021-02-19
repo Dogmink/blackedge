@@ -62,7 +62,7 @@
       </li>
 	  
 
-      <li id="li-secondary-darkart" class="nav-sub-item">
+      <li class="nav-item">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -94,7 +94,7 @@
         </a>
       </li>
 
-      <li id="li-primary-product" class="nav-item">
+      <li class="nav-item">
         <a id="btnProductos" onclick="toggleIcons()" href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -118,7 +118,7 @@
         </a>
       </li>
 
-	  <li id="li-primary-faq" class="nav-item">
+	  <li class="nav-item">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 		viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
