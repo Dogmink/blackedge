@@ -66,7 +66,7 @@
                               <label class="label-panel">Categoria</label>
                               <select class="form-selectcat" name="cat_id" requiered>
                                 <?php
-                                require '../../vendor/autoload.php';
+                                require '../../resources/categorias.php';
                                 $categ = new BlackEdgeStore\Categorias;
                                 $info_cat = $categ->mostrar();
                                 $cantidad = count($info_cat);
