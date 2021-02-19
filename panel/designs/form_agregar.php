@@ -12,17 +12,17 @@
                 </div>
                     <div class="panel-body">
                       <div class="row">
-                        <div class="col-md-6">
+                        <div class="col6">
                           <div class="form-input">
-                            <label class="label-panel">Nombre</label>
+                            <label>Nombre</label>
                             <input class="input-panel" type="text" name="name" required>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col6">
                           <div class="form-input">
-                              <label class="label-panel">Categoria</label>
-                              <select class="form-selectcat" name="cat_id" requiered>
-                                <option class="form-selectcat" value="">--SELECT--</option>
+                              <label>Categoria</label>
+                              <select class="input-panel" name="cat_id" requiered>
+                                <option value="">--SELECT--</option>
                                 <?php
                                 require '../../resources/categorias.php';
                                 $categ = new BlackEdgeStore\Categorias;
@@ -43,33 +43,36 @@
                           </div>
                         </div>
                       </div>
+                      <div class="separator"></div>
                       <div class="row">
-                        <div class="col-md-12">
+                        <div class="col12">
                           <div class="form-input">
-                            <label class="label-panel">Descripción</label>
+                            <label>Descripción</label>
                             <input class="input-panel" type="text" name="design_desc" required>
                           </div>
                         </div>
                       </div>
+                      <div class="separator"></div>
                       <div class="row">
-                        <div class="col-md-8">
+                        <div class="col8">
                           <div class="form-input">
-                            <label class="label-panel">Imagen</label>
+                            <label>Imagen</label>
                             <input class="input-panel" type="file" name="img" required>
                           </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col4">
                           <div class="form-input">
-                            <label class="label-panel">Precio</label>
+                            <label>Precio</label>
                             <input class="input-panel" type="text" name="precio" placeholder="0.00" required>
                           </div>
                         </div>
                       </div>
+                      <div class="separator"></div>
                       <div class="row">
-                        <div class="col-md-12">
+                        <div class="col6">
                           <input class="btn-addDesign" name='accion' type="submit" value="AGREGAR">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col6">
                           <button class="btn-addDesign" type="button" name="button" onclick="location.href='../designs'">CANCELAR</button>
                         </div>
                       </div>

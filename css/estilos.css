@@ -433,22 +433,18 @@ main{
 /*----------Panel-------------*/
 .input-panel {
   font-size: 14px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 20px;
   padding: 15px;
   border-color: var(--blackcolor);
   border-left: none;
   border-right: none;
   border-top: 1px;
   border-width: thin;
-  display: inherit;
-  width: 100%;
-  margin-bottom: 50px;
+  width: 90%;
 }
 
-.panel-header h3 {
+.panel-header {
   text-align: center;
-  color: var(--blackcolor);
   font-size: 40px;
   margin-top: 30px;
 }
@@ -461,70 +457,12 @@ main{
   text-align: left;
   font-size: 18px;
   justify-content: center;
-  width: 40%;
-  -webkit-box-shadow: 0 0 25px #000;
-  box-shadow: 0 0 25px #000;
+  width: 50%;
 }
 
-.btn-float {
-  position: fixed;
-}
 
 .panel-body {
   margin: 50px;
-}
-
-.pull-right {
-  right: auto;
-}
-
-.btn-panel {
-  -webkit-transition: ease 0.2s;
-  -o-transition: ease 0.2s;
-  transition: ease 0.2s;
-  margin-top: 15px;
-  text-align: left;
-  width: 100%;
-  font-size: 24px;
-  color: var(--text-btn);
-  background-color: var(--btn-primary);
-  padding: 25px;
-  border-style: none;
-  text-align: center;
-  -webkit-box-shadow: 0 0 15px #000;
-  box-shadow: 0 0 15px #000;
-}
-
-.btn-panel:hover {
-  -webkit-transition: ease 0.2s;
-  -o-transition: ease 0.2s;
-  transition: ease 0.2s;
-  margin-top: 17px;
-  color: var(--text-btn);
-  background-color: var(--btn-secondary);
-  -webkit-box-shadow: 0 0 5px #000;
-  box-shadow: 0 0 5px #000;
-}
-
-.form-selectcat {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: inline-block;
-  border-bottom: 1px;
-  width: 100%;
-  cursor: pointer;
-  padding: 7px 10px;
-  height: 42px;
-  background: #fff;
-  color: #7b7b7b;
-  font-size: 1em;
-  color: var(--blackcolor);
-  font-family:
-    'Quicksand', sans-serif;
-  position: relative;
-  transition: all 0.25s ease;
-  margin-top: 30px;
 }
 
 option {
@@ -546,15 +484,12 @@ option {
   transition: all 0.25s ease;
 }
 
-.form-selectcat::-ms-expand {
-  display: none;
-}
 
 .btn-addDesign {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
-  margin-top: 50px;
+  margin: 50px 20px;
   width: 100%;
   font-size: 18px;
   color: var(--text-btn);
@@ -681,27 +616,10 @@ option {
   box-shadow: 0 0 0px #000;
 }
 
-.pull-right {
-  float: right;
-  margin-right: 40px;
-}
-
 legend {
   font-size: 32px;
   padding: 20px;
   font-size: 28px;
-}
-
-.table-design {
-  font-size: 24px;
-  padding: 20px;
-  justify-content: center;
-  width: 90%;
-}
-
-.table-design td {
-  justify-content: center;
-  width: 90%;
 }
 
 td{
