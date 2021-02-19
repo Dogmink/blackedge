@@ -90,7 +90,7 @@
             </g>
           </svg>
 
-          <span name="secondary-span-item" class="link-text FadeInRight">Pedidos</span>
+          <span name="secondary-span-item" class="link-text">Pedidos</span>
         </a>
       </li>
 
