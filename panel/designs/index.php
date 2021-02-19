@@ -1,6 +1,7 @@
 <?php
   require '../../Modulos/basicPanel.php';
 ?>
+<main>
       <div class="container">
         <div class="row">
           <div class="col12">
@@ -76,7 +77,7 @@
           </div>
         </div>
       </div>
-
+</main>
 
 <?php
   require '../../Modulos/footerPanel.php';
