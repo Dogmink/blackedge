@@ -14,14 +14,15 @@
           <div class="col12">
             <fieldset>
               <legend>Diseños</legend>
-              <table class="table table-bordered">
+              <table class="col12">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Categoria</th>
-                    <th>Precio</th>
-                    <th class="text-center">Vista</th>
+                    <th class="col2">#</th>
+                    <th class="col2">Nombre</th>
+                    <th class="col2">Categoria</th>
+                    <th class="col2">Precio</th>
+                    <th class="col2">Vista</th>
+                    <th class="col2">Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,11 +39,11 @@
                     ?>
 
                     <tr>
-                      <td><?php print $c?></td>
-                      <td><?php print $item['name']?></td>
-                      <td><?php print $item['name_cat']?></td>
-                      <td><?php print $item['precio']?></td>
-                      <td class="text-center">
+                      <td class="col2"><?php print $c?></td>
+                      <td class="col2"><?php print $item['name']?></td>
+                      <td class="col2"><?php print $item['name_cat']?></td>
+                      <td class="col2"><?php print $item['precio']?></td>
+                      <td class="col2">
                         <?php
                           $img = '../../images/'.$item['img'];
                           if(file_exists($img)){
@@ -52,9 +53,9 @@
                           SIN FOTO
                       <?php }?>
                       </td>
-                      <td class="text-center">
-                        <a href="../acciones.php?id=<?php print $item['id'] ?>" class="btn btn-danger"><span class="">Eliminar</span></a>
-                        <a href="form_actualizar.php?id=<?php print $item['id']  ?>" class="btn btn-success"><span class="">Editar</span></a>
+                      <td class="col2">
+                        <a href="../acciones.php?id=<?php print $item['id'] ?>" class="btn-trash"><span>Eliminar</span></a>
+                        <a href="form_actualizar.php?id=<?php print $item['id']  ?>" class="btn-edit"><span>Editar</span></a>
                       </td>
 
                     </tr>
