@@ -1,5 +1,5 @@
 <?php
-  require '../../vendor/autoload.php';
+  require '../../resources/design.php';
 
   if(isset($_GET['id'])&& is_numeric($_GET['id'])){
 
