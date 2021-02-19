@@ -1,5 +1,5 @@
 <?php
-  include '../../Modulos/basicPanel.php';
+  require 'https://blackedgestore.com/Modulos/basicPanel.php';
 ?>
       <div class="container">
         <div class="row">
@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                     <?php
-                      require '../../resources/design.php';
+                      require 'https://blackedgestore.com/resources/design.php';
                       $design = new BlackEdgeStore\Design;
                       $info_designs = $design->mostrar();
                       $cantidad = count($info_designs);
