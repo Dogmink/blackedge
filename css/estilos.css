@@ -475,8 +475,6 @@ option {
   cursor: pointer;
   padding: 7px 10px;
   height: 42px;
-  background: #fff;
-  color: #7b7b7b;
   font-size: 1em;
   color: var(--blackcolor);
   font-family: 'Quicksand', sans-serif;
