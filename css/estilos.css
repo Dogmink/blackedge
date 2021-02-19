@@ -445,6 +445,10 @@ main{
   color: var(--text-primary);
 }
 
+option{
+  background-color: var(--bg-secondary);
+}
+
 .input-panel:focus, 
 .input-panel:active,
 .input-panel:hover{
