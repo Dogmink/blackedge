@@ -1,5 +1,5 @@
 <?php
-  require '../../Modulos/basicPanel.php';
+  include '../../Modulos/basicPanel.php';
 ?>
       <div class="container">
         <div class="row">
