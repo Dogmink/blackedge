@@ -1,5 +1,5 @@
 <?php
-  require '../vendor/autoload.php';
+  require '../../resources/design.php';
   $design = new BlackEdgeStore\Design;
 
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
