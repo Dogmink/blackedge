@@ -1,7 +1,7 @@
 <?php
   require '../../Modulos/basicPanel.php';
 ?>
-
+  <main>
       <div class="contenedor">
         <div class="form-panel">
           <div class="login">
@@ -79,6 +79,8 @@
           </div>
         </div>
       </div>
-<?php
-  require '../../Modulos/footerPanel.php';
-?>
+
+      </main>
+      <?php
+        require '../../Modulos/footerPanel.php';
+      ?>
