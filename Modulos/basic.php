@@ -825,7 +825,7 @@
 				<path fill="currentColor" class="fa-secondary" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
 			</g>
           </svg>
-          <span name="secondary-span-item" class="link-text FadeInRight">Login / Register</span>
+          <span name="secondary-span-item" class="link-text">Login / Register</span>
         </a>
         <a href="#" class="nav-link"  id="themeButton">
 		  <svg  class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
