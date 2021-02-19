@@ -432,7 +432,7 @@ main{
 
 /*----------Panel-------------*/
 .input-panel {
-  font-size: 14px;
+  font-size: 18px;
   margin: 20px 20px;
   padding: 15px;
   border-color: var(--blackcolor);
@@ -442,6 +442,7 @@ main{
   border-width: thin;
   width: 90%;
   background-color: transparent;
+  color: var(--text-primary);
 }
 
 .input-panel:focus, 
