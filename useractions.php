@@ -98,6 +98,7 @@
     $result = $user->actualizarInfo($parametros);
     if ($result) {
       echo json_encode($parametros);
+      session_start();
       $dataUpdate = $user->checkUser($u_username);
       $_SESSION['user_log'] = $dataUpdate;
       die();

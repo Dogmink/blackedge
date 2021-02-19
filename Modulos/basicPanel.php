@@ -2,8 +2,6 @@
     session_start();
     $divice = 'S/. ';
     $year = date('Y');
-    require 'functions.php';
-
  ?>
 <html lang='es'>
 
