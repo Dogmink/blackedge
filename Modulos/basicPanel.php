@@ -36,7 +36,7 @@
   <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
-        <a href="index.php" class="nav-link">
+        <a href="https://blackedgestore.com/panel/index.php" class="nav-link">
           <span class="link-text logo-text">BlackEdge</span>
           <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img"
             version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
