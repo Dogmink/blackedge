@@ -604,11 +604,11 @@ option {
   -webkit-transition: ease 0.2s;
   -o-transition: ease 0.2s;
   transition: ease 0.2s;
-  width: 5%;
+  width: 100%;
   font-size: 18px;
   color: var(--text-btn);
   background-color: var(--btn-primary);
-  padding: 15px;
+  padding: 20px 150px; 
   border-style: none;
   text-align: center;
   -webkit-box-shadow: 0 0 15px #000;

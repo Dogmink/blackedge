@@ -71,7 +71,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col12">
+          <div>
               <a href="form_agregar.php" class="btn-agregar">Nuevo</a>
           </div>
         </div>
