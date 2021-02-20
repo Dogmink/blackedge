@@ -328,22 +328,22 @@ function toggleIcons(){
 let graphics = document.getElementById('chart');
 
  function totalCasesChart(ctx){
-  const chart = new Chart(ctx, {
+  const chart = new chart(ctx, {
     type: 'line',
     data: {
       labels: [1, 20, 50, 60],
       datasets: [
         {
-          labels: 'Compras',
+          label: 'Compras',
           data: [1, 10, 30, 20],
         },
         {
-          labels: 'ingreso Neto',
+          label: 'Ingreso Neto',
           data: [60, 600, 1800, 1200],
         }
       ]
     }
-  });
+  })
  }
 
 
