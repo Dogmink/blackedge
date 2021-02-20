@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require '../../resources/design.php';
   if ($_SESSION[user_log] != null) {
     $user = $_SESSION[user_log];

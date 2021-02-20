@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SESSION[user_log] != null) {
   $user = $_SESSION[user_log];
   if ($user[admin] == 9) {
