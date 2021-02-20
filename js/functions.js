@@ -327,8 +327,8 @@ function toggleIcons(){
 
 let graphics = document.getElementById('chart');
 
- function totalCasesChart(ctx){
-  const chart = new chart(ctx, {
+ function totalCasesChart(ctx) {
+  const chart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: [1, 20, 50, 60],
@@ -348,8 +348,8 @@ let graphics = document.getElementById('chart');
 
 
  function renderGraphics(){
-  const ctx = document.querySelector('#chart').getContext('2d');
-  totalCasesChart(ctx);
+  const ctx = document.querySelector('#chart').getContext('2d')
+  totalCasesChart(ctx)
  }
 
  if (graphics) {
