@@ -5,12 +5,7 @@
     if ($user[admin] == 9) {
       require '../Modulos/basicPanel.php';
       ?>
-
-
-
-
-
-
+      
       <?php
       require '../Modulos/footerPanel.php';
     }else{
@@ -19,8 +14,5 @@
   }else{
     header('Location: ../index.php');
   }
-
-
-
 ?>
   

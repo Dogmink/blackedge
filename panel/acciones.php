@@ -1,4 +1,7 @@
 <?php
+  if ($_SESSION[user_log] != null) {
+    $user = $_SESSION[user_log];
+    if ($user[admin] == 9) {
   require '../resources/design.php';
   $design = new BlackEdgeStore\Design;
 
@@ -90,5 +93,7 @@
 
       return $_FILES['img']['name'];
     }
+  }
+}
 
  ?>

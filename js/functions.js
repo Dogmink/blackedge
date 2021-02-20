@@ -320,3 +320,38 @@ function toggleIcons(){
     },700);
   }
 }
+
+
+
+// ================== DASHBOARD ===========================
+
+let graphics = document.getElementById('chart');
+
+ function totalCasesChart(ctx){
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [1, 20, 50, 60],
+      datasets: [
+        {
+          labels: 'Compras',
+          data: [1, 10, 30, 20],
+        },
+        {
+          labels: 'ingreso Neto',
+          data: [60, 600, 1800, 1200],
+        }
+      ]
+    }
+  });
+ }
+
+
+ function renderGraphics(){
+  const ctx = graphics.getContext('2d');
+  totalCasesChart(ctx);
+ }
+
+ if (graphics) {
+   renderGraphics();
+ }

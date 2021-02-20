@@ -1,6 +1,9 @@
 <?php
   require '../../resources/design.php';
-
+  if ($_SESSION[user_log] != null) {
+    $user = $_SESSION[user_log];
+    if ($user[admin] == 9) {
+    require '../../Modulos/basicPanel.php';
   if(isset($_GET['id'])&& is_numeric($_GET['id'])){
 
     $id = $_GET['id'];
@@ -13,9 +16,8 @@
   } else {
     header('Location: index.php');
   }
+  
 
-
-  require '../../Modulos/basicPanel.php';
  ?>
     <main>
       <div class="contenedor">
@@ -102,5 +104,7 @@
       </div>
     </main>
     <?php
-      require '../../Modulos/footerPanel.php';
-    ?>
+  require '../../Modulos/footerPanel.php';
+  }
+}
+  ?>
