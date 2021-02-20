@@ -5,7 +5,7 @@
   if (isset($_GET['err'])) {
     $err = $_GET['err'];
   }
-
+  session_start();
   if (isset($_SESSION['user_log'])) {
     header('Location: index.php');
   }
