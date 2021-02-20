@@ -349,7 +349,7 @@ let graphics = document.getElementById('chart');
 
  function renderGraphics(){
   const ctx = document.querySelector('#chart').getContext('2d');
-  totalCasesChart();
+  totalCasesChart(ctx);
  }
 
  if (graphics) {
