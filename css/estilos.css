@@ -156,7 +156,7 @@ nav {
 }
 
 .fa-icon-text{
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 .fa-icon-text,
 .fa-primary,
@@ -780,7 +780,7 @@ td{
 }
 
 .icon-shop {
-  width: 20px;
+  width: 50px;
 }
 
 .seeMore_btn {
