@@ -934,7 +934,7 @@ thead {
 
 .nameProductDetail {
   background-color: var(--text-secondary);
-  color: #f0f0f0;
+  color: var(--bg-secondary);
   font-size: 64px;
   font-weight: 300;
   text-align: center;
