@@ -49,9 +49,6 @@
      ?>
   <div class="contenido align-login fadeInUp">
     <div class="row">
-      <div class="col8 margin-logo-login align-login">
-        <a href="index.php"><img class="logo" src="images/Logo/LogoBlack3.png"></a>
-      </div>
       <div class="col8 margin-login scaleAnim" id="formLogin" style="display: block;">
         <div class="content-login">
           <p class="login-header">INGRESAR</p>
