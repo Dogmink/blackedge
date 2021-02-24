@@ -779,8 +779,10 @@ td{
   text-align: center;
 }
 
-.icon-shop {
-  width: 50px;
+.vermas{
+  text-decoration: none;
+  color: var(--text-primary);
+  letter-spacing: 5px;
 }
 
 .seeMore_btn {
