@@ -155,6 +155,10 @@ nav {
   color: var(--logo-secondary);
 }
 
+.fa-icon-text{
+  color: var(--text-secondary);
+}
+.fa-icon-text,
 .fa-primary,
 .fa-secondary{
   transition: var(--transition-speed);
