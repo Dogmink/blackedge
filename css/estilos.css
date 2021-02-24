@@ -353,9 +353,10 @@ main{
 
 
 .input-login {
-  color: var(--hovercolor1);
+  color: var(--text-primary);
   font-size: 20px;
   margin-bottom: 20px;
+  background-color: var(--bg-secondary);
   border-color: var(--blackcolor);
   border-left: none;
   border-right: none;
