@@ -63,7 +63,7 @@
          </div>
          <div class="desc-product_shop">
            <p><?php print $divice; print $item['precio'] ?></p>
-           <a href="product_detail.php?id=<?php print $item['id']  ?>"> <span class="vermas">VER MÁS</span> </a>
+           <a class="vermas" href="product_detail.php?id=<?php print $item['id']  ?>"> <span>VER MÁS</span> </a>
          </div>
        </div>
       <?php
@@ -88,7 +88,7 @@
          </div>
          <div class="desc-product_shop">
            <p><?php print $divice; print $item['precio'] ?></p>
-           <a href="product_detail.php?id=<?php print $item['id']  ?>"> <span class="vermas">VER MÁS</span> </a>
+           <a class="vermas" href="product_detail.php?id=<?php print $item['id']  ?>"> <span>VER MÁS</span> </a>
          </div>
        </div>
       <?php
@@ -124,7 +124,7 @@
         </div>
         <div class="desc-product_shop">
           <p><?php print $divice; print $item['precio'] ?></p>
-          <a href="product_detail.php?id=<?php print $item['id']  ?>"> <span class="vermas">VER MÁS</span></a>
+          <a class="vermas" href="product_detail.php?id=<?php print $item['id']  ?>"> <span>VER MÁS</span></a>
         </div>
       </div>
       <?php

@@ -781,9 +781,10 @@ td{
 
 .vermas{
   text-decoration: none;
-  color: var(--text-primary);
+  color: var(--bg-secondary);
   letter-spacing: 5px;
   font-size: 18px;
+  background-color: var(--text-primary);
 }
 
 .seeMore_btn {
