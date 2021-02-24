@@ -783,6 +783,7 @@ td{
   text-decoration: none;
   color: var(--text-primary);
   letter-spacing: 5px;
+  font-size: 18px;
 }
 
 .seeMore_btn {
