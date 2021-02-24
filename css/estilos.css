@@ -745,6 +745,7 @@ td{
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3;
+  color: var(--text-primary);
 }
 
 .search-shop:hover,
