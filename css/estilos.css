@@ -783,9 +783,9 @@ td{
   text-decoration: none;
   color: var(--bg-secondary);
   letter-spacing: 5px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: var(--text-primary);
-  padding: 4px;
+  padding: 8px;
 }
 
 .seeMore_btn {
