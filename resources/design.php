@@ -20,6 +20,11 @@
         }
     }
 
+
+
+// =================DISEÑOS=====================
+
+
     public function registrar($_params){
       $sql = "INSERT INTO `design`(`name`, `design_desc`, `img`, `precio`, `cat_id`)
       VALUES (:name, :design_desc, :img, :precio, :cat_id)";
@@ -39,6 +44,7 @@
 
         return false;
     }
+
 
     public function actualizar($_params){
       $sql = "UPDATE `design` SET `name`=:name, `design_desc`=:design_desc, `img`=:img, `precio`=:precio, `cat_id`=:cat_id WHERE `id`=:id";
@@ -73,6 +79,10 @@
       return false;
     }
 
+    
+//  =============================MOSTRAR========================================
+
+
     public function mostrar(){
         $sql = "SELECT design.id, design.name,design_desc,img,name_cat,precio FROM design
 
@@ -86,6 +96,39 @@
 
         return false;
     }
+
+    public function mostrarBySize($size){
+      $sql = "SELECT design.id, design.name,design_desc,img,name_cat,precio FROM design
+
+      INNER JOIN categorias
+      ON design.cat_id = categorias.id WHERE 'size' = :size ORDER BY design.id DESC";
+
+      $result = $this->cn->prepare($sql);
+      $_array = array(
+        ":size" -> $size
+      );
+      if($result->execute($_array))
+          return $result->fetchAll();
+
+      return false;
+  }
+
+
+  public function mostrarByCat($cat){
+    $sql = "SELECT design.id, design.name,design_desc,img,name_cat,precio FROM design
+
+    INNER JOIN categorias
+    ON design.cat_id = categorias.id WHERE 'categoria' = :cat ORDER BY design.id DESC";
+
+    $result = $this->cn->prepare($sql);
+    $_array = array(
+      ":cat" -> $cat
+    );
+    if($result->execute($_array))
+        return $result->fetchAll();
+
+    return false;
+}
 
     public function mostrarNewDesign(){
         $sql = "SELECT  design.id, design.name,design_desc,img,name_cat,precio FROM design
@@ -114,6 +157,30 @@
     }
 
 
+    
+    
+    // =================categorias====================``
+    
+    public function newCat($_params){
+      $sql = "INSERT INTO 'categorias' ('name_cat') VALUE (:name_cat)";
+      $result = $this->cn->prepare($sql);
+      $_array = array(
+        ":name_cat" -> $_params['categoria']
+      );
+      if ($result->execute($_array)) {
+        return true;
+        
+        return false;
+      }
+    }
+    
+    public function deleteCat($id){
+      $sql = "DELETE FROM `categorias` WHERE 'id' = :id";
+      $result = $this->cn->prepare($sql);
+      $_array = array(
+        ":id" -> $id
+      );
+    }
+    
   }
-
- ?>
+    ?>

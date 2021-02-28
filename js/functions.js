@@ -1,0 +1,357 @@
+// =============================USER===============================
+
+let activeAlert = document.getElementById('activeAlert');
+
+if (activeAlert) {
+  fetch('https://blackedgestore.com/complemento.php')
+    .then(response => response.json())
+    .then(data => {
+      if (data.active == 0) {
+        activeAlert.style.display = 'block';
+      } else {
+        activeAlert.style.display = 'none';
+      }
+    })
+}
+
+
+
+
+
+// ==========================LOGIN AND REGISTER===============================
+
+
+let formulario = document.getElementById('formulario');
+let formlarioLog = document.getElementById('formularioLog');
+let errEmail = document.getElementById('failEmail');
+let errUsername = document.getElementById('failUsername');
+let errPassword = document.getElementById('failPass');
+let successReg = document.getElementById('successReg');
+let formRegister = document.getElementById('formRegister');
+let formLogin = document.getElementById('formLogin');
+let linkForm = document.getElementById("linkRegister");
+let errMatch = document.getElementById('errMatch');
+let turnForm;
+
+if (formulario) {
+  formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let datos = new FormData(formulario);
+    errEmail.style.display = 'none';
+    errUsername.style.display = 'none';
+    errPassword.style.display = 'none';
+
+    fetch('https://blackedgestore.com/useractions.php', {
+        method: 'POST',
+        body: datos
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        if (data == 1) {
+          changeForm()
+        } else if (data == 2) {
+          errUsername.style.display = 'block'
+        } else if (data == 3) {
+          errEmail.style.display = 'block'
+        } else if (data == 4) {
+          errPassword.style.display = 'block'
+        } else {
+          console.log('Ocurrió un error, intenta registrate de nuevo.')
+        }
+      })
+  })
+}
+
+if (formlarioLog) {
+  formlarioLog.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let datos = new FormData(formularioLog);
+    errMatch.style.display = 'none';
+
+    fetch('https://blackedgestore.com/useractions.php', {
+        method: 'POST',
+        body: datos
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        if (data == 1) {
+          window.location = '../index.php'
+        } else if (data == 2) {
+          errMatch.style.display = 'block'
+        } else {
+          console.log('Ocurrió un error, intenta ingresar de nuevo.')
+        }
+      })
+  })
+}
+
+function changeForm() {
+  if (formRegister.style.display == 'block') {
+    formRegister.style.display = 'none';
+    formLogin.style.display = 'block';
+  } else if (formLogin.style.display == 'block') {
+    formLogin.style.display = 'none';
+    formRegister.style.display = 'block';
+  }
+}
+
+
+
+// ============================USERCONFIG=====================================
+
+let formUserconfig = document.getElementById('fUserconfig');
+let cfgAccess = document.getElementById('cfgAccess');
+let fNombres = document.getElementById('fNombres');
+let fApellidos = document.getElementById('fApellidos');
+let fDNI = document.getElementById('fDNI');
+let fTelf = document.getElementById('fTelf');
+let fDirec = document.getElementById('fDirec');
+let fEmail = document.getElementById('fEmail');
+let fPassword = document.getElementById('fPassword');
+let identificator = document.getElementById('identificator');
+
+
+
+
+
+
+
+
+// CONFIG DE COMPRA
+
+
+if (formUserconfig) {
+  fetch('https://blackedgestore.com/complemento.php')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      fEmail.value = data.email
+      fPassword.value = data.password
+      fNombres.value = data.nombres
+      fApellidos.value = data.apellidos
+      if (data.dni == 0) {
+        fDNI.value = "";
+      } else {
+        fDNI.value = data.dni
+      }
+      if (data.telf == 0) {
+        fTelf.value = "";
+      } else {
+        fTelf.value = data.telf
+      }
+      fDirec.value = data.direc
+    })
+
+  // CONDICIONES
+
+
+  fDNI.addEventListener('input', function () {
+    if (this.value.length > 8)
+      this.value = this.value.slice(0, 8);
+  })
+  fTelf.addEventListener('input', function () {
+    if (this.value.length > 9)
+      this.value = this.value.slice(0, 9);
+  })
+
+
+  // REENVIO DE CÓDIGO
+
+
+  // INTERACCIÓN
+
+  let btnUCShop = document.getElementById('btnUserconfigShop');
+
+  formUserconfig.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (btnUCShop.value == 'Editar Datos') {
+      btnUCShop.value = 'GUARDAR';
+      identificator.value = 'GUARDAR';
+
+      // ATRIBUTOS
+      fNombres.removeAttribute('readonly');
+      fApellidos.removeAttribute('readonly');
+      fDNI.removeAttribute('readonly');
+      fTelf.removeAttribute('readonly');
+      fDirec.removeAttribute('readonly');
+      // CLASE
+      fNombres.setAttribute('class', 'input-userconfig');
+      fApellidos.setAttribute('class', 'input-userconfig');
+      fDNI.setAttribute('class', 'input-userconfig');
+      fTelf.setAttribute('class', 'input-userconfig');
+      fDirec.setAttribute('class', 'input-userconfig');
+    } else {
+      let datos = new FormData(formUserconfig);
+      fetch('https://blackedgestore.com/useractions.php', {
+          method: 'POST',
+          body: datos
+        })
+        .then(rpt => rpt.json())
+        .then(data => {
+          console.log(data)
+        })
+      btnUCShop.value = 'Editar Datos';
+      // ATRIBUTOS
+      fNombres.setAttribute('readonly', 'readonly');
+      fApellidos.setAttribute('readonly', 'readonly');
+      fDNI.setAttribute('readonly', 'readonly');
+      fTelf.setAttribute('readonly', 'readonly');
+      fDirec.setAttribute('readonly', 'readonly');
+      // CLASE
+      fNombres.setAttribute('class', 'input-userconfig-readonly');
+      fApellidos.setAttribute('class', 'input-userconfig-readonly');
+      fDNI.setAttribute('class', 'input-userconfig-readonly');
+      fTelf.setAttribute('class', 'input-userconfig-readonly');
+      fDirec.setAttribute('class', 'input-userconfig-readonly');
+    }
+  })
+}
+
+function resend() {
+  let datos = new FormData(formUserconfig);
+  identificator.value = 'resend';
+  fetch('https://blackedgestore.com/useractions.php', {
+      method: 'POST',
+      body: datos
+    })
+    .then(rpt => rpt.json())
+    .then(data => {
+      console.log(data)
+    })
+}
+
+// ==============THEME=========================
+
+const themeMap = {
+  dark: "light",
+  light: "dark",
+};
+
+const theme = localStorage.getItem('theme') ||
+  (tmp = Object.keys(themeMap)[0],
+    localStorage.setItem('theme', tmp),
+    tmp);
+const bodyClass = document.body.classList;
+bodyClass.add(theme);
+
+function toggleTheme() {
+  const current = localStorage.getItem('theme');
+  const next = themeMap[current];
+
+  bodyClass.replace(current, next);
+  localStorage.setItem('theme', next);
+}
+
+document.getElementById('themeButton').onclick = toggleTheme;
+
+
+
+// =================== ICONOS DINAMICOS ============================
+
+
+navSpanItems = document.getElementsByName('primary-span-item');
+navSVGItems = document.getElementsByName('primary-svg-item');
+navSpanSubItems = document.getElementsByName('secondary-span-item');
+navVSGSubItems = document.getElementsByName('secondary-svg-item');
+btnProductos = document.getElementById('btnProductos');
+liPrimaryProduct = document.getElementById('li-primary-product');
+liPrimaryFaq = document.getElementById('li-primary-faq');
+liSecondaryVolver = document.getElementById('li-secondary-volver');
+liSecondaryDarkArt = document.getElementById('li-secondary-darkart');
+liSecondaryAesthetic = document.getElementById('li-secondary-aesthetic');
+liSecondaryJapan = document.getElementById('li-secondary-japan');
+liSecondaryMisc = document.getElementById('li-secondary-misc');
+console.log(navSVGItems);
+console.log(navVSGSubItems);
+
+
+function toggleIcons(){
+  if (liPrimaryProduct.style.display != "none") {
+    navSpanItems[0].setAttribute('class', 'fadeOutRight');
+    navSVGItems[0].setAttribute('class', 'fadeOutLeft');
+    navSpanItems[1].setAttribute('class', 'fadeOutRight');
+    navSVGItems[1].setAttribute('class', 'fadeOutLeft');
+
+    navSpanSubItems[0].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[0].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[1].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[1].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[2].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[2].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[3].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[3].setAttribute('class', 'fadeInLeft');
+    navSpanSubItems[4].setAttribute('class', 'fadeInRight');
+    navVSGSubItems[4].setAttribute('class', 'fadeInLeft');
+    setTimeout(function(){
+      liPrimaryProduct.style.display = "none"; 
+      liPrimaryFaq.style.display = "none"; 
+      liSecondaryVolver.style.display = "block";
+      liSecondaryDarkArt.style.display = "block";
+      liSecondaryAesthetic.style.display = "block";
+      liSecondaryJapan.style.display = "block";
+      liSecondaryMisc.style.display = "block";
+    },700);
+  } else{
+    navSpanSubItems[0].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[0].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[1].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[1].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[2].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[2].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[3].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[3].setAttribute('class', 'fadeOutLeft');
+    navSpanSubItems[4].setAttribute('class', 'fadeOutRight');
+    navVSGSubItems[4].setAttribute('class', 'fadeOutLeft');
+
+    navSpanItems[0].setAttribute('class', 'fadeInRight');
+    navSVGItems[0].setAttribute('class', 'fadeInLeft');
+    navSpanItems[1].setAttribute('class', 'fadeInRight');
+    navSVGItems[1].setAttribute('class', 'fadeInLeft');
+    setTimeout(function(){
+      liPrimaryProduct.style.display = "block"; 
+      liPrimaryFaq.style.display = "block"; 
+      liSecondaryVolver.style.display = "none";
+      liSecondaryDarkArt.style.display = "none";
+      liSecondaryAesthetic.style.display = "none";
+      liSecondaryJapan.style.display = "none";
+      liSecondaryMisc.style.display = "none";
+    },700);
+  }
+}
+
+
+
+// ================== DASHBOARD ===========================
+
+let graphics = document.getElementById('chart');
+
+ function totalCasesChart(ctx) {
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [1, 20, 50, 60],
+      datasets: [
+        {
+          label: 'Compras',
+          data: [1, 10, 30, 20],
+        },
+        {
+          label: 'Ingreso Neto',
+          data: [60, 600, 1800, 1200],
+        }
+      ]
+    }
+  })
+ }
+
+
+ function renderGraphics(){
+  const ctx = document.querySelector('#chart').getContext('2d')
+  totalCasesChart(ctx)
+ }
+
+ if (graphics) {
+   renderGraphics();
+ }
