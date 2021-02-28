@@ -7,7 +7,7 @@ require 'Modulos/basic.php';
     <script>
     {
       alert("Inicia sesión para añadir productos al carrito.");
-      window.location= 'login.php';
+      window.location= 'register.php';
     }
     </script>
     <?php
@@ -92,7 +92,6 @@ require 'Modulos/basic.php';
                     </td>
                   </form>
                   </tr>
-
                <?php
              }
              }else {
@@ -123,13 +122,16 @@ require 'Modulos/basic.php';
           <a href="productos.php" class="btn-remove-shopping"><h3>Seguir comprando</h3></a>
         </div>
         <div class="col6">
-          <a href="#" class="btn-remove-shopping"><h3>Finalizar la compra</h3></a>
+          <?php
+            $userLog = $_SESSION['user_log'];
+            $userId = $userLog['id'];
+          ?>
+          <a href="" class="btn-remove-shopping"><h3>Finalizar la compra</h3></a>
         </div>
       </div>
       <?php
     }
     ?>
-
   <?php
   require 'Modulos/footer.php';
    ?>

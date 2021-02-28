@@ -105,14 +105,23 @@ class User
           $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
           $headers.= 'from: BlackEdgeStore <noreply@blackedgestore.com>' . "\r\n";
           mail($to, $subject, $message, $headers);
-          ?>
-          <script type="text/javascript">
-          window.location= '../login.php';
-          </script>
-          <?php
+          return 1;
         }
       }
 
+  
+  function resendEmailActivation($username){
+      $sql = "UPDATE user SET hash = :hash WHERE username = :username";
+      $result = $this->cn->prepare($sql);
+      $hash = md5(rand(0, 1000));
+      $result->bindParam(':username', $username);
+      $result->bindParam(':hash', $hash);
+      if($result->execute()){
+          return true;
+        }
+      }
+
+  
   function validateUsername($username){
     $sql = "SELECT COUNT(username) as num FROM user WHERE username = :username";
     $stmt = $this->cn->prepare($sql);
@@ -120,11 +129,7 @@ class User
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['num']>0) {
-      ?>
-      <script type="text/javascript">
-        window.location= '../register.php?err=0';
-      </script>
-      <?php
+      return true;
       die();
     }
   }
@@ -136,11 +141,7 @@ class User
     $stmt->execute();
     $row = $stmt->fetch(\PDO::FETCH_ASSOC);
     if ($row['mail']>0) {
-      ?>
-      <script type="text/javascript">
-        window.location= '../register.php?err=1';
-      </script>
-      <?php
+      return true;
       die();
     }
   }
@@ -154,46 +155,37 @@ class User
     print $error[$err];
   }
 
-  function validateLog($userlog){
-    $sql = "SELECT COUNT(id) as userid FROM user WHERE id = :id";
-    $stmt = $this->cn->prepare($sql);
-    $stmt->bindValue(':email', $userlog['id']);
-    $stmt->execute();
-    $r=$stmt->fetch(\PDO::FETCH_ASSOC);
-    if ($r['userid']>0) {
-      ?>
-      <script type="text/javascript">
-        window.location= '../index.php';
-      </script>
-      <?php
-    }
 
+  function checkUser($username){
+    $sql = "SELECT * FROM user WHERE username = :username";
+    $stmt = $this->cn->prepare($sql);
+    $stmt->bindParam(':username', $username);
+    $stmt->execute();
+    $result=$stmt->fetch(\PDO::FETCH_ASSOC);
+    if ($result) {
+      return $result;
+    }
   }
 
 /*----------------------Userconfig--------------*/
   function actualizarInfo($parametros){
-        $sql = "UPDATE user SET nombres = :nombres, apellidos = :apellidos, dni = :dni, telf = :telf, direc = :direc  WHERE username = :username";
+        $sql = "UPDATE `user` SET `password` = :password, `email` = :email, `nombres` = :nombres, `apellidos` = :apellidos, `dni` = :dni, `telf` = :telf, `direc` = :direc  WHERE `id` = :id";
         $stmt = $this->cn->prepare($sql);
-        $arreglo = array(
-          ':username' => $parametros['username'],
-          ':nombres' => $parametros['nombres'],
-          ':apellidos' => $parametros['apellidos'],
-          ':dni' => $parametros['dni'],
-          ':telf' => $parametros['telf'],
-          ':direc' => $parametros['direc']
-        );
-        if ($stmt->execute($arreglo)) {
-          $sql = "SELECT * FROM user WHERE username = :username";
-          $result = $this->cn->prepare($sql);
-          $arreglo2 = array(
-            ':username' => $parametros['username']
-          );
-          if ($result->execute($arreglo2)) {
-                return $result->fetch();
-              return false;
-          }
+        $stmt->bindParam(':password',$parametros['password']);
+        $stmt->bindParam(':email',$parametros['email']);
+        $stmt->bindParam(':nombres',$parametros['nombres']);
+        $stmt->bindParam(':apellidos',$parametros['apellidos']);
+        $stmt->bindParam(':dni',$parametros['dni']);
+        $stmt->bindParam(':telf',$parametros['telf']);
+        $stmt->bindParam(':direc',$parametros['direc']);
+        $stmt->bindParam(':id',$parametros['id']);
+        if ($stmt->execute()){
+          return true;
+        }else{
+          return false;
         }
-      }
+  }
+
 }
 
     // function validateEmailUserconfig($email){

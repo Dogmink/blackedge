@@ -1,5 +1,9 @@
 <?php
-  require '../vendor/autoload.php';
+  session_start();
+  if ($_SESSION[user_log] != null) {
+    $user = $_SESSION[user_log];
+    if ($user[admin] == 9) {
+  require '../resources/design.php';
   $design = new BlackEdgeStore\Design;
 
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -90,5 +94,7 @@
 
       return $_FILES['img']['name'];
     }
+  }
+}
 
  ?>
