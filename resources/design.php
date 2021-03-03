@@ -26,8 +26,8 @@
 
 
     public function registrar($_params){
-      $sql = "INSERT INTO `design`(`name`, `design_desc`, `img`, `precio`, `cat_id`)
-      VALUES (:name, :design_desc, :img, :precio, :cat_id)";
+      $sql = "INSERT INTO `design`(`name`, `design_desc`, `img`, `precio`, `cat_id`, size_id)
+      VALUES (:name, :design_desc, :img, :precio, :cat_id, :size_id)";
 
       $result = $this->cn->prepare($sql);
 
@@ -37,6 +37,7 @@
         ":img" => $_params['img'],
         ":precio" => $_params['precio'],
         ":cat_id" => $_params['cat_id'],
+        ":size_id" => $_params['size_id']
       );
 
       if($result->execute($_array))
@@ -47,7 +48,7 @@
 
 
     public function actualizar($_params){
-      $sql = "UPDATE `design` SET `name`=:name, `design_desc`=:design_desc, `img`=:img, `precio`=:precio, `cat_id`=:cat_id WHERE `id`=:id";
+      $sql = "UPDATE `design` SET `name`=:name, `design_desc`=:design_desc, `img`=:img, `precio`=:precio, `cat_id`=:cat_id, `size_id`=:size_id WHERE `id`=:id";
 
       $result = $this->cn->prepare($sql);
 
@@ -57,6 +58,7 @@
         ":img" => $_params['img'],
         ":precio" => $_params['precio'],
         ":cat_id" => $_params['cat_id'],
+        ":size_id" => $_params['size_id'],
         ":id" => $_params['id']
       );
 
@@ -99,13 +101,12 @@
 
     public function mostrarBySize($size){
       $sql = "SELECT design.id, design.name,design_desc,img,name_cat,precio FROM design
-
       INNER JOIN categorias
-      ON design.cat_id = categorias.id WHERE 'size' = :size ORDER BY design.id DESC";
+      ON design.cat_id = categorias.id WHERE size_id = :size ORDER BY design.id DESC";
 
       $result = $this->cn->prepare($sql);
       $_array = array(
-        ":size" -> $size
+        ":size" => $size
       );
       if($result->execute($_array))
           return $result->fetchAll();

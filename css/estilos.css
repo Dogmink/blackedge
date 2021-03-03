@@ -20,6 +20,8 @@
   font-size: 16px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
 /*-------------Struc-----------*/
 body {
   padding: 0px;
@@ -46,7 +48,7 @@ body::-webkit-scrollbar-thumb{
 .input-login:-webkit-autofill:hover,
 .input-login:-webkit-autofill:focus,
 .input-login:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-secondary) inset;
   -webkit-text-fill-color: var(--hovercolor1);
 }
 
@@ -54,7 +56,7 @@ input :-webkit-autofill,
 input :-webkit-autofill:hover,
 input :-webkit-autofill:focus,
 input :-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-secondary) inset;
   -webkit-text-fill-color: var(--hovercolor1);
 }
 
@@ -89,7 +91,7 @@ img.logo {
 /* -------------Nav---------------*/
 nav {
   width: 5rem;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-color: var(--bg-primary);
   z-index: 999;
@@ -155,6 +157,10 @@ nav {
   color: var(--logo-secondary);
 }
 
+.fa-userlog{
+  color: var(--hovercolor1);
+}
+
 .fa-icon-text{
   color: var(--text-primary);
 }
@@ -190,65 +196,13 @@ nav {
 }
 
 
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .navbar {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
-  }
-
-  .logo {
-    display: none;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-  }
-
-  .nav-link {
-    justify-content: center;
-  }
-
-  main {
-    margin: 0;
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .navbar {
-    top: 0;
-    width: 5rem;
-    height: 100vh;
-  }
-
-  .navbar:hover {
-    width: 16rem;
-  }
-
-  .navbar:hover .link-text {
-    display: inline;
-  }
-
-  .navbar:hover .logo svg
-  {
-    margin-left: 12.5rem;
-  }
-
-  .navbar:hover .logo-text
-  {
-    left: 0px;
-  }
-}
-
 .dark {
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --btn-primary: #23232e;
-  --btn-secondary: #141418;
+  --btn-secondary: #181822;
   --logo-primary: #F1EFCE;
   --logo-secondary: #8C8B6F;
 }
@@ -258,10 +212,10 @@ nav {
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
-  --btn-primary: #101f36;
-  --btn-secondary: #0e1027;
-  --logo-primary: #7b5292;
-  --logo-secondary: #773a6d;
+  --btn-primary: #313131;
+  --btn-secondary: #272625;
+  --logo-primary: #71767e;;
+  --logo-secondary: #4c4d57;
 }
 
 
@@ -294,11 +248,22 @@ main{
 
 .main_section {
   width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  font-size: 52px;
+  margin-top: 150px;
   align-content: center;
   justify-content: center;
+  height: 94px;
+  overflow: hidden;
+}
+
+.main_section p {
+  text-align: center;
+  font-size: 150px;
+  justify-content: center;
+  font-family: 'Krona One', sans-serif;
+  font-weight: bolder;
+  letter-spacing: 25px;
+  position: relative;
+  transform: translateY(-186px);
 }
 
 .products {
@@ -323,7 +288,7 @@ main{
 }
 
 .design_product {
-  width: 18rem;
+  width: 100%;
   box-shadow: 0 0 25px #000;
 }
 
@@ -419,15 +384,7 @@ main{
 
 .content-login {
   box-sizing: content-box;
-  width: 150%;
-}
-
-.margin-login {
-  margin-left: 50px;
-}
-
-.margin-logo-login {
-  margin-right: 100px;
+  width: 100%;
 }
 
 .align-login {
@@ -647,10 +604,14 @@ td{
 /* descripción de los productos index*/
 .desc-product {
   text-align: left;
-  font-size: 24px;
+  font-size: 18px;
   margin-left: 5%;
-  margin-top: 7%;
   color: var(--text-secondary);
+  margin-top: -10px;
+}
+
+.desc-product h1{
+  font-size: 32px;
 }
 
 
@@ -685,10 +646,14 @@ td{
 
 .desc-product2 {
   text-align: right;
-  font-size: 24px;
-  margin-right: 3%;
-  margin-top: 7%;
-  color: var(--text-primary);
+  font-size: 18px;
+  margin-right: 5%;
+  color: var(--text-secondary);
+  margin-top: -10px;
+}
+
+.desc-product2 h1{
+  font-size: 32px;
 }
 
 .desc-product2 button {
@@ -762,7 +727,7 @@ td{
 
 .design_product_products {
   justify-content: center;
-  width: 16rem;
+  height: 16rem;
   -webkit-box-shadow: 0 0 25px #000;
 }
 
@@ -775,9 +740,12 @@ td{
 }
 
 .nameDesign-shop {
-  color: var(--text-secondary);
-  font-size: 25px;
+  color: var(--text-primary);
+  font-size: 20px;
   text-align: center;
+  letter-spacing: 5px;
+  width: 100%;
+  height: 60px;
 }
 
 .vermas{
@@ -786,7 +754,7 @@ td{
   letter-spacing: 5px;
   font-size: 16px;
   background-color: var(--text-primary);
-  padding: 8px;
+  padding: 5px;
 }
 
 .seeMore_btn {
@@ -797,9 +765,48 @@ td{
 }
 
 .content_product {
-  overflow: hidden;
   width: 224px;
   height: 398.219px;
+}
+
+.content_product_square {
+  width: 224px;
+  height: 224px;
+}
+
+
+.content-cuadrados:hover{
+  overflow-X: scroll;
+}
+.content-cuadrados::-webkit-scrollbar{
+  display: none;
+}
+
+.content-cuadrados::-webkit-scrollbar-track{
+  display: none;
+}
+
+.content-cuadrados::-webkit-scrollbar-thumb{
+  display: none;
+}
+
+
+.headerKind{
+  padding-top: 80px;
+  font-size: 28px;
+  font-weight: lighter;
+  letter-spacing: 20px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+
+.grid-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 50px;
+  justify-items: center;
+  align-items: stretch;
 }
 
 /*---------Shopping-------------------*/
@@ -926,21 +933,23 @@ thead {
 
 /* ----------------PRODUCT DETAIL--------------- */
 
-.imgProductDetail {
-  box-shadow: 0 0 25px #000;
-  -webkit-box-shadow: 0 0 25px #000;
-  width: 75%;
-}
 
 
 .nameProductDetail {
   background-color: var(--text-secondary);
   color: var(--bg-secondary);
-  font-size: 64px;
-  font-weight: 300;
+  font-size: 48px;
+  font-weight: 100;
   text-align: center;
   letter-spacing: 10px;
-  margin: 0 250px;
+  margin: 0 10%;
+}
+
+.desc-product-detail{
+    text-align: left;
+    font-size: 18px;
+    margin-left: 5%;
+    color: var(--text-secondary);
 }
 
 .descProductDetail {
@@ -948,6 +957,7 @@ thead {
   font-size: 18px;
   font-weight: 200;
   text-align: left;
+  margin-right: 25px;
 }
 
 .priceProductDetail {
@@ -983,11 +993,16 @@ footer {
   padding-top: 200px;
   position: absolute;
   color: var(--text-primary);
-  justify-content: space-around;
-  display: flex;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
   width: 100%;
   align-self: flex-end;
   font-size: 14px;
   align-content: flex-end;
-  background: var(--bg-secondary);
+  background: transparent;
+  width: 95%;
+  margin-left: 5rem;
 }

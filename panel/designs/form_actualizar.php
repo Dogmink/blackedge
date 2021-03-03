@@ -38,7 +38,7 @@
                             <input class="input-panel" type="text" name="name" value="<?php print $result['name'] ?>" required>
                           </div>
                         </div>
-                        <div class="col6">
+                        <div class="col3">
                           <div class="form-input">
                               <label class="label-panel">Categoria</label>
                               <select class="input-panel" name="cat_id" requiered>
@@ -55,6 +55,30 @@
                                   ?>
                                     <option class="form-selectcat" value="<?php print $item['id'] ?>"
                                       <?php print $result['cat_id']== $item['id'] ?'selected':''?> ><?php print $item['name_cat'] ?></option>
+                                  <?php
+                                    }
+                                  }
+                                  ?>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="col3">
+                          <div class="form-input">
+                              <label class="label-panel">Tipo</label>
+                              <select class="input-panel" name="size_id" requiered>
+                                <?php
+                                require '../../resources/size.php';
+                                $size = new BlackEdgeStore\Size;
+                                $info_size = $size->mostrar();
+                                $cantidad = count($info_size);
+                                if($cantidad > 0){
+                                  $c=0;
+                                for($x =0; $x < $cantidad; $x++){
+                                  $c++;
+                                  $item = $info_size[$x];
+                                  ?>
+                                    <option class="form-selectcat" value="<?php print $item['id'] ?>"
+                                      <?php print $result['size_id']== $item['id'] ?'selected':''?> ><?php print $item['name_size'] ?></option>
                                   <?php
                                     }
                                   }

@@ -1,7 +1,6 @@
 <?php
     session_start();
-    $divice = 'S/. ';
-    $year = date('Y');
+    $divice = 'S/. ';    
     require 'functions.php';
 
  ?>
@@ -797,7 +796,11 @@
       </li>
 
       <li class="nav-item">
-	 	 <a href="register.php" class="nav-link">
+	  	<?php
+			if (isset($_SESSION['user_log']) && $_SESSION['user_log'] != null) {
+				$usr = $_SESSION['user_log']
+				?>
+					<a href="register.php" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -805,28 +808,66 @@
 				<path fill="currentColor" class="fa-primary" d="M204.3,231.6c13.6,10.5,32,16.4,51.7,16.4s38-5.8,51.7-16.4c12.5-9.7,19.4-22.2,19.4-35.2s-6.9-25.5-19.4-35.2
 					c-13.6-10.5-32-16.4-51.7-16.4s-38,5.8-51.7,16.4c-12.5,9.7-19.4,22.2-19.4,35.2S191.8,221.9,204.3,231.6L204.3,231.6z M241,181.4
 					h30v30h-30V181.4z"/>
-				<path fill="currentColor" class="fa-primary" d="M131.8,85.3c33.3-29,77.4-45,124.2-45s90.9,16,124.2,45c5.4,4.7,10.3,9.6,14.9,14.8C375.6,41.9,320.7,0,256,0
+				<path fill="currentColor" class="fa-userlog" d="M131.8,85.3c33.3-29,77.4-45,124.2-45s90.9,16,124.2,45c5.4,4.7,10.3,9.6,14.9,14.8C375.6,41.9,320.7,0,256,0
 					S136.4,41.9,116.9,100.1C121.5,94.9,126.5,90,131.8,85.3L131.8,85.3z"/>
-				<path fill="currentColor" class="fa-primary" d="M394.3,293.7c-4.4,4.8-9.1,9.5-14.1,13.9c-33.3,29-77.4,45-124.2,45s-90.9-16-124.2-45c-5-4.4-9.7-9-14.1-13.9
+				<path fill="currentColor" class="fa-userlog" d="M394.3,293.7c-4.4,4.8-9.1,9.5-14.1,13.9c-33.3,29-77.4,45-124.2,45s-90.9-16-124.2-45c-5-4.4-9.7-9-14.1-13.9
 					c20.2,56.9,74.4,97.7,138.3,97.7S374.1,350.6,394.3,293.7z"/>
-				<path fill="currentColor" class="fa-secondary" d="M256,322.6c80.9,0,146.7-56.6,146.7-126.2S336.9,70.3,256,70.3s-146.7,56.6-146.7,126.2S175.1,322.6,256,322.6z M186,137.5
+				<path fill="currentColor" class="fa-userlog" d="M256,322.6c80.9,0,146.7-56.6,146.7-126.2S336.9,70.3,256,70.3s-146.7,56.6-146.7,126.2S175.1,322.6,256,322.6z M186,137.5
 					c18.9-14.6,43.7-22.6,70-22.6s51.2,8,70,22.6c20,15.5,31,36.4,31,58.9s-11,43.4-31,58.9c-18.9,14.6-43.7,22.6-70,22.6
 					s-51.2-8-70-22.6c-20-15.5-31-36.4-31-58.9S166,153,186,137.5z"/>
-				<path fill="currentColor" class="fa-primary" d="M420.2,359.6c-1.3,0-29.9-0.1-29.9-0.1c-3,3.5-13.3,14-15.3,15.8c-7.8,58.7-58.1,104.2-119,104.2S144.8,434,137,375.3
+				<path fill="currentColor" class="fa-userlog" d="M420.2,359.6c-1.3,0-29.9-0.1-29.9-0.1c-3,3.5-13.3,14-15.3,15.8c-7.8,58.7-58.1,104.2-119,104.2S144.8,434,137,375.3
 					c-2-1.8-12.3-12.3-15.3-15.8c0,0-28.7,0-29.9,0.1c3,41.2,21.3,79.4,51.5,107.8C173.9,496.2,214,512,256,512s82.1-15.8,112.7-44.6
 					C398.9,439,417.2,400.8,420.2,359.6z"/>
-				<path fill="currentColor" class="fa-secondary" d="M187.2,407.5c-3.4-1.5-6.8-3-10.1-4.7c15.3,27.8,44.9,46.7,78.9,46.7s63.6-18.9,78.9-46.7c-3.3,1.7-6.7,3.2-10.1,4.7
+				<path fill="currentColor" class="fa-userlog" d="M187.2,407.5c-3.4-1.5-6.8-3-10.1-4.7c15.3,27.8,44.9,46.7,78.9,46.7s63.6-18.9,78.9-46.7c-3.3,1.7-6.7,3.2-10.1,4.7
 					c-21.8,9.2-44.9,13.9-68.8,13.9S209,416.7,187.2,407.5z"/>
-				<path fill="currentColor" class="fa-primary" d="M449.8,365.5c-4.4,47.3-25.8,91.1-60.6,123.7c-9.1,8.6-18.9,16.2-29.3,22.7h70.4c31-32.7,51.8-72.8,60.7-116.7
+				<path fill="currentColor" class="fa-userlog" d="M449.8,365.5c-4.4,47.3-25.8,91.1-60.6,123.7c-9.1,8.6-18.9,16.2-29.3,22.7h70.4c31-32.7,51.8-72.8,60.7-116.7
 					C480.3,382,466.1,371.6,449.8,365.5L449.8,365.5z"/>
-				<path fill="currentColor" class="fa-primary" d="M62.2,365.5C45.9,371.6,31.7,382,21,395.3c8.9,43.9,29.7,84,60.7,116.7h70.4c-10.4-6.6-20.2-14.2-29.3-22.7
+				<path fill="currentColor" class="fa-userlog" d="M62.2,365.5C45.9,371.6,31.7,382,21,395.3c8.9,43.9,29.7,84,60.7,116.7h70.4c-10.4-6.6-20.2-14.2-29.3-22.7
 					C88,456.6,66.6,412.8,62.2,365.5L62.2,365.5z"/>
-				<path fill="currentColor" class="fa-primary" d="M510.4,437.4c-9.5,26.8-23.2,51.9-40.7,74.6H512v-56.9C512,449.1,511.4,443.2,510.4,437.4z"/>
-				<path fill="currentColor" class="fa-secondary" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
+				<path fill="currentColor" class="fa-userlog" d="M510.4,437.4c-9.5,26.8-23.2,51.9-40.7,74.6H512v-56.9C512,449.1,511.4,443.2,510.4,437.4z"/>
+				<path fill="currentColor" class="fa-userlog" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
 			</g>
           </svg>
-          <span name="secondary-span-item" class="link-text">Login / Register</span>
+          <span name="secondary-span-item" class="link-text"><?php $usr['username'] ?></span>
         </a>
+				<?php
+			}else{
+				?>
+
+			
+			<a href="register.php" class="nav-link">
+			<svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
+			  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+			  <g>
+				  <path fill="currentColor" class="fa-primary" d="M204.3,231.6c13.6,10.5,32,16.4,51.7,16.4s38-5.8,51.7-16.4c12.5-9.7,19.4-22.2,19.4-35.2s-6.9-25.5-19.4-35.2
+					  c-13.6-10.5-32-16.4-51.7-16.4s-38,5.8-51.7,16.4c-12.5,9.7-19.4,22.2-19.4,35.2S191.8,221.9,204.3,231.6L204.3,231.6z M241,181.4
+					  h30v30h-30V181.4z"/>
+				  <path fill="currentColor" class="fa-primary" d="M131.8,85.3c33.3-29,77.4-45,124.2-45s90.9,16,124.2,45c5.4,4.7,10.3,9.6,14.9,14.8C375.6,41.9,320.7,0,256,0
+					  S136.4,41.9,116.9,100.1C121.5,94.9,126.5,90,131.8,85.3L131.8,85.3z"/>
+				  <path fill="currentColor" class="fa-primary" d="M394.3,293.7c-4.4,4.8-9.1,9.5-14.1,13.9c-33.3,29-77.4,45-124.2,45s-90.9-16-124.2-45c-5-4.4-9.7-9-14.1-13.9
+					  c20.2,56.9,74.4,97.7,138.3,97.7S374.1,350.6,394.3,293.7z"/>
+				  <path fill="currentColor" class="fa-secondary" d="M256,322.6c80.9,0,146.7-56.6,146.7-126.2S336.9,70.3,256,70.3s-146.7,56.6-146.7,126.2S175.1,322.6,256,322.6z M186,137.5
+					  c18.9-14.6,43.7-22.6,70-22.6s51.2,8,70,22.6c20,15.5,31,36.4,31,58.9s-11,43.4-31,58.9c-18.9,14.6-43.7,22.6-70,22.6
+					  s-51.2-8-70-22.6c-20-15.5-31-36.4-31-58.9S166,153,186,137.5z"/>
+				  <path fill="currentColor" class="fa-primary" d="M420.2,359.6c-1.3,0-29.9-0.1-29.9-0.1c-3,3.5-13.3,14-15.3,15.8c-7.8,58.7-58.1,104.2-119,104.2S144.8,434,137,375.3
+					  c-2-1.8-12.3-12.3-15.3-15.8c0,0-28.7,0-29.9,0.1c3,41.2,21.3,79.4,51.5,107.8C173.9,496.2,214,512,256,512s82.1-15.8,112.7-44.6
+					  C398.9,439,417.2,400.8,420.2,359.6z"/>
+				  <path fill="currentColor" class="fa-secondary" d="M187.2,407.5c-3.4-1.5-6.8-3-10.1-4.7c15.3,27.8,44.9,46.7,78.9,46.7s63.6-18.9,78.9-46.7c-3.3,1.7-6.7,3.2-10.1,4.7
+					  c-21.8,9.2-44.9,13.9-68.8,13.9S209,416.7,187.2,407.5z"/>
+				  <path fill="currentColor" class="fa-primary" d="M449.8,365.5c-4.4,47.3-25.8,91.1-60.6,123.7c-9.1,8.6-18.9,16.2-29.3,22.7h70.4c31-32.7,51.8-72.8,60.7-116.7
+					  C480.3,382,466.1,371.6,449.8,365.5L449.8,365.5z"/>
+				  <path fill="currentColor" class="fa-primary" d="M62.2,365.5C45.9,371.6,31.7,382,21,395.3c8.9,43.9,29.7,84,60.7,116.7h70.4c-10.4-6.6-20.2-14.2-29.3-22.7
+					  C88,456.6,66.6,412.8,62.2,365.5L62.2,365.5z"/>
+				  <path fill="currentColor" class="fa-primary" d="M510.4,437.4c-9.5,26.8-23.2,51.9-40.7,74.6H512v-56.9C512,449.1,511.4,443.2,510.4,437.4z"/>
+				  <path fill="currentColor" class="fa-secondary" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
+			  </g>
+			</svg>
+			<span name="secondary-span-item" class="link-text">Login / Register</span>
+		  </a>
+			<?php
+			}
+			?>
         <a href="#" class="nav-link"  id="themeButton">
 		  <svg  class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -842,7 +883,7 @@
 			  	   class="fa-primary"
 			/>
 			</svg>
-          <span class="link-text">Themify</span>
+          <span class="link-text">Themes</span>
         </a>
       </li>
     </ul>

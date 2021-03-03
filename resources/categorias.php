@@ -24,4 +24,43 @@
       return false;
   }
 
+  public function registrar($_params){
+    $sql = "INSERT INTO `categorias`(`name_cat`)
+    VALUES (:name_cat)";
+
+    $result = $this->cn->prepare($sql);
+
+    $_array = array(
+      ":name_cat" => $_params['name_cat']
+    );
+
+    if($result->execute($_array))
+        return true;
+  }
+
+  public function eliminar($id){
+    $sql = "DELETE FROM `categorias` WHERE `id`=:id";
+    $result = $this->cn->prepare($sql);
+
+    $_array = array(
+      ":id" => $id
+    );
+    if($result->execute($_array))
+      return true;
+
+    return false;
+  }
+
+  public function mostrarPorId($id){
+    $sql = "SELECT * FROM `categorias` WHERE `id` = :id";
+    $result = $this->cn->prepare($sql);
+    $_array = array(
+        ":id" => $id
+    );
+    if($result->execute($_array))
+          return $result->fetch();
+
+        return false;
+  }
+
 }

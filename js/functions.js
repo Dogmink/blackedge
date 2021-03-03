@@ -224,27 +224,31 @@ function resend() {
 
 // ==============THEME=========================
 
-const themeMap = {
-  dark: "light",
-  light: "dark",
-};
+let changeThemeBtn = document.getElementById('themeButton');
 
-const theme = localStorage.getItem('theme') ||
-  (tmp = Object.keys(themeMap)[0],
-    localStorage.setItem('theme', tmp),
-    tmp);
-const bodyClass = document.body.classList;
-bodyClass.add(theme);
-
-function toggleTheme() {
-  const current = localStorage.getItem('theme');
-  const next = themeMap[current];
-
-  bodyClass.replace(current, next);
-  localStorage.setItem('theme', next);
+if (changeThemeBtn) {
+  const themeMap = {
+    dark: "light",
+    light: "dark",
+  };
+  
+  const theme = localStorage.getItem('theme') ||
+    (tmp = Object.keys(themeMap)[0],
+      localStorage.setItem('theme', tmp),
+      tmp);
+  const bodyClass = document.body.classList;
+  bodyClass.add(theme);
+  
+  function toggleTheme() {
+    const current = localStorage.getItem('theme');
+    const next = themeMap[current];
+  
+    bodyClass.replace(current, next);
+    localStorage.setItem('theme', next);
+  }
+  
+  changeThemeBtn.onclick = toggleTheme; 
 }
-
-document.getElementById('themeButton').onclick = toggleTheme;
 
 
 
@@ -292,7 +296,7 @@ function toggleIcons(){
       liSecondaryAesthetic.style.display = "block";
       liSecondaryJapan.style.display = "block";
       liSecondaryMisc.style.display = "block";
-    },700);
+    },500);
   } else{
     navSpanSubItems[0].setAttribute('class', 'fadeOutRight');
     navVSGSubItems[0].setAttribute('class', 'fadeOutLeft');
@@ -317,7 +321,7 @@ function toggleIcons(){
       liSecondaryAesthetic.style.display = "none";
       liSecondaryJapan.style.display = "none";
       liSecondaryMisc.style.display = "none";
-    },700);
+    },500);
   }
 }
 

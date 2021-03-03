@@ -1,11 +1,14 @@
 <?php
 require 'Modulos/basic.php';
 ?>
-<main>
+<main id='index'>
   <!-- <div class="main_section fadeIn">
     <div id="bg_button"> RECIÉN AGREGADOS.
     </div>
   </div> -->
+  <div class="main_section">
+    <p>BLACKEDGESTORE</p>
+  </div>
   <div class="contenido_index fadeInUp">
 
     <?php
@@ -28,7 +31,7 @@ require 'Modulos/basic.php';
       $img = 'images/'.$item['img'];
       if(file_exists($img)){
     ?>
-        <img class="design_product" src="<?php print $img; ?>" width="60px">
+        <img class="design_product" src="<?php print $img; ?>">
         <?php }else{?>
         SIN FOTO
         <?php }?>

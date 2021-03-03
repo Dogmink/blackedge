@@ -1,12 +1,19 @@
+<?php
+  $year = date('Y');
+?>
+
 <footer>
   <div class="">
-    <h3>facebook.com/blackedge-store/</h3>
+    <p><b>facebook.com/blackedge-store/</b></p>
   </div>
   <div class="">
-    <h3>© 2020 - <?php print $year ?> todos los derechos reservados.</h3>
+    <p><b>© 2020 - <?php print $year ?> todos los derechos reservados.</b></p>
   </div>
   <div class="">
-    <h3>info@blackedgestore.com</h3>
+    <p><b>instagram.com/blackedgestore/</b></p>
+  </div>
+  <div class="">
+    <p><b>info@blackedgestore.com</b></p>
   </div>
 </footer>
   <script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
