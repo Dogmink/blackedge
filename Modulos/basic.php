@@ -828,7 +828,7 @@
 				<path fill="currentColor" class="fa-userlog" d="M0,455.1V512h42.3c-17.5-22.6-31.2-47.7-40.7-74.6C0.6,443.2,0,449.1,0,455.1z"/>
 			</g>
           </svg>
-          <span name="secondary-span-item" class="link-text"><?php $usr['username'] ?></span>
+          <span name="secondary-span-item" class="link-text"><?php print $usr['username'] ?></span>
         </a>
 				<?php
 			}else{
