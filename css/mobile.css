@@ -19,12 +19,11 @@
   .navbar-nav {
     flex-direction: row;
     display: block;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
   }
 
   .nav-link {
     justify-content: center;
-    scroll-snap-align: center;
   }
 
   .nav-link span{
