@@ -798,7 +798,7 @@
       <li class="nav-item">
 	  	<?php
 			if (isset($_SESSION['user_log']) && $_SESSION['user_log'] != null) {
-				$usr = $_SESSION['user_log']
+				$usr = $_SESSION['user_log'];
 				?>
 					<a href="register.php" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" version="1.1" id="Capa_1"
