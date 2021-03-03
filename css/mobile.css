@@ -9,7 +9,7 @@
     width: 100%;
     height: 5rem;
     overflow: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: block mandatory;
   }
 
   .navbar::-webkit-scrollbar{
@@ -19,11 +19,12 @@
   .navbar-nav {
     flex-direction: row;
     display: block;
+    scroll-snap-align: end;
   }
 
   .nav-link {
     justify-content: center;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
   }
 
   .nav-link span{
@@ -32,6 +33,7 @@
 
   nav ul{
     font-size: 17px;
+
   }
 
 /* ===============INDEX MISC============== */
