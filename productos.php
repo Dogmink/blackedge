@@ -19,7 +19,7 @@
           $design = new BlackEdgeStore\Design;
           ?>
       <div class="horizontal-parent">
-        <p class="headerKind">CUADRADOS</p>
+        <p class="headerKind">1 : 1</p>
         <div class="content-cuadrados">
           <div class="grid-content">
             <?php
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="horizontal-parent">
-      <p class="headerKind">VERTICAL</p>  
+      <p class="headerKind">1 : 2</p>  
     <div class="content-cuadrados">
         <div class="grid-content">
           <?php

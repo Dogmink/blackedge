@@ -77,6 +77,50 @@
   }
 }
 
+.fadeInDownNav{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDownNav;
+  animation-name: fadeInDownNav;
+
+}
+
+@keyframes fadeInDownNav {
+  from{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -300%, 0);
+    transform: translate3d(0, -300%, 0);
+  } to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeOutUpNav{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeOutUpNav;
+  animation-name: fadeOutUpNav;
+
+}
+
+@keyframes fadeOutUpNav {
+  from{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  } to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 300%, 0);
+    transform: translate3d(0, 300%, 0);
+  }
+}
+
 
 /* =======================NAV ANIMATION============================ */
 

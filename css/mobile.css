@@ -36,6 +36,20 @@
 
   }
 
+
+/* ======================= PRODUCTOS =========================*/
+
+.headerKind{
+  padding-top: 80px;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 32px;
+  margin-left: 32px;
+}
+
+
+
+
 /* ===============INDEX MISC============== */
 
   .main_section{
@@ -61,6 +75,8 @@
     margin-left: 0;
     margin-bottom: 5rem;
     justify-content: center;
+    width: 100vw;
+    padding: 0;
   }
 
   .row{

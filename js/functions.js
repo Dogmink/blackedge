@@ -47,7 +47,6 @@ if (formulario) {
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         if (data == 1) {
           changeForm()
         } else if (data == 2) {
@@ -75,7 +74,6 @@ if (formlarioLog) {
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         if (data == 1) {
           window.location = '../index.php'
         } else if (data == 2) {
@@ -126,7 +124,6 @@ if (formUserconfig) {
   fetch('https://blackedgestore.com/complemento.php')
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       fEmail.value = data.email
       fPassword.value = data.password
       fNombres.value = data.nombres
@@ -247,83 +244,154 @@ if (changeThemeBtn) {
     localStorage.setItem('theme', next);
   }
   
-  changeThemeBtn.onclick = toggleTheme; 
+  // changeThemeBtn.onclick = toggleTheme; 
+
+    changeThemeBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      toggleTheme();
+    })
 }
 
+//====================responsive NAV============================
 
+navBar = document.getElementById('navbar-nav');
+navBarStyle = window.getComputedStyle(navBar);
+navBarDisplay = navBarStyle.getPropertyValue('display');
+logoNav = document.getElementById('logoNav')
+
+if (navBar) {
+  if (navBarDisplay != "flex") {
+    navBar.setAttribute('class', 'navbar-nav FadeInDownNav');
+    setTimeout(function(){
+      navBar.setAttribute('class', 'navbar-nav');
+    },1000);
+  }
+}
 
 // =================== ICONOS DINAMICOS ============================
 
 
+menu = document.getElementsByName('menu');
+btnProductos = document.getElementById('btnProductos');
+backBtn = document.getElementById('backBtn');
 navSpanItems = document.getElementsByName('primary-span-item');
 navSVGItems = document.getElementsByName('primary-svg-item');
 navSpanSubItems = document.getElementsByName('secondary-span-item');
 navVSGSubItems = document.getElementsByName('secondary-svg-item');
-btnProductos = document.getElementById('btnProductos');
-liPrimaryProduct = document.getElementById('li-primary-product');
-liPrimaryFaq = document.getElementById('li-primary-faq');
-liSecondaryVolver = document.getElementById('li-secondary-volver');
-liSecondaryDarkArt = document.getElementById('li-secondary-darkart');
-liSecondaryAesthetic = document.getElementById('li-secondary-aesthetic');
-liSecondaryJapan = document.getElementById('li-secondary-japan');
-liSecondaryMisc = document.getElementById('li-secondary-misc');
-console.log(navSVGItems);
-console.log(navVSGSubItems);
+liPrimary = document.getElementsByName('li-primary');
+liSecondary = document.getElementsByName('li-secondary');
+
+
+btnProductos.value = 1;
+
+menu[0].addEventListener('click', function(e){
+  e.preventDefault();
+  toggleIcons();
+});
+
+menu[1].addEventListener('click', function(e){
+  e.preventDefault();
+  toggleIcons();
+});
 
 
 function toggleIcons(){
-  if (liPrimaryProduct.style.display != "none") {
-    navSpanItems[0].setAttribute('class', 'fadeOutRight');
-    navSVGItems[0].setAttribute('class', 'fadeOutLeft');
-    navSpanItems[1].setAttribute('class', 'fadeOutRight');
-    navSVGItems[1].setAttribute('class', 'fadeOutLeft');
+  if (navBarDisplay != 'flex') {
+    if (backBtn.value == 1) {
+        navBar.setAttribute('class', 'navbar-nav FadeOutUpNav')
+      setTimeout(function(){
+        navBar.setAttribute('class', 'navbar-nav FadeInDownNav');
+        for (let i = 0; i < liSecondary.length; i++) {
+          liSecondary[i].style.display = "none"; 
+        }
+        for (let i = 0; i < liPrimary.length; i++) {
+          liPrimary[i].style.display = "block"; 
+        }
+        backBtn.value = 0;
+        btnProductos.value = 1;
+      },1000);
+      setTimeout(function(){
+        navBar.setAttribute('class', 'navbar-nav');
+        logoNav.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+      },1200);
+    }
 
-    navSpanSubItems[0].setAttribute('class', 'fadeInRight');
-    navVSGSubItems[0].setAttribute('class', 'fadeInLeft');
-    navSpanSubItems[1].setAttribute('class', 'fadeInRight');
-    navVSGSubItems[1].setAttribute('class', 'fadeInLeft');
-    navSpanSubItems[2].setAttribute('class', 'fadeInRight');
-    navVSGSubItems[2].setAttribute('class', 'fadeInLeft');
-    navSpanSubItems[3].setAttribute('class', 'fadeInRight');
-    navVSGSubItems[3].setAttribute('class', 'fadeInLeft');
-    navSpanSubItems[4].setAttribute('class', 'fadeInRight');
-    navVSGSubItems[4].setAttribute('class', 'fadeInLeft');
-    setTimeout(function(){
-      liPrimaryProduct.style.display = "none"; 
-      liPrimaryFaq.style.display = "none"; 
-      liSecondaryVolver.style.display = "block";
-      liSecondaryDarkArt.style.display = "block";
-      liSecondaryAesthetic.style.display = "block";
-      liSecondaryJapan.style.display = "block";
-      liSecondaryMisc.style.display = "block";
-    },500);
-  } else{
-    navSpanSubItems[0].setAttribute('class', 'fadeOutRight');
-    navVSGSubItems[0].setAttribute('class', 'fadeOutLeft');
-    navSpanSubItems[1].setAttribute('class', 'fadeOutRight');
-    navVSGSubItems[1].setAttribute('class', 'fadeOutLeft');
-    navSpanSubItems[2].setAttribute('class', 'fadeOutRight');
-    navVSGSubItems[2].setAttribute('class', 'fadeOutLeft');
-    navSpanSubItems[3].setAttribute('class', 'fadeOutRight');
-    navVSGSubItems[3].setAttribute('class', 'fadeOutLeft');
-    navSpanSubItems[4].setAttribute('class', 'fadeOutRight');
-    navVSGSubItems[4].setAttribute('class', 'fadeOutLeft');
+    if (btnProductos.value == 1) {
+      navBar.setAttribute('class', 'navbar-nav FadeOutUpNav')
+      setTimeout(function(){
+        navBar.setAttribute('class', 'navbar-nav FadeInDownNav');
+        for (let i = 0; i < liPrimary.length; i++) {
+          liPrimary[i].style.display = "none"; 
+        }
+        for (let i = 0; i < liSecondary.length; i++) {
+          liSecondary[i].style.display = "block"; 
+        }
+        btnProductos.value = 0;
+        backBtn.value = 1;
+      },1000);
+      setTimeout(function(){
+        navBar.setAttribute('class', 'navbar-nav');
+        logoNav.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+      },1200);
+    }
+  }else{
 
-    navSpanItems[0].setAttribute('class', 'fadeInRight');
-    navSVGItems[0].setAttribute('class', 'fadeInLeft');
-    navSpanItems[1].setAttribute('class', 'fadeInRight');
-    navSVGItems[1].setAttribute('class', 'fadeInLeft');
-    setTimeout(function(){
-      liPrimaryProduct.style.display = "block"; 
-      liPrimaryFaq.style.display = "block"; 
-      liSecondaryVolver.style.display = "none";
-      liSecondaryDarkArt.style.display = "none";
-      liSecondaryAesthetic.style.display = "none";
-      liSecondaryJapan.style.display = "none";
-      liSecondaryMisc.style.display = "none";
-    },500);
-  }
+    if (backBtn.value == 1) {
+      for (let i = 0; i < navSpanSubItems.length; i++) {
+        navSpanSubItems[i].setAttribute('class', 'fadeOutRight');
+      }
+
+      for (let i = 0; i < navVSGSubItems.length; i++) {
+        navVSGSubItems[i].setAttribute('class', 'fadeOutLeft');
+      }
+
+      for (let i = 0; i < navSpanItems.length; i++) {
+        navSpanItems[i].setAttribute('class', 'fadeInRight');
+        navSVGItems[i].setAttribute('class', 'fadeInLeft');
+      }
+
+      setTimeout(function(){
+        for (let i = 0; i < liPrimary.length; i++) {
+          liPrimary[i].style.display = "block"; 
+        }
+      
+        for (let i = 0; i < liSecondary.length; i++) {
+          liSecondary[i].style.display = "none"; 
+        }
+
+        btnProductos.value = 1;
+        backBtn.value = 0;
+      },500);
+    }
+
+    if (btnProductos.value == 1) {
+      for (let i = 0; i < navSpanItems.length; i++) {
+        navSVGItems[i].setAttribute('class', 'fadeOutLeft');
+        navSpanItems[i].setAttribute('class', 'fadeOutRight');
+      }
+
+      for (let i = 0; i < navSpanSubItems.length; i++) {
+        navSpanSubItems[i].setAttribute('class', 'fadeInRight');
+      }
+      for (let i = 0; i < navVSGSubItems.length; i++) {
+        navVSGSubItems[i].setAttribute('class', 'fadeInLeft');
+      }
+      setTimeout(function(){
+        for (let i = 0; i < liSecondary.length; i++) {
+          liSecondary[i].style.display = "block"; 
+        }
+
+        for (let i = 0; i < liPrimary.length; i++) {
+          liPrimary[i].style.display = "none"; 
+        }
+
+        btnProductos.value = 0;
+        backBtn.value = 1;
+      },500);
+    }
+  } 
 }
+
 
 
 

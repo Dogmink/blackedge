@@ -119,7 +119,7 @@
     $sql = "SELECT design.id, design.name,design_desc,img,name_cat,precio FROM design
 
     INNER JOIN categorias
-    ON design.cat_id = categorias.id WHERE 'categoria' = :cat ORDER BY design.id DESC";
+    ON design.cat_id = categorias.id WHERE 'design.cat_id' = :cat ORDER BY design.id DESC";
 
     $result = $this->cn->prepare($sql);
     $_array = array(
