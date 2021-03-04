@@ -161,6 +161,10 @@ nav {
   color: var(--hovercolor1);
 }
 
+.fa-userlogactive{
+  color: var(--hovercolor2);
+}
+
 .fa-icon-text{
   color: var(--text-primary);
 }
